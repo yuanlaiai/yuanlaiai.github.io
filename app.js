@@ -276,7 +276,9 @@ function initNavbar() {
 // ── Collapsible Day Toggle ────────────────────
 
 function toggleDay(btn) {
-  var dayBody = btn.parentNode.querySelector('.day-body');
+  var dayGroup = btn.closest('.day-group');
+  if (!dayGroup) return;
+  var dayBody = dayGroup.querySelector('.day-body');
   if (!dayBody) return;
 
   var isOpening = dayBody.classList.contains('collapsed');
