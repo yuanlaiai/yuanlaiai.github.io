@@ -106,6 +106,22 @@ function renderTimeline() {
 
     day.projects.forEach(function(p) {
       var langClass = langMap[p.lang] || p.lang.toLowerCase();
+
+      // Problems
+      var problemsHtml = '<ul>';
+      if (p.problems) p.problems.forEach(function(x) { problemsHtml += '<li>' + x + '</li>'; });
+      problemsHtml += '</ul>';
+
+      // Usage
+      var usageHtml = '<ol>';
+      if (p.usage) p.usage.forEach(function(x) { usageHtml += '<li>' + x + '</li>'; });
+      usageHtml += '</ol>';
+
+      // Insights
+      var insightsHtml = '<ul>';
+      if (p.insights) p.insights.forEach(function(x) { insightsHtml += '<li>' + x + '</li>'; });
+      insightsHtml += '</ul>';
+
       html += '<div class="project-card reveal" data-rank="' + p.rank + '" style="transition-delay:' + (di * 0.05 + 0.05) + 's">';
       html += '<div class="rank-ribbon"></div>';
       html += '<div class="pc-header">';
@@ -122,6 +138,11 @@ function renderTimeline() {
       html += '<span class="today">+ ' + p.starsToday + ' today</span>';
       html += '</div>';
       html += '<p class="pc-desc">' + p.description + '</p>';
+      html += '<div class="pc-details">';
+      html += '<div class="pc-section"><div class="pc-section-label problem">📌 解决什么问题</div><div class="pc-section-content">' + problemsHtml + '</div></div>';
+      html += '<div class="pc-section"><div class="pc-section-label usage">🔧 如何使用</div><div class="pc-section-content">' + usageHtml + '</div></div>';
+      html += '<div class="pc-section"><div class="pc-section-label insight">💡 产品价值思路</div><div class="pc-section-content">' + insightsHtml + '</div></div>';
+      html += '</div>';
       html += '<div class="pc-tags">';
       p.tags.forEach(function(t) {
         html += '<span class="pc-tag">' + t + '</span>';

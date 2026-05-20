@@ -685,6 +685,62 @@ a { text-decoration: none; color: inherit; }
   line-height: 1.6;
 }
 
+/* ── Project Card Details ── */
+.pc-details {
+  margin-top: 12px;
+  padding-left: 4px;
+}
+
+.pc-section {
+  margin-bottom: 12px;
+}
+
+.pc-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+.pc-section-label.problem { color: var(--accent-cyan); }
+.pc-section-label.usage { color: var(--accent-purple); }
+.pc-section-label.insight { color: var(--accent-gold); }
+
+.pc-section-content {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.pc-section-content ul,
+.pc-section-content ol {
+  padding-left: 18px;
+}
+
+.pc-section-content li {
+  margin-bottom: 5px;
+}
+
+.pc-section-content pre {
+  display: inline;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: rgba(255,255,255,0.05);
+  padding: 1px 6px;
+  border-radius: 3px;
+  color: var(--accent-cyan);
+}
+
+.pc-section-content code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: rgba(255,255,255,0.05);
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: var(--accent-gold);
+}
+
 .pc-tags {
   display: flex;
   gap: 6px;
