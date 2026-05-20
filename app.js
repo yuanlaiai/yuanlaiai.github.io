@@ -159,7 +159,13 @@ function renderTimeline() {
     html += '<div class="day-fade"></div>';
     html += '</div>'; // day-body
     if (!isFirst) {
-      html += '<button class="day-toggle" onclick="toggleDay(this)"><span class="toggle-icon">▾</span> 展开查看 (' + day.label + ' ' + day.date + ')</button>';
+      html += '<button class="day-toggle" onclick="toggleDay(this)">';
+      html += '<span class="toggle-dot"></span>';
+      html += '<span class="toggle-label">' + day.label + '</span>';
+      html += '<span class="toggle-date">' + day.date + '</span>';
+      html += '<span class="toggle-count">' + day.projects.length + ' 个项目</span>';
+      html += '<span class="toggle-icon">▾</span>';
+      html += '</button>';
     }
     html += '</div>'; // day-group
   });
@@ -285,25 +291,20 @@ function toggleDay(btn) {
   var icon = btn.querySelector('.toggle-icon');
 
   if (isOpening) {
-    // Temporarily remove max-height to get real scrollHeight
     dayBody.style.maxHeight = 'none';
     var fullHeight = dayBody.scrollHeight;
     dayBody.classList.remove('collapsed');
-    // Set to 0 then to full height for animation
     dayBody.style.maxHeight = '0px';
     requestAnimationFrame(function() {
       dayBody.style.maxHeight = fullHeight + 'px';
     });
     icon.classList.add('open');
-    btn.innerHTML = '<span class="toggle-icon open">▾</span> 收起';
   } else {
     dayBody.style.maxHeight = dayBody.scrollHeight + 'px';
     requestAnimationFrame(function() {
       dayBody.classList.add('collapsed');
-      dayBody.style.maxHeight = '220px';
     });
     icon.classList.remove('open');
-    btn.innerHTML = '<span class="toggle-icon">▾</span> 展开查看';
   }
 }
 
