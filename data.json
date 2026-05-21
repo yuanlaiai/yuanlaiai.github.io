@@ -1,9 +1,211 @@
 {
-  "lastUpdated": "2026-05-20",
+  "lastUpdated": "2026-05-21",
   "days": [
     {
-      "date": "2026-05-20",
+      "date": "2026-05-21",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "colbymchenry",
+          "name": "codegraph",
+          "fullName": "colbymchenry / codegraph",
+          "org": "colbymchenry",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "9,448",
+          "forks": "579",
+          "starsToday": "2,123",
+          "description": "Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode —— 给 AI 编程 Agent 装上知识图谱，减少 94% 工具调用",
+          "problems": [
+            "<strong>AI Agent 探索代码库太慢太贵：</strong>Claude Code / Codex 探索代码时会产生大量 grep/glob/read 工具调用，每个调用消耗 token 和时间。CodeGraph 预先构建代码知识图谱（符号关系、调用图、代码结构），Agent 直接查图而非逐文件扫描。",
+            "<strong>Token 浪费惊人：</strong>在 VS Code 等 6 个真实仓库测试中，CodeGraph 平均减少 92% 工具调用、提速 71%。例如探索 VS Code 源码从 52 次调用/97 秒降至 3 次调用/17 秒。",
+            "<strong>跨 Agent 兼容：</strong>一次索引，Claude Code、Cursor、Codex、OpenCode 全部可用——统一代码智能层。"
+          ],
+          "usage": [
+            "一键安装并自动配置 Agent：<pre><code>npx @colbymchenry/codegraph</code></pre>",
+            "在项目中初始化索引：<pre><code>cd your-project && codegraph init -i</code></pre>",
+            "交互式安装器会自动配置 Claude Code / Cursor / Codex / OpenCode 的 MCP 连接。",
+            "之后 Agent 探索代码时自动使用知识图谱，无需额外操作。"
+          ],
+          "insights": [
+            "<strong>企业级代码智能中间件：</strong>为企业私有代码仓库提供托管的知识图谱服务——所有 AI 编程工具的代码理解都通过统一图谱，大幅降低 token 成本（94% 的工具调用减少 = 巨大的成本节省）。",
+            "<strong>代码搜索 2.0：</strong>传统的代码搜索（grep、Sourcegraph）只做文本匹配。CodeGraph 的思路可发展为“语义级企业代码搜索引擎”——按“认证模块如何工作”这样的自然语言查代码结构。",
+            "<strong>AI IDE 插件生态：</strong>作为所有 AI 编程工具的标配知识层——像 LSP（语言服务器协议）一样成为 AI 编程的基础设施层。"
+          ],
+          "tags": [
+            "knowledge-graph",
+            "claude-code",
+            "codex",
+            "94%-less-tool-calls",
+            "local-first",
+            "MCP"
+          ],
+          "count": 2
+        },
+        {
+          "rank": 2,
+          "owner": "Imbad0202",
+          "name": "academic-research-skills",
+          "fullName": "Imbad0202 / academic-research-skills",
+          "org": "Imbad0202",
+          "url": "https://github.com/Imbad0202/academic-research-skills",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "16,121",
+          "forks": "1,443",
+          "starsToday": "1,667",
+          "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize —— 让 AI Agent 成为学术研究助手",
+          "problems": [
+            "<strong>AI 不懂学术写作规范：</strong>ChatGPT/Claude 生成的学术内容缺乏规范的引用格式、文献综述结构、方法论框架。Academic Research Skills 为 Agent 注入完整的学术研究方法论。",
+            "<strong>文献调研效率低：</strong>研究人员花大量时间搜索、筛选、阅读文献。Agent 按照标准化学术流程：搜索 → 筛选 → 精读 → 综述，自动完成文献调研。",
+            "<strong>论文写作到发表的断层：</strong>写好论文只是第一步——选刊、格式排版、回复审稿意见等环节同样繁琐。技能覆盖 research → write → review → revise → finalize 全流程。"
+          ],
+          "usage": [
+            "Clone 技能库：<pre><code>git clone https://github.com/Imbad0202/academic-research-skills</code></pre>",
+            "复制技能到 Claude Code 技能目录：<pre><code>cp -r academic-research-skills/* .claude/skills/</code></pre>",
+            "在 Claude Code 中使用研究技能：<code>/academic-research \"量子计算的最新进展\"</code>",
+            "Agent 自动执行：文献搜索 → 摘要生成 → 综述撰写 → 引用格式化 → 多轮修订。"
+          ],
+          "insights": [
+            "<strong>AI 学术写作 SaaS：</strong>面向研究生/学者的 AI 学术助手——输入研究主题，输出完整的文献综述或论文初稿，按论文数量订阅。",
+            "<strong>期刊投稿自动化：</strong>不同期刊有不同格式要求、参考文献风格、字数限制。AI Agent 自动适配目标期刊格式，一键排版。",
+            "<strong>科研效率评估平台：</strong>通过 Agent 辅助研究节省的时间/提升的质量做量化分析——为高校/研究所提供科研效率提升方案。"
+          ],
+          "tags": [
+            "academic-research",
+            "claude-code",
+            "literature-review",
+            "paper-writing",
+            "research-workflow",
+            "education"
+          ],
+          "count": 3
+        },
+        {
+          "rank": 3,
+          "owner": "tinyhumansai",
+          "name": "openhuman",
+          "fullName": "tinyhumansai / openhuman",
+          "org": "Tiny Humans AI",
+          "url": "https://github.com/tinyhumansai/openhuman",
+          "lang": "Rust",
+          "langClass": "rs",
+          "stars": "23,587",
+          "forks": "2,111",
+          "starsToday": "3,394",
+          "description": "Your Personal AI super intelligence —— 桌面级个人 AI 超级智能体：私有、简单、极其强大",
+          "problems": [
+            "<strong>AI 碎片化与隐私焦虑：</strong>ChatGPT、Claude、Cursor 等工具各自为政，且数据全部上传云端。OpenHuman 提供统一的本地桌面 Agent，118+ 第三方集成（Gmail、Notion、GitHub、Slack 等）一键 OAuth 接入，所有数据本地处理。",
+            "<strong>Agent 缺乏连续记忆：</strong>每次新对话都像初次见面。OpenHuman 内置 Memory Tree + Obsidian Wiki——本地 SQLite 存储知识图谱，自动将数据整理为 Markdown 块写入 Obsidian 仓库，Agent 能记你几周前的对话和偏好。",
+            "<strong>Agent 使用门槛高：</strong>多数 Agent 框架需要配置 API Key、写提示词、管理插件。OpenHuman 是桌面应用——安装后点几下就能用，配有桌面宠物形象、语音交互、Google Meet 参会等开箱即用功能。"
+          ],
+          "usage": [
+            "macOS/Linux 一键安装：<pre><code>curl -fsSL https://raw.githubusercontent.com/tinyhumansai/openhuman/main/scripts/install.sh | bash</code></pre>",
+            "Windows 安装：<pre><code>irm https://raw.githubusercontent.com/tinyhumansai/openhuman/main/scripts/install.ps1 | iex</code></pre>",
+            "或从官网下载 DMG/EXE：<a href=\"https://tinyhumans.ai/openhuman\" style=\"color:#58a6ff\">tinyhumans.ai/openhuman</a>",
+            "启动后通过 OAuth 一键连接 Gmail、GitHub、Notion 等服务，Agent 自动获取上下文。"
+          ],
+          "insights": [
+            "<strong>个人 AI 操作系统：</strong>OpenHuman 证明“个人 AI 桌面超级助手”是可行的产品品类——本地优先、隐私优先、桌面优先。可做面向普通用户的订阅制个人 AI 管家，管理邮件、日历、文件、聊天，成为真正的数字分身。",
+            "<strong>企业 AI 桌面工作台：</strong>企业版可统一管理员工的 AI 工作台——集成公司内部工具（Jira、Confluence、内部 API），确保数据不出企业边界，同时提供标准化 AI 能力。对标 Microsoft Copilot 但本地化部署。",
+            "<strong>AI 硬件捆绑：</strong>与 Mac/Windows 设备厂商合作预装，或推出“AI PC”概念——买电脑送个人 AI 助手，形成硬件+AI 的差异化竞争。"
+          ],
+          "tags": [
+            "personal-ai",
+            "local-first",
+            "118+ integrations",
+            "memory-tree",
+            "obsidian-wiki",
+            "desktop-agent"
+          ],
+          "count": 5
+        },
+        {
+          "rank": 4,
+          "owner": "obra",
+          "name": "superpowers",
+          "fullName": "obra / superpowers",
+          "org": "obra",
+          "url": "https://github.com/obra/superpowers",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "199,986",
+          "forks": "17,834",
+          "starsToday": "1,743",
+          "description": "An agentic skills framework & software development methodology that works —— 全栈 AI 智能体技能框架与开发方法论",
+          "problems": [
+            "<strong>Agent 技能文件没有标准：</strong>每个人写 CLAUDE.md / CURSOR.md 的方式各不相同，质量和格式参差不齐。Superpowers 定义了标准化的技能文件格式和开发方法论。",
+            "<strong>AI 编程缺少系统方法论：</strong>使用 Cursor/Claude Code 时团队缺乏统一的方法论——有人习惯问问题、有人直接写代码。Superpowers 提供从需求分析到代码交付的全套方法论和技能文件。",
+            "<strong>Agent 协作混乱：</strong>多 Agent 团队（前端 Agent、后端 Agent、测试 Agent）之间缺乏协调框架。Superpowers 内置 Multi-Agent 编排能力。"
+          ],
+          "usage": [
+            "安装 Superpowers CLI：<pre><code>npx @agentic/superpowers</code></pre>",
+            "初始化项目技能：<pre><code>superpowers init</code></pre>",
+            "浏览可用技能库：<pre><code>superpowers list</code></pre>",
+            "安装特定技能到项目：<pre><code>superpowers install react-component</code></pre>"
+          ],
+          "insights": [
+            "<strong>Agent 开发方法论咨询：</strong>198K star 证明了 Superpowers 是当前最流行的 Agent 开发方法论。可以做成企业培训+咨询产品——“如何用 Superpowers 方法论构建 AI 原生开发团队”。",
+            "<strong>技能文件模板市场：</strong>像 GitHub Marketplace 一样交易 Agent 技能文件——前端技能包、后端技能包、DevOps 技能包，每个 $5-50。",
+            "<strong>团队 Agent 治理平台：</strong>企业版统一管理所有开发者的技能文件——强制更新、安全审查、使用统计，形成企业 AI 开发治理标准。"
+          ],
+          "tags": [
+            "agentic-framework",
+            "skills-file",
+            "multi-agent",
+            "development-methodology",
+            "claude-code",
+            "cursor"
+          ],
+          "count": 3
+        },
+        {
+          "rank": 5,
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "fullName": "rohitg00 / ai-engineering-from-scratch",
+          "org": "rohitg00",
+          "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "9,520",
+          "forks": "1,940",
+          "starsToday": "765",
+          "description": "Learn it. Build it. Ship it for others. —— 从零开始的 AI 工程实战教程：学 → 造 → 交付",
+          "problems": [
+            "<strong>AI 工程学习路径不清晰：</strong>从理论到实战的路太远——数学、框架、部署、运维，每步都有坑。这门课从零到交付提供完整路径。",
+            "<strong>缺数多实战项目：</strong>很多教程教概念但缺少端到端实战项目。该课程强调“造出来、交付出去”——每个模块都产出可部署的产品。",
+            "<strong>社区驱动不足：</strong>传统课程学完就结束。该项目采用开源社区模式，学员可以贡献自己的项目，形成持续学习网络。"
+          ],
+          "usage": [
+            "Clone 课程仓库：<pre><code>git clone https://github.com/rohitg00/ai-engineering-from-scratch</code></pre>",
+            "从第一章开始，每章有 Jupyter Notebook + 实战项目。",
+            "跟着课程从零构建 AI 应用并部署到生产环境。",
+            "参与社区讨论，分享自己的项目。"
+          ],
+          "insights": [
+            "<strong>AI 工程培训认证：</strong>以该课程为基础提供“AI 工程师”认证培训——面向转行/应届生，从零到就业的全套培训方案。",
+            "<strong>项目作品集平台：</strong>学员完成课程后产出的项目自动形成作品集——对接企业招聘需求，打造“学→做→找工作”闭环。",
+            "<strong>企业内训定制：</strong>为企业提供定制版课程——根据团队技术栈调整内容，加上企业自己的数据集和场景。"
+          ],
+          "tags": [
+            "ai-engineering",
+            "from-scratch",
+            "hands-on",
+            "python",
+            "production-deployment",
+            "open-source-course"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -205,7 +407,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -407,7 +609,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "前天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -609,7 +811,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "5天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -809,7 +1011,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1005,7 +1207,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
