@@ -150,7 +150,8 @@ function renderTimeline() {
       p.tags.forEach(function(t) {
         html += '<span class="pc-tag">' + t + '</span>';
       });
-      html += '<span class="pc-count">' + p.count + '次上榜</span>';
+      var countText = p.count > 1 ? p.count + '次上榜' : '首次上榜';
+      html += '<span class="pc-count">' + countText + '</span>';
       html += '</div>';
       html += '</div>';
     });
