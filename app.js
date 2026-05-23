@@ -96,19 +96,18 @@ function renderTimeline() {
   var html = '<div class="timeline">';
 
   siteData.days.forEach(function(day, di) {
-    var isFirst = di === 0;
     html += '<div class="day-group reveal" style="transition-delay:' + (di * 0.05) + 's">';
     html += '<div class="day-node">';
     html += '<div class="day-dot"></div>';
     html += '<span class="day-label">' + day.label + '</span>';
     html += '<span class="day-date">' + day.date + '</span>';
     html += '</div>';
-    html += '<div class="day-body' + (isFirst ? '' : ' collapsed') + '">';
+    html += '<div class="day-body">';
     html += '<div class="day-projects">';
 
     day.projects.forEach(function(p) {
       var langClass = langMap[p.lang] || p.lang.toLowerCase();
-      var cardExtra = isFirst ? '' : ' dimmed';
+      var cardExtra = '';
 
       // Problems
       var problemsHtml = '<ul>';
@@ -157,17 +156,7 @@ function renderTimeline() {
     });
 
     html += '</div>'; // day-projects
-    html += '<div class="day-fade"></div>';
     html += '</div>'; // day-body
-    if (!isFirst) {
-      html += '<button class="day-toggle" onclick="toggleDay(this)">';
-      html += '<span class="toggle-dot"></span>';
-      html += '<span class="toggle-label">' + day.label + '</span>';
-      html += '<span class="toggle-date">' + day.date + '</span>';
-      html += '<span class="toggle-count">' + day.projects.length + ' 个项目</span>';
-      html += '<span class="toggle-icon">▾</span>';
-      html += '</button>';
-    }
     html += '</div>'; // day-group
   });
 
@@ -281,33 +270,6 @@ function initNavbar() {
 }
 
 // ── Collapsible Day Toggle ────────────────────
-
-function toggleDay(btn) {
-  var dayGroup = btn.closest('.day-group');
-  if (!dayGroup) return;
-  var dayBody = dayGroup.querySelector('.day-body');
-  if (!dayBody) return;
-
-  var isOpening = dayBody.classList.contains('collapsed');
-  var icon = btn.querySelector('.toggle-icon');
-
-  if (isOpening) {
-    dayBody.style.maxHeight = 'none';
-    var fullHeight = dayBody.scrollHeight;
-    dayBody.classList.remove('collapsed');
-    dayBody.style.maxHeight = '0px';
-    requestAnimationFrame(function() {
-      dayBody.style.maxHeight = fullHeight + 'px';
-    });
-    icon.classList.add('open');
-  } else {
-    dayBody.style.maxHeight = dayBody.scrollHeight + 'px';
-    requestAnimationFrame(function() {
-      dayBody.classList.add('collapsed');
-    });
-    icon.classList.remove('open');
-  }
-}
 
 // ── Full-Background Particle Animation ────────
 
