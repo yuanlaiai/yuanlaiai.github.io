@@ -175,7 +175,7 @@ function loadMoreDays() {
   }
 
   // Check if more days exist beyond current batch
-  var allRendered = document.querySelectorAll('.day-group').length;
+  var allRendered = document.querySelectorAll('#timeline > .day-group').length;
   var totalDays = window.siteData.days.length;
 
   if (allRendered < totalDays) {
