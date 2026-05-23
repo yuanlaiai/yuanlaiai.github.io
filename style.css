@@ -722,11 +722,27 @@ a { text-decoration: none; color: inherit; }
   max-height: 120px;
   overflow: hidden;
   margin-top: 4px;
+  padding-left: 40px;
+}
+
+.timeline-fade-wrap::before {
+  content: '';
+  position: absolute;
+  left: 15px; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg,
+    var(--accent-gold) 0%,
+    var(--accent-cyan) 60%,
+    transparent 100%);
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .timeline-fade-gradient {
   position: absolute;
   inset: 0;
+  padding-left: 40px;
   background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--bg-page) 90%);
   pointer-events: none;
   z-index: 2;
