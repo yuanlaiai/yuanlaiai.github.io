@@ -122,18 +122,15 @@ function buildTimelineHtml(showUpTo) {
   if (remaining > 0) {
     var previewCount = Math.min(BATCH_SIZE, remaining);
 
-    // Fade preview — 精简，只露天数标题行
+    // Fade preview — 展示1天完整时间线样式，渐变隐藏
     html += '<div class="timeline-fade-wrap" id="timelineFade">';
     html += '<div class="timeline-fade-scroll">';
-    for (var fi = 0; fi < previewCount; fi++) {
-      var fDay = allDays[showUpTo + fi];
+    var fDay = allDays[showUpTo]; // 只展示第1天
+    if (fDay) {
       html += '<div class="day-group reveal">';
       html += '<div class="day-node"><div class="day-dot"></div><span class="day-label">' + fDay.label + '</span><span class="day-date">' + fDay.date + '</span></div>';
       html += '<div class="day-body collapsed"><div class="day-projects">';
-      // 只显示第一个项目的名称（一行）
-      if (fDay.projects && fDay.projects[0]) {
-        html += '<div class="fade-preview-line">#' + fDay.projects[0].rank + ' ' + fDay.projects[0].fullName + '</div>';
-      }
+      html += '<div class="project-card dimmed"><div class="pc-header"><span class="rank-num">#1</span><span class="repo-name">' + (fDay.projects[0]?.fullName || '') + '</span><span class="org">' + (fDay.projects[0]?.org || '') + '</span></div></div>';
       html += '</div></div></div>';
     }
     html += '</div>'; // fade-scroll

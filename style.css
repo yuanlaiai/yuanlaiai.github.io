@@ -719,7 +719,7 @@ a { text-decoration: none; color: inherit; }
 /* Load more button */
 .timeline-fade-wrap {
   position: relative;
-  max-height: 160px;
+  max-height: 110px;
   overflow: hidden;
   margin-top: 4px;
 }
@@ -727,7 +727,7 @@ a { text-decoration: none; color: inherit; }
 .timeline-fade-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 0%, transparent 15%, var(--bg-page) 85%);
+  background: linear-gradient(to bottom, transparent 0%, transparent 20%, var(--bg-page) 90%);
   pointer-events: none;
   z-index: 2;
 }
@@ -739,13 +739,6 @@ a { text-decoration: none; color: inherit; }
 
 .timeline-fade-scroll .day-group {
   pointer-events: none;
-}
-
-.fade-preview-line {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  padding: 2px 0 2px 4px;
-  font-family: var(--font-mono);
 }
 
 .load-more-overlay {
