@@ -122,7 +122,7 @@ function buildTimelineHtml(showUpTo) {
   if (remaining > 0) {
     var previewCount = Math.min(BATCH_SIZE, remaining);
 
-    // Fade preview wrapping content + button overlaid
+    // Fade preview — 精简，只露天数标题行
     html += '<div class="timeline-fade-wrap" id="timelineFade">';
     html += '<div class="timeline-fade-scroll">';
     for (var fi = 0; fi < previewCount; fi++) {
@@ -130,15 +130,9 @@ function buildTimelineHtml(showUpTo) {
       html += '<div class="day-group reveal">';
       html += '<div class="day-node"><div class="day-dot"></div><span class="day-label">' + fDay.label + '</span><span class="day-date">' + fDay.date + '</span></div>';
       html += '<div class="day-body collapsed"><div class="day-projects">';
-      fDay.projects.forEach(function(p, pi) {
-        if (pi > 0) return;
-        html += '<div class="project-card dimmed" data-rank="' + p.rank + '">';
-        html += '<div class="pc-header"><span class="rank-num">#' + p.rank + '</span><span class="repo-name">' + p.fullName + '</span><span class="org">' + p.org + '</span></div>';
-        html += '<div class="pc-meta"><span class="lang">' + p.lang + '</span><span class="stats">⭐ <strong>' + p.stars + '</strong></span><span class="today">+ ' + p.starsToday + ' today</span></div>';
-        html += '</div>';
-      });
-      if (fDay.projects.length > 1) {
-        html += '<div class="preview-more">还有 ' + (fDay.projects.length - 1) + ' 个项目...</div>';
+      // 只显示第一个项目的名称（一行）
+      if (fDay.projects && fDay.projects[0]) {
+        html += '<div class="fade-preview-line">#' + fDay.projects[0].rank + ' ' + fDay.projects[0].fullName + '</div>';
       }
       html += '</div></div></div>';
     }
