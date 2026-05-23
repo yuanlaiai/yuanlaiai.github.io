@@ -370,8 +370,11 @@ function initBgParticles() {
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
   var particles = [];
+  var connections = [];
   var mouse = { x: -9999, y: -9999 };
   var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var accent = isDark ? '0,217,255' : '0,150,200';  // Tech cyan
+  var warm = isDark ? '255,140,66' : '200,100,50';   // Brand orange
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -380,49 +383,144 @@ function initBgParticles() {
   resize();
   window.addEventListener('resize', resize);
 
-  var count = Math.min(Math.floor(canvas.width * canvas.height / 8000), 150);
+  // Neural network nodes
+  var count = Math.min(Math.floor(canvas.width * canvas.height / 15000), 60);
   for (var i = 0; i < count; i++) {
-    particles.push({
+    var p = {
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      r: Math.random() * 2 + 1
-    });
+      vx: (Math.random() - 0.5) * 0.1,
+      vy: (Math.random() - 0.5) * 0.1,
+      r: Math.random() * 2.5 + 1.5,
+      color: Math.random() > 0.6 ? warm : accent,
+      connections: [],
+      pulse: Math.random() * Math.PI * 2
+    };
+    particles.push(p);
   }
+
+  // Pre-compute stable connections (neural network edges)
+  function rebuildConnections() {
+    connections = [];
+    for (var i = 0; i < particles.length; i++) {
+      for (var j = i + 1; j < particles.length; j++) {
+        var dx = particles[i].x - particles[j].x;
+        var dy = particles[i].y - particles[j].y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 200) {
+          connections.push({ a: i, b: j, dist: dist });
+        }
+      }
+    }
+  }
+  rebuildConnections();
+
+  // Data packets traveling on connections
+  var packets = [];
+  function spawnPacket() {
+    if (connections.length > 0 && packets.length < 8) {
+      var conn = connections[Math.floor(Math.random() * connections.length)];
+      packets.push({
+        a: conn.a, b: conn.b,
+        progress: Math.random(),
+        speed: Math.random() * 0.008 + 0.004,
+        size: Math.random() * 2 + 1
+      });
+    }
+  }
+  setInterval(spawnPacket, 600);
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    var color = isDark ? '255,140,66' : '200,100,50';
 
-    particles.forEach(function(p) {
+    // Update particles
+    particles.forEach(function(p, i) {
       p.x += p.vx;
       p.y += p.vy;
-      if (p.x < 0) p.x = canvas.width;
-      if (p.x > canvas.width) p.x = 0;
-      if (p.y < 0) p.y = canvas.height;
-      if (p.y > canvas.height) p.y = 0;
+      p.pulse += 0.015;
+
+      if (p.x < -20) { p.x = canvas.width + 20; rebuildConnections(); }
+      if (p.x > canvas.width + 20) { p.x = -20; rebuildConnections(); }
+      if (p.y < -20) { p.y = canvas.height + 20; rebuildConnections(); }
+      if (p.y > canvas.height + 20) { p.y = -20; rebuildConnections(); }
+    });
+
+    // Draw connections
+    connections.forEach(function(c) {
+      var a = particles[c.a];
+      var b = particles[c.b];
+      var dx = a.x - b.x;
+      var dy = a.y - b.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist > 250) return;
 
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(' + color + ',0.15)';
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.strokeStyle = 'rgba(' + accent + ',' + (0.07 * (1 - dist / 250)) + ')';
+      ctx.lineWidth = 0.6;
+      ctx.stroke();
+    });
+
+    // Draw data packets
+    packets.forEach(function(pkt, idx) {
+      pkt.progress += pkt.speed;
+      if (pkt.progress > 1) {
+        packets.splice(idx, 1);
+        return;
+      }
+      var a = particles[pkt.a];
+      var b = particles[pkt.b];
+      if (!a || !b) { packets.splice(idx, 1); return; }
+
+      var x = a.x + (b.x - a.x) * pkt.progress;
+      var y = a.y + (b.y - a.y) * pkt.progress;
+
+      var glow = ctx.createRadialGradient(x, y, 0, x, y, 8);
+      glow.addColorStop(0, 'rgba(' + accent + ',0.5)');
+      glow.addColorStop(0.5, 'rgba(' + accent + ',0.15)');
+      glow.addColorStop(1, 'rgba(' + accent + ',0)');
+      ctx.beginPath();
+      ctx.arc(x, y, 8, 0, Math.PI * 2);
+      ctx.fillStyle = glow;
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(x, y, pkt.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + accent + ',0.7)';
       ctx.fill();
     });
 
-    // Mouse connections
+    // Draw particles
     particles.forEach(function(p) {
-      var dx = p.x - mouse.x;
-      var dy = p.y - mouse.y;
-      var dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 180) {
-        ctx.beginPath();
-        ctx.moveTo(p.x, p.y);
-        ctx.lineTo(mouse.x, mouse.y);
-        ctx.strokeStyle = 'rgba(' + color + ',' + (0.08 * (1 - dist / 180)) + ')';
-        ctx.lineWidth = 0.8;
-        ctx.stroke();
-      }
+      // Glow
+      var glowSize = p.r * 5 + Math.sin(p.pulse) * 2;
+      var gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowSize);
+      gradient.addColorStop(0, 'rgba(' + p.color + ',0.25)');
+      gradient.addColorStop(0.4, 'rgba(' + p.color + ',0.08)');
+      gradient.addColorStop(1, 'rgba(' + p.color + ',0)');
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, glowSize, 0, Math.PI * 2);
+      ctx.fillStyle = gradient;
+      ctx.fill();
+
+      // Core
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + p.color + ',0.6)';
+      ctx.fill();
     });
+
+    // Mouse glow
+    if (mouse.x > 0) {
+      var glow = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 120);
+      glow.addColorStop(0, 'rgba(' + warm + ',0.03)');
+      glow.addColorStop(1, 'rgba(' + warm + ',0)');
+      ctx.beginPath();
+      ctx.arc(mouse.x, mouse.y, 120, 0, Math.PI * 2);
+      ctx.fillStyle = glow;
+      ctx.fill();
+    }
 
     requestAnimationFrame(draw);
   }
