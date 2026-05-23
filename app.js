@@ -1,188 +1,55 @@
-/* =============================================
-   猿来AI · 让AI很简单
-   ============================================= */
-
-// ── Data ──────────────────────────────────────
-
-const articles = [
-  {
-    id: 1,
-    title: 'React 18 并发特性深度解析',
-    tags: ['React', '性能优化'],
-    date: '2026-03-15',
-    readTime: '12 分钟',
-    desc: '深入探讨 React 18 的 Fiber 架构升级、Concurrent Mode、useTransition、Suspense 等并发特性，以及它们在生产环境中的实战应用。',
-  },
-  {
-    id: 2,
-    title: '从 0 到 1：构建 Node.js 微服务系统',
-    tags: ['Backend', '架构'],
-    date: '2026-02-28',
-    readTime: '18 分钟',
-    desc: '手把手搭建基于 Node.js 的微服务架构，涵盖 API Gateway、服务注册发现、链路追踪、熔断限流等核心能力。',
-  },
-  {
-    id: 3,
-    title: 'Kubernetes 实战：容器编排完全指南',
-    tags: ['DevOps', 'K8s'],
-    date: '2026-02-10',
-    readTime: '22 分钟',
-    desc: '从集群搭建到生产部署，涵盖 Pod、Deployment、Service、Ingress、HPA 自动扩缩容，以及 Helm Chart 打包最佳实践。',
-  },
-  {
-    id: 4,
-    title: '现代前端工具链对比：Webpack vs Vite vs esbuild',
-    tags: ['前端工程'],
-    date: '2026-01-20',
-    readTime: '10 分钟',
-    desc: '深度对比三大构建工具的架构差异、性能表现和适用场景，帮你在不同项目中做出最优的技术选型决策。',
-  },
-  {
-    id: 5,
-    title: '构建高性能 React 应用的 5 个技巧',
-    tags: ['React', '性能优化'],
-    date: '2026-03-01',
-    readTime: '8 分钟',
-    desc: '深入探讨代码分割、懒加载、Memo 优化、虚拟列表以及 Web Worker 在 React 应用中的实战技巧。',
-  },
-  {
-    id: 6,
-    title: 'Go 语言高并发实战：goroutine 与 channel',
-    tags: ['Backend'],
-    date: '2026-01-05',
-    readTime: '15 分钟',
-    desc: '通过实战案例掌握 Go 的并发编程模型，深入讲解 goroutine 调度器、channel 通信模式与常见并发陷阱规避。',
-  },
-];
-
-const projects = [
-  {
-    id: 1,
-    icon: '⚡',
-    name: '高并发分布式缓存系统',
-    desc: '基于 Go + Redis + Raft 共识算法构建的分布式缓存系统，支持百万级 QPS，具备自动故障转移和水平扩容能力。',
-    stack: ['Go', 'Redis', 'Kubernetes', 'gRPC', 'Raft'],
-    stars: '520+',
-  },
-  {
-    id: 2,
-    icon: '🧩',
-    name: '开源 React UI 组件库',
-    desc: '基于 React + TypeScript 打造的高质量 UI 组件库，完整 Storybook 文档，覆盖 60+ 组件，支持主题定制。',
-    stack: ['React', 'TypeScript', 'Storybook', 'Vitest'],
-    stars: '310+',
-  },
-  {
-    id: 3,
-    icon: '📊',
-    name: '云原生应用监控平台',
-    desc: '集成 Prometheus + Grafana + OpenTelemetry 的一站式可观测性平台，支持链路追踪、指标聚合和智能告警。',
-    stack: ['React', 'Node.js', 'Prometheus', 'Docker'],
-    stars: '180+',
-  },
-];
-
-const langMap = {
-  'Rust': 'rs', 'Python': 'py', 'TypeScript': 'ts', 'Shell': 'sh',
-  'JavaScript': 'js', 'CSS': 'css', 'Jupyter Notebook': 'ipynb', 'Go': 'go',
+// ── Config ──
+var langMap = {
+  'typescript': 'ts', 'javascript': 'js', 'python': 'py', 'rust': 'rs',
+  'shell': 'sh', 'go': 'go', 'jupyter notebook': 'py', 'c#': 'cs',
+  'swift': 'rs', 'ruby': 'rb', 'kotlin': 'kt', 'java': 'java',
+  'c++': 'cpp', 'c': 'c', 'haskell': 'hs', 'lua': 'lua',
+  'zig': 'zig', 'solidity': 'sol'
 };
 
 // ── Render Trending Timeline ─────────────────
 
-var VISIBLE_DAYS_BATCH = 3;
-var currentDayCount = 0;
+var VISIBLE_DAYS = 3;
+var BATCH_SIZE = 3;
 
 function renderTimeline() {
   var container = document.getElementById('trendingTimeline');
   if (!container || !window.siteData) return;
 
+  var allDays = siteData.days;
+  var totalDays = allDays.length;
+  var previewCount = Math.min(BATCH_SIZE, totalDays - VISIBLE_DAYS);
+  var hasMore = totalDays > VISIBLE_DAYS;
+
   var html = '<div class="timeline" id="timeline">';
 
-  siteData.days.forEach(function(day, di) {
+  // ── Render first 3 days (today expanded, rest collapsed) ──
+  for (var di = 0; di < VISIBLE_DAYS; di++) {
+    var day = allDays[di];
     var isFirst = di === 0;
-    var inFirstBatch = di < VISIBLE_DAYS_BATCH;
-    var bodyClass = inFirstBatch ? (isFirst ? '' : ' collapsed') : ' collapsed';
+    html += renderDayGroup(day, di, isFirst ? '' : ' collapsed', true);
+  }
 
-    html += '<div class="day-group reveal' + (inFirstBatch ? '' : ' day-group-hidden') + '" style="transition-delay:' + (di * 0.05) + 's">';
-    html += '<div class="day-node">';
-    html += '<div class="day-dot"></div>';
-    html += '<span class="day-label">' + day.label + '</span>';
-    html += '<span class="day-date">' + day.date + '</span>';
-    html += '</div>';
-    html += '<div class="day-body' + bodyClass + '">';
-    html += '<div class="day-projects">';
-
-    day.projects.forEach(function(p) {
-      var langClass = langMap[p.lang] || p.lang.toLowerCase();
-      var cardExtra = isFirst ? '' : ' dimmed';
-
-      // Problems
-      var problemsHtml = '<ul>';
-      if (p.problems) p.problems.forEach(function(x) { problemsHtml += '<li>' + x + '</li>'; });
-      problemsHtml += '</ul>';
-
-      // Usage
-      var usageHtml = '<ol>';
-      if (p.usage) p.usage.forEach(function(x) { usageHtml += '<li>' + x + '</li>'; });
-      usageHtml += '</ol>';
-
-      // Insights
-      var insightsHtml = '<ul>';
-      if (p.insights) p.insights.forEach(function(x) { insightsHtml += '<li>' + x + '</li>'; });
-      insightsHtml += '</ul>';
-
-      html += '<div class="project-card reveal' + cardExtra + '" data-rank="' + p.rank + '" style="transition-delay:' + (di * 0.05 + 0.05) + 's">';
-      html += '<div class="rank-ribbon"></div>';
-      html += '<div class="pc-header">';
-      html += '<span class="rank-num">#' + p.rank + '</span>';
-      html += '<a href="' + p.url + '" class="repo-name" target="_blank">' + p.fullName + '</a>';
-      html += '<span class="org">' + p.org + '</span>';
-      html += '</div>';
-      html += '<div class="pc-meta">';
-      html += '<span class="lang">' + p.lang + '</span>';
-      html += '<span class="stats">';
-      html += '⭐ <strong>' + p.stars + '</strong>';
-      html += ' · 🍴 <strong>' + p.forks + '</strong>';
-      html += '</span>';
-      html += '<span class="today">+ ' + p.starsToday + ' today</span>';
-      html += '</div>';
-      html += '<p class="pc-desc">' + p.description + '</p>';
-      html += '<div class="pc-details">';
-      html += '<div class="pc-section"><div class="pc-section-label problem">📌 解决什么问题</div><div class="pc-section-content">' + problemsHtml + '</div></div>';
-      html += '<div class="pc-section"><div class="pc-section-label usage">🔧 如何使用</div><div class="pc-section-content">' + usageHtml + '</div></div>';
-      html += '<div class="pc-section"><div class="pc-section-label insight">💡 产品价值思路</div><div class="pc-section-content">' + insightsHtml + '</div></div>';
-      html += '</div>';
-      html += '<div class="pc-tags">';
-      p.tags.forEach(function(t) {
-        html += '<span class="pc-tag">' + t + '</span>';
-      });
-      var countText = p.count > 1 ? p.count + '次上榜' : '首次上榜';
-      html += '<span class="pc-count">' + countText + '</span>';
-      html += '</div>';
-      html += '</div>';
-    });
-
-    html += '</div>'; // day-projects
-    html += '<div class="day-fade"></div>';
-    html += '</div>'; // day-body
-    if (!isFirst && inFirstBatch) {
-      html += '<button class="day-toggle" onclick="toggleDay(this)">';
-      html += '<span class="toggle-dot"></span>';
-      html += '<span class="toggle-label">' + day.label + '</span>';
-      html += '<span class="toggle-date">' + day.date + '</span>';
-      html += '<span class="toggle-count">' + day.projects.length + ' 个项目</span>';
-      html += '<span class="toggle-icon">▾</span>';
-      html += '</button>';
+  // ── Fade preview of next batch ──
+  if (hasMore) {
+    html += '<div class="timeline-fade-wrap" id="timelineFade">';
+    html += '<div class="timeline-fade-scroll">';
+    for (var pi = 0; pi < previewCount; pi++) {
+      var pDay = allDays[VISIBLE_DAYS + pi];
+      html += renderDayGroup(pDay, VISIBLE_DAYS + pi, ' collapsed', false);
     }
-    html += '</div>'; // day-group
-  });
+    html += '</div>';
+    html += '<div class="timeline-fade-gradient"></div>';
+    html += '</div>';
+  }
 
   html += '</div>'; // timeline
 
-  // Load more button
-  if (siteData.days.length > VISIBLE_DAYS_BATCH) {
+  // ── Load more button ──
+  if (hasMore) {
+    var remaining = totalDays - VISIBLE_DAYS;
     html += '<div class="load-more-wrap" id="loadMoreWrap">';
-    html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录</button>';
+    html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录 <span class="load-more-count">(' + remaining + ' 天)</span></button>';
     html += '</div>';
   }
 
@@ -191,8 +58,158 @@ function renderTimeline() {
   html += '</div>';
 
   container.innerHTML = html;
-  currentDayCount = VISIBLE_DAYS_BATCH;
   observeReveal();
+}
+
+function renderDayGroup(day, index, bodyExtra, showToggle) {
+  var isFirst = index === 0;
+  var html = '';
+
+  html += '<div class="day-group reveal" style="transition-delay:' + (index * 0.05) + 's">';
+  html += '<div class="day-node">';
+  html += '<div class="day-dot"></div>';
+  html += '<span class="day-label">' + day.label + '</span>';
+  html += '<span class="day-date">' + day.date + '</span>';
+  html += '</div>';
+  html += '<div class="day-body' + bodyExtra + '">';
+  html += '<div class="day-projects">';
+
+  day.projects.forEach(function(p) {
+    var cardExtra = isFirst ? '' : ' dimmed';
+
+    // Problems
+    var problemsHtml = '<ul>';
+    if (p.problems) p.problems.forEach(function(x) { problemsHtml += '<li>' + x + '</li>'; });
+    problemsHtml += '</ul>';
+
+    // Usage
+    var usageHtml = '<ol>';
+    if (p.usage) p.usage.forEach(function(x) { usageHtml += '<li>' + x + '</li>'; });
+    usageHtml += '</ol>';
+
+    // Insights
+    var insightsHtml = '<ul>';
+    if (p.insights) p.insights.forEach(function(x) { insightsHtml += '<li>' + x + '</li>'; });
+    insightsHtml += '</ul>';
+
+    html += '<div class="project-card reveal' + cardExtra + '" data-rank="' + p.rank + '" style="transition-delay:' + (index * 0.05 + 0.05) + 's">';
+    html += '<div class="rank-ribbon"></div>';
+    html += '<div class="pc-header">';
+    html += '<span class="rank-num">#' + p.rank + '</span>';
+    html += '<a href="' + p.url + '" class="repo-name" target="_blank">' + p.fullName + '</a>';
+    html += '<span class="org">' + p.org + '</span>';
+    html += '</div>';
+    html += '<div class="pc-meta">';
+    html += '<span class="lang">' + p.lang + '</span>';
+    html += '<span class="stats">';
+    html += '⭐ <strong>' + p.stars + '</strong>';
+    html += ' · 🍴 <strong>' + p.forks + '</strong>';
+    html += '</span>';
+    html += '<span class="today">+ ' + p.starsToday + ' today</span>';
+    html += '</div>';
+    html += '<p class="pc-desc">' + p.description + '</p>';
+    html += '<div class="pc-details">';
+    html += '<div class="pc-section"><div class="pc-section-label problem">📌 解决什么问题</div><div class="pc-section-content">' + problemsHtml + '</div></div>';
+    html += '<div class="pc-section"><div class="pc-section-label usage">🔧 如何使用</div><div class="pc-section-content">' + usageHtml + '</div></div>';
+    html += '<div class="pc-section"><div class="pc-section-label insight">💡 产品价值思路</div><div class="pc-section-content">' + insightsHtml + '</div></div>';
+    html += '</div>';
+    html += '<div class="pc-tags">';
+    p.tags.forEach(function(t) {
+      html += '<span class="pc-tag">' + t + '</span>';
+    });
+    var countText = p.count > 1 ? p.count + '次上榜' : '首次上榜';
+    html += '<span class="pc-count">' + countText + '</span>';
+    html += '</div>';
+    html += '</div>';
+  });
+
+  html += '</div>'; // day-projects
+  html += '<div class="day-fade"></div>';
+  html += '</div>'; // day-body
+
+  // Toggle button (only for non-first visible days)
+  if (!isFirst && showToggle) {
+    html += '<button class="day-toggle" onclick="toggleDay(this)">';
+    html += '<span class="toggle-dot"></span>';
+    html += '<span class="toggle-label">' + day.label + '</span>';
+    html += '<span class="toggle-date">' + day.date + '</span>';
+    html += '<span class="toggle-count">' + day.projects.length + ' 个项目</span>';
+    html += '<span class="toggle-icon">▾</span>';
+    html += '</button>';
+  }
+
+  html += '</div>'; // day-group
+  return html;
+}
+
+function loadMoreDays() {
+  var fadeWrap = document.getElementById('timelineFade');
+  var loadMoreWrap = document.getElementById('loadMoreWrap');
+  var timeline = document.getElementById('timeline');
+
+  // Move all items from fade wrap into main timeline
+  if (fadeWrap) {
+    var fadeContent = fadeWrap.querySelector('.timeline-fade-scroll');
+    if (fadeContent) {
+      var groups = fadeContent.querySelectorAll('.day-group');
+      groups.forEach(function(g) {
+        // Add toggle button for this day (since it's not the first day)
+        var dayBody = g.querySelector('.day-body');
+        var dayNode = g.querySelector('.day-node');
+        var dayLabel = dayNode ? dayNode.querySelector('.day-label')?.textContent : '';
+        var dayDate = dayNode ? dayNode.querySelector('.day-date')?.textContent : '';
+        var dayProjects = g.querySelectorAll('.project-card').length;
+
+        if (!g.querySelector('.day-toggle')) {
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'day-toggle';
+          toggleBtn.setAttribute('onclick', 'toggleDay(this)');
+          toggleBtn.innerHTML = '<span class="toggle-dot"></span><span class="toggle-label">' + dayLabel + '</span><span class="toggle-date">' + dayDate + '</span><span class="toggle-count">' + dayProjects + ' 个项目</span><span class="toggle-icon">▾</span>';
+          g.appendChild(toggleBtn);
+        }
+
+        timeline.appendChild(g);
+      });
+    }
+    fadeWrap.remove();
+  }
+
+  // Check if more days exist beyond current batch
+  var allRendered = document.querySelectorAll('.day-group').length;
+  var totalDays = window.siteData.days.length;
+
+  if (allRendered < totalDays) {
+    // Add next batch as new fade preview
+    var nextBatchStart = allRendered;
+    var previewCount = Math.min(BATCH_SIZE, totalDays - nextBatchStart);
+
+    var newFadeHtml = '<div class="timeline-fade-wrap" id="timelineFade">';
+    newFadeHtml += '<div class="timeline-fade-scroll">';
+    for (var pi = 0; pi < previewCount; pi++) {
+      var pDay = window.siteData.days[nextBatchStart + pi];
+      newFadeHtml += renderDayGroup(pDay, nextBatchStart + pi, ' collapsed', false);
+    }
+    newFadeHtml += '</div>';
+    newFadeHtml += '<div class="timeline-fade-gradient"></div>';
+    newFadeHtml += '</div>';
+
+    // Insert before load more wrap
+    if (loadMoreWrap) {
+      var tempDiv = document.createElement('div');
+      tempDiv.innerHTML = newFadeHtml;
+      loadMoreWrap.parentNode.insertBefore(tempDiv.firstElementChild, loadMoreWrap);
+    }
+
+    // Update button text
+    var remaining = totalDays - nextBatchStart - previewCount;
+    if (remaining > 0) {
+      document.querySelector('.load-more-count').textContent = '(' + remaining + ' 天)';
+    } else {
+      loadMoreWrap.style.display = 'none';
+    }
+  } else {
+    if (loadMoreWrap) loadMoreWrap.style.display = 'none';
+  }
 }
 
 function toggleDay(btn) {
@@ -222,37 +239,6 @@ function toggleDay(btn) {
   }
 }
 
-function loadMoreDays() {
-  var nextBatch = currentDayCount + VISIBLE_DAYS_BATCH;
-  var hiddenGroups = document.querySelectorAll('.day-group-hidden');
-
-  for (var i = 0; i < hiddenGroups.length && i < VISIBLE_DAYS_BATCH; i++) {
-    hiddenGroups[i].classList.remove('day-group-hidden');
-    // Add toggle button for this day
-    var dayGroup = hiddenGroups[i];
-    if (!dayGroup.querySelector('.day-toggle')) {
-      var dayNode = dayGroup.querySelector('.day-node');
-      var dayLabel = dayNode ? dayNode.querySelector('.day-label')?.textContent : '';
-      var dayDate = dayNode ? dayNode.querySelector('.day-date')?.textContent : '';
-      var dayProjects = dayGroup.querySelectorAll('.project-card').length;
-      var toggleBtn = document.createElement('button');
-      toggleBtn.className = 'day-toggle';
-      toggleBtn.setAttribute('onclick', 'toggleDay(this)');
-      toggleBtn.innerHTML = '<span class="toggle-dot"></span><span class="toggle-label">' + dayLabel + '</span><span class="toggle-date">' + dayDate + '</span><span class="toggle-count">' + dayProjects + ' 个项目</span><span class="toggle-icon">▾</span>';
-      dayGroup.appendChild(toggleBtn);
-    }
-  }
-
-  currentDayCount += VISIBLE_DAYS_BATCH;
-
-  // Hide load more button if all days are shown
-  var remaining = document.querySelectorAll('.day-group-hidden');
-  if (remaining.length === 0) {
-    var loadMoreWrap = document.getElementById('loadMoreWrap');
-    if (loadMoreWrap) loadMoreWrap.style.display = 'none';
-  }
-}
-
 // ── Render Articles ────────────────────────────
 
 function renderArticles(filter) {
@@ -269,88 +255,40 @@ function renderArticles(filter) {
         '<span class="card-date">' + a.date + '</span>' +
       '</div>' +
       '<h3 class="card-title">' + a.title + '</h3>' +
-      '<p class="card-desc">' + a.desc + '</p>' +
+      '<p class="card-excerpt">' + a.excerpt + '</p>' +
       '<div class="card-footer">' +
-        '<span class="card-read-time">' + a.readTime + '</span>' +
-        '<span class="card-arrow">→</span>' +
-      '</div>' +
-    '</div>';
-  }).join('');
-
-  observeReveal();
-}
-
-// ── Render Projects ────────────────────────────
-
-function renderProjects() {
-  var grid = document.getElementById('projectsGrid');
-  grid.innerHTML = projects.map(function(p, i) {
-    return '<div class="project-card reveal" style="transition-delay: ' + (i * 0.1) + 's">' +
-      '<div class="project-header">' +
-        '<div class="project-icon">' + p.icon + '</div>' +
-        '<div class="project-stars"><span class="star-icon">★</span> ' + p.stars + '</div>' +
-      '</div>' +
-      '<h3 class="project-name">' + p.name + '</h3>' +
-      '<p class="project-desc">' + p.desc + '</p>' +
-      '<div class="project-stack">' +
-        p.stack.map(function(s) { return '<span class="stack-tag">' + s + '</span>'; }).join('') +
+        '<span class="card-read">阅读全文 →</span>' +
       '</div>' +
     '</div>';
   }).join('');
   observeReveal();
 }
 
-// ── Scroll Reveal ──────────────────────────────
+// ── Article Filter ─────────────────────────
+
+var activeFilter = 'all';
+document.querySelectorAll('.filter-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    activeFilter = btn.getAttribute('data-filter');
+    renderArticles(activeFilter);
+  });
+});
+
+// ── Scroll Reveal Animation ─────────────────
 
 function observeReveal() {
-  var els = document.querySelectorAll('.reveal:not(.visible)');
-  if (els.length === 0) return;
-  var observer = new IntersectionObserver(function(entries) {
+  var els = document.querySelectorAll('.reveal');
+  var obs = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
       if (e.isIntersecting) {
         e.target.classList.add('visible');
-        observer.unobserve(e.target);
+        obs.unobserve(e.target);
       }
     });
-  }, { threshold: 0.08 });
-  els.forEach(function(el) { observer.observe(el); });
-}
-
-// ── Navbar ─────────────────────────────────────
-
-function initNavbar() {
-  var nav = document.getElementById('navbar');
-  var hamburger = document.getElementById('hamburger');
-  var navLinks = document.getElementById('navLinks');
-
-  window.addEventListener('scroll', function() {
-    nav.classList.toggle('scrolled', window.scrollY > 20);
-  });
-
-  hamburger.addEventListener('click', function() {
-    hamburger.classList.toggle('open');
-    navLinks.classList.toggle('open');
-  });
-
-  var sections = document.querySelectorAll('section[id]');
-  var links = document.querySelectorAll('.nav-link');
-
-  window.addEventListener('scroll', function() {
-    var current = '';
-    sections.forEach(function(s) {
-      if (window.scrollY >= s.offsetTop - 120) current = s.id;
-    });
-    links.forEach(function(l) {
-      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
-    });
-  });
-
-  navLinks.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      hamburger.classList.remove('open');
-      navLinks.classList.remove('open');
-    });
-  });
+  }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function(el) { obs.observe(el); });
 }
 
 // ── Collapsible Day Toggle ────────────────────
@@ -363,8 +301,7 @@ function initBgParticles() {
   var ctx = canvas.getContext('2d');
   var particles = [];
   var mouse = { x: -9999, y: -9999 };
-
-  var colors = ['#FF8C42', '#FFB347', '#00D9FF', '#A78BFA', '#FF6B35'];
+  var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -373,121 +310,64 @@ function initBgParticles() {
   resize();
   window.addEventListener('resize', resize);
 
-  document.addEventListener('mousemove', function(e) {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  });
-  document.addEventListener('mouseleave', function() {
-    mouse.x = -9999;
-    mouse.y = -9999;
-  });
-
-  function createParticle() {
-    return {
+  var count = Math.min(Math.floor(canvas.width * canvas.height / 8000), 150);
+  for (var i = 0; i < count; i++) {
+    particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       vx: (Math.random() - 0.5) * 0.5,
       vy: (Math.random() - 0.5) * 0.5,
-      size: Math.random() * 2.8 + 0.8,
-      color: colors[Math.floor(Math.random() * colors.length)],
-      opacity: Math.random() * 0.4 + 0.15,
-      pulse: Math.random() * Math.PI * 2,
-      pulseSpeed: Math.random() * 0.02 + 0.01,
-    };
-  }
-
-  var count = Math.min(Math.floor(canvas.width * canvas.height / 8000), 150);
-  for (var i = 0; i < count; i++) {
-    particles.push(createParticle());
+      r: Math.random() * 2 + 1
+    });
   }
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var color = isDark ? '255,140,66' : '200,100,50';
 
-    // Update & draw particles
     particles.forEach(function(p) {
       p.x += p.vx;
       p.y += p.vy;
-      p.pulse += p.pulseSpeed;
+      if (p.x < 0) p.x = canvas.width;
+      if (p.x > canvas.width) p.x = 0;
+      if (p.y < 0) p.y = canvas.height;
+      if (p.y > canvas.height) p.y = 0;
 
-      if (p.x < -15) p.x = canvas.width + 15;
-      if (p.x > canvas.width + 15) p.x = -15;
-      if (p.y < -15) p.y = canvas.height + 15;
-      if (p.y > canvas.height + 15) p.y = -15;
-
-      // Mouse interaction
-      var dx = mouse.x - p.x;
-      var dy = mouse.y - p.y;
-      var dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 250) {
-        var force = (250 - dist) / 250 * 0.015;
-        p.vx += dx * force;
-        p.vy += dy * force;
-        var speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
-        if (speed > 2) {
-          p.vx = (p.vx / speed) * 2;
-          p.vy = (p.vy / speed) * 2;
-        }
-      }
-
-      p.vx *= 0.995;
-      p.vy *= 0.995;
-
-      var currentOpacity = p.opacity + Math.sin(p.pulse) * 0.12;
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = p.color;
-      ctx.globalAlpha = Math.max(0.03, Math.min(0.7, currentOpacity));
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + color + ',0.15)';
       ctx.fill();
     });
 
-    // Connections
-    particles.forEach(function(a, i) {
-      particles.forEach(function(b, j) {
-        if (j <= i) return;
-        var dx = a.x - b.x;
-        var dy = a.y - b.y;
-        var dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 140) {
-          ctx.beginPath();
-          ctx.moveTo(a.x, a.y);
-          ctx.lineTo(b.x, b.y);
-          ctx.strokeStyle = '#FF8C42';
-          ctx.globalAlpha = (1 - dist / 140) * 0.08;
-          ctx.lineWidth = 0.4;
-          ctx.stroke();
-        }
-      });
+    // Mouse connections
+    particles.forEach(function(p) {
+      var dx = p.x - mouse.x;
+      var dy = p.y - mouse.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 180) {
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.strokeStyle = 'rgba(' + color + ',' + (0.08 * (1 - dist / 180)) + ')';
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+      }
     });
 
-    ctx.globalAlpha = 1;
     requestAnimationFrame(draw);
   }
+
+  document.addEventListener('mousemove', function(e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
 
   draw();
 }
 
-// ── Filter ─────────────────────────────────────
-
-function initFilter() {
-  var btns = document.querySelectorAll('.filter-btn');
-  btns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      btns.forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      renderArticles(btn.dataset.filter);
-    });
-  });
-}
-
-// ── Init ───────────────────────────────────────
-
+// ── Init ──
 document.addEventListener('DOMContentLoaded', function() {
-  initBgParticles();
-  initNavbar();
-  renderTimeline();
+  if (window.siteData) renderTimeline();
   renderArticles();
-  renderProjects();
-  initFilter();
-  observeReveal();
+  initBgParticles();
 });
