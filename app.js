@@ -7,6 +7,86 @@ var langMap = {
   'zig': 'zig', 'solidity': 'sol'
 };
 
+// ── Data ──────────────────────────────────────
+
+var articles = [
+  {
+    id: 1,
+    title: 'React 18 并发特性深度解析',
+    tags: ['React', '性能优化'],
+    date: '2026-03-15',
+    readTime: '12 分钟',
+    desc: '深入探讨 React 18 的 Fiber 架构升级、Concurrent Mode、useTransition、Suspense 等并发特性，以及它们在生产环境中的实战应用。',
+  },
+  {
+    id: 2,
+    title: '从 0 到 1：构建 Node.js 微服务系统',
+    tags: ['Backend', '架构'],
+    date: '2026-02-28',
+    readTime: '18 分钟',
+    desc: '手把手搭建基于 Node.js 的微服务架构，涵盖 API Gateway、服务注册发现、链路追踪、熔断限流等核心能力。',
+  },
+  {
+    id: 3,
+    title: 'Kubernetes 实战：容器编排完全指南',
+    tags: ['DevOps', 'K8s'],
+    date: '2026-02-10',
+    readTime: '22 分钟',
+    desc: '从集群搭建到生产部署，涵盖 Pod、Deployment、Service、Ingress、HPA 自动扩缩容，以及 Helm Chart 打包最佳实践。',
+  },
+  {
+    id: 4,
+    title: '现代前端工具链对比：Webpack vs Vite vs esbuild',
+    tags: ['前端工程'],
+    date: '2026-01-20',
+    readTime: '10 分钟',
+    desc: '深度对比三大构建工具的架构差异、性能表现和适用场景，帮你在不同项目中做出最优的技术选型决策。',
+  },
+  {
+    id: 5,
+    title: '构建高性能 React 应用的 5 个技巧',
+    tags: ['React', '性能优化'],
+    date: '2026-03-01',
+    readTime: '8 分钟',
+    desc: '深入探讨代码分割、懒加载、Memo 优化、虚拟列表以及 Web Worker 在 React 应用中的实战技巧。',
+  },
+  {
+    id: 6,
+    title: 'Go 语言高并发实战：goroutine 与 channel',
+    tags: ['Backend'],
+    date: '2026-01-05',
+    readTime: '15 分钟',
+    desc: '通过实战案例掌握 Go 的并发编程模型，深入讲解 goroutine 调度器、channel 通信模式与常见并发陷阱规避。',
+  },
+];
+
+var projects = [
+  {
+    id: 1,
+    icon: '⚡',
+    name: '高并发分布式缓存系统',
+    desc: '基于 Go + Redis + Raft 共识算法构建的分布式缓存系统，支持百万级 QPS，具备自动故障转移和水平扩容能力。',
+    stack: ['Go', 'Redis', 'Kubernetes', 'gRPC', 'Raft'],
+    stars: '520+',
+  },
+  {
+    id: 2,
+    icon: '🧩',
+    name: '开源 React UI 组件库',
+    desc: '基于 React + TypeScript 打造的高质量 UI 组件库，完整 Storybook 文档，覆盖 60+ 组件，支持主题定制。',
+    stack: ['React', 'TypeScript', 'Storybook', 'Vitest'],
+    stars: '310+',
+  },
+  {
+    id: 3,
+    icon: '📊',
+    name: '云原生应用监控平台',
+    desc: '集成 Prometheus + Grafana + OpenTelemetry 的一站式可观测性平台，支持链路追踪、指标聚合和智能告警。',
+    stack: ['React', 'Node.js', 'Prometheus', 'Docker'],
+    stars: '180+',
+  },
+];
+
 // ── Render Trending Timeline ─────────────────
 
 var VISIBLE_DAYS = 3;
@@ -204,6 +284,27 @@ document.querySelectorAll('.filter-btn').forEach(function(btn) {
   });
 });
 
+// ── Render Projects ──────────────────────────
+
+function renderProjects() {
+  var grid = document.getElementById('projectsGrid');
+  if (!grid) return;
+  grid.innerHTML = projects.map(function(p, i) {
+    return '<div class="project-card reveal" style="transition-delay: ' + (i * 0.1) + 's">' +
+      '<div class="project-header">' +
+        '<div class="project-icon">' + p.icon + '</div>' +
+        '<div class="project-stars"><span class="star-icon">★</span> ' + p.stars + '</div>' +
+      '</div>' +
+      '<h3 class="project-name">' + p.name + '</h3>' +
+      '<p class="project-desc">' + p.desc + '</p>' +
+      '<div class="project-stack">' +
+        p.stack.map(function(s) { return '<span class="stack-tag">' + s + '</span>'; }).join('') +
+      '</div>' +
+    '</div>';
+  }).join('');
+  observeReveal();
+}
+
 // ── Scroll Reveal Animation ─────────────────
 
 function observeReveal() {
@@ -297,5 +398,6 @@ function initBgParticles() {
 document.addEventListener('DOMContentLoaded', function() {
   if (window.siteData) renderTimeline();
   renderArticles();
+  renderProjects();
   initBgParticles();
 });
