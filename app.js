@@ -12,6 +12,7 @@ var langMap = {
 var articles = [
   {
     id: 1,
+    readTime: '12 分钟',
     title: 'React 18 并发特性深度解析',
     tags: ['React', '性能优化'],
     date: '2026-03-15',
@@ -19,6 +20,7 @@ var articles = [
   },
   {
     id: 2,
+    readTime: '18 分钟',
     title: '从 0 到 1：构建 Node.js 微服务系统',
     tags: ['Backend', '架构'],
     date: '2026-02-28',
@@ -26,6 +28,7 @@ var articles = [
   },
   {
     id: 3,
+    readTime: '22 分钟',
     title: 'Kubernetes 实战：容器编排完全指南',
     tags: ['DevOps', 'K8s'],
     date: '2026-02-10',
@@ -33,6 +36,7 @@ var articles = [
   },
   {
     id: 4,
+    readTime: '10 分钟',
     title: '现代前端工具链对比：Webpack vs Vite vs esbuild',
     tags: ['前端工程'],
     date: '2026-01-20',
@@ -40,6 +44,7 @@ var articles = [
   },
   {
     id: 5,
+    readTime: '8 分钟',
     title: '构建高性能 React 应用的 5 个技巧',
     tags: ['React', '性能优化'],
     date: '2026-03-01',
@@ -47,6 +52,7 @@ var articles = [
   },
   {
     id: 6,
+    readTime: '15 分钟',
     title: 'Go 语言高并发实战：goroutine 与 channel',
     tags: ['Backend'],
     date: '2026-01-05',
@@ -54,6 +60,7 @@ var articles = [
   },
   {
     id: 7,
+    readTime: '15 分钟',
     title: 'Java 21 新特性实战：虚拟线程与模式匹配',
     tags: ['Java'],
     date: '2026-04-10',
@@ -61,6 +68,7 @@ var articles = [
   },
   {
     id: 8,
+    readTime: '20 分钟',
     title: 'Android Jetpack Compose 从入门到精通',
     tags: ['Android'],
     date: '2026-04-20',
@@ -68,6 +76,7 @@ var articles = [
   },
   {
     id: 9,
+    readTime: '18 分钟',
     title: 'Spring Boot 3 + GraalVM 原生编译实战',
     tags: ['Java', 'Backend'],
     date: '2026-05-05',
@@ -75,6 +84,7 @@ var articles = [
   },
   {
     id: 10,
+    readTime: '16 分钟',
     title: 'Android 性能优化：从启动到渲染的全链路分析',
     tags: ['Android', '性能优化'],
     date: '2026-05-12',
@@ -82,6 +92,7 @@ var articles = [
   },
   {
     id: 11,
+    readTime: '14 分钟',
     title: 'Go 语言进阶：泛型、错误处理与测试策略',
     tags: ['Go', 'Backend'],
     date: '2026-05-18',
@@ -292,9 +303,10 @@ function renderArticles(filter) {
         '<span class="card-date">' + a.date + '</span>' +
       '</div>' +
       '<h3 class="card-title">' + a.title + '</h3>' +
-      '<p class="card-excerpt">' + a.desc + '</p>' +
+      '<p class="card-desc">' + a.desc + '</p>' +
       '<div class="card-footer">' +
-        '<span class="card-read">阅读全文 →</span>' +
+        '<span class="card-read-time">' + a.readTime + '</span>' +
+        '<span class="card-arrow">→</span>' +
       '</div>' +
     '</div>';
   }).join('');
