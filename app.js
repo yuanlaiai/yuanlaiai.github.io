@@ -372,6 +372,9 @@ function initBgParticles() {
   var particles = [];
   var mouse = { x: -9999, y: -9999 };
   var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var colors = isDark
+    ? ['255,140,66', '255,179,71', '0,217,255', '167,139,250']
+    : ['230,120,50', '210,150,60', '0,180,220', '140,110,220'];
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -380,49 +383,96 @@ function initBgParticles() {
   resize();
   window.addEventListener('resize', resize);
 
-  var count = Math.min(Math.floor(canvas.width * canvas.height / 8000), 150);
+  var count = Math.min(Math.floor(canvas.width * canvas.height / 6000), 200);
   for (var i = 0; i < count; i++) {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      r: Math.random() * 2 + 1
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      r: Math.random() * 3 + 0.5,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      alpha: Math.random() * 0.5 + 0.1,
+      phase: Math.random() * Math.PI * 2
     });
   }
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    var color = isDark ? '255,140,66' : '200,100,50';
+    var time = Date.now() / 3000;
+
+    // Draw connections between nearby particles
+    for (var i = 0; i < particles.length; i++) {
+      for (var j = i + 1; j < particles.length; j++) {
+        var dx = particles[i].x - particles[j].x;
+        var dy = particles[i].y - particles[j].y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 120) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = 'rgba(' + colors[0] + ',' + (0.06 * (1 - dist / 120)) + ')';
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+    }
 
     particles.forEach(function(p) {
+      // Floating motion with sine wave
+      p.vx += Math.sin(time + p.phase) * 0.01;
+      p.vy += Math.cos(time + p.phase * 1.3) * 0.01;
+      // Damping
+      p.vx *= 0.99;
+      p.vy *= 0.99;
+
+      // Mouse repulsion
+      var mdx = p.x - mouse.x;
+      var mdy = p.y - mouse.y;
+      var mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+      if (mDist < 150) {
+        var force = (150 - mDist) / 150 * 0.5;
+        var angle = Math.atan2(mdy, mdx);
+        p.vx += Math.cos(angle) * force;
+        p.vy += Math.sin(angle) * force;
+      }
+
       p.x += p.vx;
       p.y += p.vy;
-      if (p.x < 0) p.x = canvas.width;
-      if (p.x > canvas.width) p.x = 0;
-      if (p.y < 0) p.y = canvas.height;
-      if (p.y > canvas.height) p.y = 0;
 
+      // Wrap around edges
+      if (p.x < -20) p.x = canvas.width + 20;
+      if (p.x > canvas.width + 20) p.x = -20;
+      if (p.y < -20) p.y = canvas.height + 20;
+      if (p.y > canvas.height + 20) p.y = -20;
+
+      // Draw particle with glow
+      var gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 4);
+      gradient.addColorStop(0, 'rgba(' + p.color + ',' + p.alpha + ')');
+      gradient.addColorStop(0.3, 'rgba(' + p.color + ',' + (p.alpha * 0.3) + ')');
+      gradient.addColorStop(1, 'rgba(' + p.color + ',0)');
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
+      ctx.fillStyle = gradient;
+      ctx.fill();
+
+      // Core dot
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(' + color + ',0.15)';
+      ctx.fillStyle = 'rgba(' + p.color + ',' + (p.alpha * 1.2) + ')';
       ctx.fill();
     });
 
-    // Mouse connections
-    particles.forEach(function(p) {
-      var dx = p.x - mouse.x;
-      var dy = p.y - mouse.y;
-      var dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 180) {
-        ctx.beginPath();
-        ctx.moveTo(p.x, p.y);
-        ctx.lineTo(mouse.x, mouse.y);
-        ctx.strokeStyle = 'rgba(' + color + ',' + (0.08 * (1 - dist / 180)) + ')';
-        ctx.lineWidth = 0.8;
-        ctx.stroke();
-      }
-    });
+    // Mouse glow
+    if (mouse.x > 0) {
+      var glow = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 200);
+      glow.addColorStop(0, 'rgba(' + colors[0] + ',0.03)');
+      glow.addColorStop(1, 'rgba(' + colors[0] + ',0)');
+      ctx.beginPath();
+      ctx.arc(mouse.x, mouse.y, 200, 0, Math.PI * 2);
+      ctx.fillStyle = glow;
+      ctx.fill();
+    }
 
     requestAnimationFrame(draw);
   }
