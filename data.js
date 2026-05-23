@@ -1,11 +1,213 @@
 // Source: data.json — Edit that file, regenerate with: bash scripts/update-data.sh
-// Last updated: 2026-05-22
+// Last updated: 2026-05-23
 var siteData = {
-  "lastUpdated": "2026-05-22",
+  "lastUpdated": "2026-05-23",
   "days": [
     {
-      "date": "2026-05-22",
+      "date": "2026-05-23",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "anthropics",
+          "name": "claude-plugins-official",
+          "fullName": "anthropics / claude-plugins-official",
+          "org": "Anthropic",
+          "url": "https://github.com/anthropics/claude-plugins-official",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "24,963",
+          "forks": "2,766",
+          "starsToday": "2,549",
+          "count": 2,
+          "description": "Anthropic 官方 Claude Code 插件目录 —— 连续两日热榜，今日 +2,549 star，插件生态持续爆发",
+          "problems": [
+            "<strong>插件发现仍然困难：</strong>虽然官方目录已上线，但随着插件数量增长（403 commits，314 branches），如何从数百个插件中找到最适合自己的仍然是个挑战。目录支持 Discover 浏览 + 关键词搜索。",
+            "<strong>第三方插件质量审核：</strong>外部插件需要提交审核后才能进入 marketplace。审核流程确保安全性和质量标准，同时支持社区贡献。",
+            "<strong>跨平台兼容：</strong>Claude Code、Cursor、Codex 等 Agent 都有自己的插件格式。官方目录统一了插件定义格式（.claude-plugin/plugin.json），一次开发多平台可用。"
+          ],
+          "usage": [
+            "在 Claude Code 中浏览发现插件：<code>/plugin > Discover</code>",
+            "一键安装插件：<pre><code>/plugin install {plugin-name}@claude-plugins-official</code></pre>",
+            "查看已安装的插件列表：<code>/plugin list</code>",
+            "GitHub 仓库浏览全部插件源码：<a href=\"https://github.com/anthropics/claude-plugins-official\" style=\"color:#58a6ff\">github.com/anthropics/claude-plugins-official</a>"
+          ],
+          "insights": [
+            "<strong>插件经济的爆发前夜：</strong>25K star + 每日 2.5K+ 增速，Claude Code 的 App Store 时刻正在到来。开发者可以像 iOS 开发者一样靠插件变现。",
+            "<strong>企业插件内购模式：</strong>企业可以自建私有插件目录——标准化内部工具、API、数据库的 Agent 接口，所有开发者统一使用，降低 onboarding 成本。",
+            "<strong>安全审核即服务：</strong>随着插件数量爆发，插件的安全审核成为刚需——自动化插件安全扫描、行为分析、沙箱测试，类似移动 App 的安全审核市场。"
+          ],
+          "tags": [
+            "claude-code",
+            "plugin-marketplace",
+            "anthropic-official",
+            "one-click-install",
+            "MCP",
+            "Agent-extensions"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "Lum1104",
+          "name": "Understand-Anything",
+          "fullName": "Lum1104 / Understand-Anything",
+          "org": "Lum1104",
+          "url": "https://github.com/Lum1104/Understand-Anything",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "18,678",
+          "forks": "1,692",
+          "starsToday": "1,393",
+          "count": 1,
+          "description": "把任意代码库变成可视化的交互式知识图谱 —— 文件、函数、类、依赖关系一目了然，Claude Code / Codex / Cursor 全兼容",
+          "problems": [
+            "<strong>新项目上手像大海捞针：</strong>加入一个 20 万行代码的项目，从哪开始？逐文件阅读效率极低。Understand Anything 用多 Agent 管道分析项目，自动构建知识图谱——每个文件、函数、类、依赖都成为可点击的节点。",
+            "<strong>只看代码看不透业务逻辑：</strong>代码结构不等于业务逻辑。Domain View 模式把代码映射为业务领域、流程、步骤的可视化横向图谱，帮新人理解&quot;这段代码到底在做什么业务&quot;。",
+            "<strong>改代码不知道影响范围：</strong>改一个函数可能影响十个模块。Diff Impact Analysis 在提交前告诉你改动会波及系统的哪些部分，避免上线事故。"
+          ],
+          "usage": [
+            "Claude Code 安装：<code>/plugin install understand-anything</code>",
+            "分析代码库：<pre><code>/understand-code /path/to/your/project</code></pre>",
+            "启动交互式知识图谱仪表盘：<pre><code>/understand-dashboard</code></pre>",
+            "使用搜索功能：<code>/understand-search \"which parts handle auth?\"</code>"
+          ],
+          "insights": [
+            "<strong>代码可视化 onboarding 平台：</strong>新员工入职时不用看文档，直接看知识图谱理解系统架构。做成 SaaS——上传仓库链接，自动生成交互式架构图，按项目数/用户数收费。",
+            "<strong>代码 Impact Analysis 即服务：</strong>在 CI/CD 中集成——每次 PR 自动生成变更影响分析报告，标注被影响的上下游模块，防止低级上线事故。",
+            "<strong>AI 编程时代的代码阅读器：</strong>AI 能写代码但不好理解代码。这个工具填补了&quot;AI 写的代码人类怎么看得懂&quot;的空白——反向知识图谱即 AI 代码的可解释性层。"
+          ],
+          "tags": [
+            "knowledge-graph",
+            "code-visualization",
+            "onboarding",
+            "multi-agent",
+            "claude-code",
+            "diff-impact-analysis"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "ChromeDevTools",
+          "name": "chrome-devtools-mcp",
+          "fullName": "ChromeDevTools / chrome-devtools-mcp",
+          "org": "Chrome DevTools Team",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "40,980",
+          "forks": "2,603",
+          "starsToday": "501",
+          "count": 1,
+          "description": "Chrome 官方推出的 MCP 服务器 —— 让 AI 编程 Agent 直接操控 Chrome 浏览器，调试、性能分析、自动化一条龙",
+          "problems": [
+            "<strong>AI Agent 不能直接操控浏览器：</strong>Agent 要做 Web 调试、性能分析、网络请求检查时，只能通过人类手动操作 DevTools，无法自动化。Chrome DevTools MCP 让 Agent 直接获得完整的 Chrome DevTools 能力——截图、网络分析、性能追踪、控制台日志。",
+            "<strong>Web 自动化工具多但互不兼容：</strong>Playwright、Selenium、Puppeteer 各有各的 API。MCP 统一协议让所有 Agent（Claude Code、Cursor、Copilot、Gemini CLI）通过一套标准接口操控浏览器。",
+            "<strong>性能分析门槛高：</strong>Chrome DevTools 的 Performance 面板很强大，但手动分析录制、解读火焰图对普通开发者不友好。Agent 自动录制性能追踪、提取可操作的优化建议。"
+          ],
+          "usage": [
+            "npx 一键运行：<pre><code>npx @puppeteer/chrome-devtools-mcp</code></pre>",
+            "在 Claude Code 中配置 MCP 服务器连接。",
+            "Agent 自动获得 DevTools 能力——截图、网络请求检查、控制台日志读取、性能录制。",
+            "支持 puppeteer 自动化，Action 自动等待结果。"
+          ],
+          "insights": [
+            "<strong>AI 测试工程师：</strong>Agent+Chrome DevTools = 全自动的 Web 测试工程师——打开页面、截图、检查网络请求、分析性能、断言正确性。颠覆传统 E2E 测试。",
+            "<strong>Web 调试助手：</strong>开发者口头描述 bug，Agent 自动打开 DevTools 检查网络/控制台/元素，定位问题根因。面向非前端开发的&quot;帮我看看这个页面为什么卡&quot;场景。",
+            "<strong>Chrome 生态的 Agent 入口：</strong>Chrome 官方出品 MCP 服务器，标志着浏览器厂商正式拥抱 AI Agent 生态。未来每个浏览器功能（DevTools、Lighthouse、Accessibility）都可以通过 MCP 被 Agent 调用。"
+          ],
+          "tags": [
+            "chrome-devtools",
+            "MCP",
+            "browser-automation",
+            "performance-analysis",
+            "debugging",
+            "google-official"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "can1357",
+          "name": "oh-my-pi",
+          "fullName": "can1357 / oh-my-pi",
+          "org": "can1357",
+          "url": "https://github.com/can1357/oh-my-pi",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "6,357",
+          "forks": "516",
+          "starsToday": "457",
+          "count": 1,
+          "description": "终端 AI 编码 Agent —— hash 锚定编辑、40+ 模型、32 内置工具、LSP + DAP 深度集成，Rust 核心",
+          "problems": [
+            "<strong>Agent 编码效率低：</strong>很多 Agent 的编辑格式会导致模型反复重试失败（str_replace 格式下模型容易出错）。oh-my-pi 的 hash-anchored edits 让编辑一次命中率从 6.7% 飙升至 68.3%。",
+            "<strong>IDE 能力与 Agent 割裂：</strong>Agent 写代码时无法利用 IDE 的 LSP（智能提示、跳转定义、引用查找）和 DAP（断点调试）。oh-my-pi 内置 13 个 LSP 操作 + 27 个 DAP 操作，把 IDE 能力直接注入 Agent。",
+            "<strong>模型适配混乱：</strong>不同模型（Grok、Gemini、MiniMax）对同一工具格式的适配效果天差地别。oh-my-pi 为每个模型单独调优 prompts，Grok Code Fast 下 lift 10 倍。"
+          ],
+          "usage": [
+            "macOS/Linux 一键安装：<pre><code>curl -fsSL https://omp.sh/install | sh</code></pre>",
+            "Bun 安装：<pre><code>bun install -g @oh-my-pi/pi-coding-agent</code></pre>",
+            "启动编码 Agent：<code>omp</code>",
+            "支持 40+ 模型提供商，自动选择最优 prompt 配置。"
+          ],
+          "insights": [
+            "<strong>Agent 编辑格式标准之争：</strong>oh-my-pi 的 hash-anchored edits 相比于 Anthropic 的 str_replace 编辑格式更高效。如果成为标准，可能改变所有 Agent 的底层编辑方式。",
+            "<strong>本地 IDE 的 Agent 化：</strong>LSP + DAP 深度集成意味着 Agent 和 IDE 的边界在消失。可以做成&quot;Agent 原生 IDE&quot;——用户在 IDE 中聊天，Agent 自动使用 LSP/DAP 完成编码-调试循环。",
+            "<strong>模型适配平台：</strong>oh-my-pi 为每个模型单独调优 prompts 的模式可以独立成服务——&quot;你的 Agent 工具哪个模型最好用？&quot; 提供模型 + 工具格式的最优匹配推荐。"
+          ],
+          "tags": [
+            "coding-agent",
+            "terminal",
+            "hash-anchored-edits",
+            "LSP",
+            "DAP",
+            "40+ providers"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "fullName": "rohitg00 / ai-engineering-from-scratch",
+          "org": "rohitg00",
+          "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "11,953",
+          "forks": "2,272",
+          "starsToday": "988",
+          "count": 2,
+          "description": "从零开始的 AI 工程实战教程 —— 学→造→交付，每天近千 star 的爆款开源课程",
+          "problems": [
+            "<strong>AI 工程学习路径不清晰：</strong>从理论到实战的路太远——数学、框架、部署、运维，每步都有坑。这门课从零到交付提供完整路径，每章有 Jupyter Notebook + 实战项目。",
+            "<strong>缺乏实战导向的教程：</strong>很多教程教概念但缺少端到端实战项目。该课程强调&quot;造出来、交付出去&quot;——每个模块都产出可部署的产品。",
+            "<strong>学习社区孤岛：</strong>传统课程学完就结束。该项目采用开源社区模式，学员可以贡献自己的项目，形成持续学习网络。"
+          ],
+          "usage": [
+            "Clone 课程仓库：<pre><code>git clone https://github.com/rohitg00/ai-engineering-from-scratch</code></pre>",
+            "从第一章开始，每章有 Jupyter Notebook + 实战项目。",
+            "跟着课程从零构建 AI 应用并部署到生产环境。",
+            "参与社区讨论，分享自己的项目作品。"
+          ],
+          "insights": [
+            "<strong>AI 工程培训认证：</strong>以该课程为基础提供&quot;AI 工程师&quot;认证培训——面向转行/应届生，从零到就业的全套培训方案。11.9K star 验证了巨大的市场需求。",
+            "<strong>项目作品集平台：</strong>学员完成课程后产出的项目自动形成作品集——对接企业招聘需求，打造&quot;学→做→找工作&quot;闭环。",
+            "<strong>企业内训定制：</strong>为企业提供定制版课程——根据团队技术栈调整内容，加上企业自己的数据集和场景，形成企业 AI 人才培养体系。"
+          ],
+          "tags": [
+            "ai-engineering",
+            "from-scratch",
+            "hands-on",
+            "python",
+            "production-deployment",
+            "open-source-course"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -207,7 +409,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -409,7 +611,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "前天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -611,7 +813,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "3天前",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -813,7 +1015,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -1015,7 +1217,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "8天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1215,7 +1417,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "9天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1411,7 +1613,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "10天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
