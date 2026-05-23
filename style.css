@@ -724,14 +724,10 @@ a { text-decoration: none; color: inherit; }
   margin-top: 4px;
 }
 
-.timeline-fade-wrap::after {
-  content: '';
+.timeline-fade-gradient {
   position: absolute;
-  bottom: 0;
-  left: -20px;
-  right: -20px;
-  height: 160px;
-  background: linear-gradient(to bottom, transparent 0%, transparent 10%, var(--bg-page) 85%);
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, transparent 15%, var(--bg-page) 85%);
   pointer-events: none;
   z-index: 2;
 }
@@ -743,10 +739,6 @@ a { text-decoration: none; color: inherit; }
 
 .timeline-fade-scroll .day-group {
   pointer-events: none;
-}
-
-.timeline-fade-scroll .day-node .day-dot {
-  opacity: 0.3;
 }
 
 .fade-preview-line {
@@ -774,9 +766,6 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--accent-orange);
 }
 
-.timeline-fade-gradient {
-  display: none;
-}
 
 .load-more-wrap {
   text-align: center;
