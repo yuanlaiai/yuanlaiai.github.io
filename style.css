@@ -533,6 +533,7 @@ a { text-decoration: none; color: inherit; }
 .timeline {
   position: relative;
   padding-left: 40px;
+  padding-bottom: 1px;
 }
 
 .timeline::before {
@@ -728,16 +729,16 @@ a { text-decoration: none; color: inherit; }
 .timeline-fade-wrap::before {
   content: '';
   position: absolute;
-  left: 15px; top: -4px; bottom: 0;
+  left: 15px; top: 0; bottom: 0;
   width: 3px;
   background: linear-gradient(180deg,
     var(--accent-cyan) 0%,
-    var(--accent-cyan) 60%,
+    var(--accent-cyan) 40%,
+    var(--accent-gold) 70%,
     transparent 100%);
   border-radius: 3px;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.5;
 }
 
 .timeline-fade-gradient {
