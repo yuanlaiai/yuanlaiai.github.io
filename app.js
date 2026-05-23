@@ -80,6 +80,13 @@ var articles = [
     date: '2026-05-12',
     desc: '系统化分析 Android 应用性能问题，覆盖启动优化、布局渲染、内存管理、网络优化、包体积缩减等核心维度，附实战工具链。',
   },
+  {
+    id: 11,
+    title: 'Go 语言进阶：泛型、错误处理与测试策略',
+    tags: ['Go', 'Backend'],
+    date: '2026-05-18',
+    desc: '深入 Go 1.18+ 泛型实际应用、error wrapping 与 sentinel errors 最佳实践，以及 Table-driven 测试、fuzz testing 和基准测试的实战技巧。',
+  },
 ];
 
 var projects = [
