@@ -122,12 +122,7 @@ function buildTimelineHtml(showUpTo) {
   if (remaining > 0) {
     var previewCount = Math.min(BATCH_SIZE, remaining);
 
-    // Button above the fade preview
-    html += '<div class="load-more-wrap" id="loadMoreWrap">';
-    html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录 <span class="load-more-count">(' + remaining + ' 天)</span></button>';
-    html += '</div>';
-
-    // Fade preview below the button
+    // Fade preview wrapping content + button overlaid
     html += '<div class="timeline-fade-wrap" id="timelineFade">';
     html += '<div class="timeline-fade-scroll">';
     for (var fi = 0; fi < previewCount; fi++) {
@@ -147,9 +142,13 @@ function buildTimelineHtml(showUpTo) {
       }
       html += '</div></div></div>';
     }
-    html += '</div>';
+    html += '</div>'; // fade-scroll
+    // Gradient overlay + button overlaid on top
     html += '<div class="timeline-fade-gradient"></div>';
+    html += '<div class="load-more-overlay" id="loadMoreWrap">';
+    html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录 <span class="load-more-count">(' + remaining + ' 天)</span></button>';
     html += '</div>';
+    html += '</div>'; // fade-wrap
   }
 
   html += '<div style="text-align:center;margin-top:32px">';
