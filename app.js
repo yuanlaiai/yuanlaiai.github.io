@@ -35,7 +35,7 @@ function buildTimelineHtml(showUpTo) {
     var day = allDays[di];
     var isFirst = di === 0;
     var isFadeDay = di === fadeDayIdx && fadeDayIdx < totalDays;
-    var bodyExtra = isFirst ? '' : ' collapsed';
+    var bodyExtra = (isFirst || isFadeDay) ? '' : ' collapsed';
 
     // 渐变日的外层包裹
     if (isFadeDay) {
