@@ -25,25 +25,24 @@ function renderTimeline() {
 function buildTimelineHtml(showUpTo) {
   var allDays = window.siteData.days;
   var totalDays = allDays.length;
-  showUpTo = Math.min(showUpTo, totalDays);
+  var fadeDayIdx = showUpTo; // 第4天（索引3）添加渐变
+  var displayUpTo = Math.min(showUpTo + 1, totalDays);
+  var remaining = totalDays - showUpTo;
 
   var html = '<div class="timeline" id="timeline">';
 
-  for (var di = 0; di < showUpTo; di++) {
+  for (var di = 0; di < displayUpTo; di++) {
     var day = allDays[di];
     var isFirst = di === 0;
-    var inFade = di >= VISIBLE_DAYS && showUpTo <= VISIBLE_DAYS + BATCH_SIZE;
-    var bodyExtra = '';
+    var isFadeDay = di === fadeDayIdx && fadeDayIdx < totalDays;
+    var bodyExtra = isFirst ? '' : ' collapsed';
 
-    // First day always expanded; past days collapsed
-    if (!isFirst) bodyExtra = ' collapsed';
-
-    // Days beyond the initial batch that are in fade preview get wrap treatment
-    var wrapClass = '';
-    if (di >= VISIBLE_DAYS && di < showUpTo && showUpTo === VISIBLE_DAYS + BATCH_SIZE && di < VISIBLE_DAYS + BATCH_SIZE) {
-      // In fade preview on first load — no wrap needed, just collapsed
+    // 渐变日的外层包裹
+    if (isFadeDay) {
+      html += '<div class="day-group-fade-wrap">';
     }
 
+    // ── day-group（与所有天数完全相同的样式）──
     html += '<div class="day-group reveal" style="transition-delay:' + (di * 0.05) + 's">';
     html += '<div class="day-node">';
     html += '<div class="day-dot"></div>';
@@ -113,34 +112,18 @@ function buildTimelineHtml(showUpTo) {
     }
 
     html += '</div>'; // day-group
+
+    // 渐变日的外层包裹关闭——渐变遮罩 + 按钮
+    if (isFadeDay && remaining > 0) {
+      html += '<div class="day-group-fade-overlay"></div>';
+      html += '<div class="load-more-overlay" id="loadMoreWrap">';
+      html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录 <span class="load-more-count">(' + remaining + ' 天)</span></button>';
+      html += '</div>';
+      html += '</div>'; // day-group-fade-wrap
+    }
   }
 
   html += '</div>'; // timeline
-
-  // ── Fade preview for next batch ──
-  var remaining = totalDays - showUpTo;
-  if (remaining > 0) {
-    var previewCount = Math.min(BATCH_SIZE, remaining);
-
-    // Fade preview — 展示1天完整时间线样式，渐变隐藏
-    html += '<div class="timeline-fade-wrap" id="timelineFade">';
-    html += '<div class="timeline-fade-scroll">';
-    var fDay = allDays[showUpTo]; // 只展示第1天
-    if (fDay) {
-      html += '<div class="day-group reveal">';
-      html += '<div class="day-node"><div class="day-dot"></div><span class="day-label">' + fDay.label + '</span><span class="day-date">' + fDay.date + '</span></div>';
-      html += '<div class="day-body collapsed"><div class="day-projects">';
-      html += '<div class="project-card dimmed"><div class="pc-header"><span class="rank-num">#1</span><span class="repo-name">' + (fDay.projects[0]?.fullName || '') + '</span><span class="org">' + (fDay.projects[0]?.org || '') + '</span></div></div>';
-      html += '</div></div></div>';
-    }
-    html += '</div>'; // fade-scroll
-    // Gradient overlay + button overlaid on top
-    html += '<div class="timeline-fade-gradient"></div>';
-    html += '<div class="load-more-overlay" id="loadMoreWrap">';
-    html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录 <span class="load-more-count">(' + remaining + ' 天)</span></button>';
-    html += '</div>';
-    html += '</div>'; // fade-wrap
-  }
 
   html += '<div style="text-align:center;margin-top:32px">';
   html += '<a href="https://github.com/trending" class="btn-ghost" target="_blank">查看完整 GitHub Trending →</a>';
