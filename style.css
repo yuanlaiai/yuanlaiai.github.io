@@ -719,7 +719,7 @@ a { text-decoration: none; color: inherit; }
 /* Load more button */
 .timeline-fade-wrap {
   position: relative;
-  max-height: 180px;
+  max-height: 160px;
   overflow: hidden;
   margin-top: 4px;
 }
@@ -728,10 +728,10 @@ a { text-decoration: none; color: inherit; }
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
-  height: 140px;
-  background: linear-gradient(to bottom, transparent 0%, transparent 5%, var(--bg-page) 90%);
+  left: -20px;
+  right: -20px;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent 0%, transparent 10%, var(--bg-page) 85%);
   pointer-events: none;
   z-index: 2;
 }
@@ -745,10 +745,14 @@ a { text-decoration: none; color: inherit; }
   pointer-events: none;
 }
 
+.timeline-fade-scroll .day-node .day-dot {
+  opacity: 0.3;
+}
+
 .fade-preview-line {
   font-size: 0.75rem;
   color: var(--text-muted);
-  padding: 4px 0 4px 4px;
+  padding: 2px 0 2px 4px;
   font-family: var(--font-mono);
 }
 
