@@ -200,12 +200,14 @@ function loadMoreDays() {
       loadMoreWrap.parentNode.insertBefore(tempDiv.firstElementChild, loadMoreWrap);
     }
 
-    // Update button text
-    var remaining = totalDays - nextBatchStart - previewCount;
+    // Update button text - count days in fade + beyond
+    var fadeCheck = document.getElementById('timelineFade');
+    var fadeDays = fadeCheck ? fadeCheck.querySelectorAll('.day-group').length : 0;
+    var remaining = totalDays - allRendered - previewCount + fadeDays;
     if (remaining > 0) {
       document.querySelector('.load-more-count').textContent = '(' + remaining + ' 天)';
     } else {
-      loadMoreWrap.style.display = 'none';
+      if (loadMoreWrap) loadMoreWrap.style.display = 'none';
     }
   } else {
     if (loadMoreWrap) loadMoreWrap.style.display = 'none';
