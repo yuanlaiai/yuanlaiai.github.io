@@ -372,9 +372,7 @@ function initBgParticles() {
   var particles = [];
   var mouse = { x: -9999, y: -9999 };
   var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var colors = isDark
-    ? ['255,140,66', '255,179,71', '0,217,255', '167,139,250']
-    : ['230,120,50', '210,150,60', '0,180,220', '140,110,220'];
+  var primColor = isDark ? '255,140,66' : '200,100,50';
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -383,96 +381,77 @@ function initBgParticles() {
   resize();
   window.addEventListener('resize', resize);
 
-  var count = Math.min(Math.floor(canvas.width * canvas.height / 6000), 200);
+  // Fewer, larger, elegant particles
+  var count = Math.min(Math.floor(canvas.width * canvas.height / 12000), 80);
   for (var i = 0; i < count; i++) {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      r: Math.random() * 3 + 0.5,
-      color: colors[Math.floor(Math.random() * colors.length)],
-      alpha: Math.random() * 0.5 + 0.1,
-      phase: Math.random() * Math.PI * 2
+      vx: (Math.random() - 0.5) * 0.15,
+      vy: (Math.random() - 0.5) * 0.15,
+      r: Math.random() * 4 + 2,
+      alpha: Math.random() * 0.25 + 0.08
     });
   }
 
+  var time = 0;
+
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    var time = Date.now() / 3000;
+    time += 0.003;
 
-    // Draw connections between nearby particles
+    // Constellation connections
     for (var i = 0; i < particles.length; i++) {
       for (var j = i + 1; j < particles.length; j++) {
         var dx = particles[i].x - particles[j].x;
         var dy = particles[i].y - particles[j].y;
         var dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 120) {
+        if (dist < 160) {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = 'rgba(' + colors[0] + ',' + (0.06 * (1 - dist / 120)) + ')';
-          ctx.lineWidth = 0.6;
+          ctx.strokeStyle = 'rgba(' + primColor + ',' + (0.04 * (1 - dist / 160)) + ')';
+          ctx.lineWidth = 0.5;
           ctx.stroke();
         }
       }
     }
 
     particles.forEach(function(p) {
-      // Floating motion with sine wave
-      p.vx += Math.sin(time + p.phase) * 0.01;
-      p.vy += Math.cos(time + p.phase * 1.3) * 0.01;
-      // Damping
-      p.vx *= 0.99;
-      p.vy *= 0.99;
+      // Gentle floating
+      p.vx += Math.sin(time + p.x * 0.01) * 0.002;
+      p.vy += Math.cos(time + p.y * 0.01) * 0.002;
+      p.vx *= 0.995;
+      p.vy *= 0.995;
 
-      // Mouse repulsion
-      var mdx = p.x - mouse.x;
-      var mdy = p.y - mouse.y;
+      // Subtle mouse attraction (not repulsion)
+      var mdx = mouse.x - p.x;
+      var mdy = mouse.y - p.y;
       var mDist = Math.sqrt(mdx * mdx + mdy * mdy);
-      if (mDist < 150) {
-        var force = (150 - mDist) / 150 * 0.5;
-        var angle = Math.atan2(mdy, mdx);
-        p.vx += Math.cos(angle) * force;
-        p.vy += Math.sin(angle) * force;
+      if (mDist < 200 && mDist > 5) {
+        var force = (1 - mDist / 200) * 0.08;
+        p.vx += (mdx / mDist) * force;
+        p.vy += (mdy / mDist) * force;
       }
 
       p.x += p.vx;
       p.y += p.vy;
 
-      // Wrap around edges
-      if (p.x < -20) p.x = canvas.width + 20;
-      if (p.x > canvas.width + 20) p.x = -20;
-      if (p.y < -20) p.y = canvas.height + 20;
-      if (p.y > canvas.height + 20) p.y = -20;
+      if (p.x < -30) p.x = canvas.width + 30;
+      if (p.x > canvas.width + 30) p.x = -30;
+      if (p.y < -30) p.y = canvas.height + 30;
+      if (p.y > canvas.height + 30) p.y = -30;
 
-      // Draw particle with glow
-      var gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 4);
-      gradient.addColorStop(0, 'rgba(' + p.color + ',' + p.alpha + ')');
-      gradient.addColorStop(0.3, 'rgba(' + p.color + ',' + (p.alpha * 0.3) + ')');
-      gradient.addColorStop(1, 'rgba(' + p.color + ',0)');
+      // Soft glow
+      var gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3);
+      gradient.addColorStop(0, 'rgba(' + primColor + ',' + p.alpha + ')');
+      gradient.addColorStop(0.5, 'rgba(' + primColor + ',' + (p.alpha * 0.2) + ')');
+      gradient.addColorStop(1, 'rgba(' + primColor + ',0)');
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, p.r * 3, 0, Math.PI * 2);
       ctx.fillStyle = gradient;
       ctx.fill();
-
-      // Core dot
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(' + p.color + ',' + (p.alpha * 1.2) + ')';
-      ctx.fill();
     });
-
-    // Mouse glow
-    if (mouse.x > 0) {
-      var glow = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 200);
-      glow.addColorStop(0, 'rgba(' + colors[0] + ',0.03)');
-      glow.addColorStop(1, 'rgba(' + colors[0] + ',0)');
-      ctx.beginPath();
-      ctx.arc(mouse.x, mouse.y, 200, 0, Math.PI * 2);
-      ctx.fillStyle = glow;
-      ctx.fill();
-    }
 
     requestAnimationFrame(draw);
   }
