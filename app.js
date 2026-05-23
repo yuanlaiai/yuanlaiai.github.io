@@ -15,7 +15,6 @@ var articles = [
     title: 'React 18 并发特性深度解析',
     tags: ['React', '性能优化'],
     date: '2026-03-15',
-    readTime: '12 分钟',
     desc: '深入探讨 React 18 的 Fiber 架构升级、Concurrent Mode、useTransition、Suspense 等并发特性，以及它们在生产环境中的实战应用。',
   },
   {
@@ -23,7 +22,6 @@ var articles = [
     title: '从 0 到 1：构建 Node.js 微服务系统',
     tags: ['Backend', '架构'],
     date: '2026-02-28',
-    readTime: '18 分钟',
     desc: '手把手搭建基于 Node.js 的微服务架构，涵盖 API Gateway、服务注册发现、链路追踪、熔断限流等核心能力。',
   },
   {
@@ -31,7 +29,6 @@ var articles = [
     title: 'Kubernetes 实战：容器编排完全指南',
     tags: ['DevOps', 'K8s'],
     date: '2026-02-10',
-    readTime: '22 分钟',
     desc: '从集群搭建到生产部署，涵盖 Pod、Deployment、Service、Ingress、HPA 自动扩缩容，以及 Helm Chart 打包最佳实践。',
   },
   {
@@ -39,7 +36,6 @@ var articles = [
     title: '现代前端工具链对比：Webpack vs Vite vs esbuild',
     tags: ['前端工程'],
     date: '2026-01-20',
-    readTime: '10 分钟',
     desc: '深度对比三大构建工具的架构差异、性能表现和适用场景，帮你在不同项目中做出最优的技术选型决策。',
   },
   {
@@ -47,7 +43,6 @@ var articles = [
     title: '构建高性能 React 应用的 5 个技巧',
     tags: ['React', '性能优化'],
     date: '2026-03-01',
-    readTime: '8 分钟',
     desc: '深入探讨代码分割、懒加载、Memo 优化、虚拟列表以及 Web Worker 在 React 应用中的实战技巧。',
   },
   {
@@ -55,8 +50,35 @@ var articles = [
     title: 'Go 语言高并发实战：goroutine 与 channel',
     tags: ['Backend'],
     date: '2026-01-05',
-    readTime: '15 分钟',
     desc: '通过实战案例掌握 Go 的并发编程模型，深入讲解 goroutine 调度器、channel 通信模式与常见并发陷阱规避。',
+  },
+  {
+    id: 7,
+    title: 'Java 21 新特性实战：虚拟线程与模式匹配',
+    tags: ['Java'],
+    date: '2026-04-10',
+    desc: '深入解析 Java 21 的虚拟线程（Virtual Threads）、模式匹配（Pattern Matching）、Record Pattern 等重磅特性，以及在实际项目中的迁移策略和性能对比。',
+  },
+  {
+    id: 8,
+    title: 'Android Jetpack Compose 从入门到精通',
+    tags: ['Android'],
+    date: '2026-04-20',
+    desc: '全面掌握 Jetpack Compose 声明式 UI 开发，涵盖状态管理、导航、动画、Material3 设计系统，以及与传统 View 系统的互操作最佳实践。',
+  },
+  {
+    id: 9,
+    title: 'Spring Boot 3 + GraalVM 原生编译实战',
+    tags: ['Java', 'Backend'],
+    date: '2026-05-05',
+    desc: '使用 Spring Boot 3 + GraalVM Native Image 构建毫秒级启动的云原生应用，详解 AOT 编译原理、反射配置和 Docker 镜像优化。',
+  },
+  {
+    id: 10,
+    title: 'Android 性能优化：从启动到渲染的全链路分析',
+    tags: ['Android', '性能优化'],
+    date: '2026-05-12',
+    desc: '系统化分析 Android 应用性能问题，覆盖启动优化、布局渲染、内存管理、网络优化、包体积缩减等核心维度，附实战工具链。',
   },
 ];
 
@@ -263,7 +285,7 @@ function renderArticles(filter) {
         '<span class="card-date">' + a.date + '</span>' +
       '</div>' +
       '<h3 class="card-title">' + a.title + '</h3>' +
-      '<p class="card-excerpt">' + a.excerpt + '</p>' +
+      '<p class="card-excerpt">' + a.desc + '</p>' +
       '<div class="card-footer">' +
         '<span class="card-read">阅读全文 →</span>' +
       '</div>' +
