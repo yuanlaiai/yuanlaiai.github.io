@@ -101,9 +101,9 @@ function renderTimeline() {
   siteData.days.forEach(function(day, di) {
     var isFirst = di === 0;
     var inFirstBatch = di < VISIBLE_DAYS_BATCH;
-    var bodyClass = inFirstBatch ? (isFirst ? '' : ' collapsed') : ' hidden';
+    var bodyClass = inFirstBatch ? (isFirst ? '' : ' collapsed') : ' collapsed';
 
-    html += '<div class="day-group reveal" style="transition-delay:' + (di * 0.05) + 's">';
+    html += '<div class="day-group reveal' + (inFirstBatch ? '' : ' day-group-hidden') + '" style="transition-delay:' + (di * 0.05) + 's">';
     html += '<div class="day-node">';
     html += '<div class="day-dot"></div>';
     html += '<span class="day-label">' + day.label + '</span>';
@@ -224,14 +224,13 @@ function toggleDay(btn) {
 
 function loadMoreDays() {
   var nextBatch = currentDayCount + VISIBLE_DAYS_BATCH;
-  var dayBodies = document.querySelectorAll('.day-body');
+  var hiddenGroups = document.querySelectorAll('.day-group-hidden');
 
-  for (var i = currentDayCount; i < nextBatch && i < dayBodies.length; i++) {
-    dayBodies[i].classList.remove('hidden');
-    dayBodies[i].classList.add('collapsed');
+  for (var i = 0; i < hiddenGroups.length && i < VISIBLE_DAYS_BATCH; i++) {
+    hiddenGroups[i].classList.remove('day-group-hidden');
     // Add toggle button for this day
-    var dayGroup = dayBodies[i].closest('.day-group');
-    if (dayGroup && !dayGroup.querySelector('.day-toggle')) {
+    var dayGroup = hiddenGroups[i];
+    if (!dayGroup.querySelector('.day-toggle')) {
       var dayNode = dayGroup.querySelector('.day-node');
       var dayLabel = dayNode ? dayNode.querySelector('.day-label')?.textContent : '';
       var dayDate = dayNode ? dayNode.querySelector('.day-date')?.textContent : '';
@@ -244,10 +243,11 @@ function loadMoreDays() {
     }
   }
 
-  currentDayCount = nextBatch;
+  currentDayCount += VISIBLE_DAYS_BATCH;
 
   // Hide load more button if all days are shown
-  if (currentDayCount >= dayBodies.length) {
+  var remaining = document.querySelectorAll('.day-group-hidden');
+  if (remaining.length === 0) {
     var loadMoreWrap = document.getElementById('loadMoreWrap');
     if (loadMoreWrap) loadMoreWrap.style.display = 'none';
   }
