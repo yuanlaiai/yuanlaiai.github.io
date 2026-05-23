@@ -121,6 +121,13 @@ function buildTimelineHtml(showUpTo) {
   var remaining = totalDays - showUpTo;
   if (remaining > 0) {
     var previewCount = Math.min(BATCH_SIZE, remaining);
+
+    // Button above the fade preview
+    html += '<div class="load-more-wrap" id="loadMoreWrap">';
+    html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录 <span class="load-more-count">(' + remaining + ' 天)</span></button>';
+    html += '</div>';
+
+    // Fade preview below the button
     html += '<div class="timeline-fade-wrap" id="timelineFade">';
     html += '<div class="timeline-fade-scroll">';
     for (var fi = 0; fi < previewCount; fi++) {
@@ -129,7 +136,7 @@ function buildTimelineHtml(showUpTo) {
       html += '<div class="day-node"><div class="day-dot"></div><span class="day-label">' + fDay.label + '</span><span class="day-date">' + fDay.date + '</span></div>';
       html += '<div class="day-body collapsed"><div class="day-projects">';
       fDay.projects.forEach(function(p, pi) {
-        if (pi > 0) return; // Only show first project in preview
+        if (pi > 0) return;
         html += '<div class="project-card dimmed" data-rank="' + p.rank + '">';
         html += '<div class="pc-header"><span class="rank-num">#' + p.rank + '</span><span class="repo-name">' + p.fullName + '</span><span class="org">' + p.org + '</span></div>';
         html += '<div class="pc-meta"><span class="lang">' + p.lang + '</span><span class="stats">⭐ <strong>' + p.stars + '</strong></span><span class="today">+ ' + p.starsToday + ' today</span></div>';
@@ -138,14 +145,10 @@ function buildTimelineHtml(showUpTo) {
       if (fDay.projects.length > 1) {
         html += '<div class="preview-more">还有 ' + (fDay.projects.length - 1) + ' 个项目...</div>';
       }
-      html += '</div></div></div>'; // day-body + day-projects + day-group
+      html += '</div></div></div>';
     }
     html += '</div>';
     html += '<div class="timeline-fade-gradient"></div>';
-    html += '</div>';
-
-    html += '<div class="load-more-wrap" id="loadMoreWrap">';
-    html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录 <span class="load-more-count">(' + remaining + ' 天)</span></button>';
     html += '</div>';
   }
 
