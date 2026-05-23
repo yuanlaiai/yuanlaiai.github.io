@@ -719,7 +719,7 @@ a { text-decoration: none; color: inherit; }
 /* Load more button */
 .timeline-fade-wrap {
   position: relative;
-  max-height: 260px;
+  max-height: 320px;
   overflow: hidden;
   margin-top: 4px;
 }
@@ -730,16 +730,15 @@ a { text-decoration: none; color: inherit; }
   bottom: 0;
   left: 0;
   right: 0;
-  height: 140px;
-  background: linear-gradient(to bottom, transparent 0%, var(--bg-page) 85%);
+  height: 200px;
+  background: linear-gradient(to bottom, transparent 0%, transparent 10%, var(--bg-page) 95%);
   pointer-events: none;
   z-index: 2;
 }
 
 .timeline-fade-scroll {
-  opacity: 0.35;
+  opacity: 0.4;
   filter: blur(0.5px);
-  padding-bottom: 60px;
 }
 
 .timeline-fade-scroll .day-group {
@@ -748,13 +747,20 @@ a { text-decoration: none; color: inherit; }
 
 .load-more-overlay {
   position: absolute;
-  bottom: 0;
+  bottom: 50%;
   left: 0;
   right: 0;
   z-index: 3;
   text-align: center;
-  padding: 12px 0 20px;
+  padding: 0;
   pointer-events: auto;
+  transform: translateY(50%);
+}
+
+.load-more-overlay .btn-load-more {
+  background: rgba(26, 26, 35, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--accent-orange);
 }
 
 .timeline-fade-gradient {
