@@ -89,25 +89,32 @@ const langMap = {
 
 // ── Render Trending Timeline ─────────────────
 
+var VISIBLE_DAYS_BATCH = 3;
+var currentDayCount = 0;
+
 function renderTimeline() {
   var container = document.getElementById('trendingTimeline');
   if (!container || !window.siteData) return;
 
-  var html = '<div class="timeline">';
+  var html = '<div class="timeline" id="timeline">';
 
   siteData.days.forEach(function(day, di) {
+    var isFirst = di === 0;
+    var inFirstBatch = di < VISIBLE_DAYS_BATCH;
+    var bodyClass = inFirstBatch ? (isFirst ? '' : ' collapsed') : ' hidden';
+
     html += '<div class="day-group reveal" style="transition-delay:' + (di * 0.05) + 's">';
     html += '<div class="day-node">';
     html += '<div class="day-dot"></div>';
     html += '<span class="day-label">' + day.label + '</span>';
     html += '<span class="day-date">' + day.date + '</span>';
     html += '</div>';
-    html += '<div class="day-body">';
+    html += '<div class="day-body' + bodyClass + '">';
     html += '<div class="day-projects">';
 
     day.projects.forEach(function(p) {
       var langClass = langMap[p.lang] || p.lang.toLowerCase();
-      var cardExtra = '';
+      var cardExtra = isFirst ? '' : ' dimmed';
 
       // Problems
       var problemsHtml = '<ul>';
@@ -156,17 +163,94 @@ function renderTimeline() {
     });
 
     html += '</div>'; // day-projects
+    html += '<div class="day-fade"></div>';
     html += '</div>'; // day-body
+    if (!isFirst && inFirstBatch) {
+      html += '<button class="day-toggle" onclick="toggleDay(this)">';
+      html += '<span class="toggle-dot"></span>';
+      html += '<span class="toggle-label">' + day.label + '</span>';
+      html += '<span class="toggle-date">' + day.date + '</span>';
+      html += '<span class="toggle-count">' + day.projects.length + ' 个项目</span>';
+      html += '<span class="toggle-icon">▾</span>';
+      html += '</button>';
+    }
     html += '</div>'; // day-group
   });
 
-  html += '</div>';
+  html += '</div>'; // timeline
+
+  // Load more button
+  if (siteData.days.length > VISIBLE_DAYS_BATCH) {
+    html += '<div class="load-more-wrap" id="loadMoreWrap">';
+    html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录</button>';
+    html += '</div>';
+  }
+
   html += '<div style="text-align:center;margin-top:32px">';
   html += '<a href="https://github.com/trending" class="btn-ghost" target="_blank">查看完整 GitHub Trending →</a>';
   html += '</div>';
 
   container.innerHTML = html;
+  currentDayCount = VISIBLE_DAYS_BATCH;
   observeReveal();
+}
+
+function toggleDay(btn) {
+  var dayGroup = btn.closest('.day-group');
+  if (!dayGroup) return;
+  var dayBody = dayGroup.querySelector('.day-body');
+  if (!dayBody) return;
+
+  var isOpening = dayBody.classList.contains('collapsed');
+  var icon = btn.querySelector('.toggle-icon');
+
+  if (isOpening) {
+    dayBody.style.maxHeight = 'none';
+    var fullHeight = dayBody.scrollHeight;
+    dayBody.classList.remove('collapsed');
+    dayBody.style.maxHeight = '0px';
+    requestAnimationFrame(function() {
+      dayBody.style.maxHeight = fullHeight + 'px';
+    });
+    icon.classList.add('open');
+  } else {
+    dayBody.style.maxHeight = dayBody.scrollHeight + 'px';
+    requestAnimationFrame(function() {
+      dayBody.classList.add('collapsed');
+    });
+    icon.classList.remove('open');
+  }
+}
+
+function loadMoreDays() {
+  var nextBatch = currentDayCount + VISIBLE_DAYS_BATCH;
+  var dayBodies = document.querySelectorAll('.day-body');
+
+  for (var i = currentDayCount; i < nextBatch && i < dayBodies.length; i++) {
+    dayBodies[i].classList.remove('hidden');
+    dayBodies[i].classList.add('collapsed');
+    // Add toggle button for this day
+    var dayGroup = dayBodies[i].closest('.day-group');
+    if (dayGroup && !dayGroup.querySelector('.day-toggle')) {
+      var dayNode = dayGroup.querySelector('.day-node');
+      var dayLabel = dayNode ? dayNode.querySelector('.day-label')?.textContent : '';
+      var dayDate = dayNode ? dayNode.querySelector('.day-date')?.textContent : '';
+      var dayProjects = dayGroup.querySelectorAll('.project-card').length;
+      var toggleBtn = document.createElement('button');
+      toggleBtn.className = 'day-toggle';
+      toggleBtn.setAttribute('onclick', 'toggleDay(this)');
+      toggleBtn.innerHTML = '<span class="toggle-dot"></span><span class="toggle-label">' + dayLabel + '</span><span class="toggle-date">' + dayDate + '</span><span class="toggle-count">' + dayProjects + ' 个项目</span><span class="toggle-icon">▾</span>';
+      dayGroup.appendChild(toggleBtn);
+    }
+  }
+
+  currentDayCount = nextBatch;
+
+  // Hide load more button if all days are shown
+  if (currentDayCount >= dayBodies.length) {
+    var loadMoreWrap = document.getElementById('loadMoreWrap');
+    if (loadMoreWrap) loadMoreWrap.style.display = 'none';
+  }
 }
 
 // ── Render Articles ────────────────────────────
