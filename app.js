@@ -370,11 +370,10 @@ function initBgParticles() {
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
   var particles = [];
-  var connections = [];
-  var mouse = { x: -9999, y: -9999 };
+  var mouse = { x: -9999, y: -9999, tx: -9999, ty: -9999 };
   var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var accent = isDark ? '0,217,255' : '0,150,200';  // Tech cyan
-  var warm = isDark ? '255,140,66' : '200,100,50';   // Brand orange
+  var accent = isDark ? '0,217,255' : '0,150,200';
+  var warm = isDark ? '255,140,66' : '200,100,50';
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -383,122 +382,87 @@ function initBgParticles() {
   resize();
   window.addEventListener('resize', resize);
 
-  // Neural network nodes
-  var count = Math.min(Math.floor(canvas.width * canvas.height / 15000), 60);
+  // Starfield particles
+  var count = Math.min(Math.floor(canvas.width * canvas.height / 10000), 120);
   for (var i = 0; i < count; i++) {
-    var p = {
+    particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.1,
-      vy: (Math.random() - 0.5) * 0.1,
-      r: Math.random() * 2.5 + 1.5,
-      color: Math.random() > 0.6 ? warm : accent,
-      connections: [],
+      z: Math.random() * 3 + 0.5,        // depth: 1=close, 3=far
+      size: Math.random() * 2 + 0.5,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      baseVx: (Math.random() - 0.5) * 0.3,
+      baseVy: (Math.random() - 0.5) * 0.3,
+      alpha: Math.random() * 0.5 + 0.15,
       pulse: Math.random() * Math.PI * 2
-    };
-    particles.push(p);
+    });
   }
-
-  // Pre-compute stable connections (neural network edges)
-  function rebuildConnections() {
-    connections = [];
-    for (var i = 0; i < particles.length; i++) {
-      for (var j = i + 1; j < particles.length; j++) {
-        var dx = particles[i].x - particles[j].x;
-        var dy = particles[i].y - particles[j].y;
-        var dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 200) {
-          connections.push({ a: i, b: j, dist: dist });
-        }
-      }
-    }
-  }
-  rebuildConnections();
-
-  // Data packets traveling on connections
-  var packets = [];
-  function spawnPacket() {
-    if (connections.length > 0 && packets.length < 8) {
-      var conn = connections[Math.floor(Math.random() * connections.length)];
-      packets.push({
-        a: conn.a, b: conn.b,
-        progress: Math.random(),
-        speed: Math.random() * 0.008 + 0.004,
-        size: Math.random() * 2 + 1
-      });
-    }
-  }
-  setInterval(spawnPacket, 600);
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Update particles
-    particles.forEach(function(p, i) {
+    // Smooth mouse follow
+    mouse.tx += (mouse.x - mouse.tx) * 0.05;
+    mouse.ty += (mouse.y - mouse.ty) * 0.05;
+
+    var isActive = mouse.x > -100;
+
+    particles.forEach(function(p) {
+      p.pulse += 0.03;
+
+      if (isActive) {
+        // Flow toward mouse
+        var dx = mouse.tx - p.x;
+        var dy = mouse.ty - p.y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 300) {
+          var strength = (1 - dist / 300) * 0.15 / p.z;
+          p.vx += (dx / dist) * strength;
+          p.vy += (dy / dist) * strength;
+        }
+
+        // Data stream alignment - particles near cursor align to flow lines
+        if (dist < 150) {
+          var orbitStr = (1 - dist / 150) * 0.05;
+          p.vx += Math.sin(p.pulse + p.y * 0.01) * orbitStr;
+          p.vy += Math.cos(p.pulse + p.x * 0.01) * orbitStr;
+        }
+      }
+
+      // Return to base velocity
+      p.vx += (p.baseVx - p.vx) * 0.01;
+      p.vy += (p.baseVy - p.vy) * 0.01;
+
+      // Speed limit
+      var speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+      if (speed > 2) { p.vx = (p.vx / speed) * 2; p.vy = (p.vy / speed) * 2; }
+
       p.x += p.vx;
       p.y += p.vy;
-      p.pulse += 0.015;
 
-      if (p.x < -20) { p.x = canvas.width + 20; rebuildConnections(); }
-      if (p.x > canvas.width + 20) { p.x = -20; rebuildConnections(); }
-      if (p.y < -20) { p.y = canvas.height + 20; rebuildConnections(); }
-      if (p.y > canvas.height + 20) { p.y = -20; rebuildConnections(); }
-    });
+      if (p.x < -30) p.x = canvas.width + 30;
+      if (p.x > canvas.width + 30) p.x = -30;
+      if (p.y < -30) p.y = canvas.height + 30;
+      if (p.y > canvas.height + 30) p.y = -30;
 
-    // Draw connections
-    connections.forEach(function(c) {
-      var a = particles[c.a];
-      var b = particles[c.b];
-      var dx = a.x - b.x;
-      var dy = a.y - b.y;
-      var dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist > 250) return;
-
-      ctx.beginPath();
-      ctx.moveTo(a.x, a.y);
-      ctx.lineTo(b.x, b.y);
-      ctx.strokeStyle = 'rgba(' + accent + ',' + (0.07 * (1 - dist / 250)) + ')';
-      ctx.lineWidth = 0.6;
-      ctx.stroke();
-    });
-
-    // Draw data packets
-    packets.forEach(function(pkt, idx) {
-      pkt.progress += pkt.speed;
-      if (pkt.progress > 1) {
-        packets.splice(idx, 1);
-        return;
+      // Glow based on proximity to mouse
+      var glowBoost = 1;
+      if (isActive) {
+        var d = Math.sqrt(Math.pow(p.x - mouse.tx, 2) + Math.pow(p.y - mouse.ty, 2));
+        if (d < 200) glowBoost = 1 + (1 - d / 200) * 2;
       }
-      var a = particles[pkt.a];
-      var b = particles[pkt.b];
-      if (!a || !b) { packets.splice(idx, 1); return; }
 
-      var x = a.x + (b.x - a.x) * pkt.progress;
-      var y = a.y + (b.y - a.y) * pkt.progress;
+      var color = p.z > 2 ? accent : warm;
+      var glowSize = p.size * 4 * glowBoost;
+      var pulseAlpha = p.alpha + Math.sin(p.pulse) * 0.12;
 
-      var glow = ctx.createRadialGradient(x, y, 0, x, y, 8);
-      glow.addColorStop(0, 'rgba(' + accent + ',0.5)');
-      glow.addColorStop(0.5, 'rgba(' + accent + ',0.15)');
-      glow.addColorStop(1, 'rgba(' + accent + ',0)');
-      ctx.beginPath();
-      ctx.arc(x, y, 8, 0, Math.PI * 2);
-      ctx.fillStyle = glow;
-      ctx.fill();
-
-      ctx.beginPath();
-      ctx.arc(x, y, pkt.size, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(' + accent + ',0.7)';
-      ctx.fill();
-    });
-
-    // Draw particles
-    particles.forEach(function(p) {
-      // Glow
-      var glowSize = p.r * 5 + Math.sin(p.pulse) * 2;
+      // Outer glow
       var gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowSize);
-      gradient.addColorStop(0, 'rgba(' + p.color + ',0.25)');
-      gradient.addColorStop(0.4, 'rgba(' + p.color + ',0.08)');
-      gradient.addColorStop(1, 'rgba(' + p.color + ',0)');
+      gradient.addColorStop(0, 'rgba(' + color + ',' + (pulseAlpha * 0.6) + ')');
+      gradient.addColorStop(0.5, 'rgba(' + color + ',' + (pulseAlpha * 0.15) + ')');
+      gradient.addColorStop(1, 'rgba(' + color + ',0)');
       ctx.beginPath();
       ctx.arc(p.x, p.y, glowSize, 0, Math.PI * 2);
       ctx.fillStyle = gradient;
@@ -506,20 +470,38 @@ function initBgParticles() {
 
       // Core
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(' + p.color + ',0.6)';
+      ctx.arc(p.x, p.y, p.size * 0.7, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(' + color + ',' + pulseAlpha + ')';
       ctx.fill();
     });
 
-    // Mouse glow
-    if (mouse.x > 0) {
-      var glow = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 120);
-      glow.addColorStop(0, 'rgba(' + warm + ',0.03)');
-      glow.addColorStop(1, 'rgba(' + warm + ',0)');
+    // Mouse cursor halo
+    if (isActive) {
+      // Outer ring
+      var ring = ctx.createRadialGradient(mouse.tx, mouse.ty, 0, mouse.tx, mouse.ty, 150);
+      ring.addColorStop(0, 'rgba(' + accent + ',0.04)');
+      ring.addColorStop(0.5, 'rgba(' + accent + ',0.02)');
+      ring.addColorStop(1, 'rgba(' + accent + ',0)');
       ctx.beginPath();
-      ctx.arc(mouse.x, mouse.y, 120, 0, Math.PI * 2);
-      ctx.fillStyle = glow;
+      ctx.arc(mouse.tx, mouse.ty, 150, 0, Math.PI * 2);
+      ctx.fillStyle = ring;
       ctx.fill();
+
+      // Bright center
+      var core = ctx.createRadialGradient(mouse.tx, mouse.ty, 0, mouse.tx, mouse.ty, 30);
+      core.addColorStop(0, 'rgba(' + accent + ',0.08)');
+      core.addColorStop(1, 'rgba(' + accent + ',0)');
+      ctx.beginPath();
+      ctx.arc(mouse.tx, mouse.ty, 30, 0, Math.PI * 2);
+      ctx.fillStyle = core;
+      ctx.fill();
+
+      // Faint crosshair
+      ctx.strokeStyle = 'rgba(' + accent + ',0.06)';
+      ctx.lineWidth = 0.5;
+      ctx.beginPath();
+      ctx.arc(mouse.tx, mouse.ty, 8, 0, Math.PI * 2);
+      ctx.stroke();
     }
 
     requestAnimationFrame(draw);
@@ -528,6 +510,11 @@ function initBgParticles() {
   document.addEventListener('mousemove', function(e) {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
+  });
+
+  document.addEventListener('mouseleave', function() {
+    mouse.x = -9999;
+    mouse.y = -9999;
   });
 
   draw();
