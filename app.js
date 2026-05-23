@@ -11,43 +11,139 @@ var langMap = {
 
 var VISIBLE_DAYS = 3;
 var BATCH_SIZE = 3;
+var dayLoadCount = 0;
 
 function renderTimeline() {
   var container = document.getElementById('trendingTimeline');
   if (!container || !window.siteData) return;
 
-  var allDays = siteData.days;
+  dayLoadCount = VISIBLE_DAYS;
+  container.innerHTML = buildTimelineHtml(dayLoadCount);
+  observeReveal();
+}
+
+function buildTimelineHtml(showUpTo) {
+  var allDays = window.siteData.days;
   var totalDays = allDays.length;
-  var previewCount = Math.min(BATCH_SIZE, totalDays - VISIBLE_DAYS);
-  var hasMore = totalDays > VISIBLE_DAYS;
+  showUpTo = Math.min(showUpTo, totalDays);
 
   var html = '<div class="timeline" id="timeline">';
 
-  // ── Render first 3 days (today expanded, rest collapsed) ──
-  for (var di = 0; di < VISIBLE_DAYS; di++) {
+  for (var di = 0; di < showUpTo; di++) {
     var day = allDays[di];
     var isFirst = di === 0;
-    html += renderDayGroup(day, di, isFirst ? '' : ' collapsed', true);
-  }
+    var inFade = di >= VISIBLE_DAYS && showUpTo <= VISIBLE_DAYS + BATCH_SIZE;
+    var bodyExtra = '';
 
-  // ── Fade preview of next batch ──
-  if (hasMore) {
-    html += '<div class="timeline-fade-wrap" id="timelineFade">';
-    html += '<div class="timeline-fade-scroll">';
-    for (var pi = 0; pi < previewCount; pi++) {
-      var pDay = allDays[VISIBLE_DAYS + pi];
-      html += renderDayGroup(pDay, VISIBLE_DAYS + pi, ' collapsed', false);
+    // First day always expanded; past days collapsed
+    if (!isFirst) bodyExtra = ' collapsed';
+
+    // Days beyond the initial batch that are in fade preview get wrap treatment
+    var wrapClass = '';
+    if (di >= VISIBLE_DAYS && di < showUpTo && showUpTo === VISIBLE_DAYS + BATCH_SIZE && di < VISIBLE_DAYS + BATCH_SIZE) {
+      // In fade preview on first load — no wrap needed, just collapsed
     }
+
+    html += '<div class="day-group reveal" style="transition-delay:' + (di * 0.05) + 's">';
+    html += '<div class="day-node">';
+    html += '<div class="day-dot"></div>';
+    html += '<span class="day-label">' + day.label + '</span>';
+    html += '<span class="day-date">' + day.date + '</span>';
     html += '</div>';
-    html += '<div class="timeline-fade-gradient"></div>';
-    html += '</div>';
+    html += '<div class="day-body' + bodyExtra + '">';
+    html += '<div class="day-projects">';
+
+    day.projects.forEach(function(p) {
+      var cardExtra = isFirst ? '' : ' dimmed';
+
+      var problemsHtml = '<ul>';
+      if (p.problems) p.problems.forEach(function(x) { problemsHtml += '<li>' + x + '</li>'; });
+      problemsHtml += '</ul>';
+
+      var usageHtml = '<ol>';
+      if (p.usage) p.usage.forEach(function(x) { usageHtml += '<li>' + x + '</li>'; });
+      usageHtml += '</ol>';
+
+      var insightsHtml = '<ul>';
+      if (p.insights) p.insights.forEach(function(x) { insightsHtml += '<li>' + x + '</li>'; });
+      insightsHtml += '</ul>';
+
+      html += '<div class="project-card reveal' + cardExtra + '" data-rank="' + p.rank + '" style="transition-delay:' + (di * 0.05 + 0.05) + 's">';
+      html += '<div class="rank-ribbon"></div>';
+      html += '<div class="pc-header">';
+      html += '<span class="rank-num">#' + p.rank + '</span>';
+      html += '<a href="' + p.url + '" class="repo-name" target="_blank">' + p.fullName + '</a>';
+      html += '<span class="org">' + p.org + '</span>';
+      html += '</div>';
+      html += '<div class="pc-meta">';
+      html += '<span class="lang">' + p.lang + '</span>';
+      html += '<span class="stats">';
+      html += '⭐ <strong>' + p.stars + '</strong>';
+      html += ' · 🍴 <strong>' + p.forks + '</strong>';
+      html += '</span>';
+      html += '<span class="today">+ ' + p.starsToday + ' today</span>';
+      html += '</div>';
+      html += '<p class="pc-desc">' + p.description + '</p>';
+      html += '<div class="pc-details">';
+      html += '<div class="pc-section"><div class="pc-section-label problem">📌 解决什么问题</div><div class="pc-section-content">' + problemsHtml + '</div></div>';
+      html += '<div class="pc-section"><div class="pc-section-label usage">🔧 如何使用</div><div class="pc-section-content">' + usageHtml + '</div></div>';
+      html += '<div class="pc-section"><div class="pc-section-label insight">💡 产品价值思路</div><div class="pc-section-content">' + insightsHtml + '</div></div>';
+      html += '</div>';
+      html += '<div class="pc-tags">';
+      p.tags.forEach(function(t) { html += '<span class="pc-tag">' + t + '</span>'; });
+      var countText = p.count > 1 ? p.count + '次上榜' : '首次上榜';
+      html += '<span class="pc-count">' + countText + '</span>';
+      html += '</div>';
+      html += '</div>';
+    });
+
+    html += '</div>'; // day-projects
+    html += '<div class="day-fade"></div>';
+    html += '</div>'; // day-body
+
+    // Toggle button for past days
+    if (!isFirst) {
+      html += '<button class="day-toggle" onclick="toggleDay(this)">';
+      html += '<span class="toggle-dot"></span>';
+      html += '<span class="toggle-label">' + day.label + '</span>';
+      html += '<span class="toggle-date">' + day.date + '</span>';
+      html += '<span class="toggle-count">' + day.projects.length + ' 个项目</span>';
+      html += '<span class="toggle-icon">▾</span>';
+      html += '</button>';
+    }
+
+    html += '</div>'; // day-group
   }
 
   html += '</div>'; // timeline
 
-  // ── Load more button ──
-  if (hasMore) {
-    var remaining = totalDays - VISIBLE_DAYS;
+  // ── Fade preview for next batch ──
+  var remaining = totalDays - showUpTo;
+  if (remaining > 0) {
+    var previewCount = Math.min(BATCH_SIZE, remaining);
+    html += '<div class="timeline-fade-wrap" id="timelineFade">';
+    html += '<div class="timeline-fade-scroll">';
+    for (var fi = 0; fi < previewCount; fi++) {
+      var fDay = allDays[showUpTo + fi];
+      html += '<div class="day-group reveal">';
+      html += '<div class="day-node"><div class="day-dot"></div><span class="day-label">' + fDay.label + '</span><span class="day-date">' + fDay.date + '</span></div>';
+      html += '<div class="day-body collapsed"><div class="day-projects">';
+      fDay.projects.forEach(function(p, pi) {
+        if (pi > 0) return; // Only show first project in preview
+        html += '<div class="project-card dimmed" data-rank="' + p.rank + '">';
+        html += '<div class="pc-header"><span class="rank-num">#' + p.rank + '</span><span class="repo-name">' + p.fullName + '</span><span class="org">' + p.org + '</span></div>';
+        html += '<div class="pc-meta"><span class="lang">' + p.lang + '</span><span class="stats">⭐ <strong>' + p.stars + '</strong></span><span class="today">+ ' + p.starsToday + ' today</span></div>';
+        html += '</div>';
+      });
+      if (fDay.projects.length > 1) {
+        html += '<div class="preview-more">还有 ' + (fDay.projects.length - 1) + ' 个项目...</div>';
+      }
+      html += '</div></div></div>'; // day-body + day-projects + day-group
+    }
+    html += '</div>';
+    html += '<div class="timeline-fade-gradient"></div>';
+    html += '</div>';
+
     html += '<div class="load-more-wrap" id="loadMoreWrap">';
     html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录 <span class="load-more-count">(' + remaining + ' 天)</span></button>';
     html += '</div>';
@@ -57,161 +153,15 @@ function renderTimeline() {
   html += '<a href="https://github.com/trending" class="btn-ghost" target="_blank">查看完整 GitHub Trending →</a>';
   html += '</div>';
 
-  container.innerHTML = html;
-  observeReveal();
-}
-
-function renderDayGroup(day, index, bodyExtra, showToggle) {
-  var isFirst = index === 0;
-  var html = '';
-
-  html += '<div class="day-group reveal" style="transition-delay:' + (index * 0.05) + 's">';
-  html += '<div class="day-node">';
-  html += '<div class="day-dot"></div>';
-  html += '<span class="day-label">' + day.label + '</span>';
-  html += '<span class="day-date">' + day.date + '</span>';
-  html += '</div>';
-  html += '<div class="day-body' + bodyExtra + '">';
-  html += '<div class="day-projects">';
-
-  day.projects.forEach(function(p) {
-    var cardExtra = isFirst ? '' : ' dimmed';
-
-    // Problems
-    var problemsHtml = '<ul>';
-    if (p.problems) p.problems.forEach(function(x) { problemsHtml += '<li>' + x + '</li>'; });
-    problemsHtml += '</ul>';
-
-    // Usage
-    var usageHtml = '<ol>';
-    if (p.usage) p.usage.forEach(function(x) { usageHtml += '<li>' + x + '</li>'; });
-    usageHtml += '</ol>';
-
-    // Insights
-    var insightsHtml = '<ul>';
-    if (p.insights) p.insights.forEach(function(x) { insightsHtml += '<li>' + x + '</li>'; });
-    insightsHtml += '</ul>';
-
-    html += '<div class="project-card reveal' + cardExtra + '" data-rank="' + p.rank + '" style="transition-delay:' + (index * 0.05 + 0.05) + 's">';
-    html += '<div class="rank-ribbon"></div>';
-    html += '<div class="pc-header">';
-    html += '<span class="rank-num">#' + p.rank + '</span>';
-    html += '<a href="' + p.url + '" class="repo-name" target="_blank">' + p.fullName + '</a>';
-    html += '<span class="org">' + p.org + '</span>';
-    html += '</div>';
-    html += '<div class="pc-meta">';
-    html += '<span class="lang">' + p.lang + '</span>';
-    html += '<span class="stats">';
-    html += '⭐ <strong>' + p.stars + '</strong>';
-    html += ' · 🍴 <strong>' + p.forks + '</strong>';
-    html += '</span>';
-    html += '<span class="today">+ ' + p.starsToday + ' today</span>';
-    html += '</div>';
-    html += '<p class="pc-desc">' + p.description + '</p>';
-    html += '<div class="pc-details">';
-    html += '<div class="pc-section"><div class="pc-section-label problem">📌 解决什么问题</div><div class="pc-section-content">' + problemsHtml + '</div></div>';
-    html += '<div class="pc-section"><div class="pc-section-label usage">🔧 如何使用</div><div class="pc-section-content">' + usageHtml + '</div></div>';
-    html += '<div class="pc-section"><div class="pc-section-label insight">💡 产品价值思路</div><div class="pc-section-content">' + insightsHtml + '</div></div>';
-    html += '</div>';
-    html += '<div class="pc-tags">';
-    p.tags.forEach(function(t) {
-      html += '<span class="pc-tag">' + t + '</span>';
-    });
-    var countText = p.count > 1 ? p.count + '次上榜' : '首次上榜';
-    html += '<span class="pc-count">' + countText + '</span>';
-    html += '</div>';
-    html += '</div>';
-  });
-
-  html += '</div>'; // day-projects
-  html += '<div class="day-fade"></div>';
-  html += '</div>'; // day-body
-
-  // Toggle button (only for non-first visible days)
-  if (!isFirst && showToggle) {
-    html += '<button class="day-toggle" onclick="toggleDay(this)">';
-    html += '<span class="toggle-dot"></span>';
-    html += '<span class="toggle-label">' + day.label + '</span>';
-    html += '<span class="toggle-date">' + day.date + '</span>';
-    html += '<span class="toggle-count">' + day.projects.length + ' 个项目</span>';
-    html += '<span class="toggle-icon">▾</span>';
-    html += '</button>';
-  }
-
-  html += '</div>'; // day-group
   return html;
 }
 
 function loadMoreDays() {
-  var fadeWrap = document.getElementById('timelineFade');
-  var loadMoreWrap = document.getElementById('loadMoreWrap');
-  var timeline = document.getElementById('timeline');
-
-  // Move all items from fade wrap into main timeline
-  if (fadeWrap) {
-    var fadeContent = fadeWrap.querySelector('.timeline-fade-scroll');
-    if (fadeContent) {
-      var groups = fadeContent.querySelectorAll('.day-group');
-      groups.forEach(function(g) {
-        // Add toggle button for this day (since it's not the first day)
-        var dayBody = g.querySelector('.day-body');
-        var dayNode = g.querySelector('.day-node');
-        var dayLabel = dayNode ? dayNode.querySelector('.day-label')?.textContent : '';
-        var dayDate = dayNode ? dayNode.querySelector('.day-date')?.textContent : '';
-        var dayProjects = g.querySelectorAll('.project-card').length;
-
-        if (!g.querySelector('.day-toggle')) {
-          var toggleBtn = document.createElement('button');
-          toggleBtn.className = 'day-toggle';
-          toggleBtn.setAttribute('onclick', 'toggleDay(this)');
-          toggleBtn.innerHTML = '<span class="toggle-dot"></span><span class="toggle-label">' + dayLabel + '</span><span class="toggle-date">' + dayDate + '</span><span class="toggle-count">' + dayProjects + ' 个项目</span><span class="toggle-icon">▾</span>';
-          g.appendChild(toggleBtn);
-        }
-
-        timeline.appendChild(g);
-      });
-    }
-    fadeWrap.remove();
-  }
-
-  // Check if more days exist beyond current batch
-  var allRendered = document.querySelectorAll('#timeline > .day-group').length;
-  var totalDays = window.siteData.days.length;
-
-  if (allRendered < totalDays) {
-    // Add next batch as new fade preview
-    var nextBatchStart = allRendered;
-    var previewCount = Math.min(BATCH_SIZE, totalDays - nextBatchStart);
-
-    var newFadeHtml = '<div class="timeline-fade-wrap" id="timelineFade">';
-    newFadeHtml += '<div class="timeline-fade-scroll">';
-    for (var pi = 0; pi < previewCount; pi++) {
-      var pDay = window.siteData.days[nextBatchStart + pi];
-      newFadeHtml += renderDayGroup(pDay, nextBatchStart + pi, ' collapsed', false);
-    }
-    newFadeHtml += '</div>';
-    newFadeHtml += '<div class="timeline-fade-gradient"></div>';
-    newFadeHtml += '</div>';
-
-    // Insert before load more wrap
-    if (loadMoreWrap) {
-      var tempDiv = document.createElement('div');
-      tempDiv.innerHTML = newFadeHtml;
-      loadMoreWrap.parentNode.insertBefore(tempDiv.firstElementChild, loadMoreWrap);
-    }
-
-    // Update button text - count days in fade + beyond
-    var fadeCheck = document.getElementById('timelineFade');
-    var fadeDays = fadeCheck ? fadeCheck.querySelectorAll('.day-group').length : 0;
-    var remaining = totalDays - allRendered - previewCount + fadeDays;
-    if (remaining > 0) {
-      document.querySelector('.load-more-count').textContent = '(' + remaining + ' 天)';
-    } else {
-      if (loadMoreWrap) loadMoreWrap.style.display = 'none';
-    }
-  } else {
-    if (loadMoreWrap) loadMoreWrap.style.display = 'none';
-  }
+  dayLoadCount += BATCH_SIZE;
+  var container = document.getElementById('trendingTimeline');
+  if (!container) return;
+  container.innerHTML = buildTimelineHtml(dayLoadCount);
+  observeReveal();
 }
 
 function toggleDay(btn) {
