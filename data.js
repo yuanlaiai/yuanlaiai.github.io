@@ -1,11 +1,211 @@
-// Source: data.json — Edit that file, regenerate with: bash scripts/update-data.sh
-// Last updated: 2026-05-23
-var siteData = {
-  "lastUpdated": "2026-05-23",
+const DATA = {
+  "lastUpdated": "2026-05-24",
   "days": [
     {
-      "date": "2026-05-23",
+      "date": "2026-05-24",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "anthropics",
+          "name": "knowledge-work-plugins",
+          "fullName": "anthropics / knowledge-work-plugins",
+          "org": "Anthropic",
+          "url": "https://github.com/anthropics/knowledge-work-plugins",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "13,355",
+          "forks": "1,640",
+          "starsToday": "486",
+          "count": 1,
+          "description": "Anthropic 官方知识工作者插件集 -- 让 Claude Cowork 变身销售/支持/工程/法务等角色的专业助手",
+          "problems": [
+            "<strong>AI Agent 不够专业：</strong>通用 AI Agent 不知道不同岗位的工作流程。Anthropic 推出 11 个角色插件——销售、客服、产品、工程、市场、法务、数据、设计、生物研究等，每个插件捆绑对应角色的技能、连接器、斜杠命令和子 Agent。",
+            "<strong>企业工具链碎片化：</strong>Slack、Notion、Jira、HubSpot、Figma 等几十个工具各自独立。Knowledge Work Plugins 预置了每个角色的关键工具连接器，比如销售插件自动连接 Slack + HubSpot + Close + ZoomInfo。",
+            "<strong>团队协作一致性差：</strong>每个人用 AI 的方式不同，产出参差不齐。插件定义标准化的角色工作流——销售人员用统一的线索研究、客户沟通、Pipeline Review 流程。"
+          ],
+          "usage": [
+            "在 Claude Cowork 中直接使用，<code>/plugin</code> 浏览可用插件。",
+            "安装销售插件：<code>/plugin install sales</code>",
+            "安装工程插件：<code>/plugin install engineering</code>",
+            "每个插件包含技能、连接器、斜杠命令和子 Agent。"
+          ],
+          "insights": [
+            "<strong>AI 角色即服务（AI Role-as-a-Service）：</strong>Anthropic 定义了 AI Agent 的 11 种角色模板。可以做成 SaaS——企业订阅不同角色包，每个角色有预配置的工具链和工作流。",
+            "<strong>企业 AI 岗位标准化：</strong>每家公司都可以定制自己的角色插件——把公司内部的 SOP、工具链、知识库打包成 Agent 角色。新员工入职时直接分配对应角色的 AI 助手。",
+            "<strong>角色插件市场：</strong>继 claude-plugins-official 的通用插件市场后，Knowledge Work Plugins 开创了垂直领域的角色插件。未来可能有第三方角色插件商店。"
+          ],
+          "tags": [
+            "anthropic-official",
+            "claude-cowork",
+            "role-plugins",
+            "enterprise",
+            "knowledge-work",
+            "MCP"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "earendil-works",
+          "name": "pi",
+          "fullName": "earendil-works / pi",
+          "org": "Earendil Works",
+          "url": "https://github.com/earendil-works/pi",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "53,678",
+          "forks": "6,416",
+          "starsToday": "444",
+          "count": 1,
+          "description": "AI Agent 工具包全家桶 -- 编码 Agent CLI + 统一 LLM API + TUI/Web UI + Slack Bot + vLLM 集群",
+          "problems": [
+            "<strong>AI Agent 工具链分散：</strong>编码 Agent、LLM API、终端 UI、Web UI、Slack Bot 各自独立项目，集成成本高。Pi 把所有打包在一个 monorepo——@pi-coding-agent（CLI）、@pi-agent-core（运行时）、@pi-ai（统一 LLM API）、@pi-tui（终端 UI）。",
+            "<strong>模型切换麻烦：</strong>OpenAI、Anthropic、Google 各有各的 API 格式和 SDK。@pi-ai 提供统一的多模型 API，一行代码切换模型提供商。",
+            "<strong>Agent 会话缺少分享机制：</strong>Agent 的开发过程难复现、难调试。Pi 支持将 OSS 编码会话发布到 Hugging Face，公开分享 Agent 的真实工作记录。"
+          ],
+          "usage": [
+            "安装编码 Agent CLI：<pre><code>npm install -g @earendil-works/pi-coding-agent</code></pre>",
+            "启动交互式编码 Agent：<code>pi</code>",
+            "使用统一 LLM API：<pre><code>import { ai } from '@earendil-works/pi-ai'</code></pre>",
+            "发布会话到 HF：<pre><code>npx pi-share-hf</code></pre>"
+          ],
+          "insights": [
+            "<strong>Agent 开发全栈平台：</strong>Pi 不只是编码 Agent，而是 Agent 开发的全栈工具包——从底层 LLM 调用到前端 UI，再到 Slack 集成。可以做成类似 Vercel 但面向 AI Agent 的一站式平台。",
+            "<strong>会话数据即训练数据：</strong>Pi 的会话分享机制（发布到 Hugging Face）本质是在构建 Agent 行为的开源数据集。这些真实世界的编码会话数据对训练更好的编码 Agent 极其宝贵。",
+            "<strong>vLLM 集群集成：</strong>Pi 支持 vLLM pods，意味着可以自托管开源模型做 Agent 推理。企业可部署私有 Pi 集群，数据不出内网。"
+          ],
+          "tags": [
+            "coding-agent",
+            "llm-api",
+            "monorepo",
+            "agent-toolkit",
+            "vLLM",
+            "open-source"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "Alishahryar1",
+          "name": "free-claude-code",
+          "fullName": "Alishahryar1 / free-claude-code",
+          "org": "Alishahryar1",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "28,875",
+          "forks": "4,332",
+          "starsToday": "565",
+          "count": 1,
+          "description": "免费使用 Claude Code -- 终端/VSCode/Discord 三合一，支持语音，无需 Anthropic 付费账号",
+          "problems": [
+            "<strong>Claude Code 需要付费 API Key：</strong>Anthropic 的 Claude Code 需要绑定付费账号，对于学习者和开发者来说成本较高。free-claude-code 通过整合免费模型和代理，让用户在终端、VSCode 扩展或 Discord 中免费使用类似 Claude Code 的体验。",
+            "<strong>多平台切换繁琐：</strong>终端编码、VSCode 扩展、Discord 机器人——不同场景需要不同工具。Free Claude Code 一个项目覆盖三种模式，包括语音输入支持。",
+            "<strong>编码 Agent 门槛高：</strong>配置 API Key、管理上下文窗口、调整模型参数对新手不友好。FCC 开箱即用，像 OpenClaw 一样简单。"
+          ],
+          "usage": [
+            "终端使用：<pre><code>pip install free-claude-code && fcc</code></pre>",
+            "VSCode 扩展：在扩展市场搜索 Free Claude Code 安装。",
+            "Discord Bot：邀请机器人到服务器，<code>/fcc 写一个 React 组件</code>",
+            "启用语音：<code>fcc --voice</code>"
+          ],
+          "insights": [
+            "<strong>AI 编码的民主化：</strong>28K star 证明市场对免费 AI 编码 Agent 的巨大需求。开发者想要零成本的 AI 编程体验。",
+            "<strong>多模态 Agent 入口：</strong>终端 + IDE + 聊天 + 语音，四个入口覆盖所有使用场景。可以做成 Agent 的多模态接入层。",
+            "<strong>教育市场黄金入口：</strong>面向编程学习者免费提供 AI 编码 Agent——学生无需付费就能获得 AI 编程体验，培养使用习惯，后续转化为付费用户。"
+          ],
+          "tags": [
+            "free-tier",
+            "claude-code",
+            "vscode-extension",
+            "discord-bot",
+            "voice-support",
+            "openclaw"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "multica-ai",
+          "name": "multica",
+          "fullName": "multica-ai / multica",
+          "org": "Multica AI",
+          "url": "https://github.com/multica-ai/multica",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "32,242",
+          "forks": "3,888",
+          "starsToday": "584",
+          "count": 1,
+          "description": "开源托管 Agent 平台 -- 把编码 Agent 变成真正的队友：分配任务、追踪进度、复用技能",
+          "problems": [
+            "<strong>AI Agent 各自为战：</strong>每个开发者有自己的 Claude Code / Codex，但彼此不协作、不共享上下文。Multica 把编码 Agent 变成团队成员——在项目看板上给 Agent 分配 Issue，像给同事派活一样。",
+            "<strong>Agent 没有长期记忆和技能积累：</strong>每次新任务 Agent 都从头开始。Multica 让 Agent 复合技能——完成的任务转化为可复用的技能文件，下次同类任务直接使用。",
+            "<strong>多 Agent 缺乏协调：</strong>多个 Agent 处理同一项目时容易冲突。Multica 的 Squads 功能提供稳定的路由层：组长 Agent 分配任务给组员 Agent，像真正的团队协作。"
+          ],
+          "usage": [
+            "部署 Multica 平台（支持自托管）：<pre><code>git clone https://github.com/multica-ai/multica</code></pre>",
+            "接入 Claude Code / Codex / Copilot 等 Agent。",
+            "在项目看板上创建 Issue 分配给 Agent。",
+            "Agent 自动接管任务、写代码、报告进度。"
+          ],
+          "insights": [
+            "<strong>AI 团队管理平台：</strong>Multica 开创了 Agent 即同事的产品品类。可以做成 SaaS——企业的 AI 开发团队管理平台，每个 Agent 有独立的 Jira/Linear 任务、Git 提交记录、Code Review 历史。",
+            "<strong>Agent 技能复合引擎：</strong>技能积累是 Multica 的核心价值——每次任务产生的知识自动转化为可复用的技能文件。类似人的经验积累，Agent 越用越熟练。",
+            "<strong>人+AI 混合团队：</strong>Multica 的 Squads 让人类和 Agent 在同一个团队中工作——人类做架构决策，Agent 执行编码。这是未来软件开发团队的标准形态。"
+          ],
+          "tags": [
+            "managed-agents",
+            "task-assignment",
+            "skill-compounding",
+            "multi-agent",
+            "self-hosted",
+            "platform"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "manaflow-ai",
+          "name": "cmux",
+          "fullName": "manaflow-ai / cmux",
+          "org": "Manaflow AI",
+          "url": "https://github.com/manaflow-ai/cmux",
+          "lang": "Swift",
+          "langClass": "rs",
+          "stars": "18,761",
+          "forks": "1,431",
+          "starsToday": "560",
+          "count": 1,
+          "description": "为 AI 编码 Agent 打造的 macOS 终端 -- Ghostty 内核 + 垂直标签 + 智能通知",
+          "problems": [
+            "<strong>终端不支持 Agent 工作流：</strong>传统终端（iTerm2、Terminal.app）没有为 AI 编码 Agent 设计。Cmux 基于 Ghostty 构建，每个 Agent 会话有独立的垂直标签页和侧边栏，显示 Git 分支、PR 状态、工作目录和端口信息。",
+            "<strong>Agent 通知被忽略：</strong>Agent 完成任务后没有合适的通知机制。Cmux 的通知环（蓝色光环）和通知面板让 Agent 在需要人类介入时引起注意，不再错过 Agent 的请求。",
+            "<strong>多 Agent 协作终端混乱：</strong>同时运行多个 Agent 时终端窗口混乱不堪。Cmux 支持 Claude Code Teams 模式——队友以原生分屏出现，带侧边栏元数据和通知。"
+          ],
+          "usage": [
+            "安装 cmux：<pre><code>brew install manaflow-ai/tap/cmux</code></pre>",
+            "启动 Claude Code Teams：<pre><code>cmux claude-teams</code></pre>",
+            "SSH 远程开发：<pre><code>cmux ssh user@remote</code></pre>",
+            "内嵌浏览器：在终端中分割浏览器面板。"
+          ],
+          "insights": [
+            "<strong>Agent 原生终端的全新品类：</strong>Cmux 是第一个专门为 AI 编码 Agent 设计的终端。传统终端厂商（iTerm2、Warp）需要跟进——Agent 工作流需要全新的终端交互范式。",
+            "<strong>Agent 协作的 UI 层：</strong>Cmux 的通知系统和 Claude Code Teams 集成意味着终端不仅是 CLI 界面，更是 Agent 团队协作的 UI 层。未来的 IDE 可能不是 VS Code，而是增强型终端。",
+            "<strong>Agent 浏览器集成：</strong>内嵌浏览器 + 脚本化 API 让 Agent 可以直接在终端中操作网页（调试、截图、检查）。终端正在变成 Agent 的操作系统。"
+          ],
+          "tags": [
+            "macos-terminal",
+            "ghostty",
+            "claude-code-teams",
+            "agent-notifications",
+            "vertical-tabs",
+            "ai-native"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-05-23",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -207,7 +407,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -409,7 +609,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "前天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -611,7 +811,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "3天前",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -813,7 +1013,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -1015,7 +1215,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -1217,7 +1417,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "9天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1417,7 +1617,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "10天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1613,7 +1813,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "11天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
