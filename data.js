@@ -1,4 +1,6 @@
-const DATA = {
+// Source: data.json — Edit that file, regenerate with: bash scripts/update-data.sh
+// Last updated: 2026-05-24
+var siteData = {
   "lastUpdated": "2026-05-24",
   "days": [
     {
