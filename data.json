@@ -1,9 +1,207 @@
 {
-  "lastUpdated": "2026-05-24",
+  "lastUpdated": "2026-05-26",
   "days": [
     {
-      "date": "2026-05-24",
+      "date": "2026-05-26",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "affaan-m",
+          "name": "ECC",
+          "fullName": "affaan-m / ECC",
+          "org": "affaan-m",
+          "url": "https://github.com/affaan-m/ECC",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "192,277",
+          "forks": "29,765",
+          "starsToday": "2,052",
+          "count": 1,
+          "description": "Agent 工具链性能优化系统 —— 技能/本能/记忆/安全，覆盖 Claude Code、Codex、Cursor 等 12+ 生态的完整 Agent 工作台",
+          "problems": [
+            "<strong>AI 编码 Agent 配置碎片化：</strong>每个 Agent 工具（Claude Code、Codex、Cursor、Gemini 等）有自己的配置格式和规则文件。ECC 提供统一的工具链优化系统，跨 12+ 平台无缝工作。",
+            "<strong>Agent 缺乏持续学习能力：</strong>每次新会话 Agent 都从零开始。ECC 包含记忆优化、技能积累、连续学习机制，让 Agent 越用越聪明。",
+            "<strong>Agent 安全没有标准化：</strong>Agent 生成的代码可能引入漏洞。ECC 内置安全扫描、Prompt 防御基线、沙箱化运行，来自 Anthropic 黑客松获奖项目。"
+          ],
+          "usage": [
+            "快速安装 ECC：<pre><code>npx ecc install</code></pre>",
+            "查看所有可用技能：<code>ecc skills list</code>",
+            "运行安全扫描：<code>ecc security scan</code>",
+            "支持 Claude Code、Codex、Cursor、OpenCode、Gemini、Zed、GitHub Copilot 等。"
+          ],
+          "insights": [
+            "<strong>Agent 工具链的标准化层：</strong>ECC 相当于 Agent 世界的 dotfiles——不管底层用哪个 Agent，都有统一的工作流配置。可以做成 SaaS 产品，企业团队统一管理 Agent 行为。",
+            "<strong>192K star 的 AI Agent 基础设施：</strong>近 20 万 star 证明了 AI Agent 工具链标准化的巨大需求。ECC 从 Anthropic 黑客松项目成长为跨生态的标准。",
+            "<strong>Agent Shiled 安全新品类：</strong>ECC 内置的 AgentShield 和 Prompt 防御机制开辟了 Agent 安全的新赛道。随着 Agent 越来越自主，安全防线将成为刚需。"
+          ],
+          "tags": [
+            "agent-harness",
+            "agent-security",
+            "multi-platform",
+            "skills",
+            "memory-optimization",
+            "anthropic-winner"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "mukul975",
+          "name": "Anthropic-Cybersecurity-Skills",
+          "fullName": "mukul975 / Anthropic-Cybersecurity-Skills",
+          "org": "mukul975",
+          "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "9,188",
+          "forks": "1,134",
+          "starsToday": "999",
+          "count": 1,
+          "description": "AI Agent 的网络安全技能库 —— 754 个结构化安全技能，覆盖 MITRE ATT&CK、NIST CSF 等 5 大框架",
+          "problems": [
+            "<strong>AI Agent 缺乏网络安全专业知识：</strong>AI 编码 Agent 懂写代码但不一定懂安全。这个项目提供了 754 个结构化网络安全技能，让 AI Agent 拥有高级安全分析师的知识水平。",
+            "<strong>安全框架碎片化：</strong>MITRE ATT&CK、NIST CSF、NIST AI RMF 等框架各自独立，普通开发者很难全面掌握。这个技能库把 5 个框架统一映射到同一套技能集。",
+            "<strong>安全知识难以复用到 Agent 工作流：</strong>传统安全知识在 SIEM 中，Agent 用不上。这 754 个技能以 agentskills.io 开放标准组织，Agent 可以直接调用——从检测 Kerberoasting 到云安全事件响应。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/mukul975/Anthropic-Cybersecurity-Skills</code></pre>",
+            "通过 Claude Code / Codex / Cursor 直接加载技能文件。",
+            "Agent 会自动在安全审计、漏洞检测、事件响应中使用这些技能。",
+            "兼容 26+ AI 平台，包括 Claude Code、Copilot、Codex CLI、Gemini CLI 等。"
+          ],
+          "insights": [
+            "<strong>Agent 专业技能库的新品类：</strong>继通用编码技能后，垂直领域的 Agent 技能库正在爆发——网络安全、金融、法律等。可以做成技能市场，每个行业贡献自己的 Agent 技能包。",
+            "<strong>安全 Agent 即服务：</strong>企业无需雇佣高级安全分析师，直接向 AI Agent 注入 754 个安全技能。安全 Agent 可以作为 DevOps 流水线的一个环节自动运行。",
+            "<strong>框架合规自动化：</strong>MITRE ATT&CK/NIST CSF 映射意味着安全 Agent 可以自动生成合规报告。安全审计从季度人工检查变成持续自动化。"
+          ],
+          "tags": [
+            "cybersecurity",
+            "skills-library",
+            "MITRE-ATTACK",
+            "NIST-CSF",
+            "agent-skills",
+            "security-automation"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "colbymchenry",
+          "name": "codegraph",
+          "fullName": "colbymchenry / codegraph",
+          "org": "Colby McHenry",
+          "url": "https://github.com/colbymchenry/codegraph",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "24,830",
+          "forks": "1,371",
+          "starsToday": "3,171",
+          "count": 3,
+          "description": "预索引的代码知识图谱 —— 为 Claude Code、Codex、Cursor 等 Agent 减少 Token 消耗和工具调用，100% 本地",
+          "problems": [
+            "<strong>AI 编码 Agent 读代码效率低：</strong>Agent 需要频繁读取文件、搜索代码，消耗大量 Token 和时间。Codegraph 提前为整个代码库建立知识图谱，Agent 直接查询无需扫描文件。",
+            "<strong>大型代码库 Agent 无法应对：</strong>百万行级项目的上下文窗口不够用。Codegraph 的预索引图谱让 Agent 精确找到需要的代码，而不是盲目搜索。",
+            "<strong>跨工具不可移植：</strong>一个代码库的索引只能在一个工具中用。Codegraph 兼容 Claude Code、Codex、Cursor、OpenCode、Hermes Agent 等多个平台。"
+          ],
+          "usage": [
+            "在项目根目录运行：<code>npx codegraph</code>",
+            "支持 Claude Code、Codex、Cursor、OpenCode、Hermes Agent。",
+            "Agent 启动后自动加载知识图谱。"
+          ],
+          "insights": [
+            "<strong>Agent 上下文管理的革命：</strong>Codegraph 从根本上改变了 Agent 理解代码的方式——从实时搜索到预索引图谱。这将大幅降低 Agent 的使用成本。",
+            "<strong>企业级代码库智能：</strong>大型企业代码库（百万行+）在 Agent 时代需要全新的索引基础设施。Codegraph 可以被视为 Agent 时代的 IDE 后端。",
+            "<strong>持续火热（+3,171 star/天）：</strong>连续多天上榜证明市场对此类产品的强烈需求。Agent 的代码理解效率是当前最紧迫的问题。"
+          ],
+          "tags": [
+            "code-knowledge-graph",
+            "code-indexing",
+            "token-optimization",
+            "multi-agent",
+            "local-first"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "Leonxlnx",
+          "name": "taste-skill",
+          "fullName": "Leonxlnx / taste-skill",
+          "org": "Leonxlnx",
+          "url": "https://github.com/Leonxlnx/taste-skill",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "19,647",
+          "forks": "1,651",
+          "starsToday": "542",
+          "count": 1,
+          "description": "给 AI 注入好品味 —— 从源头杜绝 AI 生成的廉价、模板化界面，让 AI Agent 输出有设计感的代码",
+          "problems": [
+            "<strong>AI 生成的前端太「AI 味」：</strong>所有 AI Agent 写的前端看起来都差不多——居中、白底、圆角卡片、蓝色按钮。Taste Skill 提供布局、排版、动效、间距的专业指南，让 AI 输出有真正设计感的界面。",
+            "<strong>Agent UI 缺乏设计体系：</strong>AI 不懂设计原则。Taste Skill 包含了完整的前端设计体系指南，覆盖从排版到交互的所有层面。",
+            "<strong>反 AI 模板化：</strong>专门针对 Claude Code、Codex、Cursor 等 Agent 的输出进行优化，打破 AI 默认的模板化 UI。"
+          ],
+          "usage": [
+            "安装技能：<pre><code>npx skills add https://github.com/Leonxlnx/taste-skill</code></pre>",
+            "在代码生成任务前加载技能，AI Agent 自动遵循设计指南。",
+            "包含多套设计风格（新拟态、极简、玻璃态等）。",
+            "也包含图片生成技能（参考板、线框图、品牌套件）。"
+          ],
+          "insights": [
+            "<strong>AI 审美的商业化机会：</strong>19.6K star 证明 AI 输出的审美问题是一个巨大的痛点。可以做成 AI 前端模板市场——不同风格、不同行业的「品味包」订阅服务。",
+            "<strong>Agent 技能的垂直化：</strong>Taste Skill 是 Agent 技能垂直化（编码→设计）的典型案例。未来每个设计领域都会有专门的 Agent 品味技能。",
+            "<strong>AI 同质化竞争的解药：</strong>当所有 AI 工具能力趋同，审美和品味会成为差异化竞争的关键。企业的 AI 输出风格会成为品牌资产的一部分。"
+          ],
+          "tags": [
+            "ui-design",
+            "anti-slop",
+            "design-system",
+            "agent-skills",
+            "frontend",
+            "aesthetics"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "hardikpandya",
+          "name": "stop-slop",
+          "fullName": "hardikpandya / stop-slop",
+          "org": "Hardik Pandya",
+          "url": "https://github.com/hardikpandya/stop-slop",
+          "lang": "Markdown",
+          "langClass": "",
+          "stars": "4,374",
+          "forks": "381",
+          "starsToday": "353",
+          "count": 1,
+          "description": "AI 文本反「AI 味」技能 —— 一个 skill 文件即可去除 AI 写作的模板化特征，让文字更像真人",
+          "problems": [
+            "<strong>AI 生成的文字「AI 味」太重：</strong>「值得注意的是」「毋庸置疑」「在这个充满挑战的时代」——AI 有自己的一套高频用语。Stop Slop 提供了反 AI 味的写作指南。",
+            "<strong>AI 散文缺乏真实感：</strong>真实的人写作有个人风格、有口语化表达、有不确定性。AI 倾向于过度正式和确定性语言。这个 skill 文件教导 AI 写出更自然的散文。",
+            "<strong>简单可移植：</strong>不像复杂的提示工程，Stop Slop 只是一个 skill 文件（SKILL.md），任何兼容 Agent 的工具都可以加载。"
+          ],
+          "usage": [
+            "安装 skill：<pre><code>npx skills add https://github.com/hardikpandya/stop-slop</code></pre>",
+            "或直接复制 SKILL.md 到项目 .claude/ 目录。",
+            "Agent 在写作时自动应用反 AI 味指南。"
+          ],
+          "insights": [
+            "<strong>AI 输出的「去 AI 化」市场：</strong>当 AI 内容泛滥，能写出像真人一样的 AI 工具会成为稀缺资源。去 AI 味工具（如 Stop Slop、Humanizer）会成为 AI 写作的标配。",
+            "<strong>Skill 文件作为产品：</strong>一个 SKILL.md 文件获得 4K+ star——Agent 技能本身就是可发布的产品形态。未来会像 VS Code 扩展市场一样出现 Agent 技能市场。",
+            "<strong>内容质量的新标准：</strong>「不像 AI 写的」正在成为内容质量的新标准。从 SEO 角度看，去 AI 味的内容在 Google 排名中更有优势。"
+          ],
+          "tags": [
+            "anti-slop",
+            "writing-tone",
+            "agent-skills",
+            "content-quality",
+            "natural-writing"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-05-24",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -205,7 +403,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -407,7 +605,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "前天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -609,7 +807,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "3天前",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -811,7 +1009,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -1013,7 +1211,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -1215,7 +1413,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "6天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -1417,7 +1615,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "10天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1617,7 +1815,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "11天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1813,7 +2011,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "12天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
