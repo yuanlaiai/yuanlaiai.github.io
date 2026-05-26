@@ -520,10 +520,224 @@ function initBgParticles() {
   draw();
 }
 
+// ── Prompts Module ──────────────────────────
+
+var promptsData = [];
+var activePromptFilter = 'all';
+var currentModalPromptId = null;
+
+function loadPrompts() {
+  var loadingEl = document.getElementById('promptsLoading');
+  var gridEl = document.getElementById('promptsGrid');
+
+  fetch('prompts.json')
+    .then(function(res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function(data) {
+      promptsData = data.prompts || [];
+      if (loadingEl) loadingEl.style.display = 'none';
+      if (gridEl) gridEl.style.display = '';
+      renderPromptFilters();
+      renderPrompts();
+    })
+    .catch(function(err) {
+      console.error('Failed to load prompts:', err);
+      if (loadingEl) loadingEl.textContent = 'Prompt 数据加载失败，请刷新重试';
+    });
+}
+
+function getPromptCategories() {
+  var cats = [];
+  promptsData.forEach(function(p) {
+    if (cats.indexOf(p.category) === -1) cats.push(p.category);
+  });
+  return cats;
+}
+
+function renderPromptFilters() {
+  var filterContainer = document.getElementById('promptFilterTags');
+  if (!filterContainer) return;
+
+  var categories = getPromptCategories();
+  var html = '<button class="filter-btn active" data-filter="all">全部</button>';
+  categories.forEach(function(cat) {
+    html += '<button class="filter-btn" data-filter="' + cat + '">' + cat + '</button>';
+  });
+  filterContainer.innerHTML = html;
+
+  filterContainer.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterContainer.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activePromptFilter = btn.getAttribute('data-filter');
+      renderPrompts();
+    });
+  });
+}
+
+function renderPrompts() {
+  var grid = document.getElementById('promptsGrid');
+  if (!grid) return;
+
+  var filtered = activePromptFilter === 'all'
+    ? promptsData
+    : promptsData.filter(function(p) { return p.category === activePromptFilter; });
+
+  grid.innerHTML = filtered.map(function(p, i) {
+    var modelIcons = p.models.map(function(m) {
+      return '<span class="prompt-model-icon">' + m + '</span>';
+    }).join('');
+
+    return '<div class="prompt-card reveal" style="transition-delay:' + (i * 0.06) + 's" onclick="openPromptModal(' + p.id + ')">' +
+      '<div class="prompt-card-top">' +
+        '<span class="prompt-category-tag">' + p.category + '</span>' +
+        '<span class="prompt-model-icons">' + modelIcons + '</span>' +
+      '</div>' +
+      '<h3 class="prompt-card-title">' + p.title + '</h3>' +
+      '<p class="prompt-card-desc">' + p.description + '</p>' +
+      '<div class="prompt-card-hint">查看 Prompt →</div>' +
+    '</div>';
+  }).join('');
+
+  observeReveal();
+}
+
+// ── Modal ───────────────────────────────────
+
+function openPromptModal(id) {
+  var prompt = null;
+  promptsData.forEach(function(p) {
+    if (p.id === id) prompt = p;
+  });
+  if (!prompt) return;
+
+  currentModalPromptId = id;
+
+  var modelTags = prompt.models.map(function(m) {
+    return '<span class="modal-model-tag">' + m + '</span>';
+  }).join('');
+
+  var bodyHtml =
+    '<h2 class="modal-title">' + prompt.title + '</h2>' +
+    '<span class="modal-category">' + prompt.category + '</span>' +
+    '<div class="modal-section">' +
+      '<div class="modal-section-label">📝 Prompt 正文</div>' +
+      '<div class="modal-prompt-block">' + escapeHtml(prompt.prompt) + '</div>' +
+    '</div>' +
+    '<div class="modal-section">' +
+      '<div class="modal-section-label">🎯 使用场景</div>' +
+      '<div class="modal-section-text">' + prompt.useCase + '</div>' +
+    '</div>' +
+    '<div class="modal-section">' +
+      '<div class="modal-section-label">🤖 适用模型</div>' +
+      '<div class="modal-model-list">' + modelTags + '</div>' +
+    '</div>' +
+    '<div class="modal-section">' +
+      '<div class="modal-section-label">💡 使用小贴士</div>' +
+      '<div class="modal-section-text">' + prompt.tips + '</div>' +
+    '</div>';
+
+  document.getElementById('modalBody').innerHTML = bodyHtml;
+
+  var copyBtn = document.getElementById('modalCopyBtn');
+  copyBtn.textContent = '📋 复制 Prompt';
+  copyBtn.classList.remove('copied');
+
+  var modal = document.getElementById('promptModal');
+  modal.style.display = '';
+  document.body.style.overflow = 'hidden';
+
+  // Focus trap: focus close button
+  var closeBtn = modal.querySelector('.modal-close');
+  if (closeBtn) closeBtn.focus();
+}
+
+function closePromptModal() {
+  var modal = document.getElementById('promptModal');
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+  currentModalPromptId = null;
+}
+
+function copyPromptFromModal() {
+  var prompt = null;
+  promptsData.forEach(function(p) {
+    if (p.id === currentModalPromptId) prompt = p;
+  });
+  if (!prompt) return;
+
+  var text = prompt.prompt;
+  var btn = document.getElementById('modalCopyBtn');
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      btn.textContent = '✅ 已复制';
+      btn.classList.add('copied');
+      setTimeout(function() {
+        btn.textContent = '📋 复制 Prompt';
+        btn.classList.remove('copied');
+      }, 2000);
+    }).catch(function() {
+      fallbackCopy(text, btn);
+    });
+  } else {
+    fallbackCopy(text, btn);
+  }
+}
+
+function fallbackCopy(text, btn) {
+  var textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.style.position = 'fixed';
+  textarea.style.left = '-9999px';
+  textarea.style.top = '-9999px';
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+  try {
+    document.execCommand('copy');
+    btn.textContent = '✅ 已复制';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = '📋 复制 Prompt';
+      btn.classList.remove('copied');
+    }, 2000);
+  } catch (e) {
+    btn.textContent = '复制失败，请手动选择文本';
+  }
+  document.body.removeChild(textarea);
+}
+
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// Modal click-outside-to-close
+document.addEventListener('click', function(e) {
+  if (e.target.id === 'promptModal') {
+    closePromptModal();
+  }
+});
+
+// ESC to close
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && currentModalPromptId !== null) {
+    closePromptModal();
+  }
+});
+
 // ── Init ──
 document.addEventListener('DOMContentLoaded', function() {
   if (window.siteData) renderTimeline();
   renderArticles();
   renderProjects();
+  loadPrompts();
   initBgParticles();
 });
