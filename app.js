@@ -222,7 +222,7 @@ function buildTimelineHtml(showUpTo) {
 
     // Toggle button for past days
     if (!isFirst) {
-      html += '<button class="day-toggle" onclick="toggleDay(this)">';
+      html += '<button class="day-toggle" type="button" onclick="toggleDay(event,this)">';
       html += '<span class="toggle-dot"></span>';
       html += '<span class="toggle-label">' + day.label + '</span>';
       html += '<span class="toggle-date">' + day.date + '</span>';
@@ -237,7 +237,7 @@ function buildTimelineHtml(showUpTo) {
     if (isFadeDay && remaining > 0) {
       html += '<div class="day-group-fade-overlay"></div>';
       html += '<div class="load-more-overlay" id="loadMoreWrap">';
-      html += '<button class="btn-load-more" onclick="loadMoreDays()">📅 展开更早记录 <span class="load-more-count">(' + remaining + ' 天)</span></button>';
+      html += '<button class="btn-load-more" type="button" onclick="loadMoreDays()">📅 展开更早记录 <span class="load-more-count">(' + remaining + ' 天)</span></button>';
       html += '</div>';
       html += '</div>'; // day-group-fade-wrap
     }
@@ -260,7 +260,8 @@ function loadMoreDays() {
   observeReveal();
 }
 
-function toggleDay(btn) {
+function toggleDay(e, btn) {
+  if (e) { e.preventDefault(); e.stopPropagation(); }
   var dayGroup = btn.closest('.day-group');
   if (!dayGroup) return;
   var dayBody = dayGroup.querySelector('.day-body');
