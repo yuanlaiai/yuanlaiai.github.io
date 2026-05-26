@@ -42,6 +42,7 @@ var _hmt = _hmt || [];
       <a href="#home" class="nav-link active">首页</a>
       <a href="awesome-ai-tools/" class="nav-link">AI工具</a>
       <a href="#trending" class="nav-link">AI热点</a>
+      <a href="#prompts" class="nav-link">Prompt</a>
       <a href="#articles" class="nav-link">文章</a>
       <a href="#projects" class="nav-link">项目</a>
       <a href="#about" class="nav-link">关于</a>
@@ -128,6 +129,40 @@ var _hmt = _hmt || [];
     </div>
   </div>
 </section>
+
+<!-- Curated Prompts Section -->
+<section id="prompts" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">// 精选 Prompt</div>
+      <h2 class="section-title">💬 Prompt 模板库</h2>
+      <p class="section-subtitle">精选高质量 AI 提示词，点击卡片查看详情，一键复制使用</p>
+    </div>
+    <div class="filter-tags" id="promptFilterTags">
+      <!-- Rendered by JS -->
+    </div>
+    <div id="promptsLoading" style="text-align:center;padding:40px;color:var(--text-muted)">
+      加载中...
+    </div>
+    <div class="prompts-grid" id="promptsGrid" style="display:none">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Prompt Modal -->
+<div class="modal-overlay" id="promptModal" style="display:none">
+  <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" onclick="closePromptModal()" aria-label="关闭">✕</button>
+    <div class="modal-body" id="modalBody">
+      <!-- Rendered by JS -->
+    </div>
+    <div class="modal-footer">
+      <button class="btn-modal-copy" id="modalCopyBtn" onclick="copyPromptFromModal()">📋 复制 Prompt</button>
+      <button class="btn-modal-close" onclick="closePromptModal()">关闭</button>
+    </div>
+  </div>
+</div>
 
 <!-- Articles Section -->
 <section id="articles" class="section section-alt">
