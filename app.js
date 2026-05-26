@@ -348,7 +348,10 @@ function renderProjects() {
 
 // ── Scroll Reveal Animation ─────────────────
 
+var _revealObserver = null;
+
 function observeReveal() {
+  if (_revealObserver) _revealObserver.disconnect();
   var els = document.querySelectorAll('.reveal');
   var obs = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
@@ -359,6 +362,7 @@ function observeReveal() {
     });
   }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
   els.forEach(function(el) { obs.observe(el); });
+  _revealObserver = obs;
 }
 
 // ── Collapsible Day Toggle ────────────────────
@@ -563,7 +567,7 @@ function renderPromptFilters() {
   var categories = getPromptCategories();
   var html = '<button class="filter-btn active" data-filter="all">全部</button>';
   categories.forEach(function(cat) {
-    html += '<button class="filter-btn" data-filter="' + cat + '">' + cat + '</button>';
+    html += '<button class="filter-btn" data-filter="' + escapeHtml(cat) + '">' + escapeHtml(cat) + '</button>';
   });
   filterContainer.innerHTML = html;
 
@@ -587,16 +591,16 @@ function renderPrompts() {
 
   grid.innerHTML = filtered.map(function(p, i) {
     var modelIcons = p.models.map(function(m) {
-      return '<span class="prompt-model-icon">' + m + '</span>';
+      return '<span class="prompt-model-icon">' + escapeHtml(m) + '</span>';
     }).join('');
 
     return '<div class="prompt-card reveal" style="transition-delay:' + (i * 0.06) + 's" onclick="openPromptModal(' + p.id + ')">' +
       '<div class="prompt-card-top">' +
-        '<span class="prompt-category-tag">' + p.category + '</span>' +
+        '<span class="prompt-category-tag">' + escapeHtml(p.category) + '</span>' +
         '<span class="prompt-model-icons">' + modelIcons + '</span>' +
       '</div>' +
-      '<h3 class="prompt-card-title">' + p.title + '</h3>' +
-      '<p class="prompt-card-desc">' + p.description + '</p>' +
+      '<h3 class="prompt-card-title">' + escapeHtml(p.title) + '</h3>' +
+      '<p class="prompt-card-desc">' + escapeHtml(p.description) + '</p>' +
       '<div class="prompt-card-hint">查看 Prompt →</div>' +
     '</div>';
   }).join('');
@@ -616,19 +620,19 @@ function openPromptModal(id) {
   currentModalPromptId = id;
 
   var modelTags = prompt.models.map(function(m) {
-    return '<span class="modal-model-tag">' + m + '</span>';
+    return '<span class="modal-model-tag">' + escapeHtml(m) + '</span>';
   }).join('');
 
   var bodyHtml =
-    '<h2 class="modal-title">' + prompt.title + '</h2>' +
-    '<span class="modal-category">' + prompt.category + '</span>' +
+    '<h2 class="modal-title">' + escapeHtml(prompt.title) + '</h2>' +
+    '<span class="modal-category">' + escapeHtml(prompt.category) + '</span>' +
     '<div class="modal-section">' +
       '<div class="modal-section-label">📝 Prompt 正文</div>' +
       '<div class="modal-prompt-block">' + escapeHtml(prompt.prompt) + '</div>' +
     '</div>' +
     '<div class="modal-section">' +
       '<div class="modal-section-label">🎯 使用场景</div>' +
-      '<div class="modal-section-text">' + prompt.useCase + '</div>' +
+      '<div class="modal-section-text">' + escapeHtml(prompt.useCase) + '</div>' +
     '</div>' +
     '<div class="modal-section">' +
       '<div class="modal-section-label">🤖 适用模型</div>' +
@@ -636,7 +640,7 @@ function openPromptModal(id) {
     '</div>' +
     '<div class="modal-section">' +
       '<div class="modal-section-label">💡 使用小贴士</div>' +
-      '<div class="modal-section-text">' + prompt.tips + '</div>' +
+      '<div class="modal-section-text">' + escapeHtml(prompt.tips) + '</div>' +
     '</div>';
 
   document.getElementById('modalBody').innerHTML = bodyHtml;
@@ -656,6 +660,7 @@ function openPromptModal(id) {
 
 function closePromptModal() {
   var modal = document.getElementById('promptModal');
+  if (!modal) return;
   modal.style.display = 'none';
   document.body.style.overflow = '';
   currentModalPromptId = null;
