@@ -1,9 +1,203 @@
 {
-  "lastUpdated": "2026-05-26",
+  "lastUpdated": "2026-05-27",
   "days": [
     {
-      "date": "2026-05-26",
+      "date": "2026-05-27",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "thedotmack",
+          "name": "claude-mem",
+          "fullName": "thedotmack / claude-mem",
+          "org": "TheDotMack",
+          "url": "https://github.com/thedotmack/claude-mem",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "78,620",
+          "forks": "6,764",
+          "starsToday": "319",
+          "count": 1,
+          "description": "AI Agent 的持久记忆系统 —— 自动记录 Agent 的所有操作，压缩后用 AI 注入到后续会话中，支持 Claude Code / Codex / Gemini / Hermes 等",
+          "problems": [
+            "<strong>AI Agent 每次会话都失忆：</strong>每次新会话 Agent 都不记得之前做了什么。Claude-mem 自动捕获 Agent 会话中的所有操作，用 AI 压缩成结构化记忆，下次会话自动注入相关上下文。",
+            "<strong>Agent 上下文窗口有限：</strong>即使有记忆，上下文窗口也容纳不了全部历史。Claude-mem 用智能压缩算法把大量操作提炼成关键记忆点，只注入当前任务需要的上下文。",
+            "<strong>跨工具记忆不互通：</strong>在 Claude Code 积累的知识，切换到 Codex 就没了。Claude-mem 兼容 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等主流 Agent。"
+          ],
+          "usage": [
+            "安装 claude-mem：<pre><code>npx claude-mem install</code></pre>",
+            "自动捕获 Agent 会话，压缩并保存记忆。",
+            "在 Agent 配置中启用记忆注入。",
+            "支持的 Agent：Claude Code、Codex、Gemini、Hermes、Copilot 等。"
+          ],
+          "insights": [
+            "<strong>Agent 记忆即基础设施：</strong>78K star 证明 Agent 记忆是当前最痛的需求之一。可以做成 SaaS——云端 Agent 记忆服务，跨设备、跨工具持久化。",
+            "<strong>记忆压缩是核心竞争力：</strong>不是简单的日志记录，而是用 AI 压缩成高密度记忆。这需要专门的大模型优化——谁压缩得好、检索准，谁就是市场赢家。",
+            "<strong>人类-AI 协作的桥梁：</strong>持久记忆让 Agent 不再每次从零开始，而是像人类同事一样积累经验。这是 Agent 从工具进化成「数字同事」的关键一步。"
+          ],
+          "tags": [
+            "agent-memory",
+            "persistent-context",
+            "multi-agent",
+            "session-persistence",
+            "ai-compression"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "anthropics",
+          "name": "knowledge-work-plugins",
+          "fullName": "anthropics / knowledge-work-plugins",
+          "org": "Anthropic",
+          "url": "https://github.com/anthropics/knowledge-work-plugins",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "16,633",
+          "forks": "1,952",
+          "starsToday": "1,698",
+          "count": 2,
+          "description": "Anthropic 官方知识工作者插件集 —— 持续火热，让 Claude Cowork 变身销售/支持/工程等角色的专业助手，单日 +1,698 star",
+          "problems": [
+            "<strong>AI Agent 不够专业：</strong>通用 AI Agent 不知道不同岗位的工作流程。11 个角色插件捆绑对应技能的连接器和子 Agent。",
+            "<strong>企业工具链碎片化：</strong>Slack、Notion、Jira、HubSpot 等工具各自独立。插件预置了每个角色的关键工具连接器。",
+            "<strong>跨版本持续更新：</strong>从 4 天前发布至今每天积累 star，项目不断迭代，新增更多插件和 MCP 集成。"
+          ],
+          "usage": [
+            "在 Claude Cowork 中直接使用：<code>/plugin install sales</code>",
+            "安装工程插件：<code>/plugin install engineering</code>",
+            "每个插件包含技能、连接器、斜杠命令和子 Agent。"
+          ],
+          "insights": [
+            "<strong>持续霸榜验证 PMF：</strong>连续 4 天上榜且 star 数持续增长，证明 Anthropic 的角色插件策略获得了市场的强烈认可。",
+            "<strong>企业级 AI 的先发优势：</strong>Anthropic 在定义「AI 角色的标准模板」。率先占领企业心智的品牌将获得长期的生态红利。"
+          ],
+          "tags": [
+            "anthropic-official",
+            "claude-cowork",
+            "role-plugins",
+            "enterprise",
+            "knowledge-work",
+            "MCP"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "fullName": "rohitg00 / ai-engineering-from-scratch",
+          "org": "Rohit G",
+          "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "20,659",
+          "forks": "3,443",
+          "starsToday": "2,169",
+          "count": 3,
+          "description": "AI 工程从零到一 —— 学习它、构建它、交付给他人，最热门的 AI 工程学习资源之一",
+          "problems": [
+            "<strong>AI 工程教育门槛高：</strong>从基础模型到部署上线，AI 工程的全链路知识分散。这个项目提供从零开始构建 AI 工程能力的系统化学习路径。",
+            "<strong>理论多、实战少：</strong>不只是理论，强调「构建」和「交付」——每一阶段都有可运行的代码和项目。",
+            "<strong>持续更新适应行业变化：</strong>AI 领域变化快，很多教材很快就过时了。这个 GitHub 项目可以持续更新。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/rohitg00/ai-engineering-from-scratch</code></pre>",
+            "按章节学习，每个模块都有可运行的代码。",
+            "阅读源码并动手实践。"
+          ],
+          "insights": [
+            "<strong>AI 教育的天花板效应：</strong>这个项目已经 4 次上榜且每次都有高日增 star，说明 AI 工程学习需求持续旺盛。AI 教育的市场远未饱和。",
+            "<strong>从「学 AI」到「做 AI」的转变：</strong>项目名强调「from scratch」（从零到一）和「ship it」（交付），反映了行业从学习 AI 概念到实际构建 AI 产品的需求转变。"
+          ],
+          "tags": [
+            "ai-engineering",
+            "education",
+            "learning-path",
+            "hands-on",
+            "python"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "Leonxlnx",
+          "name": "taste-skill",
+          "fullName": "Leonxlnx / taste-skill",
+          "org": "Leonxlnx",
+          "url": "https://github.com/Leonxlnx/taste-skill",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "21,528",
+          "forks": "1,734",
+          "starsToday": "1,440",
+          "count": 2,
+          "description": "AI 品味技能 —— 正在重新定义 AI Agent 的审美标准，单日 +1,440 star，连续第二天上榜",
+          "problems": [
+            "<strong>AI 生成的前端审美差：</strong>所有 AI Agent 写出代码都一个样子。Taste-Skill 提供布局、排版、动效、间距的专业设计指南。",
+            "<strong>AI 味太浓：</strong>专门针对 Claude Code、Codex、Cursor 等 Agent 输出进行优化，打破 AI 默认模板化 UI。",
+            "<strong>持续丰富技能类型：</strong>从最初的前端设计技能扩展到图片生成技能，覆盖参考板、线框图、品牌套件等。"
+          ],
+          "usage": [
+            "安装：<pre><code>npx skills add https://github.com/Leonxlnx/taste-skill</code></pre>",
+            "在代码生成任务前加载技能，AI Agent 自动遵循设计指南。",
+            "包含多套设计风格（新拟态、极简、玻璃态等）。"
+          ],
+          "insights": [
+            "<strong>AI 审美的垂直赛道：</strong>连续两天上榜且单日 +1,440 star，证明「AI 审美」是一个真实且快速增长的市场需求。",
+            "<strong>从设计技能到品牌资产：</strong>未来每个企业都会有自己的品味技能包，就像现在每个企业有自己的设计系统一样。企业的 AI 输出风格将成为品牌资产。"
+          ],
+          "tags": [
+            "ui-design",
+            "anti-slop",
+            "design-system",
+            "agent-skills",
+            "frontend",
+            "aesthetics"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "twentyhq",
+          "name": "twenty",
+          "fullName": "twentyhq / twenty",
+          "org": "Twenty HQ",
+          "url": "https://github.com/twentyhq/twenty",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "46,833",
+          "forks": "6,649",
+          "starsToday": "237",
+          "count": 1,
+          "description": "Salesforce 的开源替代品 —— 专为 AI 设计的 CRM，46K star，12,000+ 提交的成熟项目",
+          "problems": [
+            "<strong>传统 CRM 体验差：</strong>Salesforce 功能强大但用户体验差、配置复杂、价格昂贵。Twenty 用现代技术栈重构 CRM 体验。",
+            "<strong>CRM 没有 AI 原生设计：</strong>传统 CRM 的 AI 功能是后加的。Twenty 从底层为 AI 设计——AI 可以直接操作数据结构、分析客户关系、自动更新记录。",
+            "<strong>开源 CRM 选择少：</strong>企业级开源 CRM 几乎没有成熟选项。Twenty 有 12,000+ 提交和 785 分支，项目活跃度极高。"
+          ],
+          "usage": [
+            "自托管：<pre><code>git clone https://github.com/twentyhq/twenty</code></pre>",
+            "或使用云端版：<code>twenty.com</code>",
+            "API 优先设计，支持 GraphQL 查询。",
+            "AI Agent 可通过 API 直接操作 CRM 数据。"
+          ],
+          "insights": [
+            "<strong>AI-Native CRM 的新品类：</strong>「Designed for AI」不是口号——Twenty 的 GraphQL API 和数据模型专门为 AI Agent 调用优化。AI 可以自动更新客户记录、分析销售管线、发送跟进邮件。",
+            "<strong>Salesforce 的颠覆窗口：</strong>46K star 且持续增长，开源 CRM 正在挑战 Salesforce 的垄断地位。AI 原生设计是差异化竞争的关键。",
+            "<strong>企业级开源的新标杆：</strong>12,000+ 提交、785 分支、444 标签——Twenty 不是玩具项目，而是成熟的企业级开源产品。"
+          ],
+          "tags": [
+            "crm",
+            "salesforce-alternative",
+            "ai-native",
+            "graphql",
+            "open-source",
+            "typescript"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -201,7 +395,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "昨天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -403,7 +597,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -605,7 +799,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "3天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -807,7 +1001,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -1009,7 +1203,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "5天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -1211,7 +1405,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1413,7 +1607,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1615,7 +1809,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "11天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1815,7 +2009,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "12天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2011,7 +2205,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "14天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
