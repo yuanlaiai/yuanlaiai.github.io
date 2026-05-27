@@ -1,11 +1,207 @@
 // Source: data.json — Edit that file, regenerate with: bash scripts/update-data.sh
-// Last updated: 2026-05-27
+// Last updated: 2026-05-28
 var siteData = {
-  "lastUpdated": "2026-05-27",
+  "lastUpdated": "2026-05-28",
   "days": [
     {
-      "date": "2026-05-27",
+      "date": "2026-05-28",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "harry0703",
+          "name": "MoneyPrinterTurbo",
+          "fullName": "harry0703 / MoneyPrinterTurbo",
+          "org": "harry0703",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "61,823",
+          "forks": "9,036",
+          "starsToday": "1,737",
+          "count": 1,
+          "description": "AI 一键生成短视频 —— 输入主题/关键词，自动生成文案、素材、字幕、背景音乐并合成高清短视频",
+          "problems": [
+            "<strong>短视频制作门槛高：</strong>普通人想做短视频需要写脚本、找素材、配音、加字幕、配乐，流程复杂。MoneyPrinterTurbo 把这一切自动化。",
+            "<strong>AI 视频工具碎片化：</strong>文案用 ChatGPT、配音用 TTS、剪辑用剪映……多个工具来回切换。这个项目端到端完成——输入主题，输出成品视频。",
+            "<strong>多语言视频制作：</strong>支持中文和英文文案，多种语音合成，可实时试听效果。适合面向海外市场的短视频创作者。"
+          ],
+          "usage": [
+            "使用 Docker 部署：<pre><code>docker run -d -p 8501:8501 harry0703/moneyprinterturbo</code></pre>",
+            "或本地部署：<pre><code>git clone https://github.com/harry0703/MoneyPrinterTurbo && cd MoneyPrinterTurbo</code></pre>",
+            "在 Web 界面输入视频主题，一键生成。",
+            "支持 OpenAI、DeepSeek、Moonshot 等多种大模型。"
+          ],
+          "insights": [
+            "<strong>AI 短视频自动化流水线：</strong>从文案生成到视频合成全链路自动化。可以做成 SaaS——中国短视频创作者付费订阅，输入关键词自动输出可直接发布到抖音/快手的视频。",
+            "<strong>61K star 验证 PMF：</strong>市场对 AI 视频生成的需求极大。中国短视频生态巨大，这类工具的商业化空间非常可观。",
+            "<strong>多模型接入策略：</strong>支持 DeepSeek、Moonshot 等国产模型（无需 VPN），精准切中中国用户痛点。"
+          ],
+          "tags": [
+            "video-generation",
+            "short-video",
+            "AI-automation",
+            "text-to-video",
+            "chinese-market",
+            "open-source"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "p-e-w",
+          "name": "heretic",
+          "fullName": "p-e-w / heretic",
+          "org": "p-e-w",
+          "url": "https://github.com/p-e-w/heretic",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "21,995",
+          "forks": "2,348",
+          "starsToday": "219",
+          "count": 1,
+          "description": "大语言模型去审查工具 —— 自动移除 AI 模型的 safety alignment，无需昂贵的后训练",
+          "problems": [
+            "<strong>大模型回答过于保守：</strong>很多大模型因为 safety alignment 拒绝回答合理的问题。Heretic 通过 directional ablation（方向消融）技术自动移除审查，不需要昂贵的后训练。",
+            "<strong>传统去审查方法复杂：</strong>需要理解模型内部结构、手动调参。Heretic 使用 Optuna 自动优化参数，任何会命令行的人都能用。",
+            "<strong>模型兼容性差：</strong>不同模型结构不同，去审查方法不通用。Heretic 支持大多数密集模型、多模态模型、MoE 架构和混合模型。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install heretic</code></pre>",
+            "运行自动去审查：<pre><code>heretic decensor --model meta-llama/Llama-3.1-8B-Instruct</code></pre>",
+            "参数自动优化，无需手动调整。",
+            "支持本地和 Hugging Face 模型。"
+          ],
+          "insights": [
+            "<strong>AI 安全的天平正在倾斜：</strong>hertic + abliteration 等工具让去审查门槛越来越低。安全对齐和安全破解的攻防战将成为 AI 行业常态。",
+            "<strong>21K star 的争议性：</strong>这类工具的高关注度说明用户对 AI 过度审查的强烈不满。未来模型厂商需要重新平衡安全与自由。",
+            "<strong>自动化工具链化：</strong>从手动修改到自动参数优化，去审查流程变得越来越工程化。这是一个持续演进的猫鼠游戏。"
+          ],
+          "tags": [
+            "llm-safety",
+            "abliteration",
+            "decensorship",
+            "model-optimization",
+            "open-source",
+            "ai-alignment"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "Leonxlnx",
+          "name": "taste-skill",
+          "fullName": "Leonxlnx / taste-skill",
+          "org": "Leonxlnx",
+          "url": "https://github.com/Leonxlnx/taste-skill",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "24,133",
+          "forks": "1,861",
+          "starsToday": "2,715",
+          "count": 3,
+          "description": "AI 品味技能 —— 连续霸榜第三天，+2,715 star，重新定义 AI Agent 的审美标准",
+          "problems": [
+            "<strong>AI 生成前端千篇一律：</strong>所有 AI Agent 写出代码都一个样。Taste-Skill 提供专业设计指南。",
+            "<strong>AI 味太浓：</strong>防止 AI 输出模板化 UI，持续丰富技能类型。",
+            "<strong>三天霸榜验证需求：</strong>连续三天单日 +2,000+ star 说明了市场对 AI 审美的强烈需求。"
+          ],
+          "usage": [
+            "安装技能：<pre><code>npx skills add https://github.com/Leonxlnx/taste-skill</code></pre>",
+            "在代码生成任务前加载技能，AI Agent 自动遵循设计指南。",
+            "包含多套设计风格（新拟态、极简、玻璃态等）。"
+          ],
+          "insights": [
+            "<strong>AI 审美成为刚需：</strong>连续霸榜三天说明 AI 输出审美不是锦上添花，而是核心痛点。AI 编码 Agent 面临的最大问题不是能不能写代码，而是能不能写出好看的代码。",
+            "<strong>Agent 技能市场正在形成：</strong>Taste-Skill 是 Agent 技能市场化的最佳案例。一个 SKILL.md 文件吸引 24K star，证明 Agent 技能本身就是可分发、可变现的产品。"
+          ],
+          "tags": [
+            "ui-design",
+            "anti-slop",
+            "design-system",
+            "agent-skills",
+            "frontend",
+            "aesthetics"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "affaan-m",
+          "name": "ECC",
+          "fullName": "affaan-m / ECC",
+          "org": "affaan-m",
+          "url": "https://github.com/affaan-m/ECC",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "195,978",
+          "forks": "30,147",
+          "starsToday": "2,062",
+          "count": 2,
+          "description": "Agent 工具链优化系统 —— 横跨 12+ Agent 生态，195K star，持续霸榜中的王者",
+          "problems": [
+            "<strong>AI Agent 配置碎片化：</strong>每个 Agent 工具格式不同。ECC 提供统一的工具链优化系统。",
+            "<strong>Agent 缺乏持续学习：</strong>ECC 内置记忆优化、技能积累、连续学习。",
+            "<strong>Agent 安全未标准化：</strong>ECC 内置安全扫描、Prompt 防御、沙箱化运行。"
+          ],
+          "usage": [
+            "安装：<code>npx ecc install</code>",
+            "查看技能：<code>ecc skills list</code>",
+            "安全扫描：<code>ecc security scan</code>"
+          ],
+          "insights": [
+            "<strong>Agent 工具链标准化已成趋势：</strong>195K star 证明这不是小众需求。ECC 正在成为 Agent 世界的标准配置层。",
+            "<strong>即将突破 200K star：</strong>每天 +2,000 star 的增长速度，ECC 将在数日内成为 200K+ star 的超爆款项目。"
+          ],
+          "tags": [
+            "agent-harness",
+            "agent-security",
+            "multi-platform",
+            "skills",
+            "memory-optimization",
+            "anthropic-winner"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "twentyhq",
+          "name": "twenty",
+          "fullName": "twentyhq / twenty",
+          "org": "Twenty HQ",
+          "url": "https://github.com/twentyhq/twenty",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "47,310",
+          "forks": "6,716",
+          "starsToday": "520",
+          "count": 2,
+          "description": "AI-Native 开源 CRM —— Salesforce 替代品，46K star，持续上榜的 AI 企业级应用标杆",
+          "problems": [
+            "<strong>Salesforce 体验差价格贵：</strong>Twenty 用现代技术栈重构 CRM。",
+            "<strong>传统 CRM 不是为 AI 设计：</strong>Twenty 从底层为 AI 优化——GraphQL API 专为 AI Agent 调用设计。",
+            "<strong>企业级开源 CRM 稀缺：</strong>12,000+ 提交、785 分支，成熟度极高。"
+          ],
+          "usage": [
+            "自托管：<pre><code>git clone https://github.com/twentyhq/twenty</code></pre>",
+            "或使用云端版：<code>twenty.com</code>",
+            "API 优先设计，AI Agent 可直接操作 CRM 数据。"
+          ],
+          "insights": [
+            "<strong>AI-Native CRM 新品类持续验证：</strong>连续两天上榜说明市场在认真关注 AI 原生企业级应用。Twenty 的开源策略正在挑战 Salesforce 的垄断地位。",
+            "<strong>Agent 直接写 CRM 数据：</strong>AI 编码 Agent + Twenty = Agent 自动更新客户记录、销售管线。这是企业级 AI Agent 落地的典型场景。"
+          ],
+          "tags": [
+            "crm",
+            "salesforce-alternative",
+            "ai-native",
+            "graphql",
+            "open-source",
+            "typescript"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -199,7 +395,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -397,7 +593,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "3天前",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -599,7 +795,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -801,7 +997,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -1003,7 +1199,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "6天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -1205,7 +1401,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "7天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1407,7 +1603,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "8天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1609,7 +1805,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "9天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1811,7 +2007,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "13天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2011,7 +2207,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "14天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2207,7 +2403,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "15天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
