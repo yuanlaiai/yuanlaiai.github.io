@@ -1,9 +1,205 @@
 {
-  "lastUpdated": "2026-05-28",
+  "lastUpdated": "2026-05-30",
   "days": [
     {
-      "date": "2026-05-28",
+      "date": "2026-05-30",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "microsoft",
+          "name": "markitdown",
+          "fullName": "microsoft / markitdown",
+          "org": "Microsoft",
+          "url": "https://github.com/microsoft/markitdown",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "130,023",
+          "forks": "8,923",
+          "starsToday": "1,873",
+          "count": 1,
+          "description": "微软官方文件转 Markdown 工具 —— PDF/Word/Excel/PPT/图片/音频转 Markdown，专为 LLM 数据处理管道设计",
+          "problems": [
+            "<strong>非结构化数据难以喂给 LLM：</strong>PDF、Word、Excel 等格式 LLM 无法直接理解。MarkItDown 把所有常见文档格式转为 Markdown，让 AI 可以直接读取和处理。",
+            "<strong>文档格式转换碎片化：</strong>PDF 用 PyMuPDF、Excel 用 openpyxl、PPT 用 python-pptx……各自为战。MarkItDown 统一 API：<code>convert('file.pdf')</code> 一行代码搞定。",
+            "<strong>RAG 管道的文档预处理瓶颈：</strong>构建 RAG 应用需要先解析文档。MarkItDown 被设计为 LLM 数据处理管道的标准输入层，130K star 证明这是行业需求。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install markitdown</code></pre>",
+            "转换单个文件：<pre><code>from markitdown import MarkItDown\nmd = MarkItDown()\nresult = md.convert('report.docx')</code></pre>",
+            "支持：PDF、PowerPoint、Word、Excel、图片(OCR)、音频、HTML、CSV、JSON、XML、ZIP。",
+            "在 LLM 数据管道中作为预处理层使用。"
+          ],
+          "insights": [
+            "<strong>LLM 数据管道的标准输入层：</strong>130K star 说明文档转 Markdown 是 LLM 应用开发的基础设施级需求。MarkItDown 正在成为行业标准——类似于 requests 之于 HTTP。",
+            "<strong>微软的开源影响力：</strong>微软开源此工具并推向 130K star，说明大厂在 LLM 工具链的标准制定上正在发力。",
+            "<strong>Agent 数据接入的大门：</strong>当 AI Agent 需要处理企业文档时，MarkItDown 是首选。它将成为 Agent 读取企业内部知识库的标准方式。"
+          ],
+          "tags": [
+            "microsoft",
+            "document-conversion",
+            "markdown",
+            "LLM-pipeline",
+            "RAG",
+            "data-processing"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "EveryInc",
+          "name": "compound-engineering-plugin",
+          "fullName": "EveryInc / compound-engineering-plugin",
+          "org": "Every Inc.",
+          "url": "https://github.com/EveryInc/compound-engineering-plugin",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "18,147",
+          "forks": "1,378",
+          "starsToday": "353",
+          "count": 1,
+          "description": "Compound Engineering 官方插件 —— 为 Claude Code、Codex、Cursor 等 Agent 提供复合工程方法论的工作流插件",
+          "problems": [
+            "<strong>AI Agent 缺乏工程方法论：</strong>编码 Agent 会写代码但不知道怎么做工程设计。Compound Engineering 插件把系统工程方法论编码成 Agent 可执行的插件——包括策略规划、产品脉冲、架构决策等。",
+            "<strong>多 Agent 工作流缺乏框架：</strong>Compound Engineering 不只是单一 Agent 工具，而是定义了一套完整的工程流程——从调研到规划到执行到审查。",
+            "<strong>跨 Agent 工具的统一标准：</strong>插件兼容 Claude Code、Codex、Cursor、OpenCode 等，这意味着一套工程方法可以在不同 Agent 工具间复用。"
+          ],
+          "usage": [
+            "在 Claude Code 中安装：<pre><code>claude plugins install everyinc/compound-engineering</code></pre>",
+            "在 Codex 中安装：<pre><code>codex plugins install everyinc/compound-engineering</code></pre>",
+            "仓库包含完整的插件规格和多 Agent 适配器。",
+            "支持 361 个分支、826 次提交，持续迭代。"
+          ],
+          "insights": [
+            "<strong>AI 编码的系统化工程方法论：</strong>Compound Engineering 把系统工程的概念引入 AI 编码——这不是一个工具，而是一个工程框架。未来每个 AI 编码项目都会有自己的工程流程规范。",
+            "<strong>Agent 插件生态初现：</strong>EveryInc 定义了 Claude Code / Codex / Cursor 的插件标准，正在成为 Agent 插件生态的基础设施提供者。"
+          ],
+          "tags": [
+            "compound-engineering",
+            "agent-plugins",
+            "software-engineering",
+            "workflow",
+            "claude-code",
+            "cursor"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "run-llama",
+          "name": "liteparse",
+          "fullName": "run-llama / liteparse",
+          "org": "LlamaIndex",
+          "url": "https://github.com/run-llama/liteparse",
+          "lang": "Rust",
+          "langClass": "rs",
+          "stars": "7,342",
+          "forks": "445",
+          "starsToday": "701",
+          "count": 1,
+          "description": "LlamaIndex 出品的高性能文档解析器 —— 快速、准确、开源，用 Rust 构建的下一代文档解析引擎",
+          "problems": [
+            "<strong>现有文档解析器太慢：</strong>Python 解析器在处理大批量文档时性能差。LiteParse 用 Rust 重写，解析速度远快于纯 Python 方案。",
+            "<strong>文档解析质量差：</strong>MarkItDown 之类的工具注重通用性，但复杂排版（多列、表格、嵌套列表）解析质量不够。LiteParse 专注于保留文档的完整结构。",
+            "<strong>RAG 管道的瓶颈：</strong>文档解析是 RAG 应用的第一公里，解析质量直接影响检索效果。LlamaIndex 作为 RAG 框架的领导者，自然需要自研高性能解析器。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install liteparse</pre></code>",
+            "基本使用：<pre><code>from liteparse import parse\ndoc = parse('document.pdf')</code></pre>",
+            "集成到 LlamaIndex 的 RAG 管道中作为文档加载器。"
+          ],
+          "insights": [
+            "<strong>RAG 管道的 Rust 化趋势：</strong>LiteParse 是 LlamaIndex 用 Rust 重写的核心组件。这代表了 RAG 工具链的 Rust 化趋势——核心性能敏感的组件从 Python 迁移到 Rust。",
+            "<strong>LlamaIndex 的全栈布局：</strong>从 RAG 框架到文档解析器，LlamaIndex 正在构建 RAG 的全栈闭环。LiteParse + LlamaIndex = 从原始文档到检索增强生成的端到端方案。"
+          ],
+          "tags": [
+            "llamaindex",
+            "document-parser",
+            "rust",
+            "rag",
+            "high-performance",
+            "open-source"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "cursor",
+          "name": "plugins",
+          "fullName": "cursor / plugins",
+          "org": "Cursor",
+          "url": "https://github.com/cursor/plugins",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "1,307",
+          "forks": "111",
+          "starsToday": "134",
+          "count": 1,
+          "description": "Cursor 官方插件规范 —— AI 代码编辑器 Cursor 的插件标准，首批官方插件发布",
+          "problems": [
+            "<strong>Cursor 缺少插件生态：</strong>作为最流行的 AI 编码 IDE 之一，Cursor 之前没有官方的插件系统。现在发布了插件规范和首批官方插件，标志着 Cursor 正式开启生态化。",
+            "<strong>Agent 工具的插件标准各自为战：</strong>Claude Code 有 .claude-plugin、Codex 有 .codex-plugin。Cursor 的插件标准可能成为行业参照。",
+            "<strong>AI IDE 的边界扩展：</strong>插件系统让 Cursor 从单纯的编码编辑器升级为可扩展的 AI 开发平台。"
+          ],
+          "usage": [
+            "查看插件规范：<pre><code>https://github.com/cursor/plugins</code></pre>",
+            "开发 Cursor 插件，遵循目录结构和配置文件标准。",
+            "目前 star 数还少（1,307），但意义重大——Cursor 的生态战略刚起步。"
+          ],
+          "insights": [
+            "<strong>AI IDE 的生态战：</strong>Cursor 发布插件系统是 AI IDE 竞争的重要里程碑。谁先建立丰富的插件生态，谁就能锁定开发者——就像 VS Code 对传统 IDE 的颠覆。",
+            "<strong>插件标准之争：</strong>EveryInc 的插件、Cursor 的插件、Claude Code 的插件……多个标准并存。未来可能出现统一的 Agent 插件标准，类似 OpenAPI 之于 API。",
+            "<strong>星星虽少，意义重大：</strong>1,307 star 在这期榜单里算少的，但作为生态基建项目，其长期影响力不可忽视。"
+          ],
+          "tags": [
+            "cursor",
+            "plugin-system",
+            "ide-ecosystem",
+            "ai-ide",
+            "plugin-specification"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "galilai-group",
+          "name": "stable-worldmodel",
+          "fullName": "galilai-group / stable-worldmodel",
+          "org": "GALILAI Group",
+          "url": "https://github.com/galilai-group/stable-worldmodel",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "1,260",
+          "forks": "149",
+          "starsToday": "362",
+          "count": 1,
+          "description": "世界模型研究平台 —— 可复现的世界模型训练与评估基准，从视频数据中学习物理规律",
+          "problems": [
+            "<strong>世界模型研究缺少标准化基准：</strong>世界模型（World Model）是通往通用 AI 的关键路径——让 AI 从视频/交互数据中学习物理世界的规律。但不同论文用的数据集、评估指标不同，难以比较。",
+            "<strong>世界模型难以复现：</strong>论文中的结果往往因为代码未开源或环境不一致而无法复现。Stable Worldmodel 提供标准化的训练和评估平台。",
+            "<strong>从视频理解到物理理解：</strong>传统视频理解是被动的（识别物体），世界模型是主动的（预测物理变化）。这个平台推动 AI 从感知走向认知。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/galilai-group/stable-worldmodel</code></pre>",
+            "使用标准数据集训练世界模型。",
+            "在统一基准上评估和比较不同的世界模型方法。"
+          ],
+          "insights": [
+            "<strong>世界模型：AI 的下一个前沿：</strong>从大语言模型到世界模型，AI 正在从理解语言进化到理解物理世界。这是通往通用 AI 的关键基础设施。",
+            "<strong>研究基建化：</strong>Stable Worldmodel 类似于 ImageNet 之于计算机视觉——标准化基准推动了整个领域的发展。",
+            "<strong>1.2K star 的潜力股：</strong>虽然现在 star 数少，但随着世界模型领域热度上升，这个项目的价值可能被重估。"
+          ],
+          "tags": [
+            "world-model",
+            "AI-research",
+            "benchmark",
+            "video-understanding",
+            "physical-reasoning",
+            "reproducibility"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -199,7 +395,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "昨天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -393,7 +589,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -591,7 +787,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -793,7 +989,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "5天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -995,7 +1191,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1197,7 +1393,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1399,7 +1595,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "8天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1601,7 +1797,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1803,7 +1999,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "10天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -2005,7 +2201,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "14天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2205,7 +2401,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2401,7 +2597,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "16天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
