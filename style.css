@@ -439,6 +439,39 @@ a { text-decoration: none; color: inherit; }
   50% { opacity: 1; height: 50px; }
 }
 
+/* ── Topic Insight Card ── */
+.topic-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-orange);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  transition: var(--transition);
+}
+.topic-card:hover {
+  border-color: var(--accent-orange);
+  background: var(--accent-orange-dim);
+}
+.topic-icon { font-size: 1.2rem; line-height: 1.5; flex-shrink: 0; }
+.topic-content { flex: 1; min-width: 0; }
+.topic-label {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 4px;
+}
+.topic-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
 /* ── Stats Bar ── */
 .stats-bar {
   background: var(--bg-secondary);

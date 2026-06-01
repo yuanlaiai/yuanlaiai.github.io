@@ -3161,5 +3161,6 @@
         }
       ]
     }
-  ]
+  ],
+  "topic": "「AI Agent 设计技能之战」—— Impeccable 成为 taste-skill 的直接竞品，两者都在争夺 AI 前端设计的标准地位。AI 交易框架 TradingAgents（81K★）用多 Agent 架构做金融决策，FFF 用 Rust 重构文件搜索——Agent 工具链在横向扩张、纵向变深。"
 }

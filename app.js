@@ -133,9 +133,19 @@ var VISIBLE_DAYS = 3;
 var BATCH_SIZE = 3;
 var dayLoadCount = 0;
 
+// ── Topic Insight ──
+function renderTopicInsight() {
+  var el = document.getElementById('trendingTopic');
+  if (!el || !window.siteData || !window.siteData.topic) { if (el) el.style.display = 'none'; return; }
+  el.style.display = '';
+  el.innerHTML = '<div class="topic-card"><div class="topic-icon">📌</div><div class="topic-content"><div class="topic-label">本周主题</div><div class="topic-text">' + window.siteData.topic + '</div></div></div>';
+}
+
+// ── Timeline ──
 function renderTimeline() {
   var container = document.getElementById('trendingTimeline');
   if (!container || !window.siteData) return;
+  renderTopicInsight();
 
   dayLoadCount = VISIBLE_DAYS;
   container.innerHTML = buildTimelineHtml(dayLoadCount);
