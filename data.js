@@ -1,11 +1,206 @@
 // Source: data.json — Edit that file, regenerate with: bash scripts/update-data.sh
-// Last updated: 2026-05-31
+// Last updated: 2026-06-01
 var siteData = {
-  "lastUpdated": "2026-05-31",
+  "lastUpdated": "2026-06-01",
   "days": [
     {
-      "date": "2026-05-31",
+      "date": "2026-06-01",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "pbakaus",
+          "name": "impeccable",
+          "fullName": "pbakaus / impeccable",
+          "org": "Paul Bakaus",
+          "url": "https://github.com/pbakaus/impeccable",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "32,346",
+          "forks": "1,764",
+          "starsToday": "317",
+          "count": 1,
+          "description": "AI Agent 设计语言 —— 23 个设计命令 + 27 条反模式规则，让你的 Agent 不再输出模板化前端（taste-skill 的竞品）",
+          "problems": [
+            "<strong>AI 生成前端千篇一律：</strong>所有模型训练在相同的 SaaS 模板上，输出同样的 AI tells——Inter 字体、紫色渐变、卡片套卡片。Impeccable 提供 7 个领域参考文件和 23 个设计命令。",
+            "<strong>没有统一的设计词汇：</strong>人类和 AI 之间缺少共享的设计语言。Impeccable 提供 23 个命令——polish、audit、critique、distill、animate 等，人跟 AI 用同一套话沟通设计。",
+            "<strong>AI 设计缺乏自动化检查：</strong>27 条确定性反模式规则 + 12 条 LLM 评审规则，支持 CLI 和浏览器扩展，无需 API Key 即可运行。"
+          ],
+          "usage": [
+            "访问 <code>impeccable.style</code> 下载使用。",
+            "在 Claude Code 中加载技能文件。",
+            "使用设计命令与 AI 协作：<code>polish this hero section</code>",
+            "运行 CLI 检查反模式：<code>npx impeccable audit</code>"
+          ],
+          "insights": [
+            "<strong>taste-skill 的直接竞品：</strong>Impeccable 和 taste-skill 在解决同一个问题——AI 前端设计审美。两者的竞争将加速 Agent 设计技能的成熟。",
+            "<strong>从技能扩展到浏览器扩展：</strong>Impeccable 不仅有 SKILL.md，还有 CLI 工具和浏览器扩展，产品形态比纯技能文件更完整。",
+            "<strong>设计语言标准化：</strong>23 个设计命令本质上是定义了人-AI 协作设计的词汇表。这种标准化对于 Agent 设计领域至关重要。"
+          ],
+          "tags": [
+            "design-language",
+            "anti-slop",
+            "agent-skills",
+            "ui-design",
+            "frontend",
+            "cli-tool"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "TauricResearch",
+          "name": "TradingAgents",
+          "fullName": "TauricResearch / TradingAgents",
+          "org": "Tauric Research",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "81,504",
+          "forks": "15,849",
+          "starsToday": "284",
+          "count": 1,
+          "description": "多 Agent 金融交易框架 —— 81K star 的 LLM 量化交易系统，支持多个 LLM 提供商和策略回测",
+          "problems": [
+            "<strong>传统量化交易门槛高：</strong>需要编程、金融、数学三方面知识。TradingAgents 用多 Agent 架构让 LLM 直接参与交易决策。",
+            "<strong>单一 Agent 交易有偏见：</strong>单个 LLM 做交易决策容易过度自信或多变。TradingAgents 使用多 Agent 架构——研究经理、交易员、投资组合经理各司其职。",
+            "<strong>回测与实盘不一致：</strong>很多量化框架回测结果和实盘差异大。TradingAgents 支持结构化输出、检查点恢复、持久化决策日志。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install trading-agents</code></pre>",
+            "配置 API Key 和交易策略。",
+            "运行多 Agent 交易系统：<code>trading-agents run</code>",
+            "支持 OpenAI、Anthropic、DeepSeek、Qwen、GLM 等模型。"
+          ],
+          "insights": [
+            "<strong>AI 交易进入多 Agent 时代：</strong>从单一 LLM 做预测到多 Agent 协作决策，AI 交易的架构在不断进化。",
+            "<strong>81K star 的金融 AI 热度：</strong>金融是 AI 最直接的变现场景之一。交易 Agent 的市场关注度极高。",
+            "<strong>中文开发者友好：</strong>支持 DeepSeek、Qwen、GLM 等国产模型，中国开发者可轻松上手。"
+          ],
+          "tags": [
+            "trading",
+            "multi-agent",
+            "fintech",
+            "llm-trading",
+            "quantitative",
+            "backtesting"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "dmtrKovalenko",
+          "name": "fff",
+          "fullName": "dmtrKovalenko / fff",
+          "org": "Dmytro Kovalenko",
+          "url": "https://github.com/dmtrKovalenko/fff",
+          "lang": "Rust",
+          "langClass": "rs",
+          "stars": "7,014",
+          "forks": "297",
+          "starsToday": "121",
+          "count": 1,
+          "description": "最快的文件搜索工具 —— 为 AI Agent 设计的 Rust 文件查找引擎，支持 Neovim、NodeJS 集成",
+          "problems": [
+            "<strong>AI Agent 文件搜索太慢：</strong>Agent 需要频繁搜索文件，传统 find/grep 在大代码库时很慢。FFF 用 Rust 实现，搜索速度远超 find 和 fd。",
+            "<strong>Agent 工具调用效率低：</strong>每次文件搜索消耗 Token 和时间。FFF 针对 Agent 工作流优化，支持模糊搜索和模式匹配。",
+            "<strong>跨工具集成困难：</strong>可用于 Neovim、NodeJS、Rust、C 等不同环境。"
+          ],
+          "usage": [
+            "安装：<pre><code>cargo install fff</code></pre>",
+            "在终端中搜索文件：<code>fff filename</code>",
+            "在 AI Agent 中配置为默认文件搜索工具。",
+            "集成到 Neovim 或 NodeJS 项目中。"
+          ],
+          "insights": [
+            "<strong>Agent 工具链的 Rust 化：</strong>FFF 延续了 AI 工具链的 Rust 化趋势——用 Rust 重写性能敏感的组件。",
+            "<strong>小而美的 Agent 基础设施：</strong>7K star 说明「快一点点」对 Agent 工作流来说就是巨大价值。Agent 每次搜索省下来的时间×搜索次数=显著提升。",
+            "<strong>搜索即 Agent 的核心能力：</strong>文件搜索是编码 Agent 使用最频繁的操作。优化搜索就是优化 Agent 的核心体验。"
+          ],
+          "tags": [
+            "file-search",
+            "rust",
+            "agent-tools",
+            "performance",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "OpenBMB",
+          "name": "VoxCPM",
+          "fullName": "OpenBMB / VoxCPM",
+          "org": "OpenBMB",
+          "url": "https://github.com/OpenBMB/VoxCPM",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "24,016",
+          "forks": "2,768",
+          "starsToday": "880",
+          "count": 2,
+          "description": "清华 OpenBMB 多语言 TTS —— 无需 Tokenizer、支持语音克隆，连续两天上榜 +880",
+          "problems": [
+            "<strong>传统 TTS 依赖 Tokenizer：</strong>VoxCPM2 是 Tokenizer-Free 的端到端方案。",
+            "<strong>多语言 TTS 质量不均：</strong>VoxCPM2 支持多语言包括中文语音生成。",
+            "<strong>语音克隆门槛高：</strong>VoxCPM2 实现真实级语音克隆和创意声音设计。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/OpenBMB/VoxCPM</code></pre>",
+            "使用预训练模型生成语音。",
+            "支持语音克隆和创意声音设计。"
+          ],
+          "insights": [
+            "<strong>清华 OpenBMB 持续输出：</strong>OpenBMB 在 NLP/语音/AI 基础设施领域的开源影响力持续扩大。",
+            "<strong>Tokenizer-Free 的 TTS 新方向：</strong>VoxCPM2 推动 TTS 从 token-based 到直接端到端生成的范式转变。"
+          ],
+          "tags": [
+            "tts",
+            "speech-synthesis",
+            "voice-cloning",
+            "openbmb",
+            "multilingual",
+            "tokenizer-free"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "FareedKhan-dev",
+          "name": "train-llm-from-scratch",
+          "fullName": "FareedKhan-dev / train-llm-from-scratch",
+          "org": "Fareed Khan",
+          "url": "https://github.com/FareedKhan-dev/train-llm-from-scratch",
+          "lang": "Jupyter Notebook",
+          "langClass": "py",
+          "stars": "3,474",
+          "forks": "491",
+          "starsToday": "860",
+          "count": 2,
+          "description": "从零训练 LLM 实战指南 —— 连续两天上榜 +860，AI 学习类项目热度不减",
+          "problems": [
+            "<strong>LLM 训练资料碎片化：</strong>端到端完整流程——从数据下载到文本生成。",
+            "<strong>理论多代码少：</strong>Jupyter Notebook 形式，每一行代码都可运行。",
+            "<strong>入门门槛高：</strong>提供清晰的步骤和可复现的配置。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/FareedKhan-dev/train-llm-from-scratch</code></pre>",
+            "按顺序运行 Notebook，从数据到推理全流程覆盖。"
+          ],
+          "insights": [
+            "<strong>AI 教育市场持续火热：</strong>连续两天高增长说明市场需求旺盛。",
+            "<strong>动手实践是最好的学习方式：</strong>运行代码训练小型 LLM 的学习效果最好。"
+          ],
+          "tags": [
+            "llm-training",
+            "educational",
+            "jupyter-notebook",
+            "from-scratch",
+            "deep-learning"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-05-31",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -200,7 +395,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -396,7 +591,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "3天前",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -592,7 +787,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -786,7 +981,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -984,7 +1179,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "7天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1186,7 +1381,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "8天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1388,7 +1583,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "9天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1590,7 +1785,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "10天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1792,7 +1987,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "11天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1994,7 +2189,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "12天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -2196,7 +2391,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "13天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2398,7 +2593,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "17天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2598,7 +2793,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "18天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2794,7 +2989,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "19天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
