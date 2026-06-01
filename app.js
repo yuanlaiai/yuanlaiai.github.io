@@ -138,7 +138,7 @@ function renderTopicInsight() {
   var el = document.getElementById('trendingTopic');
   if (!el || !window.siteData || !window.siteData.topic) { if (el) el.style.display = 'none'; return; }
   el.style.display = '';
-  el.innerHTML = '<div class="topic-card"><div class="topic-icon">📌</div><div class="topic-content"><div class="topic-label">本周主题</div><div class="topic-text">' + window.siteData.topic + '</div></div></div>';
+  el.innerHTML = '<div class="topic-card"><div class="topic-icon">📌</div><div class="topic-content"><div class="topic-label">今日看点</div><div class="topic-text">' + window.siteData.topic + '</div></div></div>';
 }
 
 // ── Timeline ──
