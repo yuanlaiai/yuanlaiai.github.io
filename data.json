@@ -1,9 +1,207 @@
 {
-  "lastUpdated": "2026-06-01",
+  "lastUpdated": "2026-06-02",
   "days": [
     {
-      "date": "2026-06-01",
+      "date": "2026-06-02",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "chopratejas",
+          "name": "headroom",
+          "fullName": "chopratejas / headroom",
+          "org": "Chopratejas",
+          "url": "https://github.com/chopratejas/headroom",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "5,418",
+          "forks": "399",
+          "starsToday": "1,266",
+          "count": 1,
+          "description": "Token 压缩引擎 —— 在数据到达 LLM 前压缩工具输出、日志、文件和 RAG 块，60-95% 更少 Token 同样答案",
+          "problems": [
+            "<strong>LLM 上下文窗口浪费严重：</strong>Agent 工具调用输出、日志文件、RAG 检索结果中 60-95% 都是冗余内容，白白消耗 Token 和费用。Headroom 在数据到达 LLM 之前进行智能压缩。",
+            "<strong>没有统一的压缩方案：</strong>不同场景需要不同压缩策略——工具输出用结构压缩，日志用去重压缩，RAG 用语义压缩。Headroom 统一提供 Library、Proxy、MCP Server 三种使用方式。",
+            "<strong>压缩后仍要保证回答质量：</strong>不是简单的丢弃内容。Headroom 使用专门的压缩算法保证压缩后 LLM 仍然能给出和原始内容一致的答案。"
+          ],
+          "usage": [
+            "作为 Python 库：<pre><code>pip install headroom\nfrom headroom import compress\ncompressed = compress(tool_output)</code></pre>",
+            "作为代理服务器：配置 Headroom Proxy 自动压缩所有 LLM 请求。",
+            "作为 MCP Server：集成到 AI Agent 工具链中自动压缩。",
+            "支持 Claude Code、Codex、OpenAI API 等。"
+          ],
+          "insights": [
+            "<strong>Token 压缩是 Agent 经济学的核心：</strong>Agent 的每次工具调用都会产生大量输出。压缩 60-95% Token = 推理成本降低 60-95%。这是 Agent 规模化的关键基础设施。",
+            "<strong>MCP Server 形态很聪明：</strong>作为 MCP Server 集成意味着所有兼容 MCP 的 Agent 都能自动使用压缩能力，无需逐个工具适配。",
+            "<strong>Agent 工具链的新品类：</strong>Headroom 是「LLM 前置处理器」——不是增强 LLM 的能力，而是让 LLM 输入更高效。这类工具将越来越多。"
+          ],
+          "tags": [
+            "token-compression",
+            "agent-tools",
+            "llm-efficiency",
+            "mcp-server",
+            "python"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "affaan-m",
+          "name": "ECC",
+          "fullName": "affaan-m / ECC",
+          "org": "Affaan M",
+          "url": "https://github.com/affaan-m/ECC",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "203,236",
+          "forks": "31,177",
+          "starsToday": "1,842",
+          "count": 3,
+          "description": "Agent 编排优化系统 —— 为 Claude Code、Codex、Cursor 提供技能、直觉、记忆、安全的 Agent 性能优化平台，203K★",
+          "problems": [
+            "<strong>Agent 性能没有统一衡量标准：</strong>不同 Agent 工具对技能、记忆、安全各有各的实现，缺乏横向对比。ECC 定义了一套完整的 Agent 性能评估体系——技能管理、直觉优化、记忆持久化、安全基线。",
+            "<strong>Agent 配置碎片化：</strong>每个 Agent 工具（Claude Code、Codex、Cursor、OpenCode）有自己的配置格式。ECC 提供跨工具的统一配置和管理。",
+            "<strong>缺乏 Research-first 的开发方法：</strong>大多数 Agent 开发是先写代码再验证。ECC 倡导 research-first——先研究再开发，基于数据而非直觉做决策。"
+          ],
+          "usage": [
+            "在 Claude Code 中使用：加载 ECC 技能文件。",
+            "在 Codex 中使用：配置 ECC 插件集成。",
+            "在 Cursor 中使用：安装 ECC 规则集。",
+            "使用 ECC 的 Agent 性能仪表盘监控优化效果。"
+          ],
+          "insights": [
+            "<strong>203K★ 的 Agent 基础设施热度：</strong>ECC 的爆发式增长（+1,842/天）说明开发者社区迫切需要 Agent 性能优化工具。Agent 正在从「能用」走向「好用」。",
+            "<strong>跨 Agent 工具的标准制定者：</strong>ECC 支持 Claude Code、Codex、OpenCode、Cursor 等几乎所有主流编码 Agent，试图成为 Agent 工具链的标准化层。",
+            "<strong>Research-first 开发范式：</strong>ECC 提出的 research-first 方法论——先做实验收集数据，再基于数据做决策——正是 Agent 开发从碰运气到工程化的关键转变。"
+          ],
+          "tags": [
+            "agent-harness",
+            "performance-optimization",
+            "multi-agent",
+            "agent-platform",
+            "javascript"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "nesquena",
+          "name": "hermes-webui",
+          "fullName": "nesquena / hermes-webui",
+          "org": "nesquena",
+          "url": "https://github.com/nesquena/hermes-webui",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "12,353",
+          "forks": "1,521",
+          "starsToday": "1,725",
+          "count": 2,
+          "description": "Hermes Agent 的 Web 界面 —— 连续两天上榜 +1,725，社区对图形化 Agent 界面的需求持续高涨",
+          "problems": [
+            "<strong>Hermes Agent 只有终端界面：</strong>终端使用门槛高，移动设备不方便。Hermes WebUI 提供全功能的 Web 界面，手机也能用。",
+            "<strong>CLI 和 Web 功能不同步：</strong>很多工具 CLI 和 Web 版功能不一致。Hermes WebUI 承诺与 CLI 完全对等——终端能做的 WebUI 都能做。",
+            "<strong>不需要构建工具链：</strong>纯 Python + 原生 JS，无需 npm/build/bundler，一键部署即可使用。"
+          ],
+          "usage": [
+            "Docker 一键部署：<pre><code>docker run -d -p 8080:8080 nesquena/hermes-webui</code></pre>",
+            "或本地运行：<pre><code>git clone https://github.com/nesquena/hermes-webui && cd hermes-webui && python app.py</code></pre>",
+            "三面板布局：左侧会话列表，中间聊天，右侧文件浏览。",
+            "支持模型切换、Profile 管理、上下文用量可视化。"
+          ],
+          "insights": [
+            "<strong>连续两天的 Agent 热潮：</strong>Hermes WebUI 和 ECC 同时出现在今天的热榜，Agent 基础设施赛道热度不减。",
+            "<strong>WebUI 的 200% 增长：</strong>昨天 +320，今天 +1,725——增长超 5 倍，说明更多人发现了这个工具。",
+            "<strong>Agent 的四大入口成形：</strong>终端 + Web + 手机 + 消息平台（Telegram/Discord/Slack）= 全平台覆盖。"
+          ],
+          "tags": [
+            "hermes-agent",
+            "web-ui",
+            "agent-interface",
+            "docker",
+            "open-source",
+            "ai-agent"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "OpenBMB",
+          "name": "VoxCPM",
+          "fullName": "OpenBMB / VoxCPM",
+          "org": "OpenBMB",
+          "url": "https://github.com/OpenBMB/VoxCPM",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "24,909",
+          "forks": "2,862",
+          "starsToday": "779",
+          "count": 3,
+          "description": "清华 OpenBMB 多语言 TTS —— 连续三天上榜 +779，Tokenizer-Free TTS 热度持续",
+          "problems": [
+            "<strong>传统 TTS 依赖 Tokenizer：</strong>VoxCPM2 是 Tokenizer-Free 的端到端方案，不需要将文本转为离散 token。",
+            "<strong>多语言 TTS 质量不均：</strong>VoxCPM2 支持多语言包括中文语音生成，效果领先。",
+            "<strong>语音克隆门槛高：</strong>VoxCPM2 实现真实级语音克隆和创意声音设计，仅需少量样本。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/OpenBMB/VoxCPM</code></pre>",
+            "使用预训练模型生成语音。",
+            "支持语音克隆和创意声音设计。"
+          ],
+          "insights": [
+            "<strong>连续三天的热度说明一切：</strong>VoxCPM 连续三天上榜，从 +880 → +639 → +779，说明这是个真正有持久影响力的项目。",
+            "<strong>开源 TTS 的标杆：</strong>OpenBMB 持续在 NPL/语音领域输出高质量开源项目，VoxCPM 已成为开源 TTS 的标杆之一。",
+            "<strong>Tokenizer-Free 的范式胜利：</strong>VoxCPM2 证明了在语音领域 tokenizer-free 方案的有效性，这是一个重要的技术方向。"
+          ],
+          "tags": [
+            "tts",
+            "speech-synthesis",
+            "voice-cloning",
+            "openbmb",
+            "multilingual",
+            "tokenizer-free"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "supermemoryai",
+          "name": "supermemory",
+          "fullName": "supermemoryai / supermemory",
+          "org": "Supermemory AI",
+          "url": "https://github.com/supermemoryai/supermemory",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "24,457",
+          "forks": "2,166",
+          "starsToday": "677",
+          "count": 2,
+          "description": "AI 时代的记忆引擎 —— 极速、可扩展的记忆 API，再次上榜 +677，为 Agent 和 AI 应用提供持久化记忆服务",
+          "problems": [
+            "<strong>AI Agent 没有跨会话记忆：</strong>每次新会话 Agent 都不记得用户是谁、之前聊过什么。Supermemory 提供持久化记忆 API。",
+            "<strong>记忆引擎难以扩展：</strong>构建记忆系统需要向量数据库、语义搜索等复杂基础设施。Supermemory 提供开箱即用的 Memory API。",
+            "<strong>没有统一的记忆 API 标准：</strong>不同框架有不同的记忆方案。Supermemory 努力成为 AI 时代的 Memory API 标准。"
+          ],
+          "usage": [
+            "集成 API：<pre><code>npm install supermemory</code></pre>",
+            "使用 Memory API 存储和检索上下文。",
+            "支持向量搜索、语义缓存、会话持久化。"
+          ],
+          "insights": [
+            "<strong>记忆赛道持续升温：</strong>Supermemory 二次上榜（+677/天），说明 AI 记忆基础设施的社区需求依然旺盛。",
+            "<strong>高速增长：</strong>24.5K★，从 23K 到 24.5K 只用了一周时间，增长速度加快。",
+            "<strong>Agent 记忆=下一个 Redis：</strong>就像 Redis 之于 Web 应用，Supermemory 正在成为 AI 应用的标准记忆层。"
+          ],
+          "tags": [
+            "memory-engine",
+            "agent-memory",
+            "api",
+            "vector-search",
+            "persistence",
+            "ai-infrastructure"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -198,7 +396,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -393,7 +591,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "前天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -3161,6 +3359,5 @@
         }
       ]
     }
-  ],
-  "topic": "「AI Agent 设计技能之战」—— Impeccable 成为 taste-skill 的直接竞品，两者都在争夺 AI 前端设计的标准地位。AI 交易框架 TradingAgents（81K★）用多 Agent 架构做金融决策，FFF 用 Rust 重构文件搜索——Agent 工具链在横向扩张、纵向变深。"
+  ]
 }
