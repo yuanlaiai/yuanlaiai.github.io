@@ -2,6 +2,7 @@
 // Last updated: 2026-06-02
 var siteData = {
   "lastUpdated": "2026-06-02",
+  "topic": "🏗️ <strong>AI Agent 基础设施大爆发</strong> —— 今天 GitHub Trending 前 5 清一色 Agent 基础设施项目：token 压缩（Headroom）、编排优化（ECC, 203K★）、Web 界面（Hermes WebUI）、语音交互（VoxCPM）、记忆引擎（Supermemory）。Agent 正从「能做」迈向「做好」，谁先铺好基础设施，谁就赢。",
   "days": [
     {
       "date": "2026-06-02",
