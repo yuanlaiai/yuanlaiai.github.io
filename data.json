@@ -1,10 +1,207 @@
 {
-  "lastUpdated": "2026-06-02",
-  "topic": "🏗️ <strong>AI Agent 基础设施大爆发</strong> —— 今天 GitHub Trending 前 5 清一色 Agent 基础设施项目：token 压缩（Headroom）、编排优化（ECC, 203K★）、Web 界面（Hermes WebUI）、语音交互（VoxCPM）、记忆引擎（Supermemory）。Agent 正从「能做」迈向「做好」，谁先铺好基础设施，谁就赢。",
+  "lastUpdated": "2026-06-04",
+  "topic": "📄 <strong>文档解析赛道双雄争霸</strong> —— 今天一个有趣的现象：microsoft/markitdown（+1,984）和 opendataloader-pdf（+570）同时上榜，一个将各种文档转 Markdown，一个专攻 PDF 解析。同时 Hermes Agent 本体首次上榜（+1,735），展示开源 Agent 的生态力量。而 headroom 连续两天霸榜榜首（+3,530），Token 压缩已经成为 Agent 效率的标配。",
   "days": [
     {
-      "date": "2026-06-02",
+      "date": "2026-06-04",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "chopratejas",
+          "name": "headroom",
+          "fullName": "chopratejas / headroom",
+          "org": "Chopratejas",
+          "url": "https://github.com/chopratejas/headroom",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "9,652",
+          "forks": "636",
+          "starsToday": "3,530",
+          "count": 2,
+          "description": "Token 压缩引擎 —— 连续两日霸榜榜首！+3,530 一天增速翻倍，从 5.4K→9.6K★ 只用了 2 天",
+          "problems": [
+            "<strong>LLM 上下文窗口浪费严重：</strong>工具调用输出、日志、RAG 检索结果中充斥着冗余内容。Headroom 在数据到达 LLM 前智能压缩，节省 60-95% Token。",
+            "<strong>场景碎片化：</strong>不同场景需要不同压缩策略。Headroom 统一提供 Library、Proxy、MCP Server 三种形态，适配所有使用场景。",
+            "<strong>压缩不能降质量：</strong>不是简单丢弃内容。Headroom 使用专门算法保证压缩后 LLM 回答质量和原始内容一致。"
+          ],
+          "usage": [
+            "作为 Python 库：<pre><code>pip install headroom\nfrom headroom import compress</code></pre>",
+            "作为代理服务器：配置 Headroom Proxy 自动压缩所有 LLM 请求。",
+            "作为 MCP Server：集成到 AI Agent 工具链中自动压缩。"
+          ],
+          "insights": [
+            "<strong>连续两天榜首的统治力：</strong>从 5.4K★ 到 9.6K★ 只用了两天，+3,530/天 的增速意味着开发者正在大量部署它。",
+            "<strong>Agent 成本优化的刚需：</strong>压缩 60-95% Token = 推理成本降低 60-95%。在 Agent 规模化的当下，这是最具性价比的投资。",
+            "<strong>MCP 形态正在成为标配：</strong>作为 MCP Server 集成意味着所有兼容 Agent 都能自动使用，无需逐个适配。"
+          ],
+          "tags": [
+            "token-compression",
+            "agent-tools",
+            "llm-efficiency",
+            "mcp-server",
+            "python"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "fullName": "NousResearch / hermes-agent",
+          "org": "Nous Research",
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "179,082",
+          "forks": "30,676",
+          "starsToday": "1,735",
+          "count": 2,
+          "description": "Hermes Agent —— 超越 ChatGPT 的开源 AI Agent，179K★ 的 Agent 框架首次登上 GitHub Trending",
+          "problems": [
+            "<strong>开源 Agent 缺少好用的框架：</strong>很多 Agent 工具要么太简单（脚本级），要么太重（需要大量配置）。Hermes Agent 提供恰到好处的抽象——CLI、网关、MCP、Skill 体系一层层构建。",
+            "<strong>Agent 能力难以渐进增长：</strong>大多数 Agent 框架学起来陡峭。Hermes 设计理念是「和你一起成长的 Agent」——从简单开始，按需添加技能和工具。",
+            "<strong>缺少统一的消息和工具平台：</strong>Hermes 支持 Telegram、Discord、Slack、WebUI、CLI 等各种入口，用同一套技能和记忆系统驱动。"
+          ],
+          "usage": [
+            "快速启动：<pre><code>pip install hermes-agent && hermes run</code></pre>",
+            "配置 Provider：<pre><code>hermes config set provider openai</code></pre>",
+            "管理技能：<pre><code>hermes skills list</code></pre>",
+            "更多用法见 <code>docs.hermes-agent.ai</code>"
+          ],
+          "insights": [
+            "<strong>179K★ 的 Agent 鼻祖进热榜：</strong>Hermes Agent 作为开源 Agent 的先驱，一直在默默地迭代。今天登上 Trending 说明 Agent 赛道的关注度达到了新高度。",
+            "<strong>生态成熟了：</strong>Hermes WebUI 连续两天上榜（+1725），今天 Hermes Agent 本体也进榜了。Hermes 生态正在从开发者工具走向主流。",
+            "<strong>「和你一起成长的 Agent」：</strong>Hermes 设计的核心是渐进式——从简单聊天到复杂技能，从单文件到多 Agent 编排，用户按需加功能。"
+          ],
+          "tags": [
+            "hermes-agent",
+            "ai-agent",
+            "agent-framework",
+            "open-source",
+            "python",
+            "nous-research"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "microsoft",
+          "name": "markitdown",
+          "fullName": "microsoft / markitdown",
+          "org": "Microsoft",
+          "url": "https://github.com/microsoft/markitdown",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "142,831",
+          "forks": "9,762",
+          "starsToday": "1,984",
+          "count": 2,
+          "description": "微软官方文档转 Markdown 工具 —— 再上榜 +1,984，142K★ 的 LLM 数据管道基础设施，持续增长",
+          "problems": [
+            "<strong>非结构化数据难以喂给 LLM：</strong>PDF、Word、Excel 等格式 LLM 无法直接理解。MarkItDown 把所有常见文档格式转为 Markdown。",
+            "<strong>文档格式转换碎片化：</strong>PDF 用 PyMuPDF、Excel 用 openpyxl……各自为战。MarkItDown 统一 API：<code>convert('file.pdf')</code>。",
+            "<strong>RAG 管道的文档预处理瓶颈：</strong>构建 RAG 应用需要先解析文档。MarkItDown 被设计为 LLM 数据处理管道的标准输入层。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install markitdown</code></pre>",
+            "转换文件：<pre><code>from markitdown import MarkItDown\nmd = MarkItDown()\nresult = md.convert('report.docx')</code></pre>",
+            "支持 PDF、PowerPoint、Word、Excel、图片(OCR)、音频、HTML 等。"
+          ],
+          "insights": [
+            "<strong>文档解析的标准层：</strong>MarkItDown 从 130K→142K★ 的一周增长说明它正在成为 LLM 应用开发的基础设施。",
+            "<strong>与 opendataloader 同一天热榜：</strong>今天 markitdown 和 opendataloader-pdf 同时上榜，文档解析赛道集中爆发。",
+            "<strong>微软在 AI 基础设施的持续布局：</strong>MarkItDown + 其他开源工具 = 微软正在搭建 LLM 应用的完整数据管道。"
+          ],
+          "tags": [
+            "microsoft",
+            "document-conversion",
+            "markdown",
+            "LLM-pipeline",
+            "RAG",
+            "data-processing"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "opendataloader-project",
+          "name": "opendataloader-pdf",
+          "fullName": "opendataloader-project / opendataloader-pdf",
+          "org": "Open Data Loader",
+          "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+          "lang": "Java",
+          "langClass": "",
+          "stars": "23,250",
+          "forks": "2,182",
+          "starsToday": "570",
+          "count": 1,
+          "description": "AI 原生的 PDF 解析器 —— 为 AI 数据准备而生的开源 PDF 解析引擎，Java 构建、23K★",
+          "problems": [
+            "<strong>PDF 解析是 AI 数据处理的最大痛点：</strong>PDF 格式复杂——多列、表格、图片、嵌入字体……通用解析器要么慢要么不准。OpenDataLoader 专为 AI 数据准备优化。",
+            "<strong>现有工具要么慢要么不准确：</strong>Python 解析器慢，闭源工具贵。OpenDataLoader 用 Java 实现高性能解析，开源免费。",
+            "<strong>缺少 AI 数据管道的标准入站格式：</strong>不仅要解析 PDF，还要输出 AI-ready 的结构化数据。OpenDataLoader 内置了 LLM 友好的输出格式。"
+          ],
+          "usage": [
+            "Maven 集成：<pre><code>// 在 pom.xml 中添加依赖\n&lt;dependency&gt;\n  &lt;groupId&gt;io.opendataloader&lt;/groupId&gt;\n  &lt;artifactId&gt;opendataloader-pdf&lt;/artifactId&gt;\n&lt;/dependency&gt;</code></pre>",
+            "Python 客户端：<pre><code>pip install opendataloader-pdf-py</code></pre>",
+            "解析 PDF：<pre><code>from opendataloader import parse\ndoc = parse('document.pdf')</code></pre>",
+            "输出 JSON/Markdown 等 AI-ready 格式。"
+          ],
+          "insights": [
+            "<strong>文档解析赛道双星闪耀：</strong>今天 markitdown 和 opendataloader-pdf 同时上榜，说明文档转 AI 格式是当前最热的基础设施需求。",
+            "<strong>Java 在 AI 领域的存在感：</strong>opendataloader-pdf 用 Java 构建在 AI 领域是一股清流，说明企业级 AI 应用也需要高性能的 Java 组件。",
+            "<strong>AI 数据准备=新的基础设施：</strong>数据准备（ETL）是老旧概念，但 AI 时代的数据准备有新需求——结构保留、格式统一、管道化。"
+          ],
+          "tags": [
+            "pdf-parser",
+            "data-loading",
+            "ai-data",
+            "document-parsing",
+            "java"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "supermemoryai",
+          "name": "supermemory",
+          "fullName": "supermemoryai / supermemory",
+          "org": "Supermemory AI",
+          "url": "https://github.com/supermemoryai/supermemory",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "25,156",
+          "forks": "2,209",
+          "starsToday": "600",
+          "count": 3,
+          "description": "AI 时代的记忆引擎 —— 第三次上榜！25K★ 的记忆 API，为 Agent 和 AI 应用提供持久化记忆",
+          "problems": [
+            "<strong>AI Agent 没有跨会话记忆：</strong>每次新会话 Agent 都不记得用户是谁。Supermemory 提供持久化记忆 API。",
+            "<strong>记忆引擎难以扩展：</strong>构建记忆系统需要向量数据库、语义搜索等复杂基础设施。Supermemory 提供开箱即用的 Memory API。",
+            "<strong>没有统一的记忆 API 标准：</strong>不同框架记忆方案互不兼容。Supermemory 努力成为 AI 时代的 Memory API 标准。"
+          ],
+          "usage": [
+            "集成 API：<pre><code>npm install supermemory</code></pre>",
+            "使用 Memory API 存储和检索上下文。",
+            "支持向量搜索、语义缓存、会话持久化。"
+          ],
+          "insights": [
+            "<strong>第三次上榜说明赛道成熟：</strong>Supermemory 在 5/31、6/02、6/04 三次上榜，AI 记忆引擎已经是持续存在的刚需。",
+            "<strong>一周内 23K→25K★：</strong>持续加速增长，Supermemory 正在成为 AI 应用的标准记忆基础设施。",
+            "<strong>Agent 记忆=新 Redis：</strong>就像 Redis 之于 Web 应用，AI 应用也需要标准化的记忆服务。"
+          ],
+          "tags": [
+            "memory-engine",
+            "agent-memory",
+            "api",
+            "vector-search",
+            "persistence",
+            "ai-infrastructure"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-02",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -202,7 +399,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "昨天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -397,7 +594,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -592,7 +789,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "3天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -788,7 +985,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "4天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -984,7 +1181,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "5天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1178,7 +1375,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "6天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1376,7 +1573,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "8天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1578,7 +1775,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "9天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1780,7 +1977,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "10天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1982,7 +2179,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "11天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2184,7 +2381,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "12天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2386,7 +2583,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "13天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2588,7 +2785,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "14天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2790,7 +2987,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "18天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -2990,7 +3187,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "19天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -3186,7 +3383,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "20天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
