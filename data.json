@@ -1,10 +1,207 @@
 {
-  "lastUpdated": "2026-06-04",
-  "topic": "📄 <strong>文档解析赛道双雄争霸</strong> —— 今天一个有趣的现象：microsoft/markitdown（+1,984）和 opendataloader-pdf（+570）同时上榜，一个将各种文档转 Markdown，一个专攻 PDF 解析。同时 Hermes Agent 本体首次上榜（+1,735），展示开源 Agent 的生态力量。而 headroom 连续两天霸榜榜首（+3,530），Token 压缩已经成为 Agent 效率的标配。",
+  "lastUpdated": "2026-06-05",
+  "topic": "🔥 <strong>连续第三天：Agent 基础设施全面爆发</strong> —— Headroom 连续三天霸榜（+3,142），从 5.4K→12.4K★ 只用三天。Hermes Agent 连续第二天上榜（+1,913），ECC 第四次入榜（+1,750），Agent 基础设施的持续热度标志着行业从「做 Agent」进入「做好 Agent」的阶段。同时 Open Notebook（25K★）和 Open-LLM-VTuber（9.6K★）也展现了 AI 消费级应用的新方向。",
   "days": [
     {
-      "date": "2026-06-04",
+      "date": "2026-06-05",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "chopratejas",
+          "name": "headroom",
+          "fullName": "chopratejas / headroom",
+          "org": "Chopratejas",
+          "url": "https://github.com/chopratejas/headroom",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "12,442",
+          "forks": "807",
+          "starsToday": "3,142",
+          "count": 3,
+          "description": "Token 压缩引擎 —— 连续三天霸榜榜首！+3,142，从 5.4K→12.4K★ 只用了三天，增速不减",
+          "problems": [
+            "<strong>LLM 上下文窗口浪费严重：</strong>工具调用输出、日志、RAG 检索结果中充斥着冗余内容。Headroom 在数据到达 LLM 前智能压缩，节省 60-95% Token。",
+            "<strong>场景碎片化需统一方案：</strong>工具输出用结构压缩，日志用去重压缩，RAG 用语义压缩。Headroom 统一提供 Library、Proxy、MCP Server 三种形态。",
+            "<strong>压缩不能降质量：</strong>不是简单丢弃内容。Headroom 使用专门算法保证压缩后 LLM 回答质量和原始内容一致。"
+          ],
+          "usage": [
+            "作为 Python 库：<pre><code>pip install headroom\nfrom headroom import compress\ncompressed = compress(tool_output)</code></pre>",
+            "作为代理服务器：配置 Headroom Proxy 自动压缩所有 LLM 请求。",
+            "作为 MCP Server：集成到 AI Agent 工具链中自动压缩。"
+          ],
+          "insights": [
+            "<strong>连续三天榜首的战绩：</strong>从 5.4K→9.6K→12.4K★，每天 +3K 以上的增速。Headroom 已经成为 AI 工程师的标配工具。",
+            "<strong>Token 压缩=Agent 刚需：</strong>Agent 每次工具调用都产生大量输出，压缩 60-95% Token = 推理成本降低 60-95%。",
+            "<strong>MCP 生态的标杆产品：</strong>Headroom 的 MCP Server 形态是所有兼容 Agent 的即插即用组件，展示了 MCP 生态的活力。"
+          ],
+          "tags": [
+            "token-compression",
+            "agent-tools",
+            "llm-efficiency",
+            "mcp-server",
+            "python"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "fullName": "NousResearch / hermes-agent",
+          "org": "Nous Research",
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "180,954",
+          "forks": "31,038",
+          "starsToday": "1,913",
+          "count": 3,
+          "description": "Hermes Agent —— 连续两天上榜！180K★ 的开源 Agent 框架 +1,913，社区关注度持续攀升",
+          "problems": [
+            "<strong>开源 Agent 缺少好用的框架：</strong>要么太简单（脚本级），要么太重。Hermes Agent 提供恰到好处的抽象——CLI、网关、MCP、Skill 体系。",
+            "<strong>Agent 能力难以渐进增长：</strong>Hermes 设计理念是「和你一起成长的 Agent」——从简单开始，按需添加技能和工具。",
+            "<strong>缺少统一的消息和工具平台：</strong>支持 Telegram、Discord、Slack、WebUI、CLI 等各种入口，同一套技能和记忆系统驱动。"
+          ],
+          "usage": [
+            "快速启动：<pre><code>pip install hermes-agent && hermes run</code></pre>",
+            "配置 Provider：<pre><code>hermes config set provider openai</code></pre>",
+            "管理技能：<pre><code>hermes skills list</code></pre>"
+          ],
+          "insights": [
+            "<strong>连续两天进热榜：</strong>昨天 +1,735，今天 +1,913，Hermes Agent 的热度在加速。180K★ 的背后是活跃的开发社区。",
+            "<strong>Hermes 生态全面开花：</strong>Hermes WebUI（12K★）+ Hermes Agent（180K★）双双霸榜，Agent 基础设施赛道 Hermes 占据核心地位。",
+            "<strong>从 05-12 到今天：</strong>Hermes Agent 上次进榜是 05-12，时隔 24 天再次上榜，期间 star 增长了数万。"
+          ],
+          "tags": [
+            "hermes-agent",
+            "ai-agent",
+            "agent-framework",
+            "open-source",
+            "python",
+            "nous-research"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "affaan-m",
+          "name": "ECC",
+          "fullName": "affaan-m / ECC",
+          "org": "Affaan M",
+          "url": "https://github.com/affaan-m/ECC",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "207,210",
+          "forks": "31,811",
+          "starsToday": "1,750",
+          "count": 4,
+          "description": "Agent 编排优化系统 —— 再上榜 +1,750，207K★ 的 Agent 性能优化平台持续增长",
+          "problems": [
+            "<strong>Agent 性能没有统一衡量标准：</strong>不同 Agent 工具对技能、记忆、安全各有各的实现。ECC 定义了一套完整的 Agent 性能评估体系。",
+            "<strong>Agent 配置碎片化：</strong>每个 Agent 工具有自己的配置格式。ECC 提供跨工具的统一配置和管理。",
+            "<strong>缺乏 Research-first 的开发方法：</strong>ECC 倡导 research-first——先研究再开发，基于数据而非直觉做决策。"
+          ],
+          "usage": [
+            "在 Claude Code 中使用：加载 ECC 技能文件。",
+            "在 Codex 中使用：配置 ECC 插件集成。",
+            "在 Cursor 中使用：安装 ECC 规则集。"
+          ],
+          "insights": [
+            "<strong>第四次上榜的含金量：</strong>ECC 是本站历史上榜次数最多的项目之一（5/26, 5/28, 6/04, 6/05），真正的持久热度。",
+            "<strong>Agent 基础设施大赛的领跑者：</strong>207K★ 稳步增长，ECC 正在成为 Agent 性能优化的行业标准。",
+            "<strong>跨 Agent 工具的平台价值：</strong>支持 Claude Code、Codex、Cursor 等所有主流编码 Agent，平台效应越来越强。"
+          ],
+          "tags": [
+            "agent-harness",
+            "performance-optimization",
+            "multi-agent",
+            "agent-platform",
+            "javascript"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "lfnovo",
+          "name": "open-notebook",
+          "fullName": "lfnovo / open-notebook",
+          "org": "lfnovo",
+          "url": "https://github.com/lfnovo/open-notebook",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "25,004",
+          "forks": "2,914",
+          "starsToday": "212",
+          "count": 1,
+          "description": "NotebookLM 的开源替代 —— 更灵活、更多功能的 AI 笔记本，支持多提供商的文档问答和播客生成",
+          "problems": [
+            "<strong>Google NotebookLM 功能受限：</strong>NotebookLM 只支持 Google 生态，限制文档类型和使用场景。Open Notebook 是开源的替代方案，支持更多功能和更多提供商。",
+            "<strong>AI 笔记本缺少灵活性：</strong>NotebookLM 只能使用 Gemini 模型。Open Notebook 支持 OpenAI、Anthropic、Ollama 等多个 LLM 提供商。",
+            "<strong>播客生成被大厂锁定：</strong>NotebookLM 的 Audio Overviews 功能很受欢迎但只支持英文。Open Notebook 支持更多语言和定制化播客生成。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install open-notebook</code></pre>",
+            "启动 Web 界面：<pre><code>open-notebook start</code></pre>",
+            "上传文档，AI 自动分析和生成摘要。",
+            "支持播客（Audio Overview）生成。"
+          ],
+          "insights": [
+            "<strong>NotebookLM 开源替代的空白：</strong>Google 的 NotebookLM 极受欢迎但不开源。Open Notebook 填补了这个空白，25K★ 说明需求强烈。",
+            "<strong>多提供商策略是正确的选择：</strong>支持 OpenAI/Anthropic/Ollama 等，用户可以用自己偏好的模型，不受单一厂商锁定。",
+            "<strong>播客生成的独特价值：</strong>Audio Overviews 是 NotebookLM 最惊艳的功能之一，开源实现能覆盖更多语言和场景。"
+          ],
+          "tags": [
+            "notebooklm",
+            "ai-notebook",
+            "open-source",
+            "document-analysis",
+            "podcast-generation",
+            "python"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "Open-LLM-VTuber",
+          "name": "Open-LLM-VTuber",
+          "fullName": "Open-LLM-VTuber / Open-LLM-VTuber",
+          "org": "Open LLM VTuber",
+          "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "9,576",
+          "forks": "1,151",
+          "starsToday": "581",
+          "count": 1,
+          "description": "与任意 LLM 语音交互 —— 免手持语音对话、语音打断、Live2D 虚拟形象，全平台本地运行",
+          "problems": [
+            "<strong>LLM 语音交互门槛高：</strong>集成语音识别+LLM+TTS 需要组合多个技术栈。Open-LLM-VTuber 提供一站式解决方案。",
+            "<strong>现有语音助手不灵活：</strong>大多数语音助手绑定特定 LLM 或云端服务。Open-LLM-VTuber 支持任意 LLM，本地或云端均可。",
+            "<strong>缺少沉浸式的交互体验：</strong>只有语音不够，还需要视觉反馈。Live2D 虚拟形象实时对口型，让交互更有沉浸感。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/Open-LLM-VTuber/Open-LLM-VTuber</code></pre>",
+            "配置 LLM 提供商（支持 OpenAI、Anthropic、Ollama 等）。",
+            "运行：<pre><code>python main.py</code></pre>",
+            "支持语音打断、Live2D 虚拟形象、全平台运行。"
+          ],
+          "insights": [
+            "<strong>AI + VTuber 的跨界融合：</strong>把 LLM 语音交互和虚拟主播文化结合起来，创造了独特的「看得见、听得见」的 AI 交互体验。",
+            "<strong>581 star/天的增长速度：</strong>从 8.2K→9.6K★ 稳步增长，Voice LLM 的市场需求在扩大。",
+            "<strong>全平台本地运行的价值：</strong>支持 macOS/Windows/Linux，可在本地运行保护隐私，这对语音交互场景尤为重要。"
+          ],
+          "tags": [
+            "voice-assistant",
+            "llm",
+            "live2d",
+            "vtuber",
+            "voice-interaction",
+            "python"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -201,7 +398,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "前天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -399,7 +596,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "3天前",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -594,7 +791,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -789,7 +986,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -985,7 +1182,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "7天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1181,7 +1378,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "8天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1375,7 +1572,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "9天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1573,7 +1770,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "11天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1775,7 +1972,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "12天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1977,7 +2174,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "13天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2179,7 +2376,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "14天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2381,7 +2578,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "15天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2583,7 +2780,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "16天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2785,7 +2982,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "17天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2987,7 +3184,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "21天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -3187,7 +3384,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "22天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3383,7 +3580,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "23天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
