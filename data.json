@@ -1,10 +1,207 @@
 {
-  "lastUpdated": "2026-06-05",
-  "topic": "🔥 <strong>连续第三天：Agent 基础设施全面爆发</strong> —— Headroom 连续三天霸榜（+3,142），从 5.4K→12.4K★ 只用三天。Hermes Agent 连续第二天上榜（+1,913），ECC 第四次入榜（+1,750），Agent 基础设施的持续热度标志着行业从「做 Agent」进入「做好 Agent」的阶段。同时 Open Notebook（25K★）和 Open-LLM-VTuber（9.6K★）也展现了 AI 消费级应用的新方向。",
+  "lastUpdated": "2026-06-06",
+  "topic": "🌟 <strong>Agent 视野拓展：从 CLI 到全网</strong> —— 今天的榜单呈现了一个有趣趋势：Agent 正在从「本地工具」走向「网络原生」。Superpowers 重返热榜（+1,008），CopilotKit（+613）为 Agent 赋予前端 UI，Agent-Reach（+148）更是让 Agent 直达 B 站和小红书。同时微软的 VibeVoice（+219）将语音 AI 能力开源。Agent 的感知边界正在扩展——能看网页、能听语音、能做 UI。",
   "days": [
     {
-      "date": "2026-06-05",
+      "date": "2026-06-06",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "obra",
+          "name": "superpowers",
+          "fullName": "obra / superpowers",
+          "org": "Obra",
+          "url": "https://github.com/obra/superpowers",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "57,200",
+          "forks": "7,894",
+          "starsToday": "1,008",
+          "count": 5,
+          "description": "Agent 技能框架 —— 定义 Agent 软件开发方法论的元平台，+1,008 重返热榜",
+          "problems": [
+            "<strong>Agent 开发缺少方法论：</strong>写 Agent 容易，写好 Agent 难。Superpowers 不只给工具，更定义了整套 Agent 软件工程方法论。",
+            "<strong>Agent 技能碎片化：</strong>不同 Agent 框架各有各的技能格式。Superpowers 提供统一的「技能框架」——写一次技能，到处运行。",
+            "<strong>缺乏可复用的 Agent 组件：</strong>Superpowers 建立了一套技能市场，开发者可以发布和复用技能，形成生态正循环。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/obra/superpowers</code></pre>",
+            "安装技能框架。",
+            "浏览和安装社区技能。"
+          ],
+          "insights": [
+            "<strong>重返热榜证明持久力：</strong>Superpowers 在 5/14、5/21、5/22 三次上榜后，今天再次回归 +1,008。真正的持久项目不需要天天刷存在感。",
+            "<strong>Agent 技能标准化的先驱：</strong>Superpowers 是最早提出「Agent 技能」概念的项目之一，被 ECC、Harness 等项目借鉴。",
+            "<strong>57K★ 的技能生态：</strong>从最早的技能概念到现在的完整生态，Superpowers 的成长也是 Agent 技能范式被验证的历史。"
+          ],
+          "tags": [
+            "agent-skills",
+            "agent-framework",
+            "methodology",
+            "agent-ecosystem",
+            "python"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "CopilotKit",
+          "name": "CopilotKit",
+          "fullName": "CopilotKit / CopilotKit",
+          "org": "CopilotKit",
+          "url": "https://github.com/CopilotKit/CopilotKit",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "32,961",
+          "forks": "4,215",
+          "starsToday": "613",
+          "count": 1,
+          "description": "Agent UI 前端框架 —— React + Angular 构建 AI Agent 界面，AG-UI 协议的创造者，32K★",
+          "problems": [
+            "<strong>AI Agent 缺少好用的前端 UI：</strong>大多数 Agent 只有 CLI 或简单聊天界面，复杂的 Agent 交互需要定制 UI。CopilotKit 提供现成的 React/Angular 组件。",
+            "<strong>Agent UI 协议不统一：</strong>每个 Agent 框架有自己的 UI 方案。CopilotKit 提出 AG-UI 协议，让 Agent 和 UI 层解耦。",
+            "<strong>生成式 UI 难以落地：</strong>AI 动态生成 UI 组件是一个方向，CopilotKit 提供了实用工具让生成式 UI 真正可用。"
+          ],
+          "usage": [
+            "安装 React 版：<pre><code>npm install @copilotkit/react-core @copilotkit/react-ui</code></pre>",
+            "在组件中使用：<pre><code>import { CopilotKit } from '@copilotkit/react-core'</code></pre>",
+            "支持 Angular、Next.js、Vite 等框架。"
+          ],
+          "insights": [
+            "<strong>Agent UI 层的稀缺价值：</strong>Agent 后端（推理、工具调用）已经很成熟了，但前端 UI 是薄弱环节。CopilotKit 填补了这个空白。",
+            "<strong>AG-UI 协议的行业意义：</strong>就像 HTTP 之于 Web，AG-UI 试图定义 Agent 和 UI 之间的通信协议。这是真正的基础设施级创新。",
+            "<strong>33K★ 的增长势头：</strong>10,792 次提交、1401 个版本标签，CopilotKit 在快速迭代中。"
+          ],
+          "tags": [
+            "agent-ui",
+            "react",
+            "angular",
+            "generative-ui",
+            "frontend",
+            "typescript"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "PaddlePaddle",
+          "name": "PaddleOCR",
+          "fullName": "PaddlePaddle / PaddleOCR",
+          "org": "百度 PaddlePaddle",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "79,845",
+          "forks": "10,598",
+          "starsToday": "747",
+          "count": 1,
+          "description": "百度 PaddleOCR —— 79K★ 的 OCR 工具包，PDF/图片转 AI 结构化数据，支持 100+ 语言",
+          "problems": [
+            "<strong>AI 数据输入的瓶颈：</strong>PDF 和图片中的文字 LLM 无法直接理解。PaddleOCR 提供超轻量 OCR 引擎，快速将非结构化文档转为 AI 可读的数据。",
+            "<strong>中英文 OCR 效果不均：</strong>很多 OCR 在英文上表现好但中文差。PaddleOCR 在中文 OCR 上表现卓越（毕竟百度出品）。",
+            "<strong>OCR 工具太重量级：</strong>PaddleOCR 提供超轻量模型，可以在 CPU 上运行，集成简单。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install paddleocr</code></pre>",
+            "基本使用：<pre><code>from paddleocr import PaddleOCR\nocr = PaddleOCR()\nresult = ocr.ocr('image.jpg')</code></pre>",
+            "支持 PDF 转结构化数据、表格识别、版面分析。"
+          ],
+          "insights": [
+            "<strong>百度在 AI 基础设施的隐形布局：</strong>PaddlePaddle 生态覆盖了从训练到推理到 OCR 的全链路。79K★ 的 OCR 说明需求确实大。",
+            "<strong>OCR + LLM 的黄金组合：</strong>文档转 Markdown（MarkItDown）+ OCR（PaddleOCR）+ LLM 分析 = AI 数据处理的完整链路。",
+            "<strong>100+ 语言支持的价值：</strong>全球化应用场景下多语言 OCR 是刚需，PaddleOCR 在这点上优势明显。"
+          ],
+          "tags": [
+            "ocr",
+            "baidu",
+            "paddlepaddle",
+            "document-processing",
+            "ai-data",
+            "python"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "microsoft",
+          "name": "VibeVoice",
+          "fullName": "microsoft / VibeVoice",
+          "org": "Microsoft",
+          "url": "https://github.com/microsoft/VibeVoice",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "48,300",
+          "forks": "5,400",
+          "starsToday": "219",
+          "count": 1,
+          "description": "微软开源的语音 AI —— 前沿的开源语音 AI 平台，48K★，覆盖 ASR/TTS/语音克隆全栈",
+          "problems": [
+            "<strong>语音 AI 被巨头锁定：</strong>最好的语音识别和合成技术掌握在云厂商手里。VibeVoice 提供开源替代，覆盖语音识别（ASR）和语音合成（TTS）。",
+            "<strong>语音管线碎片化：</strong>ASR + TTS + 语音克隆需要拼接多个模型。VibeVoice 提供统一的开源管线。",
+            "<strong>开源语音落后闭源：</strong>VibeVoice 的目标是缩小开源语音 AI 与商业方案之间的差距。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/microsoft/VibeVoice</code></pre>",
+            "安装依赖后运行 ASR 或 TTS 管线。",
+            "支持微调 ASR 模型和语音克隆。"
+          ],
+          "insights": [
+            "<strong>微软开源语音的野心：</strong>VibeVoice 是微软在开源语音 AI 领域的重要布局，类似 MarkItDown 在文档处理领域的角色。",
+            "<strong>语音 AI 的开源拐点：</strong>48K★ 说明社区对开源语音 AI 有巨大需求。VibeVoice + Whisper = 开源语音的双引擎。",
+            "<strong>ASR + TTS 全栈覆盖：</strong>不像 Whisper 只做 ASR，VibeVoice 覆盖了 ASR、TTS 和语音克隆，更适合构建语音 Agent。"
+          ],
+          "tags": [
+            "voice-ai",
+            "microsoft",
+            "asr",
+            "tts",
+            "speech-recognition",
+            "voice-cloning"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "Panniantong",
+          "name": "Agent-Reach",
+          "fullName": "Panniantong / Agent-Reach",
+          "org": "Panniantong",
+          "url": "https://github.com/Panniantong/Agent-Reach",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "21,968",
+          "forks": "1,886",
+          "starsToday": "148",
+          "count": 1,
+          "description": "Agent 互联网浏览器 —— 让你的 Agent 看遍全网：Twitter、Reddit、YouTube、B站、小红书，一个 CLI 零 API 费用",
+          "problems": [
+            "<strong>Agent 只能读文档不能上网：</strong>大多数 Agent 只能处理本地文件或通过复杂 API 访问网络。Agent-Reach 一个 CLI 搞定所有主流平台的内容读取。",
+            "<strong>中文平台没有好的 Agent 数据源：</strong>支持 B 站、小红书等中文平台，对中国开发者十分友好。",
+            "<strong>API 费用高昂：</strong>每个平台都需要单独申请 API Key 和付费。Agent-Reach 直接解析网页免 API 费用。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install agent-reach</code></pre>",
+            "读取 Reddit：<pre><code>agent-reach reddit search 'AI agents'</code></pre>",
+            "读 B 站：<pre><code>agent-reach bilibili search 'AI'</code></pre>",
+            "读小红书：<pre><code>agent-reach xiaohongshu search 'Agent'</code></pre>"
+          ],
+          "insights": [
+            "<strong>唯一一个支持小红书的 Agent 工具：</strong>在 GitHub 上能搜到支持小红书的开源项目寥寥无几，Agent-Reach 填补了这个空白。",
+            "<strong>零 API 费用的商业模式：</strong>绕过官方 API 直接解析网页，省了每年数万的 API 订阅费——但对开发者来说这是巨大的吸引力。",
+            "<strong>中国开发者的出海工具：</strong>名字是英文（Agent-Reach）但 README 有大量中文，代码注释也是中英混杂。这是一个面向全球但偏爱中国开发者的项目。"
+          ],
+          "tags": [
+            "agent-tools",
+            "web-scraping",
+            "social-media",
+            "bilibili",
+            "xiaohongshu",
+            "python"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -201,7 +398,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -398,7 +595,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "3天前",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -596,7 +793,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -791,7 +988,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -986,7 +1183,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "6天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -1182,7 +1379,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "8天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1378,7 +1575,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "9天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1572,7 +1769,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "10天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1770,7 +1967,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "12天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1972,7 +2169,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "13天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2174,7 +2371,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "14天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2376,7 +2573,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "15天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2578,7 +2775,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "16天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2780,7 +2977,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "17天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2982,7 +3179,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "18天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -3184,7 +3381,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "22天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3384,7 +3581,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "23天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -3580,7 +3777,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "24天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
