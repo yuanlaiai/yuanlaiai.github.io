@@ -1,10 +1,208 @@
 {
-  "lastUpdated": "2026-06-06",
-  "topic": "🌟 <strong>Agent 视野拓展：从 CLI 到全网</strong> —— 今天的榜单呈现了一个有趣趋势：Agent 正在从「本地工具」走向「网络原生」。Superpowers 重返热榜（+1,008），CopilotKit（+613）为 Agent 赋予前端 UI，Agent-Reach（+148）更是让 Agent 直达 B 站和小红书。同时微软的 VibeVoice（+219）将语音 AI 能力开源。Agent 的感知边界正在扩展——能看网页、能听语音、能做 UI。",
+  "lastUpdated": "2026-06-07",
+  "topic": "🔥 <strong>Agent 生态全面爆发：NotebookLM 替代 + Agent 记忆 + 技能框架同日上榜</strong> —— 今天的榜单是一场 Agent 基础设施的全景展示。Open Notebook（+794）代表「AI 笔记本」需求爆发，MemPalace（+446）把 Agent 记忆提升到新的竞争维度，Superpowers（+700）和 CopilotKit（+631）分别代表技能框架和 UI 层的成熟。Agent-Reach（+683）连续两天上榜，再次证明「让 Agent 看到全网」是刚需。从后端框架到前端 UI，从记忆系统到全网数据源——Agent 的基础设施拼图正在一块块补齐。",
   "days": [
     {
-      "date": "2026-06-06",
+      "date": "2026-06-07",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "lfnovo",
+          "name": "open-notebook",
+          "fullName": "lfnovo / open-notebook",
+          "org": "lfnovo",
+          "url": "https://github.com/lfnovo/open-notebook",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "26,861",
+          "forks": "3,057",
+          "starsToday": "794",
+          "count": 2,
+          "description": "NotebookLM 的开源替代 —— 今天最热！+794★，26.8K★ 的多模型 AI 笔记本，支持文档问答、播客生成、多提供商",
+          "problems": [
+            "<strong>Google NotebookLM 太封闭：</strong>功能虽好但被 Gemini 锁定，文档类型和语言受限。Open Notebook 提供开源替代。",
+            "<strong>AI 笔记本缺少灵活性：</strong>NotebookLM 只能用 Gemini，Open Notebook 支持 OpenAI/Anthropic/Ollama 多个 LLM 提供商。",
+            "<strong>播客生成被大厂垄断：</strong>NotebookLM 的 Audio Overviews 很火但不开源也不支持中文。Open Notebook 支持多语言定制化播客。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install open-notebook</code></pre>",
+            "启动 Web 界面：<pre><code>open-notebook start</code></pre>",
+            "上传文档让 AI 自动分析并生成摘要。",
+            "支持播客（Audio Overview）一键生成。"
+          ],
+          "insights": [
+            "<strong>今天最热项目：</strong>+794★ 夺今日第一！NotebookLM 的开源替代需求确实旺盛，26.8K★ 的增速说明用户对「属于自己的 AI 笔记本」有强烈渴望。",
+            "<strong>多提供商策略是正确的选择：</strong>支持 OpenAI/Anthropic/Ollama，用户不受单一厂商锁定。Agent 生态里「提供商可切换」正在成为标配。",
+            "<strong>播客生成是杀手功能：</strong>NotebookLM 的 Audio Overviews 极受欢迎但不开源，开源实现能覆盖更多语言和场景——这是差异化竞争点。"
+          ],
+          "tags": [
+            "notebooklm",
+            "ai-notebook",
+            "open-source",
+            "document-analysis",
+            "podcast-generation",
+            "typescript"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "obra",
+          "name": "superpowers",
+          "fullName": "obra / superpowers",
+          "org": "Obra",
+          "url": "https://github.com/obra/superpowers",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "220,039",
+          "forks": "19,576",
+          "starsToday": "700",
+          "count": 6,
+          "description": "Agent 技能框架 —— 连续四天上榜！220K★ 的 Agent 方法论元平台 +700，热度不减",
+          "problems": [
+            "<strong>Agent 开发缺少方法论：</strong>写 Agent 容易，写好 Agent 难。Superpowers 不只给工具，更定义了整套 Agent 软件工程方法论。",
+            "<strong>Agent 技能碎片化：</strong>不同 Agent 框架各有各的技能格式。Superpowers 提供统一的「技能框架」——写一次技能到处运行。",
+            "<strong>缺乏可复用的 Agent 组件：</strong>Superpowers 建立了一套技能市场，开发者可以发布和复用技能，形成生态正循环。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/obra/superpowers</code></pre>",
+            "安装技能框架。",
+            "浏览和安装社区技能。"
+          ],
+          "insights": [
+            "<strong>连续四天上榜的霸主：</strong>220K★ 的超人气项目，今天 +700 第五次上榜。Superpowers 已经从一个工具进化成了「Agent 技能操作系统」。",
+            "<strong>Agent 技能标准化的奠基人：</strong>被 ECC、Hermes 等项目借鉴的「技能」概念，Superpowers 是这个生态的起点。",
+            "<strong>220K★ 的持久力：</strong>不是短期的热度爆发，而是持续稳定的增长。真正的「基础设施级」项目才有这种曲线。"
+          ],
+          "tags": [
+            "agent-skills",
+            "agent-framework",
+            "methodology",
+            "agent-ecosystem",
+            "python"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "Panniantong",
+          "name": "Agent-Reach",
+          "fullName": "Panniantong / Agent-Reach",
+          "org": "Panniantong",
+          "url": "https://github.com/Panniantong/Agent-Reach",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "22,885",
+          "forks": "1,939",
+          "starsToday": "683",
+          "count": 2,
+          "description": "Agent 全网浏览器 —— 让 Agent 看遍 Twitter、Reddit、YouTube、B站、小红书，零 API 费用，+683★ 再度上榜",
+          "problems": [
+            "<strong>Agent 不能直接读取中文平台：</strong>主流 Agent Tool 对 B 站、小红书等中文平台支持几乎为零。Agent-Reach 是目前唯一能读小红书的开源工具。",
+            "<strong>API 费用高昂：</strong>每个平台申请 API Key + 付费 = 每年数万美元。Agent-Reach 直接解析网页，零 API 费用。",
+            "<strong>Agent 的「互联网视野」太窄：</strong>大多数 Agent 只能看本地文件或 Google 搜索结果。Agent-Reach 让 Agent 能像人一样浏览社交网络。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install agent-reach</code></pre>",
+            "搜索 Reddit：<pre><code>agent-reach reddit search 'AI agents'</code></pre>",
+            "搜 B 站：<pre><code>agent-reach bilibili search 'AI'</code></pre>",
+            "读小红书：<pre><code>agent-reach xiaohongshu search 'Agent'</code></pre>"
+          ],
+          "insights": [
+            "<strong>唯一一个支持小红书的 Agent 工具：</strong>GitHub 上能搜到支持小红书的开源项目屈指可数，Agent-Reach 填补了这个关键空白。对于做中文 Agent 的开发者来说，这是必备工具。",
+            "<strong>第二次上榜的延续：</strong>昨天 +148 首次上榜，今天 +683 飙升到第三！增速翻了 4 倍，Agent-Reach 正在获得社区广泛关注。",
+            "<strong>「零 API 费用」是杀手锏：</strong>在 API 成本越来越高的今天，直接解析网页的方案对独立开发者和小团队极具吸引力。"
+          ],
+          "tags": [
+            "agent-tools",
+            "web-scraping",
+            "social-media",
+            "bilibili",
+            "xiaohongshu",
+            "python"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "CopilotKit",
+          "name": "CopilotKit",
+          "fullName": "CopilotKit / CopilotKit",
+          "org": "CopilotKit",
+          "url": "https://github.com/CopilotKit/CopilotKit",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "33,521",
+          "forks": "4,263",
+          "starsToday": "631",
+          "count": 2,
+          "description": "Agent UI 前端框架 —— 再上榜！33.5K★ 的 Agent 前端栈 +631，React/Angular/Slack 全平台",
+          "problems": [
+            "<strong>AI Agent 缺少好用的前端 UI：</strong>大多数 Agent 只有 CLI 或简单聊天界面，复杂的 Agent 交互需要定制 UI。CopilotKit 提供现成的 React/Angular 组件。",
+            "<strong>Agent UI 协议不统一：</strong>每个 Agent 框架有自己的 UI 方案。CopilotKit 提出 AG-UI 协议，让 Agent 和 UI 层解耦。",
+            "<strong>生成式 UI 难以落地：</strong>AI 动态生成 UI 组件是一个方向，CopilotKit 提供了实用工具让生成式 UI 真正可用。"
+          ],
+          "usage": [
+            "安装 React 版：<pre><code>npm install @copilotkit/react-core @copilotkit/react-ui</code></pre>",
+            "在组件中使用：<pre><code>import { CopilotKit } from '@copilotkit/react-core'</code></pre>",
+            "支持 Angular、Next.js、Vite 等框架。"
+          ],
+          "insights": [
+            "<strong>再次上榜的 UI 层玩家：</strong>昨天 +613，今天 +631，CopilotKit 热度稳定。在后端 Agent 框架已卷出天际的时候，前端 UI 层反而成了稀缺价值。",
+            "<strong>AG-UI 协议的行业野心：</strong>就像 HTTP 之于 Web，AG-UI 试图定义 Agent 和 UI 之间的通信协议。如果成功，CopilotKit 将成为 Agent 生态的基础设施。",
+            "<strong>从 Web 到移动到 Slack：</strong>支持 React、Angular、Mobile、Slack 等多平台，CopilotKit 在做的是「Agent UI 的覆盖面」。"
+          ],
+          "tags": [
+            "agent-ui",
+            "react",
+            "angular",
+            "generative-ui",
+            "frontend",
+            "typescript"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "MemPalace",
+          "name": "mempalace",
+          "fullName": "MemPalace / mempalace",
+          "org": "MemPalace",
+          "url": "https://github.com/MemPalace/mempalace",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "54,534",
+          "forks": "7,127",
+          "starsToday": "446",
+          "count": 1,
+          "description": "开源 AI 记忆系统 —— 54.5K★ 的顶级 Agent 记忆方案，最优基准测试成绩，完全免费",
+          "problems": [
+            "<strong>Agent 记忆是瓶颈：</strong>没有记忆的 Agent 每次对话都是「初识」。MemPalace 提供高性能、可基准测试的开源记忆系统。",
+            "<strong>记忆方案缺少对比标准：</strong>谁的记忆方案最好？MemPalace 不仅有记忆系统，还有基准测试来证明自己是最优的。",
+            "<strong>记忆系统被 SaaS 锁定：</strong>很多记忆方案是基于云服务的。MemPalace 开源免费，可以自托管。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install mempalace</code></pre>",
+            "初始化记忆系统。",
+            "集成到你的 Agent 中。",
+            "运行基准测试验证效果。"
+          ],
+          "insights": [
+            "<strong>记忆是 Agent 的下一个战场：</strong>在推理和工具调用成熟之后，Agent 记忆正在成为核心竞争力。MemPalace +446★ 说明社区也在关注这个方向。",
+            "<strong>「最佳基准测试」的营销策略：</strong>自称「best-benchmarked」是有力的定位——在记忆这个很难量化的领域，用基准测试说话比任何描述都有说服力。",
+            "<strong>54.5K★ 的免费吸引力：</strong>记忆系统是 Agent 的核心基础设施，免费 + 开源 + 自托管的组合让 MemPalace 成为很多开发者的首选。"
+          ],
+          "tags": [
+            "agent-memory",
+            "memory-system",
+            "open-source",
+            "agent-infrastructure",
+            "python"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-06",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -201,7 +399,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -398,7 +596,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "前天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -595,7 +793,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -793,7 +991,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -988,7 +1186,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "6天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -1183,7 +1381,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "7天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1379,7 +1577,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "9天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1575,7 +1773,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "10天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1769,7 +1967,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "11天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1967,7 +2165,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "13天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2169,7 +2367,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "14天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2371,7 +2569,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "15天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2573,7 +2771,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "16天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2775,7 +2973,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "17天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2977,7 +3175,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "18天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -3179,7 +3377,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "19天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -3381,7 +3579,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "23天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -3581,7 +3779,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "24天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -3777,7 +3975,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "25天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
