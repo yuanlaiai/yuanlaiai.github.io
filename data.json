@@ -1,10 +1,203 @@
 {
-  "lastUpdated": "2026-06-07",
-  "topic": "🔥 <strong>Agent 生态全面爆发：NotebookLM 替代 + Agent 记忆 + 技能框架同日上榜</strong> —— 今天的榜单是一场 Agent 基础设施的全景展示。Open Notebook（+794）代表「AI 笔记本」需求爆发，MemPalace（+446）把 Agent 记忆提升到新的竞争维度，Superpowers（+700）和 CopilotKit（+631）分别代表技能框架和 UI 层的成熟。Agent-Reach（+683）连续两天上榜，再次证明「让 Agent 看到全网」是刚需。从后端框架到前端 UI，从记忆系统到全网数据源——Agent 的基础设施拼图正在一块块补齐。",
+  "lastUpdated": "2026-06-08",
+  "topic": "🔥 <strong>Agent 赛场两极分化：轻量化工具崛起 + 巨头入场</strong> —— 今天的榜单呈现出两条清晰的分化线。一边是轻量化工具爆发——Turbovec（+1,730）用 Rust 写向量索引、Last30Days-Skill（+3,558）把全网研究变成一个 skill、Supervision（+957）把 CV 工具标准化。另一边是巨头和准巨头入场——Google 发布 Agent Skills（+481）、Block 出品的 Goose（+699）47.9K★、Agent-Reach（+961）连续三天的增长说明数据层 Agent 正在成为刚需。Agent 生态正在从「框架之争」走向「工具之争 + 平台之争」。",
   "days": [
     {
-      "date": "2026-06-07",
+      "date": "2026-06-08",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "fullName": "mvanhorn / last30days-skill",
+          "org": "mvanhorn",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "33,377",
+          "forks": "2,747",
+          "starsToday": "3,558",
+          "count": 1,
+          "description": "AI Agent 全网研究技能 —— 今日最热 +3,558★！跨 Reddit/X/YouTube/HN/Polymarket 全网研究，输出接地气的摘要",
+          "problems": [
+            "<strong>Agent 研究能力弱：</strong>大多数 Agent 只能搜索单一来源或 Google。Last30Days-Skill 同时搜索 Reddit、X、YouTube、HN、Polymarket 五个平台。",
+            "<strong>信息源碎片化：</strong>研究一个话题需要开 5 个标签页分别查。这个 skill 一个命令搞定所有平台。",
+            "<strong>AI 研究缺乏时效性：</strong>很多 Agent 只能读文档，不能查社交媒体上的实时讨论。Last30Days-Skill 专门聚焦「过去 30 天」的讨论。"
+          ],
+          "usage": [
+            "安装 skill 到你的 Agent 框架。",
+            "输入研究话题：<pre><code>研究一下 Meta 最近开源的 AI 项目</code></pre>",
+            "AI 自动搜索五个平台并合成摘要。"
+          ],
+          "insights": [
+            "<strong>今日最热 +3,558★：</strong>首次上榜就冲上第一。33K★ 说明「Agent 需要联网研究」是刚需。",
+            "<strong>多源合成的价值：</strong>单一信息源容易偏颇。Reddit 的民间讨论 + HN 的技术讨论 + X 的实时动态 = 更立体的研究结果。",
+            "<strong>Agent Skill 生态的成熟：</strong>它不是独立工具，而是 skill——可以挂载到各种 Agent 框架上。Skill 生态正在成为 Agent 的「App Store」。"
+          ],
+          "tags": [
+            "agent-skills",
+            "research",
+            "multi-source",
+            "social-media",
+            "python"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "RyanCodrai",
+          "name": "turbovec",
+          "fullName": "RyanCodrai / turbovec",
+          "org": "RyanCodrai",
+          "url": "https://github.com/RyanCodrai/turbovec",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "8,158",
+          "forks": "767",
+          "starsToday": "1,730",
+          "count": 1,
+          "description": "TurboQuant 向量索引 —— Rust 编写的高性能向量数据库，Python 绑定，今日 +1,730★",
+          "problems": [
+            "<strong>向量数据库太重量级：</strong>Milvus、Pinecone 等方案需要部署服务。Turbovec 是轻量级嵌入库，pip install 即可用。",
+            "<strong>RAG 管线的性能瓶颈：</strong>向量搜索是 RAG 的核心环节，速度直接影响用户体验。Turbovec 基于 TurboQuant 量化技术，追求极致的搜索性能。",
+            "<strong>Rust 写的 Python 库：</strong>既享受 Rust 的性能优势，又有 Python 的易用性。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install turbovec</code></pre>",
+            "创建索引：<pre><code>from turbovec import Index\nidx = Index()\nidx.add(vectors)</code></pre>",
+            "搜索相似向量。"
+          ],
+          "insights": [
+            "<strong>向量数据库轻量化趋势：</strong>8K★ 的快速崛起说明开发者需要「小而快」的向量方案，不想部署复杂的分布式系统。",
+            "<strong>Rust + Python 的黄金组合：</strong>底层 Rust 保证性能，上层 Python 保证易用性。这是 AI 工具链的标准配方。",
+            "<strong>量化技术下放：</strong>TurboQuant 的量化技术本来是面向大模型的，被用到向量索引上带来了显著的性能提升。"
+          ],
+          "tags": [
+            "vector-database",
+            "embeddings",
+            "rag",
+            "rust",
+            "python"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "Panniantong",
+          "name": "Agent-Reach",
+          "fullName": "Panniantong / Agent-Reach",
+          "org": "Panniantong",
+          "url": "https://github.com/Panniantong/Agent-Reach",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "23,721",
+          "forks": "2,002",
+          "starsToday": "961",
+          "count": 3,
+          "description": "Agent 全网浏览器 —— 连续三天上榜！+961★，唯一能搜 B 站和小红书的 Agent 工具",
+          "problems": [
+            "<strong>Agent 不能直接读取中文平台：</strong>主流 Agent Tool 对 B 站、小红书等中文平台支持几乎为零。Agent-Reach 是目前唯一能读小红书的开源工具。",
+            "<strong>API 费用高昂：</strong>每个平台申请 API Key + 付费 = 每年数万美元。Agent-Reach 直接解析网页，零 API 费用。",
+            "<strong>Agent 的「互联网视野」太窄：</strong>大多数 Agent 只能看本地文件或 Google 搜索结果。Agent-Reach 让 Agent 能像人一样浏览社交网络。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install agent-reach</code></pre>",
+            "搜索 Reddit：<pre><code>agent-reach reddit search 'AI agents'</code></pre>",
+            "搜 B 站：<pre><code>agent-reach bilibili search 'AI'</code></pre>"
+          ],
+          "insights": [
+            "<strong>连续三天上榜的韧性：</strong>6/6 +148 → 6/7 +683 → 6/8 +961。增速每天都在翻倍，Agent-Reach 正在成为 Agent 数据层的标准工具。",
+            "<strong>唯一的中文平台 Agent 工具：</strong>能搜 B 站、小红书的能力在 GitHub 上几乎是独一份。对中国 Agent 开发者来说价值巨大。",
+            "<strong>23.7K★ 的传播路径：</strong>最初靠「零 API 费用」吸引开发者，现在靠「唯一支持小红书」建立壁垒。"
+          ],
+          "tags": [
+            "agent-tools",
+            "web-scraping",
+            "social-media",
+            "bilibili",
+            "xiaohongshu",
+            "python"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "roboflow",
+          "name": "supervision",
+          "fullName": "roboflow / supervision",
+          "org": "Roboflow",
+          "url": "https://github.com/roboflow/supervision",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "42,046",
+          "forks": "3,766",
+          "starsToday": "957",
+          "count": 1,
+          "description": "计算机视觉工具库 —— 42K★ 的 CV 开发必备，写一次就能复用的视觉工具集",
+          "problems": [
+            "<strong>计算机视觉的重复劳动：</strong>标注、可视化、后处理、评估，每个 CV 项目都要重复写这些代码。Supervision 提供开箱即用的工具。",
+            "<strong>CV 管线碎片化：</strong>检测用 YOLO，分割用 SAM，跟踪用 DeepSORT……每个模型有各自的输出格式。Supervision 提供统一的后处理 API。",
+            "<strong>可视化太费时间：</strong>画出检测框、标注类别、展示分割掩码——每次都要写几十行 OpenCV。Supervision 一行搞定。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install supervision</code></pre>",
+            "检测 + 标注：<pre><code>import supervision as sv\nbox_annotator = sv.BoxAnnotator()\nannotated = box_annotator.annotate(scene, detections)</code></pre>",
+            "支持目标检测、分割、跟踪、分类等多种任务。"
+          ],
+          "insights": [
+            "<strong>CV 领域的「标准库」：</strong>42K★ 说明 Supervision 已经成了计算机视觉开发的标配，类似 Requests 之于 HTTP。",
+            "<strong>Roboflow 的商业策略：</strong>开源 Supervision 做流量入口，付费 Roboflow 平台做商业化。典型的 open-core 模式。",
+            "<strong>与 SAM/CLIP 等模型深度集成：</strong>Supervision 不是孤立工具，而是 CV 生态的「胶水层」——让不同模型能协同工作。"
+          ],
+          "tags": [
+            "computer-vision",
+            "object-detection",
+            "segmentation",
+            "visualization",
+            "python"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "aaif-goose",
+          "name": "goose",
+          "fullName": "aaif-goose / goose",
+          "org": "Block（前 Square）",
+          "url": "https://github.com/aaif-goose/goose",
+          "lang": "Rust",
+          "langClass": "rust",
+          "stars": "47,902",
+          "forks": "5,049",
+          "starsToday": "699",
+          "count": 1,
+          "description": "开源可扩展 AI Agent —— Block 出品，支持任意 LLM，47.9K★，超越代码补全的通用 Agent",
+          "problems": [
+            "<strong>编码 Agent 被特定模型锁定：</strong>Claude Code 锁 Anthropic，Codex 锁 OpenAI。Goose 支持任意 LLM——本地、云端、自部署都行。",
+            "<strong>Agent 能力边界太窄：</strong>大多数编码 Agent 只能写代码。Goose 可以安装依赖、执行命令、编辑文件、跑测试——端到端开发。",
+            "<strong>开源 Agent 缺少企业背书：</strong>Goose 由 Block（前 Square）出品，有企业级的质量保证。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install goose-ai</code></pre>",
+            "启动：<pre><code>goose run</code></pre>",
+            "支持配置任意 LLM 提供商。"
+          ],
+          "insights": [
+            "<strong>Block 在 AI Agent 领域的布局：</strong>前 Square 出品的开源 Agent，47.9K★ 说明金融科技公司也在押注 Agent 赛道。",
+            "<strong>「任意 LLM」是差异化：</strong>在 Claude Code 和 Codex 各自锁定自家模型时，Goose 选择「开放」——用户可以用任何模型。",
+            "<strong>端到端能力 > 代码补全：</strong>不只是 IDE 插件，而是能直接操作系统终端的 Agent。这是 Agent 从「辅助工具」到「自主执行」的进化。"
+          ],
+          "tags": [
+            "ai-agent",
+            "open-source",
+            "coding-agent",
+            "multi-llm",
+            "rust"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-07",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -202,7 +395,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -399,7 +592,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "前天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -596,7 +789,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "3天前",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -793,7 +986,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -991,7 +1184,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "6天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -1186,7 +1379,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "7天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1381,7 +1574,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "8天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1577,7 +1770,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "10天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1773,7 +1966,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "11天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1967,7 +2160,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "12天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -2165,7 +2358,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "14天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2367,7 +2560,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "15天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2569,7 +2762,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "16天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2771,7 +2964,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "17天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2973,7 +3166,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "18天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -3175,7 +3368,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "19天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -3377,7 +3570,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "20天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -3579,7 +3772,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "24天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -3779,7 +3972,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "25天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -3975,7 +4168,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "26天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
