@@ -1,10 +1,203 @@
 {
-  "lastUpdated": "2026-06-08",
-  "topic": "🔥 <strong>Agent 赛场两极分化：轻量化工具崛起 + 巨头入场</strong> —— 今天的榜单呈现出两条清晰的分化线。一边是轻量化工具爆发——Turbovec（+1,730）用 Rust 写向量索引、Last30Days-Skill（+3,558）把全网研究变成一个 skill、Supervision（+957）把 CV 工具标准化。另一边是巨头和准巨头入场——Google 发布 Agent Skills（+481）、Block 出品的 Goose（+699）47.9K★、Agent-Reach（+961）连续三天的增长说明数据层 Agent 正在成为刚需。Agent 生态正在从「框架之争」走向「工具之争 + 平台之争」。",
+  "lastUpdated": "2026-06-10",
+  "topic": "🔥 <strong>Agent Skill 生态迎来品类化拐点</strong> —— 今天的榜单透露了一个重要信号：Agent Skill 正在从「开发者专属」走向「职业化细分」。Last30Days-Skill（+3,177）满足「研究者」需求，PM-Skills（+808）瞄准「产品经理」群体，Career-Ops（+1,114）服务「求职者」场景。Agent 技能的消费者已经不只是程序员——产品经理、求职者、内容研究者都在成为 Agent 的用户。这是 Agent 从「开发工具」走向「通用生产力套件」的关键转折。",
   "days": [
     {
-      "date": "2026-06-08",
+      "date": "2026-06-10",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "fullName": "mvanhorn / last30days-skill",
+          "org": "mvanhorn",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "37,248",
+          "forks": "3,025",
+          "starsToday": "3,177",
+          "count": 2,
+          "description": "再次登顶！+3,177★ 的 AI Agent 全网研究技能——Reddit/X/YouTube/HN/Polymarket 跨平台研究，37K★ 持续爆发",
+          "problems": [
+            "<strong>Agent 研究能力弱：</strong>大多数 Agent 只能搜索单一来源。Last30Days-Skill 同时搜索 Reddit、X、YouTube、HN、Polymarket 五个平台。",
+            "<strong>信息源碎片化：</strong>研究一个话题需要开 5 个标签页分别查。这个 skill 一个命令搞定所有平台。",
+            "<strong>AI 研究缺乏时效性：</strong>很多 Agent 只能读文档，不能查社交媒体上的实时讨论。"
+          ],
+          "usage": [
+            "安装 skill 到你的 Agent 框架。",
+            "输入研究话题：<pre><code>研究一下今天 X 上对 AI 的讨论</code></pre>",
+            "AI 自动搜索五个平台并合成摘要。"
+          ],
+          "insights": [
+            "<strong>连续两天登顶：</strong>6/8 的 +3,558 到今天 +3,177，两天 7K★ 的爆发力——Agent 研究型 skill 是实打实的刚需。",
+            "<strong>37K★ 的跨平台能力是壁垒：</strong>同时覆盖 Reddit、X、YouTube、HN、Polymarket 的 Agent 技能很少见。五个信息源同步搜索 + 自动合成是核心价值。",
+            "<strong>WWDC 相关的搜索量暴涨：</strong>今天正值 WWDC 2026 第二日，开发者用 Last30Days-Skill 搜 Apple × Gemini 的社区讨论可能推高了热度。"
+          ],
+          "tags": [
+            "agent-skills",
+            "research",
+            "multi-source",
+            "social-media",
+            "python"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "RyanCodrai",
+          "name": "turbovec",
+          "fullName": "RyanCodrai / turbovec",
+          "org": "RyanCodrai",
+          "url": "https://github.com/RyanCodrai/turbovec",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "10,133",
+          "forks": "868",
+          "starsToday": "1,800",
+          "count": 2,
+          "description": "TurboQuant 向量索引 —— Rust 写的高性能向量搜索库，Python 绑定，+1,800★ 飙升至 10K★",
+          "problems": [
+            "<strong>向量数据库太重量级：</strong>Milvus、Pinecone 需要部署服务。Turbovec 是轻量级嵌入库，pip install 即可用。",
+            "<strong>RAG 管线的性能瓶颈：</strong>向量搜索是 RAG 的核心环节。Turbovec 基于 TurboQuant 量化技术追求极致速度。",
+            "<strong>Rust 写的 Python 库：</strong>享受 Rust 的高性能，又有 Python 的易用性。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install turbovec</code></pre>",
+            "创建索引：<pre><code>from turbovec import Index\\nidx = Index()\\nidx.add(vectors)</code></pre>",
+            "搜索相似向量。"
+          ],
+          "insights": [
+            "<strong>连续两天的稳定增长：</strong>6/8 +1,730 → 6/10 +1,800。Turbovec 不是一锤子买卖，而是持续稳定的增长。",
+            "<strong>10K★ 里程碑突破：</strong>时隔两天从 8K 到 10K。当一个向量库的 star 数达到五位数，说明它已经从实验性项目变成了可信赖的生产选项。",
+            "<strong>量化 + 向量搜索的组合：</strong>TurboQuant 的量化技术被用在向量索引上，这个跨界组合是 Turbovec 的核心创新。"
+          ],
+          "tags": [
+            "vector-database",
+            "embeddings",
+            "rag",
+            "rust",
+            "python"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "santifer",
+          "name": "career-ops",
+          "fullName": "santifer / career-ops",
+          "org": "santifer",
+          "url": "https://github.com/santifer/career-ops",
+          "lang": "Go",
+          "langClass": "go",
+          "stars": "51,605",
+          "forks": "4,578",
+          "starsToday": "1,114",
+          "count": 1,
+          "description": "AI 求职系统 —— 用 Claude Code 驱动的 AI 求职系统，14 种技能模式 + Go 仪表盘 + PDF 简历生成",
+          "problems": [
+            "<strong>求职太耗费精力：</strong>海投简历、逐个岗位定制、追踪面试进度——CareerOps 用 AI Agent 自动完成。",
+            "<strong>Claude Code 的实用性延伸：</strong>很多人用 Claude Code 写代码，CareerOps 展示了如何使用 Claude Code 完成非编程任务。",
+            "<strong>求职管理没有好工具：</strong>大部分求职者用 Excel 管理投递进度。CareerOps 提供 Go 写的仪表盘 + PDF 生成。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/santifer/career-ops</code></pre>",
+            "配置 API Key。",
+            "运行 AI 求职助手。",
+            "生成简历 PDF 和投递追踪仪表盘。"
+          ],
+          "insights": [
+            "<strong>首次上榜 +1,114★：</strong>51.6K★ 已经是一个成熟的工具了。CareerOps 证明 AI Agent 不只是用来写代码的——找工作也能被 AI 自动化。",
+            "<strong>14 种技能模式的深度：</strong>不只是简单的「一键投递」——从简历优化到面试准备到岗位匹配，14 种模式覆盖了求职全流程。",
+            "<strong>Go 写后台的差异点：</strong>在 Python 和 TypeScript 主导的 AI 工具圈，用 Go 写 Dashboard 显得独特而有辨识度。"
+          ],
+          "tags": [
+            "ai-agent",
+            "job-search",
+            "career",
+            "go",
+            "resume"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "phuryn",
+          "name": "pm-skills",
+          "fullName": "phuryn / pm-skills",
+          "org": "phuryn",
+          "url": "https://github.com/phuryn/pm-skills",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "13,401",
+          "forks": "1,210",
+          "starsToday": "808",
+          "count": 1,
+          "description": "100+ Agentic PM 技能市场 —— 从发现、策略、执行到发布的完整产品管理 Agent 技能包，+808★",
+          "problems": [
+            "<strong>产品经理缺少 Agent 工具：</strong>开发者有 Claude Code、Cursor，但 PM 几乎没有趁手的 AI 工具。PM-Skills 填补了这个空白。",
+            "<strong>PM 工作流碎片化：</strong>竞品分析、用户访谈、需求排期、PRD 撰写——每个环节用不同的工具。PM-Skills 提供一站式 Agent 技能。",
+            "<strong>Agentic Workflow 缺少产品化视角：</strong>很多 Agent 工具偏技术，缺少面向 PM 的场景化设计。"
+          ],
+          "usage": [
+            "安装技能包到支持 Agent Skills 的框架。",
+            "运行 PM 技能：<pre><code>pm-skill competitive-analysis '目标产品'</code></pre>",
+            "支持策略制定、需求拆解、路线图规划等场景。"
+          ],
+          "insights": [
+            "<strong>Agent 技能正在品类化：</strong>从开发技能（编码/调试）到 PM 技能（分析/策略），Agent Skill 市场正在按职业角色细分。",
+            "<strong>100+ 技能的积累：</strong>13.4K★ 说明 PM 群体对 AI Agent 的需求真实存在，100+ 技能的体积也说明 PM-Skills 不是玩具。",
+            "<strong>「AI 做得到 PM 的事情吗」的答案：</strong>PM-Skills 证明了——AI 至少能做好 PM 工作中结构化、流程化的部分。"
+          ],
+          "tags": [
+            "agent-skills",
+            "product-management",
+            "pm-tools",
+            "workflow",
+            "python"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "roboflow",
+          "name": "supervision",
+          "fullName": "roboflow / supervision",
+          "org": "Roboflow",
+          "url": "https://github.com/roboflow/supervision",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "42,961",
+          "forks": "3,833",
+          "starsToday": "735",
+          "count": 2,
+          "description": "可复用的 CV 工具库 —— 42.9K★，计算机视觉开发的标准库，+735★ 稳步增长",
+          "problems": [
+            "<strong>计算机视觉的重复劳动：</strong>标注、可视化、后处理、评估——每个 CV 项目都要重复写。Supervision 提供开箱即用的工具。",
+            "<strong>CV 管线碎片化：</strong>检测用 YOLO，分割用 SAM，跟踪用 DeepSORT。Supervision 提供统一的后处理 API。",
+            "<strong>OpenCV 5 与之呼应：</strong>同一天 OpenCV 5 发布在 HN 拿到 456 分，说明计算机视觉领域正在经历一波更新热潮。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install supervision</code></pre>",
+            "检测 + 标注：<pre><code>import supervision as sv\\nbox_annotator = sv.BoxAnnotator()\\nannotated = box_annotator.annotate(scene, detections)</code></pre>",
+            "支持目标检测、分割、跟踪、分类。"
+          ],
+          "insights": [
+            "<strong>再上榜验证 CV 热度：</strong>6/8 +957 → 6/10 +735。OpenCV 5 的发布叠加 Supervision 的持续热度，计算机视觉正在经历一轮复兴。",
+            "<strong>OpenCV 5 的带动效应：</strong>OpenCV 5 发布拿到 HN 456 分，受此带动 CV 相关工具链热度整体升温。",
+            "<strong>42.9K★ 的生态位：</strong>Supervision 已经坐稳了 CV 生态的「标准工具库」位置。"
+          ],
+          "tags": [
+            "computer-vision",
+            "object-detection",
+            "segmentation",
+            "visualization",
+            "python"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-08",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -197,7 +390,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "昨天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -395,7 +588,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -592,7 +785,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "3天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -789,7 +982,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -986,7 +1179,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1184,7 +1377,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1379,7 +1572,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "8天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1574,7 +1767,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1770,7 +1963,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "11天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1966,7 +2159,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "12天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2160,7 +2353,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2358,7 +2551,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2560,7 +2753,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "16天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2762,7 +2955,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2964,7 +3157,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "18天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -3166,7 +3359,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "19天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -3368,7 +3561,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -3570,7 +3763,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "21天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3772,7 +3965,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "25天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -3972,7 +4165,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -4168,7 +4361,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
