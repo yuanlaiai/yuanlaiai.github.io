@@ -1,10 +1,203 @@
 {
-  "lastUpdated": "2026-06-10",
-  "topic": "🔥 <strong>Agent Skill 生态迎来品类化拐点</strong> —— 今天的榜单透露了一个重要信号：Agent Skill 正在从「开发者专属」走向「职业化细分」。Last30Days-Skill（+3,177）满足「研究者」需求，PM-Skills（+808）瞄准「产品经理」群体，Career-Ops（+1,114）服务「求职者」场景。Agent 技能的消费者已经不只是程序员——产品经理、求职者、内容研究者都在成为 Agent 的用户。这是 Agent 从「开发工具」走向「通用生产力套件」的关键转折。",
+  "lastUpdated": "2026-06-11",
+  "topic": "🔥 <strong>「Agent Skill 三冠王」诞生：Last30Days-Skill 连续三天登顶</strong> —— 当所有人都以为 Agent 赛道拼的是代码能力时，一个「研究型」Skill 用三天 10K★ 证明：Agent 的最大价值不是帮你写代码，而是帮你省时间。与此同时，Superpowers（+1,205）和 Agent-Skills（+781）代表「方法论派」，PM-Skills（+775）代表「品类化派」——三条路线并行，Agent Skill 生态正在以惊人的速度成熟。",
   "days": [
     {
-      "date": "2026-06-10",
+      "date": "2026-06-11",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "fullName": "mvanhorn / last30days-skill",
+          "org": "mvanhorn",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "39,034",
+          "forks": "3,151",
+          "starsToday": "2,561",
+          "count": 3,
+          "description": "AI Agent 全网研究技能 —— 连续三天登顶！+2,561★ 再夺今日第一，39K★ 的跨平台研究神器",
+          "problems": [
+            "<strong>Agent 研究能力弱：</strong>大多数 Agent 只能搜索单一来源。Last30Days-Skill 同时搜索 Reddit、X、YouTube、HN、Polymarket 五个平台。",
+            "<strong>信息源碎片化：</strong>研究一个话题需要开 5 个标签页分别查。这个 skill 一个命令搞定所有平台。",
+            "<strong>AI 研究缺乏时效性：</strong>很多 Agent 只能读文档，不能查社交媒体上的实时讨论。"
+          ],
+          "usage": [
+            "安装 skill 到你的 Agent 框架。",
+            "输入研究话题：<pre><code>研究一下今天 Apple-Gemini 的最新讨论</code></pre>",
+            "AI 自动搜索五个平台并合成摘要。"
+          ],
+          "insights": [
+            "<strong>连续三天登顶，史无前例：</strong>6/8 +3,558 → 6/10 +3,177 → 6/11 +2,561。三天贡献近 10K★，Last30Days-Skill 已经成为 Agent Skill 生态的标志性项目。",
+            "<strong>39K★ 的「研究型 Agent」赛道：</strong>在编码 Agent 卷到天际的时候，研究型 Agent 反而成了蓝海——跨平台搜索 + 智能合成是明确的需求。",
+            "<strong>WWDC 热度持续拉动：</strong>Apple × Gemini 的讨论在 HN 和 X 上持续发酵，开发者用 Last30Days-Skill 追踪舆论可能是持续热度的推手。"
+          ],
+          "tags": [
+            "agent-skills",
+            "research",
+            "multi-source",
+            "social-media",
+            "python"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "harry0703",
+          "name": "MoneyPrinterTurbo",
+          "fullName": "harry0703 / MoneyPrinterTurbo",
+          "org": "harry0703",
+          "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "84,976",
+          "forks": "12,134",
+          "starsToday": "1,471",
+          "count": 2,
+          "description": "AI 短视频生成器 —— 输入一句话，AI 自动生成高清短视频，84.9K★，今日 +1,471★",
+          "problems": [
+            "<strong>短视频制作太耗时：</strong>选素材、配音、剪辑、字幕——一条短视频至少半小时。MoneyPrinterTurbo 全自动生成。",
+            "<strong>AI 视频工具门槛高：</strong>Sora、Runway 要提示词工程师级别的技巧。MoneyPrinterTurbo「一句话出片」。",
+            "<strong>无法批量生产：</strong>做自媒体的日更需要大量内容。MoneyPrinterTurbo 支持批量生成。"
+          ],
+          "usage": [
+            "安装：<pre><code>git clone https://github.com/harry0703/MoneyPrinterTurbo</code></pre>",
+            "配置 API Key。",
+            "输入文案一键生成短视频。",
+            "支持多种配音、字幕样式和背景音乐。"
+          ],
+          "insights": [
+            "<strong>84.9K★ 的 AI 视频热度：</strong>在 AI 视频生成赛道，MoneyPrinterTurbo 是最火的开源方案。+1,471★ 说明这个需求远没有饱和。",
+            "<strong>「一句话出片」的产品哲学：</strong>不要求用户懂提示词、不要求用户懂剪辑——极致简化是它爆火的原因。",
+            "<strong>自媒体创作者的刚需：</strong>日更博主需要大量内容，MoneyPrinterTurbo 批量 + 自动化精准命中了这个痛点。"
+          ],
+          "tags": [
+            "ai-video",
+            "content-creation",
+            "automation",
+            "short-video",
+            "python"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "obra",
+          "name": "superpowers",
+          "fullName": "obra / superpowers",
+          "org": "Obra",
+          "url": "https://github.com/obra/superpowers",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "223,565",
+          "forks": "19,874",
+          "starsToday": "1,205",
+          "count": 7,
+          "description": "Agent 技能框架与开发方法论 —— 223K★ 的 Agent 元平台，+1,205★ 再次回归热榜",
+          "problems": [
+            "<strong>Agent 开发缺少方法论：</strong>写 Agent 容易，写好 Agent 难。Superpowers 不只给工具，更定义了整套 Agent 软件工程方法论。",
+            "<strong>Agent 技能碎片化：</strong>不同 Agent 框架各有各的技能格式。Superpowers 提供统一的「技能框架」——写一次技能到处运行。",
+            "<strong>缺乏可复用的 Agent 组件：</strong>Superpowers 建立了一套技能市场，开发者可以发布和复用技能。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/obra/superpowers</code></pre>",
+            "安装技能框架。",
+            "浏览和安装社区技能。"
+          ],
+          "insights": [
+            "<strong>223K★ 的持久力：</strong>连续五次上榜。Superpowers 不是短期的热度爆发，而是 Agent 技能范式的基础设施。",
+            "<strong>WWDC 催化 Agent 讨论：</strong>Apple × Gemini 的新闻让开发者重新思考 AI 战略，Superpowers 作为方法论框架受益于这波反思。",
+            "<strong>从「技能框架」到「操作系统」：</strong>223K★ 不是终点，Superpowers 正在从工具进化为 Agent 技能生态的操作系统。"
+          ],
+          "tags": [
+            "agent-skills",
+            "agent-framework",
+            "methodology",
+            "agent-ecosystem",
+            "python"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "fullName": "addyosmani / agent-skills",
+          "org": "addyosmani",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "51,686",
+          "forks": "5,698",
+          "starsToday": "781",
+          "count": 1,
+          "description": "生产级 Agent 工程技能 —— Google Chrome 团队出品，51.6K★ 的 AI 编码 Agent 技能集，+781★",
+          "problems": [
+            "<strong>Agent 写代码质量不稳：</strong>AI 生成的代码经常有 bug。Addy Osmani 的 Agent-Skills 提供生产级的工程规范。",
+            "<strong>缺少工程化 Agent 技能：</strong>大多数 Agent 技能是玩具级的。Addy Osmani（Google Chrome 工程总监）出品保证了企业级质量。",
+            "<strong>Agent 技能没有最佳实践：</strong>每个团队都在重新发明轮子。Agent-Skills 收录了经过生产验证的工程技能。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/addyosmani/agent-skills</code></pre>",
+            "查看技能目录。",
+            "将技能加载到你的 Agent 框架中使用。"
+          ],
+          "insights": [
+            "<strong>Google Chrome 工程总监出品：</strong>Addy Osmani 是 Web 性能领域的权威。他亲自维护的 Agent-Skills 项目自带信任背书。",
+            "<strong>「生产级」是差异化：</strong>在 Agent 技能遍地开花的当下，强调「Production-grade」是对质量和可靠性的承诺。",
+            "<strong>51.6K★ 的工程化趋势：</strong>Agent 技能正在从「可以做」向「做得好」演进——工程化、规范化、可复用是下一阶段。"
+          ],
+          "tags": [
+            "agent-skills",
+            "engineering",
+            "production-grade",
+            "coding-agent",
+            "python"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "phuryn",
+          "name": "pm-skills",
+          "fullName": "phuryn / pm-skills",
+          "org": "phuryn",
+          "url": "https://github.com/phuryn/pm-skills",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "14,799",
+          "forks": "1,617",
+          "starsToday": "775",
+          "count": 2,
+          "description": "100+ PM Agent 技能市场 —— 连续两天上榜！+775★，14.7K★，产品经理的 Agent 工具箱",
+          "problems": [
+            "<strong>产品经理缺少 Agent 工具：</strong>开发者有 Claude Code、Cursor，但 PM 几乎没有趁手的 AI 工具。PM-Skills 填补了这个空白。",
+            "<strong>PM 工作流碎片化：</strong>竞品分析、用户访谈、需求排期、PRD 撰写——每个环节用不同的工具。PM-Skills 提供一站式 Agent 技能。",
+            "<strong>Agentic Workflow 缺少产品化视角：</strong>很多 Agent 工具偏技术，缺少面向 PM 的场景化设计。"
+          ],
+          "usage": [
+            "安装技能包到支持 Agent Skills 的框架。",
+            "运行 PM 技能：<pre><code>pm-skill competitive-analysis '目标产品'</code></pre>",
+            "支持策略制定、需求拆解、路线图规划等场景。"
+          ],
+          "insights": [
+            "<strong>连续两天上榜的品类信号：</strong>6/10 +808 → 6/11 +775。PM-Skills 的稳定热度说明 Agent Skill 品类化不是幻觉——PM 真的需要自己的 Agent。",
+            "<strong>Agent 技能的「职业化」趋势：</strong>从昨日的首发上榜到今日的持续热度，PM-Skills 正在验证「每个职业角色都有对应的 Agent Skill」这个趋势。",
+            "<strong>100+ 技能的数量壁垒：</strong>不是做几个简单的提示词就完事，100+ 技能说明 PM-Skills 在深度和广度上都有积累。"
+          ],
+          "tags": [
+            "agent-skills",
+            "product-management",
+            "pm-tools",
+            "workflow",
+            "python"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-10",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -197,7 +390,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "前天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -390,7 +583,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "3天前",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -588,7 +781,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -785,7 +978,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -982,7 +1175,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "6天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -1179,7 +1372,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "8天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1377,7 +1570,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "9天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1572,7 +1765,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "10天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1767,7 +1960,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "11天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1963,7 +2156,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "13天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2159,7 +2352,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "14天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2353,7 +2546,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "15天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2551,7 +2744,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "17天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2753,7 +2946,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "18天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2955,7 +3148,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "19天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -3157,7 +3350,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "20天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -3359,7 +3552,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "21天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -3561,7 +3754,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "22天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3763,7 +3956,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "23天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -3965,7 +4158,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "27天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -4165,7 +4358,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "28天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -4361,7 +4554,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "29天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
