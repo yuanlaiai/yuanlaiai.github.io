@@ -212,7 +212,59 @@ function toggleDay(e, btn) {
   }
 }
 
-// ── Render Articles ────────────────────────────
+// ── Navbar Scroll Behavior ────────────────
+
+(function() {
+  var navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  var lastScrollY = window.scrollY;
+  var scrollThreshold = 100;  // pixels before showing background
+
+  function onScroll() {
+    var currentScrollY = window.scrollY;
+
+    // Add/remove background (.scrolled)
+    if (currentScrollY > scrollThreshold) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+
+    // At the very top — always fully visible, transparent
+    if (currentScrollY < 50) {
+      navbar.classList.remove('nav-hidden');
+      navbar.classList.remove('scrolled');
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    // Scrolling down → hide navbar
+    if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
+      navbar.classList.add('nav-hidden');
+    }
+    // Scrolling up → show navbar
+    else if (currentScrollY < lastScrollY) {
+      navbar.classList.remove('nav-hidden');
+    }
+
+    lastScrollY = currentScrollY;
+  }
+
+  // Debounce for performance
+  var ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        onScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Initial check
+  onScroll();
+})();
 
 function renderArticles(filter) {
   if (typeof filter === 'undefined') filter = 'all';
