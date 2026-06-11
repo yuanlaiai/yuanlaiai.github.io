@@ -9,96 +9,10 @@ var langMap = {
 
 // ── Data ──────────────────────────────────────
 
-var articles = [
-  {
-    id: 1,
-    readTime: '12 分钟',
-    title: 'React 18 并发特性深度解析',
-    tags: ['React', '性能优化'],
-    date: '2026-03-15',
-    desc: '深入探讨 React 18 的 Fiber 架构升级、Concurrent Mode、useTransition、Suspense 等并发特性，以及它们在生产环境中的实战应用。',
-  },
-  {
-    id: 2,
-    readTime: '18 分钟',
-    title: '从 0 到 1：构建 Node.js 微服务系统',
-    tags: ['Backend', '架构'],
-    date: '2026-02-28',
-    desc: '手把手搭建基于 Node.js 的微服务架构，涵盖 API Gateway、服务注册发现、链路追踪、熔断限流等核心能力。',
-  },
-  {
-    id: 3,
-    readTime: '22 分钟',
-    title: 'Kubernetes 实战：容器编排完全指南',
-    tags: ['DevOps', 'K8s'],
-    date: '2026-02-10',
-    desc: '从集群搭建到生产部署，涵盖 Pod、Deployment、Service、Ingress、HPA 自动扩缩容，以及 Helm Chart 打包最佳实践。',
-  },
-  {
-    id: 4,
-    readTime: '10 分钟',
-    title: '现代前端工具链对比：Webpack vs Vite vs esbuild',
-    tags: ['前端工程'],
-    date: '2026-01-20',
-    desc: '深度对比三大构建工具的架构差异、性能表现和适用场景，帮你在不同项目中做出最优的技术选型决策。',
-  },
-  {
-    id: 5,
-    readTime: '8 分钟',
-    title: '构建高性能 React 应用的 5 个技巧',
-    tags: ['React', '性能优化'],
-    date: '2026-03-01',
-    desc: '深入探讨代码分割、懒加载、Memo 优化、虚拟列表以及 Web Worker 在 React 应用中的实战技巧。',
-  },
-  {
-    id: 6,
-    readTime: '15 分钟',
-    title: 'Go 语言高并发实战：goroutine 与 channel',
-    tags: ['Backend'],
-    date: '2026-01-05',
-    desc: '通过实战案例掌握 Go 的并发编程模型，深入讲解 goroutine 调度器、channel 通信模式与常见并发陷阱规避。',
-  },
-  {
-    id: 7,
-    readTime: '15 分钟',
-    title: 'Java 21 新特性实战：虚拟线程与模式匹配',
-    tags: ['Java'],
-    date: '2026-04-10',
-    desc: '深入解析 Java 21 的虚拟线程（Virtual Threads）、模式匹配（Pattern Matching）、Record Pattern 等重磅特性，以及在实际项目中的迁移策略和性能对比。',
-  },
-  {
-    id: 8,
-    readTime: '20 分钟',
-    title: 'Android Jetpack Compose 从入门到精通',
-    tags: ['Android'],
-    date: '2026-04-20',
-    desc: '全面掌握 Jetpack Compose 声明式 UI 开发，涵盖状态管理、导航、动画、Material3 设计系统，以及与传统 View 系统的互操作最佳实践。',
-  },
-  {
-    id: 9,
-    readTime: '18 分钟',
-    title: 'Spring Boot 3 + GraalVM 原生编译实战',
-    tags: ['Java', 'Backend'],
-    date: '2026-05-05',
-    desc: '使用 Spring Boot 3 + GraalVM Native Image 构建毫秒级启动的云原生应用，详解 AOT 编译原理、反射配置和 Docker 镜像优化。',
-  },
-  {
-    id: 10,
-    readTime: '16 分钟',
-    title: 'Android 性能优化：从启动到渲染的全链路分析',
-    tags: ['Android', '性能优化'],
-    date: '2026-05-12',
-    desc: '系统化分析 Android 应用性能问题，覆盖启动优化、布局渲染、内存管理、网络优化、包体积缩减等核心维度，附实战工具链。',
-  },
-  {
-    id: 11,
-    readTime: '14 分钟',
-    title: 'Go 语言进阶：泛型、错误处理与测试策略',
-    tags: ['Go', 'Backend'],
-    date: '2026-05-18',
-    desc: '深入 Go 1.18+ 泛型实际应用、error wrapping 与 sentinel errors 最佳实践，以及 Table-driven 测试、fuzz testing 和基准测试的实战技巧。',
-  },
-];
+// Articles now come from data.js (siteData.articles)
+var articles = (typeof window !== 'undefined' && window.siteData && window.siteData.articles)
+  ? window.siteData.articles
+  : [];
 
 var projects = [
   {
@@ -307,8 +221,11 @@ function renderArticles(filter) {
     ? articles
     : articles.filter(function(a) { return a.tags.some(function(t) { return t === filter; }); });
 
-  grid.innerHTML = filtered.map(function(a, i) {
-    return '<div class="article-card reveal" style="transition-delay: ' + (i * 0.07) + 's">' +
+  // Only show latest 6 on homepage
+  var showCount = Math.min(filtered.length, 6);
+
+  grid.innerHTML = filtered.slice(0, showCount).map(function(a, i) {
+    return '<a href="article.html?id=' + a.id + '" class="article-card reveal" style="text-decoration:none;transition-delay: ' + (i * 0.07) + 's">' +
       '<div class="card-meta">' +
         a.tags.map(function(t, idx) { return '<span class="card-tag' + (idx % 2 === 1 ? ' purple' : '') + '">' + t + '</span>'; }).join('') +
         '<span class="card-date">' + a.date + '</span>' +
@@ -319,7 +236,7 @@ function renderArticles(filter) {
         '<span class="card-read-time">' + a.readTime + '</span>' +
         '<span class="card-arrow">→</span>' +
       '</div>' +
-    '</div>';
+    '</a>';
   }).join('');
   observeReveal();
 }

@@ -1013,6 +1013,25 @@ a { text-decoration: none; color: inherit; }
   background: var(--accent-orange-dim);
 }
 
+.btn-more {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 12px 32px;
+  background: var(--accent-orange);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.btn-more:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
 /* ── Article Cards ── */
 .articles-grid {
   display: grid;
