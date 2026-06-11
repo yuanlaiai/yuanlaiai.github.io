@@ -33,9 +33,21 @@
     font-size: 15px; line-height: 1.9;
     color: var(--text-secondary);
   }
-  .article-detail .body p { color: var(--text-secondary); }
-  .article-detail .body strong { color: var(--text-primary); }
-  .article-detail .body h2 { color: var(--text-primary); }
+  .article-detail .body p,
+  .article-detail .body li,
+  .article-detail .body section > p,
+  .article-detail .body div > p {
+    color: var(--text-secondary) !important;
+  }
+  .article-detail .body strong {
+    color: var(--text-primary) !important;
+  }
+  .article-detail .body h2,
+  .article-detail .body h3 {
+    color: var(--text-primary) !important;
+  }
+  .article-detail .body blockquote p { color: var(--text-secondary) !important; }
+  .article-detail .body pre { color: #e8e8e8 !important; }
   .article-detail .wechat-link {
     display: inline-flex; align-items: center; gap: 8px;
     margin-top: 40px; padding: 12px 20px;
@@ -66,9 +78,12 @@
       <a href="index.html#articles" class="nav-link">文章</a>
       <a href="index.html#about" class="nav-link">关于</a>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="菜单">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="切换主题">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 

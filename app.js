@@ -212,6 +212,34 @@ function toggleDay(e, btn) {
   }
 }
 
+// ── Theme Toggle ──────────────────────────
+
+(function() {
+  var html = document.documentElement;
+  var btn = document.getElementById('themeToggle');
+  if (!btn) return;
+
+  // Restore saved theme
+  var saved = localStorage.getItem('theme');
+  if (saved === 'light') {
+    html.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+
+  btn.addEventListener('click', function() {
+    var current = html.getAttribute('data-theme');
+    if (current === 'light') {
+      html.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+      btn.textContent = '🌙';
+    } else {
+      html.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+      btn.textContent = '☀️';
+    }
+  });
+})();
+
 // ── Navbar Scroll Behavior ────────────────
 
 (function() {
