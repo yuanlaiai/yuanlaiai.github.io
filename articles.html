@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>猿来AI · 全部文章</title>
+<title>猿来AI · 全部文章 | AI科普 × 技术深度分析</title>
+<meta name="description" content="猿来AI全部文章：AI趋势解读、Agent技能分析、GitHub热点追踪、技术深度分析。让AI从黑盒变成你的得力助手。">
+<meta name="keywords" content="AI, 文章, GitHub, Agent, 趋势, 科普, 猿来AI">
+<meta property="og:title" content="猿来AI · 全部文章">
+<meta property="og:description" content="AI趋势解读、Agent技能分析、GitHub热点追踪。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yuanlaiai.github.io/articles.html">
+<meta property="og:site_name" content="猿来AI">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://yuanlaiai.github.io/articles.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -109,7 +118,7 @@
     for (var i = loadedCount; i < end; i++) {
       var a = articles[i];
       var html = '';
-      html += '<a href="article.html?id=' + a.id + '" class="article-item">';
+      html += '<a href="articles/' + a.slug + '/" class="article-item">';
       html += '<div class="meta">';
       for (var j = 0; j < a.tags.length; j++) {
         html += '<span class="tag">' + a.tags[j] + '</span>';

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>猿来AI · 日报流水线架构</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'JetBrains Mono', monospace; background: #020617; min-height: 100vh; padding: 2rem; color: white; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { margin-bottom: 2rem; }
+    .header-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+    .pulse-dot { width: 12px; height: 12px; background: #22d3ee; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+    h1 { font-size: 1.5rem; font-weight: 700; }
+    .subtitle { color: #94a3b8; font-size: 0.875rem; margin-left: 1.75rem; }
+    .diagram-container { background: rgba(15,23,42,0.5); border-radius: 1rem; border: 1px solid #1e293b; padding: 1.5rem; overflow-x: auto; }
+    svg { width: 100%; min-width: 1000px; display: block; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+    .card { background: rgba(15,23,42,0.5); border-radius: 0.75rem; border: 1px solid #1e293b; padding: 1.25rem; }
+    .card-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .card-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .card-dot.cyan { background: #22d3ee; }
+    .card-dot.emerald { background: #34d399; }
+    .card-dot.violet { background: #a78bfa; }
+    .card-dot.amber { background: #fbbf24; }
+    .card-dot.rose { background: #fb7185; }
+    .card h3 { font-size: 0.875rem; font-weight: 600; }
+    .card ul { list-style: none; color: #94a3b8; font-size: 0.75rem; }
+    .card li { margin-bottom: 0.375rem; }
+    .footer { text-align: center; margin-top: 1.5rem; color: #475569; font-size: 0.75rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-row">
+        <div class="pulse-dot"></div>
+        <h1>猿来AI · GitHub Trending 日报流水线</h1>
+      </div>
+      <p class="subtitle">每天自动抓取 → AI 分析 → 发布到网站 + 公众号</p>
+    </div>
+
+    <div class="diagram-container">
+      <svg viewBox="0 0 1100 620">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+          </marker>
+          <marker id="arrow-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" />
+          </marker>
+          <marker id="arrow-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#34d399" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- ============ STEP 1: GitHub Trending ============ -->
+        <rect x="30" y="80" width="180" height="90" rx="8" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1.5"/>
+        <text x="120" y="108" fill="white" font-size="12" font-weight="600" text-anchor="middle">GitHub Trending</text>
+        <text x="120" y="126" fill="#94a3b8" font-size="9" text-anchor="middle">数据源</text>
+        <text x="120" y="142" fill="#94a3b8" font-size="8" text-anchor="middle">github.com/trending</text>
+        <text x="120" y="158" fill="#fbbf24" font-size="7" text-anchor="middle">每天自动抓取</text>
+
+        <!-- Arrow 1 -->
+        <line x1="210" y1="125" x2="270" y2="125" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+        <text x="240" y="118" fill="#22d3ee" font-size="8" text-anchor="middle">cron job</text>
+
+        <!-- ============ STEP 2: Headless Scraper ============ -->
+        <rect x="275" y="80" width="180" height="90" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="365" y="108" fill="white" font-size="12" font-weight="600" text-anchor="middle">Headless Browser</text>
+        <text x="365" y="126" fill="#94a3b8" font-size="9" text-anchor="middle">数据抓取</text>
+        <text x="365" y="142" fill="#94a3b8" font-size="8" text-anchor="middle">browser_navigate</text>
+        <text x="365" y="158" fill="#22d3ee" font-size="8" text-anchor="middle">提取项目 JSON</text>
+
+        <!-- Arrow 2 -->
+        <line x1="455" y1="125" x2="515" y2="125" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow-cyan)"/>
+        <text x="485" y="118" fill="#22d3ee" font-size="8" text-anchor="middle">LLM</text>
+
+        <!-- ============ STEP 3: AI Analysis ============ -->
+        <rect x="520" y="70" width="200" height="110" rx="8" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+        <text x="620" y="95" fill="white" font-size="12" font-weight="600" text-anchor="middle">AI 分析引擎</text>
+        <text x="620" y="115" fill="#94a3b8" font-size="9" text-anchor="middle">分析 + 写作</text>
+        <text x="620" y="132" fill="#94a3b8" font-size="8" text-anchor="middle">• 选 Top 5 AI 项目</text>
+        <text x="620" y="146" fill="#94a3b8" font-size="8" text-anchor="middle">• 写深度分析</text>
+        <text x="620" y="160" fill="#34d399" font-size="8" text-anchor="middle">DeepSeek / Claude</text>
+
+        <!-- Arrow 3 (down) -->
+        <line x1="620" y1="180" x2="620" y2="250" stroke="#34d399" stroke-width="2" marker-end="url(#arrow-emerald)"/>
+        <text x="635" y="220" fill="#34d399" font-size="8">JSON output</text>
+
+        <!-- ============ STEP 4: Data Generation ============ -->
+        <rect x="520" y="255" width="200" height="90" rx="8" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="620" y="283" fill="white" font-size="12" font-weight="600" text-anchor="middle">数据生成</text>
+        <text x="620" y="301" fill="#94a3b8" font-size="9" text-anchor="middle">data.json → data.js</text>
+        <text x="620" y="319" fill="#a78bfa" font-size="8" text-anchor="middle">var siteData = {...}</text>
+
+        <!-- Arrow 4 (down left) -->
+        <line x1="520" y1="300" x2="460" y2="300" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="490" y="293" fill="#94a3b8" font-size="8">git push</text>
+
+        <!-- Arrow 4b (down right) -->
+        <line x1="720" y1="300" x2="820" y2="300" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- ============ STEP 5a: GitHub Pages ============ -->
+        <rect x="290" y="280" width="160" height="80" rx="8" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="370" y="308" fill="white" font-size="12" font-weight="600" text-anchor="middle">GitHub Pages</text>
+        <text x="370" y="326" fill="#94a3b8" font-size="9" text-anchor="middle">yuanlaiai.github.io</text>
+        <text x="370" y="344" fill="#fbbf24" font-size="7" text-anchor="middle">CDN 自动部署</text>
+
+        <!-- Arrow to browser -->
+        <line x1="370" y1="360" x2="370" y2="420" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- ============ STEP 5b: WeChat Draft ============ -->
+        <rect x="825" y="255" width="180" height="90" rx="8" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+        <text x="915" y="283" fill="white" font-size="12" font-weight="600" text-anchor="middle">公众号 API</text>
+        <text x="915" y="301" fill="#94a3b8" font-size="9" text-anchor="middle">draft/add</text>
+        <text x="915" y="319" fill="#fb7185" font-size="8" text-anchor="middle">草稿箱直达</text>
+
+        <!-- ============ OUTPUT: Browser ============ -->
+        <rect x="290" y="425" width="160" height="70" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="370" y="453" fill="white" font-size="12" font-weight="600" text-anchor="middle">🌐 网站</text>
+        <text x="370" y="471" fill="#94a3b8" font-size="9" text-anchor="middle">用户访问</text>
+        <text x="370" y="483" fill="#22d3ee" font-size="7" text-anchor="middle">每日更新可见</text>
+
+        <!-- ============ OUTPUT: WeChat ============ -->
+        <rect x="825" y="360" width="180" height="70" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+        <text x="915" y="388" fill="white" font-size="12" font-weight="600" text-anchor="middle">📨 草稿箱</text>
+        <text x="915" y="406" fill="#94a3b8" font-size="9" text-anchor="middle">公众号后台</text>
+        <text x="915" y="418" fill="#22d3ee" font-size="7" text-anchor="middle">微调后发布</text>
+
+        <!-- Arrow from WeChat API to WeChat output -->
+        <line x1="915" y1="345" x2="915" y2="358" stroke="#fb7185" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- ============ Legend ============ -->
+        <rect x="30" y="430" width="200" height="120" rx="8" fill="rgba(15,23,42,0.6)" stroke="#1e293b" stroke-width="1"/>
+        <text x="45" y="450" fill="white" font-size="11" font-weight="600">图例</text>
+        <rect x="45" y="460" width="14" height="10" rx="2" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1"/>
+        <text x="65" y="469" fill="#94a3b8" font-size="9">外部数据源</text>
+        <rect x="45" y="476" width="14" height="10" rx="2" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1"/>
+        <text x="65" y="485" fill="#94a3b8" font-size="9">前端/展示</text>
+        <rect x="45" y="492" width="14" height="10" rx="2" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/>
+        <text x="65" y="501" fill="#94a3b8" font-size="9">AI 处理</text>
+        <rect x="45" y="508" width="14" height="10" rx="2" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/>
+        <text x="65" y="517" fill="#94a3b8" font-size="9">部署/托管</text>
+        <rect x="45" y="524" width="14" height="10" rx="2" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1"/>
+        <text x="65" y="533" fill="#94a3b8" font-size="9">API 发布</text>
+
+        <!-- ============ Data comparison callout ============ -->
+        <rect x="30" y="570" width="1040" height="36" rx="6" fill="rgba(251,191,36,0.08)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="550" y="593" fill="#fbbf24" font-size="10" text-anchor="middle">⚡ 全流程 100% 自动化 · 每日运行 · 零人工干预 · 已连续运行 30+ 天</text>
+      </svg>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-dot cyan"></div>
+          <h3>数据层</h3>
+        </div>
+        <ul>
+          <li>• GitHub Trending 每日抓取</li>
+          <li>• Headless Browser 解析</li>
+          <li>• 项目结构化为 JSON</li>
+          <li>• 历史数据持久化</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-dot emerald"></div>
+          <h3>AI 分析层</h3>
+        </div>
+        <ul>
+          <li>• 智能筛选 Top 5 AI 项目</li>
+          <li>• 深度分析生成</li>
+          <li>• 多日累计计数</li>
+          <li>• 标签自动归类</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-dot amber"></div>
+          <h3>发布层</h3>
+        </div>
+        <ul>
+          <li>• GitHub Pages 自动部署</li>
+          <li>• CDN 缓存刷新</li>
+          <li>• 公众号草稿箱直达</li>
+          <li>• 全流程 15 分钟完成</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer">猿来AI · GitHub Trending 日报流水线 · v2.0 · 2026</p>
+  </div>
+</body>
+</html>
