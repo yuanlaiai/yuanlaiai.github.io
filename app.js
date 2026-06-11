@@ -295,15 +295,36 @@ function renderArticles(filter) {
 
 // ── Article Filter ─────────────────────────
 
-var activeFilter = 'all';
-document.querySelectorAll('.filter-btn').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-    btn.classList.add('active');
-    activeFilter = btn.getAttribute('data-filter');
-    renderArticles(activeFilter);
+function renderFilters() {
+  var container = document.getElementById('filterTags');
+  if (!container) return;
+  // Collect all unique tags from articles
+  var tagSet = {};
+  for (var i = 0; i < articles.length; i++) {
+    for (var j = 0; j < articles[i].tags.length; j++) {
+      tagSet[articles[i].tags[j]] = true;
+    }
+  }
+  var allTags = Object.keys(tagSet).sort();
+  // Build filter buttons
+  var html = '<button class="filter-btn active" data-filter="all">全部</button>';
+  for (var k = 0; k < allTags.length; k++) {
+    html += '<button class="filter-btn" data-filter="' + allTags[k] + '">' + allTags[k] + '</button>';
+  }
+  container.innerHTML = html;
+
+  // Attach click handlers
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeFilter = btn.getAttribute('data-filter');
+      renderArticles(activeFilter);
+    });
   });
-});
+}
+
+var activeFilter = 'all';
 
 // ── Render Projects ──────────────────────────
 
@@ -721,6 +742,7 @@ document.addEventListener('keydown', function(e) {
 // ── Init ──
 document.addEventListener('DOMContentLoaded', function() {
   if (window.siteData) renderTimeline();
+  renderFilters();
   renderArticles();
   renderProjects();
   loadPrompts();
