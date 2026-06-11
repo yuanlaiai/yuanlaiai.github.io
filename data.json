@@ -1,10 +1,203 @@
 {
-  "lastUpdated": "2026-06-11",
-  "topic": "🔥 <strong>「Agent Skill 三冠王」诞生：Last30Days-Skill 连续三天登顶</strong> —— 当所有人都以为 Agent 赛道拼的是代码能力时，一个「研究型」Skill 用三天 10K★ 证明：Agent 的最大价值不是帮你写代码，而是帮你省时间。与此同时，Superpowers（+1,205）和 Agent-Skills（+781）代表「方法论派」，PM-Skills（+775）代表「品类化派」——三条路线并行，Agent Skill 生态正在以惊人的速度成熟。",
+  "lastUpdated": "2026-06-12",
+  "topic": "🔥 <strong>Agent Skill 一周复盘：从单品爆款到生态裂变</strong> —— 过去一周是 Agent Skill 生态的里程碑。Last30Days-Skill 三天 10K★ 打开局面，PM-Skills 连续三天上榜验证品类化，Superpowers 第 8 次上榜巩固方法论地位。今天的 agent-skills（+3,275）以 Google Chrome 总监的背书登顶，agency-agents（+1,235）用 Persona 驱动多 Agent 模式吸引开发者。Agent Skill 从「实验性概念」变成了「真实的生产力工具」——这个品类只用了 7 天。",
   "days": [
     {
-      "date": "2026-06-11",
+      "date": "2026-06-12",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "fullName": "addyosmani / agent-skills",
+          "org": "addyosmani",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "54,643",
+          "forks": "5,937",
+          "starsToday": "3,275",
+          "count": 2,
+          "description": "生产级 Agent 工程技能 —— 今日最热 +3,275★！Google Chrome 总监出品，54.6K★ 持续爆发",
+          "problems": [
+            "<strong>Agent 写代码质量不稳：</strong>AI 生成的代码经常有 bug。Agent-Skills 提供生产级的工程规范。",
+            "<strong>缺少工程化 Agent 技能：</strong>大多数 Agent 技能是玩具级的。Addy Osmani（Google Chrome 工程总监）出品保证了企业级质量。",
+            "<strong>Agent 技能没有最佳实践：</strong>每个团队都在重新发明轮子。Agent-Skills 收录了经过生产验证的工程技能。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/addyosmani/agent-skills</code></pre>",
+            "查看技能目录。",
+            "将技能加载到你的 Agent 框架中使用。"
+          ],
+          "insights": [
+            "<strong>以绝对优势登顶：</strong>+3,275★ 是第二名（pm-skills +1,944）的近两倍。Agent-Skills 的成长曲线非常陡峭。",
+            "<strong>Google Chrome 总监的背书效应：</strong>Addy Osmani 在 Web 性能和工程领域的声望让这个项目自带流量和信任。",
+            "<strong>「生产级」成为 Agent 技能的新标准：</strong>在 Agent 技能遍地开花的当下，「Production-grade」定位是有效的差异化。"
+          ],
+          "tags": [
+            "agent-skills",
+            "engineering",
+            "production-grade",
+            "coding-agent",
+            "python"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "phuryn",
+          "name": "pm-skills",
+          "fullName": "phuryn / pm-skills",
+          "org": "phuryn",
+          "url": "https://github.com/phuryn/pm-skills",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "16,175",
+          "forks": "1,682",
+          "starsToday": "1,944",
+          "count": 3,
+          "description": "100+ PM Agent 技能市场 —— 连续三天上榜！+1,944★，16K★ 的 PM 专属 Agent 工具箱",
+          "problems": [
+            "<strong>产品经理缺少 Agent 工具：</strong>开发者有 Claude Code、Cursor，但 PM 几乎没有趁手的 AI 工具。PM-Skills 填补这个空白。",
+            "<strong>PM 工作流碎片化：</strong>竞品分析、用户访谈、需求排期、PRD 撰写——每个环节用不同的工具。PM-Skills 提供一站式 Agent 技能。",
+            "<strong>Agentic Workflow 缺少产品化视角：</strong>很多 Agent 工具偏技术，缺少面向 PM 的场景化设计。"
+          ],
+          "usage": [
+            "安装技能包到支持 Agent Skills 的框架。",
+            "运行 PM 技能：<pre><code>pm-skill competitive-analysis '目标产品'</code></pre>",
+            "支持策略制定、需求拆解、路线图规划等场景。"
+          ],
+          "insights": [
+            "<strong>连续三天上榜，品类化趋势确认：</strong>6/10 +808 → 6/11 +775 → 6/12 +1,944。三天累计 3,527★，PM-Skills 不再是偶然现象。",
+            "<strong>16K★ 的品类壁垒：</strong>PM 专属 Agent 技能的市场被验证了。下一步可能被复制的方向：设计师技能、市场技能、HR 技能。",
+            "<strong>今天增速翻倍：</strong>从 775 到 1,944，今天的增速是昨天的 2.5 倍。可能是 WWDC 和 Agent Skill 热潮的叠加效应。"
+          ],
+          "tags": [
+            "agent-skills",
+            "product-management",
+            "pm-tools",
+            "workflow",
+            "python"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "obra",
+          "name": "superpowers",
+          "fullName": "obra / superpowers",
+          "org": "Obra",
+          "url": "https://github.com/obra/superpowers",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "224,779",
+          "forks": "19,984",
+          "starsToday": "1,323",
+          "count": 8,
+          "description": "Agent 技能框架与开发方法论 —— 224K★ 的 Agent 元平台，+1,323★ 第 8 次上榜",
+          "problems": [
+            "<strong>Agent 开发缺少方法论：</strong>写 Agent 容易，写好 Agent 难。Superpowers 不只给工具，更定义了整套 Agent 软件工程方法论。",
+            "<strong>Agent 技能碎片化：</strong>不同 Agent 框架各有各的技能格式。Superpowers 提供统一的「技能框架」——写一次技能到处运行。",
+            "<strong>缺乏可复用的 Agent 组件：</strong>Superpowers 建立了一套技能市场，开发者可以发布和复用技能。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/obra/superpowers</code></pre>",
+            "安装技能框架。",
+            "浏览和安装社区技能。"
+          ],
+          "insights": [
+            "<strong>第 8 次上榜，史无前例的持久力：</strong>从 5 月 14 日到今天，Superpowers 是唯一一个持续出现在 Trending 上的项目。224K★ 不是偶然。",
+            "<strong>Agent 技能领域的事实标准：</strong>无数 Agent Skill 项目（包括我们站的）都以 Superpowers 的格式为参考。它正在成为行业标准。",
+            "<strong>224K★ 的生态网络效应：</strong>技能越多→开发者越多→技能越多。Superpowers 已经过了临界点，进入了自我强化的正循环。"
+          ],
+          "tags": [
+            "agent-skills",
+            "agent-framework",
+            "methodology",
+            "agent-ecosystem",
+            "python"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "msitarzewski",
+          "name": "agency-agents",
+          "fullName": "msitarzewski / agency-agents",
+          "org": "msitarzewski",
+          "url": "https://github.com/msitarzewski/agency-agents",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "111,512",
+          "forks": "11,293",
+          "starsToday": "1,235",
+          "count": 1,
+          "description": "全能 AI Agent 平台 —— 111K★，从前端到社区运营，每种 Agent 都有专属人格和流程",
+          "problems": [
+            "<strong>通用 Agent 能力不足：</strong>一个 Agent 做所有事往往什么都做不好。Agency-Agents 提供数十种专门化 Agent。",
+            "<strong>Agent 缺少个性：</strong>大多数 Agent 没有明确的人格定位。Agency-Agents 每个 Agent 有专属人格、流程和交付物。",
+            "<strong>缺少即用型 Agent 团队：</strong>搭建多 Agent 系统太复杂。Agency-Agents 提供开箱即用的 Agent 团队。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/msitarzewski/agency-agents</code></pre>",
+            "浏览可用的 Agent 列表。",
+            "选择和启动你需要的 Agent。",
+            "支持定制和扩展。"
+          ],
+          "insights": [
+            "<strong>111K★ 的 Agent 生态：</strong>从「前端专家」到「Reddit 社区运营」，Agency-Agents 覆盖了开发、内容、社区等多场景。",
+            "<strong>Persona 驱动是差异化：</strong>每个 Agent 有专属人格和流程，这种设计让 Agent 更适合特定任务，比通用提示词效果好得多。",
+            "<strong>多 Agent 协作是大趋势：</strong>不是单 Agent 通吃，而是多 Agent 各司其职——Agency-Agents 验证了这个方向。"
+          ],
+          "tags": [
+            "ai-agent",
+            "multi-agent",
+            "persona",
+            "agent-framework",
+            "python"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "maziyarpanahi",
+          "name": "openmed",
+          "fullName": "maziyarpanahi / openmed",
+          "org": "maziyarpanahi",
+          "url": "https://github.com/maziyarpanahi/openmed",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "2,733",
+          "forks": "268",
+          "starsToday": "427",
+          "count": 1,
+          "description": "开源医疗 AI —— +427★ 的医疗 AI 项目，2.7K★ 但增速亮眼",
+          "problems": [
+            "<strong>医疗 AI 被大厂垄断：</strong>Google Health、IBM Watson 主导，开源方案极少。OpenMed 填补开源空白。",
+            "<strong>医疗数据隐私问题：</strong>开源方案可以本地部署，保护患者数据隐私。",
+            "<strong>缺少垂直领域 Agent：</strong>通用 Agent 不适合医疗场景。OpenMed 专注医疗 AI。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/maziyarpanahi/openmed</code></pre>",
+            "查看文档了解支持的医疗 AI 功能。",
+            "本地部署或云端运行。"
+          ],
+          "insights": [
+            "<strong>首次上榜的医疗 AI：</strong>在这个 Agent Skills 霸榜的一周里，OpenMed 是唯一的垂直行业项目。说明医疗 AI 仍在早期。",
+            "<strong>2.7K★ 的快速增长：</strong>虽然绝对星数不大，但 +427 的增速说明社区对开源医疗 AI 有真实需求。",
+            "<strong>Agent + 医疗的想象力：</strong>当 Agent Skills 扩展到医疗行业——病历分析 Agent、诊断辅助 Agent——这可能比 PM-Skills 的市场更大。"
+          ],
+          "tags": [
+            "healthcare",
+            "ai-agent",
+            "open-source",
+            "medical",
+            "python"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-11",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -197,7 +390,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -390,7 +583,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "3天前",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -583,7 +776,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -781,7 +974,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -978,7 +1171,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "6天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -1175,7 +1368,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "7天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1372,7 +1565,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "9天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1570,7 +1763,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "10天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1765,7 +1958,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "11天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1960,7 +2153,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "12天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -2156,7 +2349,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "14天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2352,7 +2545,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "15天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2546,7 +2739,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "16天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2744,7 +2937,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "18天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2946,7 +3139,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "19天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -3148,7 +3341,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "20天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -3350,7 +3543,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "21天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -3552,7 +3745,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "22天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3754,7 +3947,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "23天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -3956,7 +4149,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "24天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -4158,7 +4351,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "28天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -4358,7 +4551,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "29天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -4554,7 +4747,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "30天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
