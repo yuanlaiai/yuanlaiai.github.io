@@ -240,6 +240,36 @@ function toggleDay(e, btn) {
   });
 })();
 
+// ── Hamburger Menu Toggle ────────────────
+
+(function() {
+  var ham = document.getElementById('hamburger');
+  var navLinks = document.getElementById('navLinks');
+  if (!ham || !navLinks) return;
+
+  // Toggle menu on hamburger click
+  ham.addEventListener('click', function() {
+    ham.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+
+  // Close menu when a nav link is clicked (mobile)
+  navLinks.querySelectorAll('.nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      ham.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  // Close menu on click outside
+  document.addEventListener('click', function(e) {
+    if (!navLinks.contains(e.target) && !ham.contains(e.target)) {
+      ham.classList.remove('open');
+      navLinks.classList.remove('open');
+    }
+  });
+})();
+
 // ── Navbar Scroll Behavior ────────────────
 
 (function() {
