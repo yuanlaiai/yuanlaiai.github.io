@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-06-12",
-  "topic": "🔥 <strong>Agent Skill 一周复盘：从单品爆款到生态裂变</strong> —— 过去一周是 Agent Skill 生态的里程碑。Last30Days-Skill 三天 10K★ 打开局面，PM-Skills 连续三天上榜验证品类化，Superpowers 第 8 次上榜巩固方法论地位。今天的 agent-skills（+3,275）以 Google Chrome 总监的背书登顶，agency-agents（+1,235）用 Persona 驱动多 Agent 模式吸引开发者。Agent Skill 从「实验性概念」变成了「真实的生产力工具」——这个品类只用了 7 天。",
+  "lastUpdated": "2026-06-14",
+  "topic": "🔥 <strong>AI 基建日：从安全扫描到推理加速</strong> —— 今天的榜单信号非常清晰：AI 正在从「应用层」向「基础设施层」深化。NVIDIA SkillSpector（+962）直击 Agent 技能安全这个空白市场，LMCache（+271）解决 LLM 推理的核心瓶颈，和 Andrew Ng 的 aisuite（+290）一起构成了「安全→加速→统一接口」的基础设施三部曲。OpenHands（+258）继续巩固 AI 自主开发的地位，Kronos（+238）则展示了垂直领域 LLM 的巨大想象空间。Agent Skill 热潮暂歇，AI 基建时代开启。”",
   "days": [
     {
-      "date": "2026-06-12",
+      "date": "2026-06-14",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "NVIDIA",
+          "name": "SkillSpector",
+          "fullName": "NVIDIA / SkillSpector",
+          "org": "NVIDIA",
+          "url": "https://github.com/NVIDIA/SkillSpector",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "4,921",
+          "forks": "375",
+          "starsToday": "962",
+          "count": 1,
+          "description": "AI Agent 技能安全扫描器 —— NVIDIA 出品，今日 +962★！自动检测 Agent 技能中的漏洞、恶意模式和安全隐患",
+          "problems": [
+            "<strong>Agent 技能安全不可控：</strong>第三方 Agent 技能可能包含漏洞或恶意代码。SkillSpector 提供自动化安全扫描。",
+            "<strong>缺少 Agent 安全标准：</strong>Agent 生态系统快速膨胀，但技能的安全审核完全空白。NVIDIA 出手填补了这个空缺。",
+            "<strong>开发者难以评估技能风险：</strong>安装一个 Agent 技能前，你不知道它会不会偷数据。SkillSpector 帮你做尽职调查。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/NVIDIA/SkillSpector</code></pre>",
+            "运行扫描：<pre><code>python -m skillspector scan &lt;skill-path&gt;</code></pre>",
+            "查看安全报告，根据建议修复隐患。"
+          ],
+          "insights": [
+            "<strong>NVIDIA 入局 Agent 安全：</strong>当 NVIDIA 开始做 Agent 技能安全扫描，说明 Agent 生态已经从「玩具阶段」进入「企业级落地阶段」。",
+            "<strong>安全扫描将成为 Agent 技能的标准环节：</strong>就像 App Store 审核一样，未来每个 Agent 技能都需要通过安全认证。",
+            "<strong>SkillSpector 抓住了空白市场：</strong>Agent 技能数量爆发，但安全工具几乎为零——这是典型的基础设施级机会。"
+          ],
+          "tags": [
+            "agent-skills",
+            "security",
+            "nvidia",
+            "ai-agent",
+            "python"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "andrewyng",
+          "name": "aisuite",
+          "fullName": "andrewyng / aisuite",
+          "org": "Andrew Ng",
+          "url": "https://github.com/andrewyng/aisuite",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "14,279",
+          "forks": "1,494",
+          "starsToday": "290",
+          "count": 1,
+          "description": "统一多 AI 提供商接口 —— Andrew Ng 出品，今日 +290★。一个 API 调用 ChatGPT、Claude、Gemini 等所有主流模型",
+          "problems": [
+            "<strong>多模型切换成本高：</strong>每个 AI 提供商有自己的 API、SDK 和认证方式。切换模型需要改大量代码。",
+            "<strong>AI 供应商锁定风险：</strong>深度绑定一个 AI 提供商后，迁移成本极高。aisuite 提供统一抽象层。",
+            "<strong>多模型测试比较繁琐：</strong>想对比不同模型的效果需要写多套调用代码。aisuite 一行代码切换提供商。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install aisuite</code></pre>",
+            "调用：<pre><code>from aisuite import AI; client = AI(); response = client.chat('openai','gpt-4o', messages)</code></pre>",
+            "切换模型只需改第一个参数：'anthropic/claude-sonnet-4', 'google/gemini-2.5-pro' 等。"
+          ],
+          "insights": [
+            "<strong>Andrew Ng 的品牌效应：</strong>AI 教育界的 KOL 出品，自带信任和流量。aisuite 有望成为 AI 开发者的标准工具。",
+            "<strong>「统一接口」是 AI 基础设施的必争之地：</strong>类似 LangChain 的思路，但更轻量、更 Pythonic。",
+            "<strong>多模型策略成为主流：</strong>开发者不再绑定单一模型，而是根据任务选择最佳模型——aisuite 让这件事变得简单。"
+          ],
+          "tags": [
+            "ai-tools",
+            "multi-provider",
+            "andrew-ng",
+            "python",
+            "api"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "LMCache",
+          "name": "LMCache",
+          "fullName": "LMCache / LMCache",
+          "org": "LMCache",
+          "url": "https://github.com/LMCache/LMCache",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "9,028",
+          "forks": "1,312",
+          "starsToday": "271",
+          "count": 1,
+          "description": "LLM KV Cache 加速层 —— 今日 +271★！最快的 KV Cache 方案，显著降低 LLM 推理延迟和成本",
+          "problems": [
+            "<strong>LLM 推理延迟高：</strong>长上下文场景下，KV Cache 占用巨大显存，导致推理速度慢。",
+            "<strong>重复计算浪费资源：</strong>相同前缀的请求每次都重新计算 KV Cache，浪费大量算力。",
+            "<strong>多轮对话成本高：</strong>长对话的 KV Cache 管理不善会导致 OOM 或严重的性能退化。"
+          ],
+          "usage": [
+            "集成 LMCache 到现有推理框架：<pre><code>pip install lmcache</code></pre>",
+            "在 vLLM 或 Hugging Face 推理中启用 LMCache 后端。",
+            "通过 LMCache 的缓存策略自动管理 KV Cache 的存储和复用。"
+          ],
+          "insights": [
+            "<strong>KV Cache 是 LLM 推理的关键瓶颈：</strong>谁能把 KV Cache 做好，谁就掌握了 LLM 规模部署的核心技术。",
+            "<strong>推理优化比模型训练更「基础设施」：</strong>LMCache 解决了「如何低成本运行 LLM」的问题，这是企业落地最关心的。",
+            "<strong>长上下文是趋势，KV Cache 优化是刚需：</strong>随着 200K+ 上下文成为标配，KV Cache 优化工具会越来越重要。"
+          ],
+          "tags": [
+            "llm",
+            "inference",
+            "optimization",
+            "kv-cache",
+            "python"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "OpenHands",
+          "name": "OpenHands",
+          "fullName": "OpenHands / OpenHands",
+          "org": "OpenHands",
+          "url": "https://github.com/OpenHands/OpenHands",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "77,005",
+          "forks": "9,779",
+          "starsToday": "258",
+          "count": 1,
+          "description": "AI 驱动开发平台（前 OpenDevin） —— 今日 +258★，77K★ 持续增长。让 AI 自主完成编码任务",
+          "problems": [
+            "<strong>编码 Agent 缺乏统一平台：</strong>各种 AI 编码工具碎片化，没有一个完整的开发平台。",
+            "<strong>AI 编码缺少端到端流程：</strong>从理解需求到写代码、测试、部署，缺乏完整的闭环。",
+            "<strong>开发者需要可扩展的 AI 编码框架：</strong>OpenHands 提供插件系统，让社区可以扩展功能。"
+          ],
+          "usage": [
+            "使用 Docker 运行：<pre><code>docker pull openhands/openhands</code></pre>",
+            "启动 Web 界面，通过自然语言描述任务。",
+            "AI 会自动完成代码编写、测试和调试。"
+          ],
+          "insights": [
+            "<strong>77K★ 证明 AI 驱动开发是真实需求：</strong>从 OpenDevin 改名 OpenHands 后增长更猛，开发者对 AI 编码平台的渴望可见一斑。",
+            "<strong>「AI 结对编程」正在变成「AI 自主开发」：</strong>OpenHands 代表的趋势是 AI 从「辅助编码」走向「自主完成开发任务」。",
+            "<strong>开源 AI 开发平台将挑战商业产品：</strong>作为开源方案，OpenHands 是 Cursor、Copilot 等商业产品的有力竞争者。"
+          ],
+          "tags": [
+            "coding-agent",
+            "ai-development",
+            "open-source",
+            "python",
+            "dev-tools"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "shiyu-coder",
+          "name": "Kronos",
+          "fullName": "shiyu-coder / Kronos",
+          "org": "shiyu-coder",
+          "url": "https://github.com/shiyu-coder/Kronos",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "29,757",
+          "forks": "5,139",
+          "starsToday": "238",
+          "count": 1,
+          "description": "金融市场基础模型 —— 今日 +238★，29.8K★！用 AI 理解「金融市场的语言」",
+          "problems": [
+            "<strong>金融领域缺少专用 LLM：</strong>通用模型在金融任务上表现不佳，因为金融数据有自己的「语言」和模式。",
+            "<strong>交易策略研究成本高：</strong>传统量化交易需要大量的手工特征工程和策略回测。",
+            "<strong>金融数据时序特性难以建模：</strong>Kronos 专门针对金融时间序列数据进行了优化。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/shiyu-coder/Kronos</code></pre>",
+            "加载预训练模型进行金融数据分析和预测。",
+            "在自有金融数据集上微调。"
+          ],
+          "insights": [
+            "<strong>垂直领域 LLM 是下一个蓝海：</strong>Kronos 证明了「领域专用模型」的巨大需求——金融、医疗、法律等垂直赛道都有空间。",
+            "<strong>29.8K★ 说明金融+AI 的吸引力：</strong>量化交易和 AI 的结合一直以来都是开发者关注的顶级话题。",
+            "<strong>「金融语言」概念新颖：</strong>把市场价格波动看作一种「语言」，用 LLM 的方法来理解和生成——这个视角很有启发性。"
+          ],
+          "tags": [
+            "finance",
+            "llm",
+            "trading",
+            "deep-learning",
+            "python"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-12",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -200,7 +392,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "昨天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -393,7 +585,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "前天",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -586,7 +778,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -779,7 +971,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "5天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -977,7 +1169,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -1174,7 +1366,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1371,7 +1563,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "8天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1568,7 +1760,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "10天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1766,7 +1958,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "11天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1961,7 +2153,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "12天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2156,7 +2348,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2352,7 +2544,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2548,7 +2740,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "16天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2742,7 +2934,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2940,7 +3132,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "19天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -3142,7 +3334,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -3344,7 +3536,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "21天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3546,7 +3738,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "22天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -3748,7 +3940,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "23天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -3950,7 +4142,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "24天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -4152,7 +4344,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "25天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -4354,7 +4546,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -4554,7 +4746,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "30天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -4750,7 +4942,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "31天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
