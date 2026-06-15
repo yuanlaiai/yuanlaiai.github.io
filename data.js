@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-06-14",
-  "topic": "🔥 <strong>AI 基建日：从安全扫描到推理加速</strong> —— 今天的榜单信号非常清晰：AI 正在从「应用层」向「基础设施层」深化。NVIDIA SkillSpector（+962）直击 Agent 技能安全这个空白市场，LMCache（+271）解决 LLM 推理的核心瓶颈，和 Andrew Ng 的 aisuite（+290）一起构成了「安全→加速→统一接口」的基础设施三部曲。OpenHands（+258）继续巩固 AI 自主开发的地位，Kronos（+238）则展示了垂直领域 LLM 的巨大想象空间。Agent Skill 热潮暂歇，AI 基建时代开启。”",
+  "lastUpdated": "2026-06-15",
+  "topic": "🔥 <strong>Agent 安全与工程化双主线</strong> —— 今天的榜单清晰的呈现了两条主线：<strong>Agent 安全</strong>（SkillSpector +1,079★ 连续两天登顶，claude-bug-bounty +173★ 用 AI 做安全测试）和 <strong>AI 工程化</strong>（ai-engineering-from-scratch +538★ 32.8K★ 持续增长，SurfSense +185★ 开源 NotebookLM 替代品）。Agent-Reach（+1,045★）作为「Agent 上网」的基础设施级工具，继续保持高速增长。Agent 生态正在从「概念验证」走向「安全合规+工程落地」的新阶段。",
   "days": [
     {
-      "date": "2026-06-14",
+      "date": "2026-06-15",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "NVIDIA",
+          "name": "SkillSpector",
+          "fullName": "NVIDIA / SkillSpector",
+          "org": "NVIDIA",
+          "url": "https://github.com/NVIDIA/SkillSpector",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "5,998",
+          "forks": "443",
+          "starsToday": "1,079",
+          "count": 2,
+          "description": "AI Agent 技能安全扫描器 —— 连续第二天登顶！+1,079★，突破 6K★。NVIDIA 加速布局 Agent 安全基础设施",
+          "problems": [
+            "<strong>Agent 技能安全仍是空白：</strong>SkillSpector 持续暴涨说明 Agent 技能安全的刚需远未被满足。",
+            "<strong>NVIDIA 的品牌效应持续发酵：</strong>昨天登顶后今天继续 +1,079★，安全扫描正在成为 Agent 生态的基础配置。",
+            "<strong>恶性 Agent 技能开始出现：</strong>随着 Agent 技能市场的爆发，恶意技能的风险与日俱增。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/NVIDIA/SkillSpector</code></pre>",
+            "运行扫描：<pre><code>python -m skillspector scan &lt;skill-path&gt;</code></pre>",
+            "查看详细安全报告。"
+          ],
+          "insights": [
+            "<strong>连续两天登顶→赛道确认：</strong>SkillSpector 连续两天排名 AI 项目第一，说明 Agent 安全不是短期热点而是长期赛道。",
+            "<strong>NVIDIA 在 Agent 生态的话语权：</strong>从 GPU 到 Agent 安全，NVIDIA 正在全面渗透 AI 基础设施。",
+            "<strong>「安全」是 Agent 规模化的前提：</strong>没有 SkillSpector 这样的安全工具，企业不敢大规模部署 Agent 技能。"
+          ],
+          "tags": [
+            "agent-skills",
+            "security",
+            "nvidia",
+            "ai-agent",
+            "python"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "Panniantong",
+          "name": "Agent-Reach",
+          "fullName": "Panniantong / Agent-Reach",
+          "org": "Panniantong",
+          "url": "https://github.com/Panniantong/Agent-Reach",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "29,548",
+          "forks": "2,409",
+          "starsToday": "1,045",
+          "count": 3,
+          "description": "Agent 全网浏览器 —— 今日 +1,045★，直奔 30K★！让 AI Agent 一键读取全网（Twitter/Reddit/YouTube/GitHub/B站/小红书）",
+          "problems": [
+            "<strong>Agent 无法访问实时网络：</strong>大多数 Agent 只能基于训练数据回答问题，无法获取最新信息。",
+            "<strong>多平台数据获取成本高：</strong>每个平台有不同的 API、反爬机制、数据格式，集成成本极高。",
+            "<strong>Agent 需要「眼睛」看到互联网：</strong>Agent-Reach 提供统一的 CLI 接口，让 Agent 能像人一样浏览全网。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install agent-reach</code></pre>",
+            "搜索 Twitter：<pre><code>agent-reach twitter search 'AI agents'</code></pre>",
+            "读取 Reddit：<pre><code>agent-reach reddit hot r/MachineLearning</code></pre>"
+          ],
+          "insights": [
+            "<strong>「Agent 上网」是刚需：</strong>Agent-Reach 的持续火爆（3次上榜）说明开发者迫切需要一个让 Agent 上网的标准工具。",
+            "<strong>零 API 费用是杀手锏：</strong>通过网页抓取而非官方 API，Agent-Reach 绕过了昂贵的 API 订阅费用。",
+            "<strong>中国平台支持是差异化优势：</strong>支持 B 站、小红书让它在中文开发者中特别受欢迎。"
+          ],
+          "tags": [
+            "agent-tools",
+            "web-scraping",
+            "ai-agent",
+            "python",
+            "multi-platform"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "fullName": "rohitg00 / ai-engineering-from-scratch",
+          "org": "rohitg00",
+          "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "32,786",
+          "forks": "5,377",
+          "starsToday": "538",
+          "count": 2,
+          "description": "AI 工程从零到一 —— 今日 +538★，32.8K★！Learn it. Build it. Ship it. 完整 AI 工程实战指南",
+          "problems": [
+            "<strong>AI 工程学习路径不清晰：</strong>市面上的 AI 资源要么太学术、要么太营销，缺少从工程视角的实战指南。",
+            "<strong>「学→做→交付」链条断裂：</strong>很多教程只教你调包，不教你如何构建、部署和维护 AI 系统。",
+            "<strong>缺少项目驱动的学习方式：</strong>ai-engineering-from-scratch 以项目为主线，从零到一构建完整的 AI 应用。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/rohitg00/ai-engineering-from-scratch</code></pre>",
+            "按章节顺序学习，每个章节包含理论+代码+项目。",
+            "跟随教程构建并部署自己的 AI 应用。"
+          ],
+          "insights": [
+            "<strong>「AI 工程化」是开发者最大的痛点：</strong>32.8K★ 说明开发者缺的不是模型知识，而是如何把 AI 做成产品。",
+            "<strong>Learn→Build→Ship 三层递进：</strong>这个项目的爆火说明开发者要的不只是知识，而是「能交付的能力」。",
+            "<strong>作者 rohitg00 的 AI 教育品牌：</strong>他之前还出了 agentmemory 等多款热门工具，个人品牌正在形成。"
+          ],
+          "tags": [
+            "ai-engineering",
+            "learning",
+            "tutorial",
+            "python",
+            "project-based"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "MODSetter",
+          "name": "SurfSense",
+          "fullName": "MODSetter / SurfSense",
+          "org": "MODSetter",
+          "url": "https://github.com/MODSetter/SurfSense",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "14,691",
+          "forks": "1,600",
+          "starsToday": "185",
+          "count": 1,
+          "description": "开源 NotebookLM 替代品 —— 今日 +185★，14.7K★！无数据限制，注重隐私，适合团队协作",
+          "problems": [
+            "<strong>NotebookLM 有数据限制和隐私顾虑：</strong>Google 的 NotebookLM 很好用，但数据上传有限制且隐私不可控。",
+            "<strong>团队协作需要本地化方案：</strong>SurfSense 提供开源、自托管的方案，适合团队内部使用。",
+            "<strong>AI 笔记需要更强的定制能力：</strong>开源方案让用户可以自定义模型、Prompt 和处理流程。"
+          ],
+          "usage": [
+            "克隆并部署：<pre><code>git clone https://github.com/MODSetter/SurfSense</code></pre>",
+            "上传文档进行 AI 分析。",
+            "支持团队协作和自定义模型。"
+          ],
+          "insights": [
+            "<strong>NotebookLM 带火了一个品类：</strong>NotebookLM 的成功催生了大量开源替代品，SurfSense 是其中增长最快的之一。",
+            "<strong>「AI 笔记+团队协作」是刚需：</strong>个人用 NotebookLM 够用，但团队需要私有部署。",
+            "<strong>隐私和无限数据是差异化：</strong>「无数据限制」和「隐私优先」是 SurfSense 对比 NotebookLM 的核心卖点。"
+          ],
+          "tags": [
+            "notebooklm",
+            "ai-notes",
+            "open-source",
+            "privacy",
+            "python"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "shuvonsec",
+          "name": "claude-bug-bounty",
+          "fullName": "shuvonsec / claude-bug-bounty",
+          "org": "shuvonsec",
+          "url": "https://github.com/shuvonsec/claude-bug-bounty",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "3,158",
+          "forks": "600",
+          "starsToday": "173",
+          "count": 1,
+          "description": "AI 驱动漏洞赏金猎人 —— 终端里的 AI 安全助手，自动发现 20 种漏洞并生成报告",
+          "problems": [
+            "<strong>漏洞挖掘需要大量人工：</strong>传统 bug bounty 需要安全专家手动分析目标、寻找漏洞，效率低下。",
+            "<strong>入门门槛高：</strong>安全测试需要深厚的专业知识，大多数开发者难以入门。",
+            "<strong>报告编写耗时：</strong>发现漏洞后还需要编写详细的 PoC 和修复建议。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/shuvonsec/claude-bug-bounty</code></pre>",
+            "在 Claude Code 中配置并使用。",
+            "自动进行漏洞扫描并生成报告。"
+          ],
+          "insights": [
+            "<strong>AI 安全从「防御」走向「攻击」：</strong>SkillSpector 是防御，claude-bug-bounty 是攻击——AI 安全的两端都在爆发。",
+            "<strong>Claude Code 生态的垂直应用：</strong>这个项目是 Claude Code 的垂直场景应用，说明 Agent 编程工具的生态正在细分。",
+            "<strong>安全民主化：</strong>AI 让普通人也能做安全测试，大大降低了安全领域的入门门槛。"
+          ],
+          "tags": [
+            "security",
+            "bug-bounty",
+            "claude-code",
+            "ai-agent",
+            "python"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-14",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -199,7 +391,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -392,7 +584,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -585,7 +777,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "5天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -778,7 +970,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -971,7 +1163,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1169,7 +1361,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "8天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1366,7 +1558,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1563,7 +1755,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "10天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1760,7 +1952,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "12天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -1958,7 +2150,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -2153,7 +2345,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "14天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2348,7 +2540,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2544,7 +2736,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2740,7 +2932,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "18天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -2934,7 +3126,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "19天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -3132,7 +3324,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "21天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3334,7 +3526,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "22天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -3536,7 +3728,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "23天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -3738,7 +3930,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "24天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -3940,7 +4132,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "25天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -4142,7 +4334,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -4344,7 +4536,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -4546,7 +4738,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "31天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -4746,7 +4938,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "32天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -4942,7 +5134,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "33天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
