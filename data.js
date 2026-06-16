@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-06-15",
-  "topic": "🔥 <strong>Agent 安全与工程化双主线</strong> —— 今天的榜单清晰的呈现了两条主线：<strong>Agent 安全</strong>（SkillSpector +1,079★ 连续两天登顶，claude-bug-bounty +173★ 用 AI 做安全测试）和 <strong>AI 工程化</strong>（ai-engineering-from-scratch +538★ 32.8K★ 持续增长，SurfSense +185★ 开源 NotebookLM 替代品）。Agent-Reach（+1,045★）作为「Agent 上网」的基础设施级工具，继续保持高速增长。Agent 生态正在从「概念验证」走向「安全合规+工程落地」的新阶段。",
+  "lastUpdated": "2026-06-16",
+  "topic": "🔥 <strong>Agent 生态持续爆发：从全网浏览到 AI 工程化</strong> —— 今天的榜单是「Agent 生态」的全面展示。Agent-Reach（+2,150★）单日暴涨，第四次上榜，已经成为 Agent 基础设施的「标准网络层」。ai-engineering-from-scratch（+833★）连续三天上榜，33.6K★ 证明了「AI 工程化」教育的巨大需求。OpenBMB/VoxCPM（+413★）清华出品，Tokenizer-Free TTS 逼近 30K★。Datawhale/hello-agents（+283★）59.7K★ 的中文 Agent 教程反映了中国开发者的学习热情。Andrew Ng 的 aisuite（+255★）连续三天上榜，统一多模型接口成为开发者新标配。",
   "days": [
     {
-      "date": "2026-06-15",
+      "date": "2026-06-16",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "Panniantong",
+          "name": "Agent-Reach",
+          "fullName": "Panniantong / Agent-Reach",
+          "org": "Panniantong",
+          "url": "https://github.com/Panniantong/Agent-Reach",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "31,593",
+          "forks": "2,537",
+          "starsToday": "2,150",
+          "count": 4,
+          "description": "Agent 全网浏览器 —— 今日爆炸 +2,150★！突破 31.5K★。让 AI Agent 一键读取 Twitter/Reddit/YouTube/GitHub/B站/小红书",
+          "problems": [
+            "<strong>Agent 无法访问实时网络：</strong>大多数 Agent 只能基于训练数据回答问题，无法获取最新信息。",
+            "<strong>多平台数据获取成本高：</strong>每个平台有不同的 API、反爬机制、数据格式，集成成本极高。",
+            "<strong>Agent 需要「眼睛」看到互联网：</strong>Agent-Reach 提供统一的 CLI 接口，让 Agent 能像人一样浏览全网。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install agent-reach</code></pre>",
+            "搜索 Twitter：<pre><code>agent-reach twitter search 'AI agents'</code></pre>",
+            "读取 Reddit：<pre><code>agent-reach reddit hot r/MachineLearning</code></pre>"
+          ],
+          "insights": [
+            "<strong>第四次上榜 +2,150★ 属于现象级：</strong>Agent-Reach 连续多天在 AI 项目中排名前列，单日 +2,150★ 是最近一周的最高增速。",
+            "<strong>「Agent 上网」成为基础设施需求：</strong>Agent-Reach 正在成为 Agent 生态的「标准网络层」。",
+            "<strong>29.5K→31.6K 两天涨 2K★：</strong>这种增速说明 Agent-Reach 已经进入病毒式传播阶段。"
+          ],
+          "tags": [
+            "agent-tools",
+            "web-scraping",
+            "ai-agent",
+            "python",
+            "multi-platform"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "fullName": "rohitg00 / ai-engineering-from-scratch",
+          "org": "rohitg00",
+          "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "33,569",
+          "forks": "5,478",
+          "starsToday": "833",
+          "count": 3,
+          "description": "AI 工程从零到一 —— 今日 +833★，33.6K★！连续三天上榜，Learn→Build→Ship 的理念征服了开发者",
+          "problems": [
+            "<strong>AI 工程学习路径不清晰：</strong>市面上的 AI 资源要么太学术、要么太营销。",
+            "<strong>「学→做→交付」链条断裂：</strong>很多教程只教你调包，不教你如何构建、部署和维护 AI 系统。",
+            "<strong>缺少项目驱动的学习方式：</strong>这个项目以完整项目为主线，从零到一构建 AI 应用。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/rohitg00/ai-engineering-from-scratch</code></pre>",
+            "按章节顺序学习理论+代码+项目。",
+            "跟随教程构建并部署自己的 AI 应用。"
+          ],
+          "insights": [
+            "<strong>连续三天上榜说明刚需：</strong>ai-engineering-from-scratch 连续三天进入 Top 5，说明「AI 工程化」是开发者最迫切的需求。",
+            "<strong>33.6K★ 三天涨了近 3K★：</strong>增速非常稳定，说明口碑传播在持续发酵。",
+            "<strong>「Learn→Build→Ship」是成功公式：</strong>这个项目的核心理念击中了开发者的痛点——不止要学，更要能交付。"
+          ],
+          "tags": [
+            "ai-engineering",
+            "learning",
+            "tutorial",
+            "python",
+            "project-based"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "OpenBMB",
+          "name": "VoxCPM",
+          "fullName": "OpenBMB / VoxCPM",
+          "org": "清华 OpenBMB",
+          "url": "https://github.com/OpenBMB/VoxCPM",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "29,980",
+          "forks": "3,396",
+          "starsToday": "413",
+          "count": 3,
+          "description": "Tokenizer-Free TTS —— 今日 +413★，逼近 30K★！清华 OpenBMB 出品的多语言语音生成，支持创意声音设计和真人级声音克隆",
+          "problems": [
+            "<strong>传统 TTS 依赖 tokenizer：</strong>大多数 TTS 系统需要文本 tokenizer，限制了多语言和跨语言能力。",
+            "<strong>多语言语音合成效果不佳：</strong>现有方案在中文、英文混合时往往出现口音问题。",
+            "<strong>声音克隆需要大量数据：</strong>VoxCPM2 用更少的数据实现更真实的声音克隆。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/OpenBMB/VoxCPM</code></pre>",
+            "安装依赖并加载预训练模型。",
+            "使用 Python API 生成语音或克隆声音。"
+          ],
+          "insights": [
+            "<strong>清华 OpenBMB 持续产出高质量开源：</strong>从大模型到 TTS，OpenBMB 是中国最活跃的 AI 开源团队之一。",
+            "<strong>「Tokenizer-Free」是 TTS 的技术方向：</strong>去掉 tokenizer 让模型更灵活地处理多语言和特殊发音。",
+            "<strong>30K★ 的 TTS 项目不多见：</strong>VoxCPM 的社区认可度说明「AI 语音」是刚需赛道。"
+          ],
+          "tags": [
+            "tts",
+            "voice-cloning",
+            "openbmb",
+            "multilingual",
+            "python"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "datawhalechina",
+          "name": "hello-agents",
+          "fullName": "datawhalechina / hello-agents",
+          "org": "Datawhale",
+          "url": "https://github.com/datawhalechina/hello-agents",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "59,679",
+          "forks": "7,341",
+          "starsToday": "283",
+          "count": 2,
+          "description": "《从零开始构建智能体》 —— 今日 +283★，59.7K★！Datawhale 出品的中文 Agent 教程，从原理到实践的一站式指南",
+          "problems": [
+            "<strong>中文 Agent 学习资源匮乏：</strong>Agent 相关的优质中文教程太少，英文资料对中文开发者有门槛。",
+            "<strong>Agent 概念繁杂难理解：</strong>从 Agent 到 Multi-Agent、工具调用、记忆系统，初学者容易迷失。",
+            "<strong>缺少体系化的 Agent 教程：</strong>hello-agents 提供了从原理到实践的完整学习路径。"
+          ],
+          "usage": [
+            "在线阅读或克隆仓库。",
+            "按照章节顺序学习 Agent 原理和实现。",
+            "动手实践每个章节的代码示例。"
+          ],
+          "insights": [
+            "<strong>59.7K★ 说明中文 Agent 教育的巨大需求：</strong>Datawhale 作为中国最大的 AI 开源学习社区，其 Agent 教程的火爆反映了中文开发者的学习热潮。",
+            "<strong>Agent 知识正在「课程化」：</strong>从零散的文章到体系化的教程，Agent 教育进入了结构化阶段。",
+            "<strong>中文本地化是核心竞争力：</strong>跟英文教程相比，中文讲解+中文示例+中国案例让学习效率大幅提升。"
+          ],
+          "tags": [
+            "agent-tutorial",
+            "datawhale",
+            "chinese",
+            "ai-agent",
+            "education"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "andrewyng",
+          "name": "aisuite",
+          "fullName": "andrewyng / aisuite",
+          "org": "Andrew Ng",
+          "url": "https://github.com/andrewyng/aisuite",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "14,626",
+          "forks": "1,526",
+          "starsToday": "255",
+          "count": 3,
+          "description": "统一多 AI 提供商接口 —— 今日 +255★，连续三天上榜！Andrew Ng 出品，一个 API 调用所有主流模型",
+          "problems": [
+            "<strong>多模型切换成本高：</strong>每个 AI 提供商有自己的 API。aisuite 提供统一抽象层。",
+            "<strong>AI 供应商锁定风险：</strong>深度绑定一个提供商后迁移成本极高。",
+            "<strong>多模型测试比较繁琐：</strong>想对比不同模型的效果需要写多套调用代码。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install aisuite</code></pre>",
+            "调用：<pre><code>from aisuite import AI; client = AI(); response = client.chat('openai','gpt-4o', messages)</code></pre>",
+            "切换模型只需改名字：'anthropic/claude-sonnet-4', 'google/gemini-2.5-pro' 等。"
+          ],
+          "insights": [
+            "<strong>连续三天上榜说明 aisuite 踩中了刚需：</strong>在多模型时代，统一接口是每个开发者都需要的基础设施。",
+            "<strong>Andrew Ng 的品牌加持持续发力：</strong>14.6K★ 且每天 +250+，增长非常健康。",
+            "<strong>「轻量统一接口」打败了「重型框架」：</strong>对比 LangChain 等重型框架，aisuite 的简洁哲学更受开发者欢迎。"
+          ],
+          "tags": [
+            "ai-tools",
+            "multi-provider",
+            "andrew-ng",
+            "python",
+            "api"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-15",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -199,7 +391,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -391,7 +583,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -584,7 +776,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -777,7 +969,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -970,7 +1162,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "8天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1163,7 +1355,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1361,7 +1553,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "10天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1558,7 +1750,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "11天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1755,7 +1947,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "12天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -1952,7 +2144,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "14天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2150,7 +2342,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2345,7 +2537,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "16天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2540,7 +2732,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2736,7 +2928,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "19天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -2932,7 +3124,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -3126,7 +3318,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "21天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3324,7 +3516,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "23天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -3526,7 +3718,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "24天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -3728,7 +3920,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "25天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -3930,7 +4122,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -4132,7 +4324,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -4334,7 +4526,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "28天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -4536,7 +4728,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -4738,7 +4930,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "33天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -4938,7 +5130,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "34天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -5134,7 +5326,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "35天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
