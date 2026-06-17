@@ -1,10 +1,202 @@
 {
-  "lastUpdated": "2026-06-16",
-  "topic": "🔥 <strong>Agent 生态持续爆发：从全网浏览到 AI 工程化</strong> —— 今天的榜单是「Agent 生态」的全面展示。Agent-Reach（+2,150★）单日暴涨，第四次上榜，已经成为 Agent 基础设施的「标准网络层」。ai-engineering-from-scratch（+833★）连续三天上榜，33.6K★ 证明了「AI 工程化」教育的巨大需求。OpenBMB/VoxCPM（+413★）清华出品，Tokenizer-Free TTS 逼近 30K★。Datawhale/hello-agents（+283★）59.7K★ 的中文 Agent 教程反映了中国开发者的学习热情。Andrew Ng 的 aisuite（+255★）连续三天上榜，统一多模型接口成为开发者新标配。",
+  "lastUpdated": "2026-06-17",
+  "topic": "🔥 <strong>Anthropic 官方入局 + Agent 生态持续爆发</strong> —— 今天的榜单最大的新闻是 Anthropic 官方推出了 skills 仓库（+556★），标志着 Agent 技能从社区生态走向官方标准。Agent-Reach（+2,025★）第五次登榜，32.7K★ 的增长曲线令人惊叹。OpenBMB/VoxCPM（+460★）连续四天上榜突破 30K★。DeusData/codebase-memory-mcp（+367★）用 C 语言实现了极致的代码库记忆 MCP 服务器。PaddleOCR（+353★）55K★ 的 OCR 标杆项目再次上榜，证明了 AI 基础设施的持续需求。",
   "days": [
     {
-      "date": "2026-06-16",
+      "date": "2026-06-17",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "Panniantong",
+          "name": "Agent-Reach",
+          "fullName": "Panniantong / Agent-Reach",
+          "org": "Panniantong",
+          "url": "https://github.com/Panniantong/Agent-Reach",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "32,684",
+          "forks": "2,635",
+          "starsToday": "2,025",
+          "count": 5,
+          "description": "Agent 全网浏览器 —— 第五次上榜！今日 +2,025★，32.7K★。让 AI Agent 一键读取全网，持续爆发增长",
+          "problems": [
+            "<strong>Agent 无法访问实时网络：</strong>大多数 Agent 只能基于训练数据回答问题。",
+            "<strong>多平台数据获取成本高：</strong>每个平台有不同的 API 和反爬机制。",
+            "<strong>Agent 需要「眼睛」看到互联网：</strong>Agent-Reach 提供统一的 CLI 接口。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install agent-reach</code></pre>",
+            "搜索 Twitter：<pre><code>agent-reach twitter search 'AI agents'</code></pre>",
+            "读取 Reddit：<pre><code>agent-reach reddit hot r/MachineLearning</code></pre>"
+          ],
+          "insights": [
+            "<strong>第五次登榜，现象级项目：</strong>Agent-Reach 已经成为 Agent 基础设施的「标配」工具。",
+            "<strong>32.7K★ 一周内暴增：</strong>从 29K 到 32.7K 只用了一周，增长曲线极其陡峭。",
+            "<strong>Agent 上网是刚需中的刚需：</strong>每个 Agent 开发者都需要这个工具。"
+          ],
+          "tags": [
+            "agent-tools",
+            "web-scraping",
+            "ai-agent",
+            "python",
+            "multi-platform"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "anthropics",
+          "name": "skills",
+          "fullName": "anthropics / skills",
+          "org": "Anthropic",
+          "url": "https://github.com/anthropics/skills",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "5,500",
+          "forks": "800",
+          "starsToday": "556",
+          "count": 1,
+          "description": "Anthropic 官方 Agent 技能库 —— 今日 +556★！Anthropic 官方出品的 Agent 技能集合，定义 Agent 技能标准",
+          "problems": [
+            "<strong>Agent 技能缺少官方标准：</strong>社区技能质量参差不齐，缺少权威来源。",
+            "<strong>Anthropic 官方出手定义技能生态：</strong>作为 Claude 的创造者，Anthropic 的技能库是最权威的参考。",
+            "<strong>技能没有统一格式和规范：</strong>anthropics/skills 给出了官方的最佳实践和模板。"
+          ],
+          "usage": [
+            "克隆仓库查看技能示例。",
+            "参考官方技能格式创建自己的技能。",
+            "加载到 Claude Code 中使用。"
+          ],
+          "insights": [
+            "<strong>Anthropic 官方入局技能生态：</strong>继 addyosmani/agent-skills 社区爆火后，Anthropic 官方也推出了技能库，说明 Agent 技能是战略级赛道。",
+            "<strong>官方背书将加速企业采用：</strong>企业更愿意使用官方来源的技能，而不是社区技能。",
+            "<strong>「技能标准」将成为 Agent 平台的核心竞争力：</strong>谁制定了技能标准，谁就掌握了 Agent 生态。"
+          ],
+          "tags": [
+            "agent-skills",
+            "anthropic",
+            "official",
+            "python",
+            "standards"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "OpenBMB",
+          "name": "VoxCPM",
+          "fullName": "OpenBMB / VoxCPM",
+          "org": "清华 OpenBMB",
+          "url": "https://github.com/OpenBMB/VoxCPM",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "30,440",
+          "forks": "3,450",
+          "starsToday": "460",
+          "count": 4,
+          "description": "Tokenizer-Free TTS —— 今日 +460★，突破 30K★！清华 OpenBMB 多语言语音生成，连续四天上榜",
+          "problems": [
+            "<strong>传统 TTS 依赖 tokenizer：</strong>限制多语言和跨语言能力。",
+            "<strong>多语言语音合成效果不佳：</strong>中英文混合时往往出现口音问题。",
+            "<strong>声音克隆需要大量数据：</strong>VoxCPM2 用更少的数据实现更真实的声音克隆。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/OpenBMB/VoxCPM</code></pre>",
+            "安装依赖并加载预训练模型。",
+            "使用 Python API 生成语音或克隆声音。"
+          ],
+          "insights": [
+            "<strong>连续四天上榜，30K★里程碑：</strong>VoxCPM 是近期最稳定的 AI 项目之一。",
+            "<strong>清华 OpenBMB 的品牌力：</strong>作为中国顶级 AI 开源团队，OpenBMB 持续产出高质量项目。",
+            "<strong>Tokenizer-Free 是 TTS 的技术趋势：</strong>这个技术方向正在被越来越多的团队采纳。"
+          ],
+          "tags": [
+            "tts",
+            "voice-cloning",
+            "openbmb",
+            "multilingual",
+            "python"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "DeusData",
+          "name": "codebase-memory-mcp",
+          "fullName": "DeusData / codebase-memory-mcp",
+          "org": "DeusData",
+          "url": "https://github.com/DeusData/codebase-memory-mcp",
+          "lang": "C",
+          "langClass": "c",
+          "stars": "4,293",
+          "forks": "430",
+          "starsToday": "367",
+          "count": 1,
+          "description": "高性能代码库记忆 MCP 服务器 —— 今日 +367★！用 C 语言实现，零依赖，为 AI Agent 提供持久化代码库记忆",
+          "problems": [
+            "<strong>AI Agent 记不住代码库：</strong>每次对话 Agent 都需要重新理解代码结构，效率低下。",
+            "<strong>现有方案太重：</strong>向量数据库方案需要庞大基础设施。codebase-memory-mcp 只有 158 种语言支持，零依赖。",
+            "<strong>MCP 生态需要基础设施工具：</strong>这个项目填补了 MCP 生态中「代码库记忆」的空白。"
+          ],
+          "usage": [
+            "安装 MCP 服务器。",
+            "配置到你的 Agent 框架中。",
+            "Agent 自动索引代码库并提供持久化记忆。"
+          ],
+          "insights": [
+            "<strong>用 C 语言写 MCP 服务器是差异化：</strong>在 Python/JS 主导的 MCP 生态中，C 语言实现意味着极致性能。",
+            "<strong>「代码库记忆」是 Agent 的核心痛点：</strong>codebase-memory-mcp 的崛起说明开发者迫切需要 Agent 记住代码库的工具。",
+            "<strong>零依赖设计吸引开发者：</strong>158 种语言支持 + 零依赖 = 即插即用。"
+          ],
+          "tags": [
+            "mcp",
+            "code-intelligence",
+            "memory",
+            "c",
+            "agent-tools"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "PaddlePaddle",
+          "name": "PaddleOCR",
+          "fullName": "PaddlePaddle / PaddleOCR",
+          "org": "百度 PaddlePaddle",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "55,000",
+          "forks": "10,000",
+          "starsToday": "353",
+          "count": 2,
+          "description": "百度 PaddleOCR —— 今日 +353★，55K★！OCR 领域的标杆项目，支持 80+ 语言的文字识别",
+          "problems": [
+            "<strong>OCR 工具碎片化：</strong>没有一个统一的 OCR 方案能同时处理多语言、多场景。",
+            "<strong>中文 OCR 尤其困难：</strong>PaddleOCR 对中文的识别效果是目前开源方案中最好的。",
+            "<strong>端侧部署需要轻量 OCR：</strong>PaddleOCR 提供轻量模型，适合移动端和边缘设备。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install paddleocr</code></pre>",
+            "快速识别：<pre><code>paddleocr --image demo.jpg</code></pre>",
+            "支持多种语言和场景的定制化训练。"
+          ],
+          "insights": [
+            "<strong>OCR 是 AI 基础设施的刚需：</strong>PaddleOCR 再次上榜说明文字识别是 AI 应用中不可或缺的基础能力。",
+            "<strong>百度开源的品牌效应：</strong>PaddleOCR 是百度 PaddlePaddle 生态中最成功的开源项目之一。",
+            "<strong>中文 OCR 赛道 PaddleOCR 仍是王者：</strong>在中文 OCR 领域，PaddleOCR 的开源方案仍然是最优选择。"
+          ],
+          "tags": [
+            "ocr",
+            "paddlepaddle",
+            "baidu",
+            "python",
+            "computer-vision"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -196,7 +388,7 @@
     },
     {
       "date": "2026-06-15",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -388,7 +580,7 @@
     },
     {
       "date": "2026-06-14",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -580,7 +772,7 @@
     },
     {
       "date": "2026-06-12",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -773,7 +965,7 @@
     },
     {
       "date": "2026-06-11",
-      "label": "8天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -966,7 +1158,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1159,7 +1351,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "10天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1352,7 +1544,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "11天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1550,7 +1742,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "12天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -1747,7 +1939,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1944,7 +2136,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "14天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -2141,7 +2333,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "16天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2339,7 +2531,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2534,7 +2726,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "18天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -2729,7 +2921,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "19天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -2925,7 +3117,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "21天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3121,7 +3313,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "22天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -3315,7 +3507,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "23天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -3513,7 +3705,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "25天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -3715,7 +3907,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -3917,7 +4109,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -4119,7 +4311,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "28天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -4321,7 +4513,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -4523,7 +4715,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "30天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -4725,7 +4917,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "31天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -4927,7 +5119,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "35天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -5127,7 +5319,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "36天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -5323,7 +5515,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "37天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
