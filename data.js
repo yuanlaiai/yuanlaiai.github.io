@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-06-17",
-  "topic": "🔥 <strong>Anthropic 官方入局 + Agent 生态持续爆发</strong> —— 今天的榜单最大的新闻是 Anthropic 官方推出了 skills 仓库（+556★），标志着 Agent 技能从社区生态走向官方标准。Agent-Reach（+2,025★）第五次登榜，32.7K★ 的增长曲线令人惊叹。OpenBMB/VoxCPM（+460★）连续四天上榜突破 30K★。DeusData/codebase-memory-mcp（+367★）用 C 语言实现了极致的代码库记忆 MCP 服务器。PaddleOCR（+353★）55K★ 的 OCR 标杆项目再次上榜，证明了 AI 基础设施的持续需求。",
+  "lastUpdated": "2026-06-19",
+  "topic": "🔥 <strong>MCP 生态爆发 + Anthropic 行业布局</strong> —— 今天的榜单是「MCP 生态」和「行业 Agent 技能」的双主线。DeusData/codebase-memory-mcp（+2,322★）用 C 语言实现的 MCP 服务器连续两天霸榜，增速翻倍。obra/superpowers（+1,429★）230K★ 第九次上榜，Agent 技能框架的中流砥柱。Google Research 的 timesfm（+844★）将「基础模型」范式延伸到时序预测领域。Anthropic 推出的 financial-services（+481★）是官方第二个技能集，标志着 Agent 技能从通用走向行业垂直化。OpenMontage（+738★）展示了 AI 视频生成赛道的持续升温。",
   "days": [
     {
-      "date": "2026-06-17",
+      "date": "2026-06-19",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "DeusData",
+          "name": "codebase-memory-mcp",
+          "fullName": "DeusData / codebase-memory-mcp",
+          "org": "DeusData",
+          "url": "https://github.com/DeusData/codebase-memory-mcp",
+          "lang": "C",
+          "langClass": "c",
+          "stars": "6,615",
+          "forks": "650",
+          "starsToday": "2,322",
+          "count": 2,
+          "description": "高性能代码库记忆 MCP 服务器 —— 今日暴增 +2,322★！用 C 语言实现，零依赖，为 AI Agent 提供持久化代码库记忆",
+          "problems": [
+            "<strong>AI Agent 记不住代码库：</strong>每次对话 Agent 都需要重新理解代码结构。",
+            "<strong>现有方案太重：</strong>向量数据库方案需要庞大基础设施。codebase-memory-mcp 零依赖。",
+            "<strong>MCP 生态需要基础设施工具：</strong>这个项目填补了 MCP 生态中「代码库记忆」的空白。"
+          ],
+          "usage": [
+            "安装 MCP 服务器并配置到 Agent 框架中。",
+            "Agent 自动索引代码库。",
+            "提供持久化记忆查询。"
+          ],
+          "insights": [
+            "<strong>连续两天登顶，增速翻倍：</strong>昨天 +367，今天 +2,322——爆发式增长。",
+            "<strong>C 语言 MCP 服务器的稀缺性：</strong>在 Python/JS 主导的 MCP 生态中，C 语言实现意味着极致性能和零依赖。",
+            "<strong>「代码库记忆」是所有 Agent 的刚需：</strong>每个使用 AI 编程的开发者都需要 Agent 记住代码库。"
+          ],
+          "tags": [
+            "mcp",
+            "code-intelligence",
+            "memory",
+            "c",
+            "agent-tools"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "obra",
+          "name": "superpowers",
+          "fullName": "obra / superpowers",
+          "org": "Obra",
+          "url": "https://github.com/obra/superpowers",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "230,655",
+          "forks": "12,000",
+          "starsToday": "1,429",
+          "count": 9,
+          "description": "Agent 技能框架与方法论 —— 今日 +1,429★，突破 230K★！最成熟的 Agent 技能开发框架",
+          "problems": [
+            "<strong>Agent 技能开发缺少方法论：</strong>Superpowers 提供完整的技能开发框架。",
+            "<strong>社区技能质量参差不齐：</strong>Superpowers 定义了技能开发的「正确方式」。",
+            "<strong>Agent 技能生态需要基础设施：</strong>作为技能框架，Superpowers 是 Agent 生态的基石。"
+          ],
+          "usage": [
+            "克隆仓库学习技能开发方法论。",
+            "使用框架快速创建 Agent 技能。",
+            "参考最佳实践提升技能质量。"
+          ],
+          "insights": [
+            "<strong>第九次上榜，Agent 技能框架中的「常青树」：</strong>Superpowers 是少数能持续霸榜的 Agent 基础设施项目。",
+            "<strong>230K★ 证明方法论的价值：</strong>开发者不仅需要工具，更需要「如何做好 Agent」的方法论。",
+            "<strong>从工具到框架的进化：</strong>Agent 生态正在从单个工具走向完整的开发框架。"
+          ],
+          "tags": [
+            "agent-skills",
+            "framework",
+            "methodology",
+            "shell",
+            "agent-ecosystem"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "google-research",
+          "name": "timesfm",
+          "fullName": "google-research / timesfm",
+          "org": "Google Research",
+          "url": "https://github.com/google-research/timesfm",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "22,378",
+          "forks": "2,200",
+          "starsToday": "844",
+          "count": 1,
+          "description": "Google 时序基础模型 —— 今日 +844★！TimesFM 是 Google Research 出品的时间序列预测基础模型，21K+★",
+          "problems": [
+            "<strong>时间序列预测缺少通用模型：</strong>传统方法需要大量特征工程和模型调参。",
+            "<strong>不同场景需要不同的时序模型：</strong>TimesFM 作为预训练基础模型，可以适配多种时序任务。",
+            "<strong>Google Research 的背书：</strong>TimesFM 代表了时序预测领域最前沿的研究成果。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install timesfm</code></pre>",
+            "加载预训练模型进行时序预测。",
+            "支持金融、天气、流量等多种场景。"
+          ],
+          "insights": [
+            "<strong>Google Research 开源时序基础模型：</strong>TimesFM 是 Google 在时序领域的重磅开源项目。",
+            "<strong>「基础模型」范式延伸到时序领域：</strong>像 LLM 一样，时序预测也在从专用模型走向通用基础模型。",
+            "<strong>金融预测是最大的应用场景：</strong>TimesFM 在量化交易和金融预测中有巨大的应用潜力。"
+          ],
+          "tags": [
+            "time-series",
+            "google",
+            "foundation-model",
+            "python",
+            "forecasting"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "calesthio",
+          "name": "OpenMontage",
+          "fullName": "calesthio / OpenMontage",
+          "org": "calesthio",
+          "url": "https://github.com/calesthio/OpenMontage",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "5,707",
+          "forks": "1,000",
+          "starsToday": "738",
+          "count": 2,
+          "description": "开源蒙太奇 AI 生成平台 —— 今日 +738★！AI 视频/图像合成与编辑平台",
+          "problems": [
+            "<strong>AI 视频编辑工具碎片化：</strong>没有一个统一的平台能完成从生成到编辑的完整流程。",
+            "<strong>开源视频 AI 方案少：</strong>大多数 AI 视频工具是闭源的。",
+            "<strong>需要强大的 AI 合成与编辑能力：</strong>OpenMontage 提供开源的 AI 视频/图像合成方案。"
+          ],
+          "usage": [
+            "克隆仓库部署。",
+            "使用 API 进行 AI 视频/图像合成。",
+            "支持自定义工作流。"
+          ],
+          "insights": [
+            "<strong>AI 视频赛道持续升温：</strong>从 Sora 到 OpenMontage，AI 视频生成是 2026 年最热门的 AI 应用方向之一。",
+            "<strong>开源方案对抗闭源巨头：</strong>OpenMontage 作为开源方案，是 Sora、Runway 等闭源产品的有力竞争者。",
+            "<strong>「蒙太奇」概念新颖：</strong>把 AI 视频生成比作电影蒙太奇，降低了用户的理解门槛。"
+          ],
+          "tags": [
+            "ai-video",
+            "image-generation",
+            "open-source",
+            "python",
+            "creative"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "anthropics",
+          "name": "financial-services",
+          "fullName": "anthropics / financial-services",
+          "org": "Anthropic",
+          "url": "https://github.com/anthropics/financial-services",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "2,000",
+          "forks": "200",
+          "starsToday": "481",
+          "count": 1,
+          "description": "Anthropic 官方金融 Agent 技能集 —— 今日 +481★！AI 驱动的金融服务 Agent 技能，覆盖风控、合规、投研等场景",
+          "problems": [
+            "<strong>金融行业 AI 落地门槛高：</strong>合规、风控、数据隐私等要求让金融 AI 开发复杂。",
+            "<strong>缺少金融专用的 Agent 技能：</strong>通用 Agent 技能无法满足金融行业的特殊需求。",
+            "<strong>Anthropic 官方入局金融 AI：</strong>推出官方金融技能集，降低金融 AI 开发门槛。"
+          ],
+          "usage": [
+            "克隆仓库查看金融技能示例。",
+            "加载到 Claude Code 中使用。",
+            "根据需求定制化金融 Agent。"
+          ],
+          "insights": [
+            "<strong>Anthropic 连续推出官方技能仓库：</strong>继 skills 后，financial-services 是 Anthropic 第二个官方技能集——说明 Anthropic 在加速布局行业 Agent 技能生态。",
+            "<strong>金融是 AI Agent 最大的企业市场：</strong>Anthropic 选择金融作为第一个行业技能集，说明金融是 AI Agent 商业化的首选赛道。",
+            "<strong>行业技能将成为 Agent 生态的下一个爆发点：</strong>从通用技能到行业技能，Agent 正在走向垂直化。"
+          ],
+          "tags": [
+            "agent-skills",
+            "anthropic",
+            "finance",
+            "python",
+            "enterprise"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -199,7 +391,7 @@ var siteData = {
     },
     {
       "date": "2026-06-16",
-      "label": "昨天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -391,7 +583,7 @@ var siteData = {
     },
     {
       "date": "2026-06-15",
-      "label": "前天",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -583,7 +775,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "4天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -775,7 +967,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "8天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -968,7 +1160,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "10天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1161,7 +1353,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "11天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -1354,7 +1546,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "12天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1547,7 +1739,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "13天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -1745,7 +1937,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "14天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -1942,7 +2134,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "15天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2139,7 +2331,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "16天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2336,7 +2528,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "18天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -2534,7 +2726,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "19天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2729,7 +2921,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "20天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -2924,7 +3116,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "21天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -3120,7 +3312,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "23天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -3316,7 +3508,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "24天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -3510,7 +3702,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "25天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -3708,7 +3900,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "27天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -3910,7 +4102,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "28天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -4112,7 +4304,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "29天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -4314,7 +4506,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "30天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -4516,7 +4708,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "31天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -4718,7 +4910,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "32天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -4920,7 +5112,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "33天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -5122,7 +5314,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "37天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -5322,7 +5514,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "38天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -5518,7 +5710,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "39天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
