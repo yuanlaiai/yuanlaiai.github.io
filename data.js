@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-06-20",
-  "topic": "🔥 <strong>Token 经济学 + MCP 生态持续爆发</strong> —— headroom（+4,005★）以单日 4K★ 的惊人成绩登顶，60-95% Token 压缩直接命中了 LLM 应用的成本痛点。timesfm（+1,510★）Google 时序模型连续两天走高，superpowers（+1,110★）第十次上榜 231K★ 堪称 Agent 技能框架的丰碑。codebase-memory-mcp（+1,058★）连续三天上榜，C 语言 MCP 服务器持续吸引开发者。智谱 GLM-5（+480★）的开源标志着国产大模型的最新进展。",
+  "lastUpdated": "2026-06-21",
+  "topic": "🔥 <strong>Agent 视频 + 技能 + Token 压缩三线并行</strong> —— headroom（+2,617★）第五次登顶，Token 压缩已成 LLM 基础设施标配。mattpocock/skills（+1,441★）以 138K★ 回归，Agent 技能框架的持久热度不减。codebase-memory-mcp（+1,029★）连续第四天上榜，C 语言 MCP 服务器坚定不移。OpenMontage（+993★）全球首个开源 Agentic 视频制作系统，标志着 AI 从文本走向多模态创作。deer-flow（+415★）字节跳动 SuperAgent 框架亮相，Agent 编排 Agent 的新范式正在成型。",
   "days": [
     {
-      "date": "2026-06-20",
+      "date": "2026-06-21",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "chopratejas",
+          "name": "headroom",
+          "fullName": "chopratejas / headroom",
+          "org": "chopratejas",
+          "url": "https://github.com/chopratejas/headroom",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "42,900",
+          "forks": "2,961",
+          "starsToday": "2,617",
+          "count": 5,
+          "description": "🔥 Token 压缩引擎持续爆火 —— 今日 +2,617★，42.9K★！第五次登顶榜单，Library/Proxy/MCP Server 三合一，压缩 60-95% token",
+          "problems": [
+            "<strong>LLM 上下文窗口有限：</strong>工具输出、日志、文件占用大量 token，推高成本和延迟。",
+            "<strong>RAG 块过大：</strong>检索到的文档片段太大，浪费宝贵的上下文空间。",
+            "<strong>连续第五次上榜证明刚需：</strong>headroom 解决了每个 LLM 用户都在面对的实际成本问题。"
+          ],
+          "usage": [
+            "作为 Python 库集成：<pre><code>pip install headroom</code></pre>",
+            "作为代理运行，自动压缩所有 LLM 输入。",
+            "作为 MCP 服务器配置到 Agent 框架。"
+          ],
+          "insights": [
+            "<strong>第五次登顶不可忽视的信号：</strong>Token 压缩已经从「锦上添花」变为「基础设施」。",
+            "<strong>+2,617★ 虽然低于昨日的 4K，但持续高位：</strong>说明用户到手即用，没有退坑。",
+            "<strong>MCP Server 集成是下一阶段的竞争力：</strong>当每个 Agent 框架都内嵌 headroom 时，它将成为 LLM 时代的 gzip。"
+          ],
+          "tags": [
+            "token-compression",
+            "llm",
+            "optimization",
+            "python",
+            "mcp"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "mattpocock",
+          "name": "skills",
+          "fullName": "mattpocock / skills",
+          "org": "mattpocock",
+          "url": "https://github.com/mattpocock/skills",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "138,931",
+          "forks": "12,054",
+          "starsToday": "1,441",
+          "count": 2,
+          "description": "Agent 技能框架之王 —— 今日 +1,441★，138K★！来自知名 TypeScript 教育者的实战技能库，覆盖前端/后端/工程化，直接用于 Claude Code、Copilot、Cursor",
+          "problems": [
+            "<strong>Agent 不知道如何高效工作：</strong>每个 AI IDE（Claude Code、Copilot、Cursor）都需要特定的技能引导。",
+            "<strong>从零开始写技能文件成本高：</strong>mattpocock/skills 提供即拿即用的高质量技能，覆盖工程实战场景。",
+            "<strong>不同 Agent 生态的兼容性：</strong>一套技能适配 Claude Code、GitHub Copilot、Cursor 等多个平台。"
+          ],
+          "usage": [
+            "克隆技能库：<pre><code>git clone https://github.com/mattpocock/skills</code></pre>",
+            "复制需要的技能到项目：<pre><code>cp skills/typescript.md .claude/skills/</code></pre>",
+            "Agent 自动加载 .claude/skills/ 下的所有技能作为上下文。"
+          ],
+          "insights": [
+            "<strong>138K★ 说明「Agent 技能化」不是伪需求：</strong>当全球开发者都开始为 AI 助手写技能，这个赛道才刚刚开始。",
+            "<strong>mattpocock 的个人品牌效应：</strong>从 TypeScript 教育到 AI 技能框架，头部开发者正在定义 Agent 编程范式。",
+            "<strong>「技能即代码」趋势：</strong>技能文件从简单提示词进化到结构化工程实践，skill-as-code 正在成为新常态。"
+          ],
+          "tags": [
+            "agent-skills",
+            "claude-code",
+            "copilot",
+            "cursor",
+            "development"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "DeusData",
+          "name": "codebase-memory-mcp",
+          "fullName": "DeusData / codebase-memory-mcp",
+          "org": "DeusData",
+          "url": "https://github.com/DeusData/codebase-memory-mcp",
+          "lang": "C",
+          "langClass": "c",
+          "stars": "9,817",
+          "forks": "746",
+          "starsToday": "1,029",
+          "count": 4,
+          "description": "代码智能 MCP 服务器 —— 今日 +1,029★！158 种语言、毫秒级查询、99% 省 token。单静态二进制零依赖，连续第四次上榜",
+          "problems": [
+            "<strong>AI Agent 记不住代码库：</strong>每次对话 Agent 都需要重新理解代码结构，效率低下。",
+            "<strong>现有方案太重：</strong>向量数据库方案需要庞大基础设施。codebase-memory-mcp 零依赖。",
+            "<strong>第四次上榜见证 MCP 生态加速度：</strong>从代码记忆到代码智能，MCP 正在成为 Agent 的标准接口。"
+          ],
+          "usage": [
+            "下载二进制：<pre><code>curl -O https://github.com/DeusData/codebase-memory-mcp/releases/latest/codebase-memory</code></pre>",
+            "运行服务器：<pre><code>./codebase-memory --repo-path /path/to/repo</code></pre>",
+            "在 MCP 客户端配置中连接该服务器即可使用。"
+          ],
+          "insights": [
+            "<strong>C 语言 MCP 服务器的差异化：</strong>在 Python/JS 主导的 MCP 生态中，C 语言实现意味着极致性能和零依赖。",
+            "<strong>连续四天前五说明粘性：</strong>用户不是尝鲜，而是真正在日常工作流中依赖它。",
+            "<strong>「代码库记忆」是 Agent 工程师的刚需：</strong>从 codebase-memory-mcp 的持续火热看，Agent 编码工作流正在替代传统 IDE。"
+          ],
+          "tags": [
+            "mcp",
+            "code-intelligence",
+            "agent-tools",
+            "c-language",
+            "codebase"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "calesthio",
+          "name": "OpenMontage",
+          "fullName": "calesthio / OpenMontage",
+          "org": "calesthio",
+          "url": "https://github.com/calesthio/OpenMontage",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "7,593",
+          "forks": "1,204",
+          "starsToday": "993",
+          "count": 3,
+          "description": "全球首个开源 Agentic 视频制作系统 —— 今日 +993★！12 条管线、52 个工具、500+ Agent 技能。把你的 AI 编码助手变成视频制作工作室",
+          "problems": [
+            "<strong>AI 视频制作工具极度碎片化：</strong>生成、编辑、配音、字幕分布在不同的工具中，没有统一工作流。",
+            "<strong>视频制作对 AI Agent 来说太复杂：</strong>需要编排多个 AI 模型协调工作，OpenMontage 用 12 条管线解决。",
+            "<strong>开源方案缺失：</strong>大多数 AI 视频工具是闭源的，OpenMontage 提供了完整的开源替代方案。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/calesthio/OpenMontage</code></pre>",
+            "配置 Agent 连接（Claude Code / Copilot / Cursor 均可）。",
+            "使用 CLI 或 API 触发视频管线：<pre><code>montage create --pipeline script-to-video</code></pre>"
+          ],
+          "insights": [
+            "<strong>「Agentic Video」是新范式：</strong>OpenMontage 不是又一个视频编辑软件，而是让 Agent 替你完成从脚本到成片的全部流程。",
+            "<strong>500+ Agent 技能是壁垒：</strong>从 TTS 到视频合成，每个技能都连接一个 AI 模型，组合成完整影视制作管线。",
+            "<strong>AI 编码助手变身视频工作室：</strong>这条路径表明 Agent 正在从「写代码」扩展到「做创意」，多模态 Agent 是下一站。"
+          ],
+          "tags": [
+            "ai-video",
+            "agentic",
+            "open-source",
+            "python",
+            "multimodal"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "bytedance",
+          "name": "deer-flow",
+          "fullName": "bytedance / deer-flow",
+          "org": "字节跳动",
+          "url": "https://github.com/bytedance/deer-flow",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "72,241",
+          "forks": "9,796",
+          "starsToday": "415",
+          "count": 1,
+          "description": "字节跳动开源 SuperAgent 框架 —— 今日 +415★，72.2K★！长时任务编排引擎，支持研究、编码、创作全流程。沙箱+记忆+工具+子 Agent+消息网关",
+          "problems": [
+            "<strong>复杂任务需要长时编排：</strong>从研究到编码到创作，单个 Agent 无法独立完成跨多小时的复杂任务链。",
+            "<strong>现有 Agent 框架缺少沙箱隔离：</strong>deer-flow 内置沙箱确保子 Agent 执行的安全性。",
+            "<strong>缺少企业级的 Agent 治理：</strong>记忆持久化、工具管理、子 Agent 编排需要统一框架。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install deer-flow</code></pre>",
+            "启动服务工作流：<pre><code>deer-flow run --task \"research and build\"</code></pre>",
+            "通过消息网关与外部系统集成。"
+          ],
+          "insights": [
+            "<strong>字节跳动释放重磅开源：</strong>72K★ 说明 deer-flow 是经过字节内部验证的成熟框架，不是实验性项目。",
+            "<strong>SuperAgent 概念登场：</strong>deer-flow 代表的「Agent 编排 Agent」架构，是通往 AI 大规模自动化的关键一步。",
+            "<strong>沙箱+记忆+工具的完整体系：</strong>开源实现了一套对标企业级需求的 Agent 基础设施，开发者可以在此基础上构建。"
+          ],
+          "tags": [
+            "agent-framework",
+            "bytedance",
+            "superagent",
+            "python",
+            "orchestration"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-20",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -198,7 +390,7 @@ var siteData = {
     },
     {
       "date": "2026-06-19",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -390,7 +582,7 @@ var siteData = {
     },
     {
       "date": "2026-06-17",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -582,7 +774,7 @@ var siteData = {
     },
     {
       "date": "2026-06-16",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -774,7 +966,7 @@ var siteData = {
     },
     {
       "date": "2026-06-15",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -966,7 +1158,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1158,7 +1350,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1351,7 +1543,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -1544,7 +1736,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "16天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -1737,7 +1929,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -1930,7 +2122,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "18天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -2128,7 +2320,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "19天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -2325,7 +2517,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2522,7 +2714,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "21天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -2719,7 +2911,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "23天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -2917,7 +3109,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "24天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -3112,7 +3304,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "25天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -3307,7 +3499,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -3503,7 +3695,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "28天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -3699,7 +3891,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -3893,7 +4085,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "30天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -4091,7 +4283,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "32天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -4293,7 +4485,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "33天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -4495,7 +4687,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "34天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -4697,7 +4889,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "35天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -4899,7 +5091,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "36天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -5101,7 +5293,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "37天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -5303,7 +5495,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "38天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -5505,7 +5697,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "42天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -5705,7 +5897,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "43天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -5901,7 +6093,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "44天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
