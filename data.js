@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-06-22",
-  "topic": "🔥 <strong>AI 视频爆发 + Agent 技能持续升温</strong> —— OpenMontage（+2,935★）以单日近 3K★ 的恐怖速度登顶，连续两天翻倍增长，Agentic 视频制作正在成为今年的 AI 爆款场景。mattpocock/skills（+2,051★）第三天高居前二，141K★ 印证技能框架的不可逆趋势。daily_stock_analysis（+1,560★）LLM 炒股系统首次上榜即冲击前三，AI+金融是普通人最关心的应用方向。codebase-memory-mcp（+1,186★）第五次上榜，MCP 基础设施层的护城河正在形成。deer-flow（+736★）字节跳动 SuperAgent 第二天吸引企业开发者目光。",
+  "lastUpdated": "2026-06-23",
+  "topic": "🔥 <strong>AI 视频三连冠 + 开源语音 AI 爆发</strong> —— OpenMontage（+3,590★）连续三天登顶且持续加速，单日 3.5K★ 宣告 Agentic 视频制作成为 2026 最大 AI 应用赛道。codebase-memory-mcp（+1,299★）第六天上榜创下榜单最长连续记录。voicebox（+1,042★）开源 AI 语音工作室首次上榜，ElevenLabs 的开源替代正在崛起。daily_stock_analysis（+1,121★）连续两天走高，AI+金融热度不减。gstack（+1,012★）YC CEO 亲自调教的 Claude Code 工具箱，Agent 角色化工具的新范式。",
   "days": [
     {
-      "date": "2026-06-22",
+      "date": "2026-06-23",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "calesthio",
+          "name": "OpenMontage",
+          "fullName": "calesthio / OpenMontage",
+          "org": "calesthio",
+          "url": "https://github.com/calesthio/OpenMontage",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "14,555",
+          "forks": "1,753",
+          "starsToday": "3,590",
+          "count": 5,
+          "description": "🔥 Agentic 视频制作三连冠 —— 今日 +3,590★，14.6K★！连续三天霸榜，从 +993→+2,935→+3,590 持续加速，全球首个开源 Agent 视频制作系统",
+          "problems": [
+            "<strong>AI 视频制作零散不成体系：</strong>生成、编辑、配音、字幕分布在多个工具，没有统一工作流。",
+            "<strong>视频管线需要编排大量 AI 模型：</strong>OpenMontage 用 12 条预设管线解决模型协调问题。",
+            "<strong>连续三天加速增长是强烈的市场信号：</strong>Agentic 视频制作正在从尝鲜走向主流。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/calesthio/OpenMontage</code></pre>",
+            "配置 Agent 连接（Claude Code / Copilot / Cursor）。",
+            "触发视频管线：<pre><code>montage create --pipeline script-to-video</code></pre>"
+          ],
+          "insights": [
+            "<strong>连续三天霸榜且加速增长：</strong>+993→+2,935→+3,590，单日 3.5K★ 的数据说明这不是一时热度。",
+            "<strong>AI 视频正在成为 2026 年最大的 AI 应用赛道：</strong>从 Sora 到 OpenMontage，从闭源到开源，视频生成赛道的热度空前。",
+            "<strong>「写提示词 = 拍电影」的时代来了：</strong>Agentic 视频制作让没有专业技能的普通人也能创作视频内容。"
+          ],
+          "tags": [
+            "ai-video",
+            "agentic",
+            "open-source",
+            "python",
+            "multimodal"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "DeusData",
+          "name": "codebase-memory-mcp",
+          "fullName": "DeusData / codebase-memory-mcp",
+          "org": "DeusData",
+          "url": "https://github.com/DeusData/codebase-memory-mcp",
+          "lang": "C",
+          "langClass": "c",
+          "stars": "12,483",
+          "forks": "911",
+          "starsToday": "1,299",
+          "count": 6,
+          "description": "第六日连冠！代码智能 MCP 服务器 —— +1,299★，12.5K★。158 语言毫秒级查询，99% 省 token，零依赖单二进制",
+          "problems": [
+            "<strong>Agent 记不住代码库结构：</strong>每次对话都需要重新理解代码，效率极低。",
+            "<strong>向量数据库方案太重：</strong>codebase-memory-mcp 零依赖，单二进制搞定。",
+            "<strong>连续六天前五名说明已成基础设施：</strong>这不再是新玩具，而是 Agent 编码工作流的标配。"
+          ],
+          "usage": [
+            "下载二进制：<pre><code>curl -O https://github.com/DeusData/codebase-memory-mcp/releases/latest/codebase-memory</code></pre>",
+            "运行服务器：<pre><code>./codebase-memory --repo-path /path/to/repo</code></pre>",
+            "在 MCP 客户端配置中连接服务器即可使用。"
+          ],
+          "insights": [
+            "<strong>连续六天上榜，count=6 是榜单最长的连续记录：</strong>说明 codebase-memory-mcp 已经跨越了尝鲜期，进入了开发者日常工作流。",
+            "<strong>C 语言实现是性能护城河：</strong>在 Python/JS 主导的 MCP 生态中，C 语言极致性能是核心优势。",
+            "<strong>MCP 生态正在固化：</strong>代码记忆、代码搜索、代码生成三件套正在成为 Agent 开发的标准工具栈。"
+          ],
+          "tags": [
+            "mcp",
+            "code-intelligence",
+            "agent-tools",
+            "c-language",
+            "codebase"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "jamiepine",
+          "name": "voicebox",
+          "fullName": "jamiepine / voicebox",
+          "org": "jamiepine",
+          "url": "https://github.com/jamiepine/voicebox",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "32,931",
+          "forks": "3,978",
+          "starsToday": "1,042",
+          "count": 1,
+          "description": "开源 AI 语音工作室 —— 今日 +1,042★，32.9K★！克隆、听写、创作三合一。TypeScript 全栈，开源替代 ElevenLabs",
+          "problems": [
+            "<strong>语音 AI 工具被闭源巨头把持：</strong>ElevenLabs、Murf 等语音平台都是闭源的，价格昂贵。",
+            "<strong>语音克隆、听写、生成需要统一平台：</strong>voicebox 三合一，一个工具搞定语音全流程。",
+            "<strong>开发者和内容创作者需要开源方案：</strong>32K★ 说明社区对开源语音 AI 的渴求。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/jamiepine/voicebox</code></pre>",
+            "启动本地服务：<pre><code>npm install && npm run dev</code></pre>",
+            "通过 Web UI 进行语音克隆、听写或生成。"
+          ],
+          "insights": [
+            "<strong>开源语音 AI 赛道正在升温：</strong>voicebox 32K★ 说明 ElevenLabs 级别的开源替代品的需求巨大。",
+            "<strong>语音是 AI Agent 的下一个交互入口：</strong>从 TTS 到语音克隆到听写，语音能力正在成为 Agent 的标配。",
+            "<strong>TypeScript 全栈意味着对 Web 开发者友好：</strong>相比 Python 语音项目，voicebox 降低了前端开发者的使用门槛。"
+          ],
+          "tags": [
+            "voice-ai",
+            "tts",
+            "open-source",
+            "typescript",
+            "elevenlabs-alternative"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "ZhuLinsen",
+          "name": "daily_stock_analysis",
+          "fullName": "ZhuLinsen / daily_stock_analysis",
+          "org": "ZhuLinsen",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "46,702",
+          "forks": "42,281",
+          "starsToday": "1,121",
+          "count": 2,
+          "description": "LLM 炒股系统持续火热 —— 今日 +1,121★，46.7K★！多源行情、实时新闻、智能决策看板，零成本定时运行",
+          "problems": [
+            "<strong>个人投资者需要 AI 辅助决策：</strong>传统炒股软件功能臃肿，LLM 智能分析工具更贴合个人需求。",
+            "<strong>多市场数据整合难度大：</strong>daily_stock_analysis 一站式覆盖 A 股、美股等多市场行情。",
+            "<strong>连续第二天上榜说明粘性强：</strong>用户不是尝鲜，而是真的用它做投资参考。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/ZhuLinsen/daily_stock_analysis</code></pre>",
+            "配置 API Key 和关注的股票列表。",
+            "启动自动分析：<pre><code>python main.py --schedule daily</code></pre>"
+          ],
+          "insights": [
+            "<strong>连续两天上榜说明 LLM+投资是真实需求：</strong>46K★ 且持续增长，个人投资者正在拥抱 AI 工具。",
+            "<strong>「零成本定时运行」是关键卖点：</strong>不需要付费订阅、不需要服务器，定时自动出分析报告。",
+            "<strong>多市场+多源数据整合是差异化：</strong>从行情到新闻到决策，一站式方案优于碎片化工具组合。"
+          ],
+          "tags": [
+            "stock-analysis",
+            "llm",
+            "finance",
+            "python",
+            "investment"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "garrytan",
+          "name": "gstack",
+          "fullName": "garrytan / gstack",
+          "org": "garrytan",
+          "url": "https://github.com/garrytan/gstack",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "113,797",
+          "forks": "16,852",
+          "starsToday": "1,012",
+          "count": 1,
+          "description": "YC CEO 的 Claude Code 工具箱 —— 今日 +1,012★，113.8K★！23 个定制工具：CEO、设计师、工程经理、发布经理、文档工程师、QA",
+          "problems": [
+            "<strong>Claude Code 默认能力不够个性化：</strong>需要定制工具才能发挥最大效能，gstack 打包了 Garry Tan 的最佳实践。",
+            "<strong>从零搭建 Agent 工具栈成本高：</strong>gstack 提供 23 个即开即用的专属角色工具。",
+            "<strong>个人品牌加持的可信度：</strong>YC CEO Garry Tan 亲自使用的配置，有很强的背书效应。"
+          ],
+          "usage": [
+            "添加到项目：<pre><code>git clone https://github.com/garrytan/gstack .claude/tools</code></pre>",
+            "在 Claude Code 中直接调用各角色工具。",
+            "每个工具代表一个视角：CEO 看战略、QA 找 Bug、Designer 看设计。"
+          ],
+          "insights": [
+            "<strong>113K★ 说明 YC CEO 的配置吸引了全球开发者：</strong>Garry Tan 的个人影响力 + Claude Code 热度 = 爆炸性传播。",
+            "<strong>「角色化 Agent 工具」是新趋势：</strong>不再是单一 Agent 做所有事，而是为不同角色定制专用工具。",
+            "<strong>从技能到工具集的进化：</strong>gstack 不是教 Agent 怎么做，而是给 Agent 工具让它自己做，这是更高阶的抽象。"
+          ],
+          "tags": [
+            "claude-code",
+            "agent-tools",
+            "productivity",
+            "typescript",
+            "yc"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-22",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -199,7 +391,7 @@ var siteData = {
     },
     {
       "date": "2026-06-21",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -391,7 +583,7 @@ var siteData = {
     },
     {
       "date": "2026-06-20",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -582,7 +774,7 @@ var siteData = {
     },
     {
       "date": "2026-06-19",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -774,7 +966,7 @@ var siteData = {
     },
     {
       "date": "2026-06-17",
-      "label": "8天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -966,7 +1158,7 @@ var siteData = {
     },
     {
       "date": "2026-06-16",
-      "label": "10天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1158,7 +1350,7 @@ var siteData = {
     },
     {
       "date": "2026-06-15",
-      "label": "11天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1350,7 +1542,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1542,7 +1734,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -1735,7 +1927,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "19天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -1928,7 +2120,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2121,7 +2313,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "21天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -2314,7 +2506,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "22天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -2512,7 +2704,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "23天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -2709,7 +2901,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "24天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -2906,7 +3098,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "25天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -3103,7 +3295,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -3301,7 +3493,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "28天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -3496,7 +3688,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -3691,7 +3883,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "30天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -3887,7 +4079,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "32天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -4083,7 +4275,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "33天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -4277,7 +4469,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "34天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -4475,7 +4667,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "36天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -4677,7 +4869,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "37天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -4879,7 +5071,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "38天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -5081,7 +5273,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "39天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -5283,7 +5475,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "40天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -5485,7 +5677,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "41天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -5687,7 +5879,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "42天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -5889,7 +6081,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "46天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -6089,7 +6281,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "47天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -6285,7 +6477,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "48天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
