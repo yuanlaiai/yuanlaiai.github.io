@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-06-23",
-  "topic": "🔥 <strong>AI 视频三连冠 + 开源语音 AI 爆发</strong> —— OpenMontage（+3,590★）连续三天登顶且持续加速，单日 3.5K★ 宣告 Agentic 视频制作成为 2026 最大 AI 应用赛道。codebase-memory-mcp（+1,299★）第六天上榜创下榜单最长连续记录。voicebox（+1,042★）开源 AI 语音工作室首次上榜，ElevenLabs 的开源替代正在崛起。daily_stock_analysis（+1,121★）连续两天走高，AI+金融热度不减。gstack（+1,012★）YC CEO 亲自调教的 Claude Code 工具箱，Agent 角色化工具的新范式。",
+  "lastUpdated": "2026-06-27",
+  "topic": "🔥 <strong>Google 定义 Agent 设计规范 + Agent 记忆成基建 + Agent 工具链井喷</strong> —— google-labs-code/design.md（+1,542★）Google 官方出手为 AI 编码智能体定义视觉身份规范，22K★ 印证需求。topoteretes/cognee（+729★）Agent 长记忆 + 知识图谱引擎首次上榜，Agent 基础设施化趋势明确。JCodesMore/ai-website-cloner-template（+750★）AI 一键克隆整站，模板化 Agent 开发新范式。xbtlin/ai-berkshire（+686★）四大师方法论 × Claude Code 多 Agent 并行研究，AI+价值投资新赛道。garrytan/gstack（+674★）117K★ 二次上榜，YC CEO 角色化 Agent 工具持续验证。Agent 设计规范、记忆存储、场景模板、角色工具全线爆发——AI Agent 的「基础设施元年」正式到来。",
   "days": [
     {
-      "date": "2026-06-23",
+      "date": "2026-06-27",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "google-labs-code",
+          "name": "design.md",
+          "fullName": "google-labs-code / design.md",
+          "org": "Google Labs",
+          "url": "https://github.com/google-labs-code/design.md",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "22,000",
+          "forks": "1,766",
+          "starsToday": "1,542",
+          "count": 1,
+          "description": "🔥 Google 官方出品 —— 今日 +1,542★，22K★！定义 AI 编码智能体的视觉身份描述规范，让 Agent 理解设计系统",
+          "problems": [
+            "<strong>AI 编码智能体不认识你的设计系统：</strong>给 Agent 的提示词里描述样式总是不够准确，不同 Agent 之间没有统一的视觉语言。",
+            "<strong>多 Agent 协作缺乏设计一致性：</strong>每个 Agent 各自理解设计规范，导致视觉碎片化。",
+            "<strong>Google 官方下场定义 Spec 是信号：</strong>AI 编码 Agent 正在成为主流开发范式，需要标准化的设计接口。"
+          ],
+          "usage": [
+            "创建 DESIGN.md 文件：<pre><code>touch DESIGN.md</code></pre>",
+            "按 Spec 格式编写 token：<pre><code># DESIGN.md\n#brand: colors, typography, spacing\ntoken color-primary \"#1a73e8\"</code></pre>",
+            "让 Agent 读取：<pre><code>claude dev --spec DESIGN.md</code></pre>"
+          ],
+          "insights": [
+            "<strong>Google 官方身份认定：</strong>「design.md」是 Google 实验室项目，说明 AI Agent 设计标准化已经是 Google 的正式研究方向。",
+            "<strong>1,542★ 单日说明需求真实存在：</strong>开发者苦「给 Agent 讲设计规矩」久矣，一个标准 Spec 解决了从零到一的认知鸿沟。",
+            "<strong>这是「LLM 的 CSS」时刻：</strong>就像 CSS 把样式从 HTML 分离出来，DESIGN.md 把视觉身份从 Agent Prompt 中分离出来。"
+          ],
+          "tags": [
+            "ai-agent",
+            "design-system",
+            "google",
+            "specification",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "JCodesMore",
+          "name": "ai-website-cloner-template",
+          "fullName": "JCodesMore / ai-website-cloner-template",
+          "org": "JCodesMore",
+          "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "21,795",
+          "forks": "3,140",
+          "starsToday": "750",
+          "count": 1,
+          "description": "🔥 用 AI 编码智能体一键克隆任意网站 —— 今日 +750★，21.8K★！单一命令实现整站克隆，AI 开发的新范式",
+          "problems": [
+            "<strong>网站克隆需要大量手动工作：</strong>截屏、HTML 分析、手动重写样式，过程繁琐且容易出错。",
+            "<strong>AI 开发者想做站点参考但没工具：</strong>想借鉴某个网站的设计或布局，但只能手动复制粘贴。",
+            "<strong>单日 750★ 说明需求极度旺盛：</strong>开发者需要「点一下就能拿到 HTML/CSS」的能力。"
+          ],
+          "usage": [
+            "克隆网站：<pre><code>git clone https://github.com/JCodesMore/ai-website-cloner-template</code></pre>",
+            "运行克隆器：<pre><code>npm run clone -- --url https://example.com</code></pre>",
+            "AI 编码智能体会自动分析并生成克隆版本。"
+          ],
+          "insights": [
+            "<strong>AI 驱动的「逆向工程」成为新能力：</strong>AI Agent 不仅能写代码，还能读代码、分析网站设计、理解布局逻辑并重建。",
+            "<strong>模板化是 Agent 开发的关键模式：</strong>这个项目是一个「Template」而非「Tool」，说明预设模板 + AI Agent = 快速上手的最佳实践。",
+            "<strong>21.8K★ 高星说明复制需求广泛：</strong>从初学者想学前端到开发者快速原型，clone + AI 修改是最自然的工作流。"
+          ],
+          "tags": [
+            "ai-agent",
+            "website-cloner",
+            "developer-tools",
+            "template",
+            "frontend"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "topoteretes",
+          "name": "cognee",
+          "fullName": "topoteretes / cognee",
+          "org": "topoteretes",
+          "url": "https://github.com/topoteretes/cognee",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "23,620",
+          "forks": "2,239",
+          "starsToday": "729",
+          "count": 1,
+          "description": "🔥 开源 AI Agent 记忆平台 —— 今日 +729★，23.6K★！自托管知识图谱引擎，给 Agent 持久化的长期记忆",
+          "problems": [
+            "<strong>AI Agent 每次对话都是「失忆」：</strong>没有持久记忆导致 Agent 无法学习、不能积累上下文。",
+            "<strong>现有记忆方案要么太简单要么太封闭：</strong>RAG 不够结构化，闭源方案无法自托管。",
+            "<strong>Agent 需要知识图谱而非简单向量：</strong>只有知识图谱才能支持 Agent 进行推理和关联。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install cognee</code></pre>",
+            "快速启动：<pre><code>cognee init && cognee run</code></pre>",
+            "集成到 Agent：<pre><code>from cognee import CogneeMemory\nagent.memory = CogneeMemory()</code></pre>"
+          ],
+          "insights": [
+            "<strong>Agent 记忆是 2026 年最热的 AI 基础设施赛道：</strong>从 Mem0 到 Cognee，Agent 长记忆正在成为标配。",
+            "<strong>自托管是趋势：</strong>企业急需能控制数据和隐私的 Agent 记忆方案，闭源 API 无法满足合规要求。",
+            "<strong>知识图谱是 Agent 记忆的正确抽象：</strong>Vector-only 的检索无法支持跨实体推理，Graph 正在成为 Agent 记忆的事实标准。"
+          ],
+          "tags": [
+            "ai-agent",
+            "memory",
+            "knowledge-graph",
+            "python",
+            "llm"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "xbtlin",
+          "name": "ai-berkshire",
+          "fullName": "xbtlin / ai-berkshire",
+          "org": "xbtlin",
+          "url": "https://github.com/xbtlin/ai-berkshire",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "3,602",
+          "forks": "527",
+          "starsToday": "686",
+          "count": 1,
+          "description": "🔥 AI 时代的伯克希尔 —— 今日 +686★，3.6K★！巴菲特+芒格+段永平+李录四大师方法论 × Claude Code 多Agent 并行研究",
+          "problems": [
+            "<strong>价值投资研究极度耗时：</strong>看财报、分析护城河、跟踪管理层，传统方式依赖人工深度阅读。",
+            "<strong>多大师方法论难以融合：</strong>巴菲特、芒格、段永平、李录各有侧重，普通人没法同时运用四种框架。",
+            "<strong>AI Agent 研究框架需要领域知识：</strong>通用 LLM 可以做事实查询，但做价值投资判断需要专门的框架。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/xbtlin/ai-berkshire</code></pre>",
+            "配置 API Key：<pre><code>export CLAUDE_API_KEY=your_key</code></pre>",
+            "分析公司：<pre><code>python analyze.py --ticker AAPL</code></pre>"
+          ],
+          "insights": [
+            "<strong>多 Agent 并行研究是价值投资的最佳 AI 范式：</strong>四位大师各有分工（巴菲特看财务、芒格看心理、段永平看赛道、李录看护城河），天然适合多 Agent。",
+            "<strong>中文关键词 + 英文市场的跨文化项目：</strong>说明中国 AI 开发者正在从「跟跑」到「用 AI 分析全球市场」。",
+            "<strong>AI + 投资正在从量化交易转向基本面分析：</strong>过去三年都是 AI 量化交易，现在 AI 开始赋能传统价值投资了。"
+          ],
+          "tags": [
+            "ai-agent",
+            "value-investing",
+            "claude-code",
+            "finance",
+            "python"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "garrytan",
+          "name": "gstack",
+          "fullName": "garrytan / gstack",
+          "org": "Garry Tan",
+          "url": "https://github.com/garrytan/gstack",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "116,954",
+          "forks": "17,366",
+          "starsToday": "674",
+          "count": 2,
+          "description": "🔥 YC CEO 的 Claude Code 工具箱二次上榜 —— 今日 +674★，117K★！23 个角色化工具：CEO、设计师、工程经理、QA 全包",
+          "problems": [
+            "<strong>Claude Code 默认工具不够「角色化」：</strong>通用工具能做事但不够专业，缺少设计师、CEO、QA 等角色视角。",
+            "<strong>YC CEO 亲自实践验证的配置才有说服力：</strong>Garry Tan 每天都在用，不是「理论最佳实践」。",
+            "<strong>117K★ 二度上榜说明热度不是昙花一现：</strong>开发者需要可复用的 Agent 配置而非从零打造。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/garrytan/gstack</code></pre>",
+            "安装角色化工具：<pre><code>gstack install --role ceo</code></pre>",
+            "查看所有角色：<pre><code>gstack roles</code></pre>"
+          ],
+          "insights": [
+            "<strong>二次上榜且依旧 674★：</strong>gstack 不是一周热度，117K★ 二度上榜说明 Agent 角色化工具是刚需。",
+            "<strong>CEO+设计师+QA 的 Agent 工具集：</strong>Garry Tan 把公司级职能抽象为 Agent 工具，预示了未来 AI 组织架构的雏形。",
+            "<strong>117K★ 是 GitHub 现象级项目：</strong>从 1K→117K 的爆发式增长说明 Agent 配置市场存在巨大蓝海。"
+          ],
+          "tags": [
+            "ai-agent",
+            "claude-code",
+            "developer-tools",
+            "agent-toolkit",
+            "typescript"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-23",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -199,7 +391,7 @@ var siteData = {
     },
     {
       "date": "2026-06-22",
-      "label": "昨天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -391,7 +583,7 @@ var siteData = {
     },
     {
       "date": "2026-06-21",
-      "label": "前天",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -583,7 +775,7 @@ var siteData = {
     },
     {
       "date": "2026-06-20",
-      "label": "4天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -774,7 +966,7 @@ var siteData = {
     },
     {
       "date": "2026-06-19",
-      "label": "6天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -966,7 +1158,7 @@ var siteData = {
     },
     {
       "date": "2026-06-17",
-      "label": "10天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1158,7 +1350,7 @@ var siteData = {
     },
     {
       "date": "2026-06-16",
-      "label": "12天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1350,7 +1542,7 @@ var siteData = {
     },
     {
       "date": "2026-06-15",
-      "label": "13天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -1542,7 +1734,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "15天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -1734,7 +1926,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "19天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -1927,7 +2119,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "21天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -2120,7 +2312,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "22天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -2313,7 +2505,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "23天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -2506,7 +2698,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "24天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -2704,7 +2896,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "25天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -2901,7 +3093,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "26天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -3098,7 +3290,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "27天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -3295,7 +3487,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "29天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -3493,7 +3685,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "30天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -3688,7 +3880,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "31天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -3883,7 +4075,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "32天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -4079,7 +4271,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "34天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -4275,7 +4467,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "35天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -4469,7 +4661,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "36天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -4667,7 +4859,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "38天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -4869,7 +5061,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "39天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -5071,7 +5263,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "40天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -5273,7 +5465,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "41天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -5475,7 +5667,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "42天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -5677,7 +5869,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "43天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -5879,7 +6071,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "44天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -6081,7 +6273,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "48天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -6281,7 +6473,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "49天前",
+      "label": "52天前",
       "icon": "",
       "projects": [
         {
@@ -6477,7 +6669,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "50天前",
+      "label": "53天前",
       "icon": "",
       "projects": [
         {
