@@ -1,10 +1,202 @@
 {
-  "lastUpdated": "2026-06-27",
-  "topic": "🔥 <strong>Google 定义 Agent 设计规范 + Agent 记忆成基建 + Agent 工具链井喷</strong> —— google-labs-code/design.md（+1,542★）Google 官方出手为 AI 编码智能体定义视觉身份规范，22K★ 印证需求。topoteretes/cognee（+729★）Agent 长记忆 + 知识图谱引擎首次上榜，Agent 基础设施化趋势明确。JCodesMore/ai-website-cloner-template（+750★）AI 一键克隆整站，模板化 Agent 开发新范式。xbtlin/ai-berkshire（+686★）四大师方法论 × Claude Code 多 Agent 并行研究，AI+价值投资新赛道。garrytan/gstack（+674★）117K★ 二次上榜，YC CEO 角色化 Agent 工具持续验证。Agent 设计规范、记忆存储、场景模板、角色工具全线爆发——AI Agent 的「基础设施元年」正式到来。",
+  "lastUpdated": "2026-06-28",
+  "topic": "🔥 <strong>代码理解 MCP 霸榜 + 文档解析成 RAG 刚需 + AI 交易与 3D 视觉齐飞</strong> —— DeusData/codebase-memory-mcp（+2,162★）连续7次登榜，代码知识图谱已成为 Agent 基础设施标配。opendatalab/MinerU（+749★）71K★ 的 PDF 解析之王，RAG 时代的基础设施级工具。HKUDS/Vibe-Trading（+490★）AI 个人交易 Agent 首次上榜，量化赛道的 AI 化改造仍在持续。Robbyant/lingbot-map（+372★）前馈式 3D 场景重建模型，机器人实时感知的未来。browser-use/video-use（+186★）browser-use 生态延伸到 AI 视频编辑，编程式视频生产自动化趋势明确。代码理解、文档解析、量化交易、3D 视觉、视频编辑——AI Agent 正从“对话”走向“全栈自动化”。",
   "days": [
     {
-      "date": "2026-06-27",
+      "date": "2026-06-28",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "DeusData",
+          "name": "codebase-memory-mcp",
+          "fullName": "DeusData / codebase-memory-mcp",
+          "org": "DeusData",
+          "url": "https://github.com/DeusData/codebase-memory-mcp",
+          "lang": "C",
+          "langClass": "c",
+          "stars": "18,744",
+          "forks": "1,369",
+          "starsToday": "2,162",
+          "count": 7,
+          "description": "🔥 亮点 —— 今日 +2,162★！连续7次登榜，累计18.7K★。代码知识图谱 MCP 服务器，毫秒级索引完整代码库，158种语言支持，单静态二进制零依赖。",
+          "problems": [
+            "<strong>代码理解成本高：</strong>AI 编码助手缺乏代码库全局上下文，每次提问都要重新理解项目结构。",
+            "<strong>Token 浪费严重：</strong>将整个代码库塞进 LLM 上下文窗口，成本高昂且效率低下。",
+            "<strong>跨文件引用断裂：</strong>大型项目中函数调用链、类型定义跨文件追踪困难，AI 经常给出脱离上下文的建议。"
+          ],
+          "usage": [
+            "从 GitHub Releases 下载对应平台的单二进制文件（macOS/Linux/Windows）。",
+            "运行 <pre><code>./cbm-server --repo /path/to/your/repo --port 3000</code></pre> 启动 MCP 服务器。",
+            "在 Claude Desktop / Cursor / VSCode 等 MCP 客户端中配置指向 localhost:3000 的 MCP Server 即可使用。"
+          ],
+          "insights": [
+            "<strong>MCP 生态标杆：</strong>单静态二进制 + 零依赖的设计理念让代码理解服务化从“折腾”变成“秒级部署”，这正是 MCP 协议期待的 killer app。",
+            "<strong>知识图谱 > 向量检索：</strong>代码知识图谱保存了调用关系、类型依赖等结构化信息，比纯向量检索更适合代码理解场景。",
+            "<strong>Agent 基础设施化：</strong>持续7次登榜印证市场判断——代码理解正在从开发者的“技能”转变为 AI Agent 的“基础设施”。"
+          ],
+          "tags": [
+            "mcp",
+            "code-intelligence",
+            "knowledge-graph",
+            "developer-tools",
+            "agent-infrastructure"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "opendatalab",
+          "name": "MinerU",
+          "fullName": "opendatalab / MinerU",
+          "org": "上海人工智能实验室",
+          "url": "https://github.com/opendatalab/MinerU",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "71,265",
+          "forks": "5,989",
+          "starsToday": "749",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +749★！71K★ 的开源 PDF 解析之王。将复杂 PDF、Office 文档一键转化为 LLM 可直接消费的 Markdown/JSON 格式。",
+          "problems": [
+            "<strong>PDF 解析质量差：</strong>传统 PDF 解析器在表格、公式、多栏布局面前频频翻车，输出杂乱无章。",
+            "<strong>文档预处理耗时：</strong>RAG 流程中大部分时间花在文档清洗和格式转换上，而非实际问答。",
+            "<strong>非结构化数据孤岛：</strong>企业大量知识沉淀在 PDF/Office 文档中，无法被 LLM 和 Agent 流程利用。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install mineru -i https://pypi.tuna.tsinghua.edu.cn/simple</code></pre>",
+            "命令行转换：<pre><code>magic-pdf --pdf_path your_doc.pdf --output_dir ./output</code></pre>",
+            "通过 Docker：<pre><code>docker run --rm -v $(pwd):/data opendatalab/mineru /data/input.pdf /data/output/</code></pre>"
+          ],
+          "insights": [
+            "<strong>LLM 的数据管道之重：</strong>MinerU 71K★ 的体量说明文档解析不是“小问题”——它是整个 LLM 应用栈中最难啃的硬骨头之一。",
+            "<strong>Agentic Workflows 的基础设施：</strong>当 AI Agent 需要自主阅读合同、财报、论文时，MinerU 就从“工具”升级为“管线基础设施”。",
+            "<strong>开源 PK 商业方案：</strong>在 Unstructured、Mathpix 等商业方案环伺下，MinerU 凭质量反超，证明开源社区在垂直 AI 工具赛道仍有统治力。"
+          ],
+          "tags": [
+            "pdf-parser",
+            "document-processing",
+            "rag",
+            "data-pipeline",
+            "llm-tools"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "HKUDS",
+          "name": "Vibe-Trading",
+          "fullName": "HKUDS / Vibe-Trading",
+          "org": "HKUDS",
+          "url": "https://github.com/HKUDS/Vibe-Trading",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "14,023",
+          "forks": "2,608",
+          "starsToday": "490",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +490★！14K★ 的个人 AI 交易 Agent。集成行情分析、因子挖掘、策略回测与实盘执行的全栈量化框架。",
+          "problems": [
+            "<strong>量化门槛过高：</strong>传统量化框架需要编程、金融、数学三重技能，散户难以入门。",
+            "<strong>策略落地周期长：</strong>从研究想法到实盘执行，需要经过数据获取→因子构建→回测→风控等多个环节，缺乏一站式方案。",
+            "<strong>情绪化交易决策：</strong>散户缺乏系统化的交易纪律，容易在 FOMO 和恐慌中做出非理性决策。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/HKUDS/Vibe-Trading.git && cd Vibe-Trading</code></pre>",
+            "配置 API Key，启动 Agent：<pre><code>python run.py --mode research --ticker AAPL</code></pre>",
+            "切换回测模式：<pre><code>python run.py --mode backtest --strategy alpha_regime --start 2025-01-01</code></pre>"
+          ],
+          "insights": [
+            "<strong>AI 交易赛道人满为患：</strong>从加密交易 Bot 到今天的 Vibe-Trading 14K★，说明市场对“让 AI 替我抜股”的需求永远不会饱和。",
+            "<strong>研究驱动的回测系统：</strong>基于因子挖掘的 Alpha Zoo 框架，让策略不再依赖单一信号，而是组合多个弱信号形成强信号。",
+            "<strong>合规红线：</strong>个人交易 Agent 面临的最大风险不是技术挑战，而是证券监管——自动交易的合规边界需要用户自己把握。"
+          ],
+          "tags": [
+            "trading-agent",
+            "quantitative-finance",
+            "ai-agent",
+            "factor-mining",
+            "backtesting"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "Robbyant",
+          "name": "lingbot-map",
+          "fullName": "Robbyant / lingbot-map",
+          "org": "Robbyant",
+          "url": "https://github.com/Robbyant/lingbot-map",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "8,012",
+          "forks": "789",
+          "starsToday": "372",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +372★！8K★ 的前馈式 3D 基础模型。从流式数据实时重建 3D 场景，无需后处理优化，前馈单次推理即可。",
+          "problems": [
+            "<strong>3D 重建速度慢：</strong>传统 NeRF/3DGS 方法需要数小时优化才能得到一个场景，无法实时应用。",
+            "<strong>流式数据不支持：</strong>大多数 3D 模型要求完整输入，无法处理增量式、流式传入的传感器数据。",
+            "<strong>落地门槛高：</strong>机器人、自动驾驶等场景需要实时 3D 感知，但现有方案计算量过大无法部署在边缘设备。"
+          ],
+          "usage": [
+            "克隆并安装依赖：<pre><code>git clone https://github.com/Robbyant/lingbot-map.git && cd lingbot-map && pip install -r requirements.txt</code></pre>",
+            "运行场景重建：<pre><code>python run.py --input path/to/video_or_image_sequence --output ./reconstructed_scene</code></pre>",
+            "在自定义数据上评估：<pre><code>python benchmark/eval.py --dataset TAT --checkpoint ./checkpoints/model.pth</code></pre>"
+          ],
+          "insights": [
+            "<strong>前馈式 3D 理解是未来：</strong>告别逐场景优化，lingbot-map 的前馈推理范式让 3D 理解从“离线渲染”走向“实时感知”。",
+            "<strong>机器人视觉的潜在 killer：</strong>流式数据实时重建能力恰好命中机器人场景的核心需求——边移动边建图。",
+            "<strong>中科院背景团队：</strong>项目来自中科院自动化研究所，背后有扎实的学术积累（涵盖 NeRF、3DGS 多个 benchmark）。"
+          ],
+          "tags": [
+            "3d-reconstruction",
+            "foundation-model",
+            "computer-vision",
+            "real-time",
+            "robotics"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "browser-use",
+          "name": "video-use",
+          "fullName": "browser-use / video-use",
+          "org": "browser-use",
+          "url": "https://github.com/browser-use/video-use",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "10,680",
+          "forks": "1,507",
+          "starsToday": "186",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +186★！10.6K★。browser-use 团队新作——用 AI 编码 Agent 自动剪辑视频。Python 代码驱动视频编辑，支持渲染、转场、字幕。",
+          "problems": [
+            "<strong>视频编辑学习曲线陡：</strong>Premiere/Final Cut 等专业工具功能强大但上手复杂，简单剪辑也需要大量操作。",
+            "<strong>批量处理困难：</strong>对大量视频素材做相同的裁剪、字幕、转场操作，手动重复劳动效率极低。",
+            "<strong>AI 视频编辑碎片化：</strong>各种 AI 视频工具散落在不同平台，缺乏统一的程序化编辑框架。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install video-use</code></pre> 或克隆仓库。",
+            "编写 Python 脚本：<pre><code>from video_use import VideoEditor; ed = VideoEditor(); ed.add_clip('input.mp4').add_text('Hello').render('output.mp4')</code></pre>",
+            "搭配 coding agent 使用：让 Claude/Cursor 根据自然语言描述自动生成编辑脚本。"
+          ],
+          "insights": [
+            "<strong>browser-use 生态延伸：</strong>从“用 AI 操控浏览器”到“用 AI 剪辑视频”，browser-use 团队正在构建一个 coding agent 工具矩阵。",
+            "<strong>编程式视频编辑复兴：</strong>让专业视频编辑回归代码（类似 FFmpeg 但更高级），AI Agent 充当“自然语言转编辑脚本”的桥梁。",
+            "<strong>视频内容创作自动化：</strong>结合 AI 配音、AI 字幕、AI 素材选择，video-use 补齐了“全自动视频生产”的最后一个拼图。"
+          ],
+          "tags": [
+            "video-editing",
+            "ai-agent",
+            "coding-agent",
+            "automation",
+            "creative-tools"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-27",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -196,7 +388,7 @@
     },
     {
       "date": "2026-06-23",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -388,7 +580,7 @@
     },
     {
       "date": "2026-06-22",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -580,7 +772,7 @@
     },
     {
       "date": "2026-06-21",
-      "label": "5天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -772,7 +964,7 @@
     },
     {
       "date": "2026-06-20",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -963,7 +1155,7 @@
     },
     {
       "date": "2026-06-19",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1155,7 +1347,7 @@
     },
     {
       "date": "2026-06-17",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1347,7 +1539,7 @@
     },
     {
       "date": "2026-06-16",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -1539,7 +1731,7 @@
     },
     {
       "date": "2026-06-15",
-      "label": "16天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -1731,7 +1923,7 @@
     },
     {
       "date": "2026-06-14",
-      "label": "18天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -1923,7 +2115,7 @@
     },
     {
       "date": "2026-06-12",
-      "label": "22天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -2116,7 +2308,7 @@
     },
     {
       "date": "2026-06-11",
-      "label": "24天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -2309,7 +2501,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "25天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -2502,7 +2694,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -2695,7 +2887,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -2893,7 +3085,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "28天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -3090,7 +3282,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -3287,7 +3479,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "30天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -3484,7 +3676,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "32天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -3682,7 +3874,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "33天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -3877,7 +4069,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "34天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -4072,7 +4264,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "35天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -4268,7 +4460,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "37天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -4464,7 +4656,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "38天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -4658,7 +4850,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "39天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -4856,7 +5048,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "41天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -5058,7 +5250,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "42天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -5260,7 +5452,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "43天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -5462,7 +5654,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "44天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -5664,7 +5856,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "45天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -5866,7 +6058,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "46天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -6068,7 +6260,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "47天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -6270,7 +6462,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "51天前",
+      "label": "53天前",
       "icon": "",
       "projects": [
         {
@@ -6470,7 +6662,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "52天前",
+      "label": "54天前",
       "icon": "",
       "projects": [
         {
@@ -6666,7 +6858,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "53天前",
+      "label": "55天前",
       "icon": "",
       "projects": [
         {
