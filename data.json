@@ -1,10 +1,202 @@
 {
-  "lastUpdated": "2026-06-28",
-  "topic": "🔥 <strong>代码理解 MCP 霸榜 + 文档解析成 RAG 刚需 + AI 交易与 3D 视觉齐飞</strong> —— DeusData/codebase-memory-mcp（+2,162★）连续7次登榜，代码知识图谱已成为 Agent 基础设施标配。opendatalab/MinerU（+749★）71K★ 的 PDF 解析之王，RAG 时代的基础设施级工具。HKUDS/Vibe-Trading（+490★）AI 个人交易 Agent 首次上榜，量化赛道的 AI 化改造仍在持续。Robbyant/lingbot-map（+372★）前馈式 3D 场景重建模型，机器人实时感知的未来。browser-use/video-use（+186★）browser-use 生态延伸到 AI 视频编辑，编程式视频生产自动化趋势明确。代码理解、文档解析、量化交易、3D 视觉、视频编辑——AI Agent 正从“对话”走向“全栈自动化”。",
+  "lastUpdated": "2026-06-29",
+  "topic": "🔥 <strong>AI 价值投资二次爆发 + Agent 技能标准化 + AI 视频编辑与交易双热 + 离线语音新赛道</strong> —— xbtlin/ai-berkshire（+1,397★）三天内两次登榜，价值投资的 AI 改造需求超预期。msitarzewski/agency-agents（+1,221★）118K★ Agent 技能库帝国二次上榜，SKILL.md 标准化席卷社区。browser-use/video-use（+976★）+ HKUDS/Vibe-Trading（+840★）双双连续登榜，AI 视频编辑和量化交易两大方向持续升温。altic-dev/FluidVoice（+836★）macOS 离线语音新物种，本地优先的隐私 AI 趋势加速。Agent 技能标准化、垂直场景深耕、隐私本地化——AI Agent 正从概念走向成熟生态。",
   "days": [
     {
-      "date": "2026-06-28",
+      "date": "2026-06-29",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "xbtlin",
+          "name": "ai-berkshire",
+          "fullName": "xbtlin / ai-berkshire",
+          "org": "xbtlin",
+          "url": "https://github.com/xbtlin/ai-berkshire",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "6,418",
+          "forks": "843",
+          "starsToday": "1,397",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +1,397★！累计6.4K★，二次登榜。AI 时代的伯克希尔：Claude Code / Codex 驱动的价值投资研究框架，四大师方法论 × 多 Agent 对抗分析。",
+          "problems": [
+            "<strong>投资研究碎片化：</strong>财报、新闻、研报散落在不同平台，人工收集和分析效率极低。",
+            "<strong>多因子交叉验证难：</strong>巴菲特价值派、芒格心理学、段永平商业视角、李录历史视野，四种思维模型难以在同一框架下并行。",
+            "<strong>情绪干扰决策：</strong>散户容易跟风炒作，缺乏系统化的价值发现流程和纪律性框架。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/xbtlin/ai-berkshire.git && cd ai-berkshire</code></pre>",
+            "研究个股：<pre><code>python run.py --ticker AAPL --mode deep</code></pre> 自动生成四大师视角分析报告。",
+            "批量扫描：<pre><code>python run.py --universe s&p500 --filter 'pe<15,roe>20'</code></pre> 筛选低估标的。"
+          ],
+          "insights": [
+            "<strong>多 Agent 对抗优于单 Agent：</strong>四大师方法论不是装饰——多 Agent 对抗式分析让每个假设都经过跨视角验证，比单 Agent 结论更稳健。",
+            "<strong>二次登榜验证需求：</strong>从 6/27 +686★ 到今天 +1,397★ 二次登榜，说明市场对 AI + 价值投资的组合极度饥渴。",
+            "<strong>AI 改造传统行业：</strong>投资研究是最适合 AI Agent 落地的场景之一——信息检索、模式识别、逻辑推理都是 LLM 的强项。"
+          ],
+          "tags": [
+            "value-investing",
+            "ai-agent",
+            "claude-code",
+            "finance",
+            "multi-agent"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "msitarzewski",
+          "name": "agency-agents",
+          "fullName": "msitarzewski / agency-agents",
+          "org": "msitarzewski",
+          "url": "https://github.com/msitarzewski/agency-agents",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "118,498",
+          "forks": "19,425",
+          "starsToday": "1,221",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +1,221★！118K★ 的 AI Agent 技能库帝国。涵盖前端、设计、营销、工程、金融等全工种专业 Agent，SKILL.md 驱动。",
+          "problems": [
+            "<strong>AI Agent 能力单一：</strong>大多数 Agent 工具只擅长单一领域，无法应对跨职能复杂任务。",
+            "<strong>Agent 体系混乱：</strong>社区 Agent 散落在不同仓库，缺乏统一规范和质量标准。",
+            "<strong>缺乏可复用的 Agent 技能：</strong>每次从零构建 Agent 成本高，需要标准化的技能文件体系。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/msitarzewski/agency-agents.git</code></pre>",
+            "将所需 Agent 的 SKILL.md 放入 AI 助手的 skills 目录中即可使用。",
+            "查看所有可用 Agent：<pre><code>ls */SKILL.md</code></pre> 选择需要的技能加载。"
+          ],
+          "insights": [
+            "<strong>SKILL.md 标准正在形成：</strong>从 Anthropic 官方 skills 到 agency-agents 的 50+ Agent，SKILL.md 正成为 Agent 技能的通用文件格式。",
+            "<strong>118K★ 的压倒性优势：</strong>agency-agents 的星数本身就说明问题——社区需要一个一站式的 Agent 技能超市。",
+            "<strong>二次登榜见真章：</strong>距离上次登榜 17 天，今天二次上榜且 +1,221★，说明项目活跃度持续高涨。"
+          ],
+          "tags": [
+            "ai-agent",
+            "skills",
+            "agent-framework",
+            "productivity",
+            "automation"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "browser-use",
+          "name": "video-use",
+          "fullName": "browser-use / video-use",
+          "org": "browser-use",
+          "url": "https://github.com/browser-use/video-use",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "11,674",
+          "forks": "1,548",
+          "starsToday": "976",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +976★！11.6K★ 二次登榜。browser-use 团队出品，用 AI 编码 Agent 自动剪辑视频，Python 驱动全流程。",
+          "problems": [
+            "<strong>视频编辑门槛高：</strong>Premiere/达芬奇等专业工具学习曲线陡峭，简单剪辑也需要复杂操作。",
+            "<strong>重复劳动耗时：</strong>批量裁切、加字幕、转场等操作需要人工重复操作，效率低下。",
+            "<strong>AI 视频工具孤岛：</strong>各 AI 视频工具各自为政，缺乏统一程序化编辑框架。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install video-use</code></pre>",
+            "Python 脚本编辑：<pre><code>from video_use import VideoEditor; ed = VideoEditor(); ed.add_clip('in.mp4').add_text('字幕').render('out.mp4')</code></pre>",
+            "搭配 AI Agent：让 Claude/Cursor 根据自然语言描述自动生成编辑脚本。"
+          ],
+          "insights": [
+            "<strong>编程式视频编辑复兴：</strong>视频编辑回归代码——FFmpeg 级控制力 + Python 级可读性，AI Agent 充当翻译层。",
+            "<strong>二次登榜热度不减：</strong>昨天 +186★，今天 +976★ 二次上榜，说明 browser-use 生态延伸正在被市场快速接受。",
+            "<strong>AI 视频生产全链路：</strong>video-use + AI 配音 + AI 字幕 + AI 素材选择，补齐了全自动视频生产的编程环节。"
+          ],
+          "tags": [
+            "video-editing",
+            "ai-agent",
+            "coding-agent",
+            "automation",
+            "creative-tools"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "HKUDS",
+          "name": "Vibe-Trading",
+          "fullName": "HKUDS / Vibe-Trading",
+          "org": "HKUDS",
+          "url": "https://github.com/HKUDS/Vibe-Trading",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "14,887",
+          "forks": "2,677",
+          "starsToday": "840",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +840★！14.8K★ 二次登榜。个人 AI 交易 Agent，集成因子挖掘、回测、实盘执行的全栈量化框架。",
+          "problems": [
+            "<strong>量化门槛持续高企：</strong>编程+金融+数学三重技能要求让散户望而却步。",
+            "<strong>从研究到实盘周期漫长：</strong>数据获取→因子构建→回测→风控→实盘，每个环节都需要独立工具。",
+            "<strong>策略迭代缺乏纪律：</strong>散户常因情绪化决策打乱交易计划，缺乏系统化执行框架。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/HKUDS/Vibe-Trading.git && cd Vibe-Trading</code></pre>",
+            "研究模式：<pre><code>python run.py --mode research --ticker AAPL</code></pre>",
+            "回测模式：<pre><code>python run.py --mode backtest --strategy alpha_regime --start 2025-01-01</code></pre>"
+          ],
+          "insights": [
+            "<strong>连续两天登榜：</strong>昨天 +490★ 首次亮相，今天 +840★ 二次登榜，说明 AI 交易 Agent 赛道需求远未被满足。",
+            "<strong>因子挖掘框架差异：</strong>Alpha Zoo 框架不是简单策略组合，而是多个弱信号协同形成强信号的系统工程。",
+            "<strong>合规仍是隐忧：</strong>自动交易的证券监管红线是最大风险——使用前务必确认当地法规。"
+          ],
+          "tags": [
+            "trading-agent",
+            "quantitative-finance",
+            "ai-agent",
+            "factor-mining",
+            "backtesting"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "altic-dev",
+          "name": "FluidVoice",
+          "fullName": "altic-dev / FluidVoice",
+          "org": "altic-dev",
+          "url": "https://github.com/altic-dev/FluidVoice",
+          "lang": "Swift",
+          "langClass": "swift",
+          "stars": "4,183",
+          "forks": "261",
+          "starsToday": "836",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +836★！4.1K★ 的 macOS 离线语音输入 App。全本地运行，语音转文字，无需联网，隐私安全。",
+          "problems": [
+            "<strong>语音输入依赖云端：</strong>主流语音输入需要联网发送录音到云端处理，存在隐私泄露风险。",
+            "<strong>macOS 缺乏离线语音方案：</strong>相比 iOS 有内置听写，macOS 的离线语音输入体验远不如专业方案。",
+            "<strong>速度和延迟痛点：</strong>云端语音识别有网络延迟，且无法在无网络环境下使用。"
+          ],
+          "usage": [
+            "从 GitHub Releases 下载最新版 FluidVoice.dmg 安装。",
+            "打开 App，点击麦克风按钮开始听写。",
+            "支持快捷键全局唤起，语音即输入至当前光标位置。"
+          ],
+          "insights": [
+            "<strong>本地优先的 AI 趋势：</strong>离线语音识别是 AI 落地的典型场景——比云端方案更私密、更快、更可靠。",
+            "<strong>macOS 生态稀缺性：</strong>macOS 端全本地离线语音输入方案稀缺，FluidVoice 填补了空白。",
+            "<strong>隐私红利：</strong>在 AI 隐私焦虑加剧的背景下，全本地运行的设计本身就是最强的卖点。"
+          ],
+          "tags": [
+            "speech-to-text",
+            "offline",
+            "macos",
+            "privacy",
+            "voice-input"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-28",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -196,7 +388,7 @@
     },
     {
       "date": "2026-06-27",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -388,7 +580,7 @@
     },
     {
       "date": "2026-06-23",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -580,7 +772,7 @@
     },
     {
       "date": "2026-06-22",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -772,7 +964,7 @@
     },
     {
       "date": "2026-06-21",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -964,7 +1156,7 @@
     },
     {
       "date": "2026-06-20",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1155,7 +1347,7 @@
     },
     {
       "date": "2026-06-19",
-      "label": "11天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1347,7 +1539,7 @@
     },
     {
       "date": "2026-06-17",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -1539,7 +1731,7 @@
     },
     {
       "date": "2026-06-16",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -1731,7 +1923,7 @@
     },
     {
       "date": "2026-06-15",
-      "label": "18天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -1923,7 +2115,7 @@
     },
     {
       "date": "2026-06-14",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2115,7 +2307,7 @@
     },
     {
       "date": "2026-06-12",
-      "label": "24天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -2308,7 +2500,7 @@
     },
     {
       "date": "2026-06-11",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -2501,7 +2693,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -2694,7 +2886,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "28天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -2887,7 +3079,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -3085,7 +3277,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "30天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -3282,7 +3474,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "31天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -3479,7 +3671,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "32天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -3676,7 +3868,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "34天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -3874,7 +4066,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "35天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -4069,7 +4261,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "36天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -4264,7 +4456,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "37天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -4460,7 +4652,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "39天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -4656,7 +4848,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "40天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -4850,7 +5042,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "41天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -5048,7 +5240,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "43天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -5250,7 +5442,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "44天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -5452,7 +5644,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "45天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -5654,7 +5846,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "46天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -5856,7 +6048,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "47天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -6058,7 +6250,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "48天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -6260,7 +6452,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "49天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -6462,7 +6654,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "53天前",
+      "label": "55天前",
       "icon": "",
       "projects": [
         {
@@ -6662,7 +6854,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "54天前",
+      "label": "56天前",
       "icon": "",
       "projects": [
         {
@@ -6858,7 +7050,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "55天前",
+      "label": "57天前",
       "icon": "",
       "projects": [
         {
