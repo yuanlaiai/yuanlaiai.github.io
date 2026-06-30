@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-06-29",
-  "topic": "🔥 <strong>AI 价值投资二次爆发 + Agent 技能标准化 + AI 视频编辑与交易双热 + 离线语音新赛道</strong> —— xbtlin/ai-berkshire（+1,397★）三天内两次登榜，价值投资的 AI 改造需求超预期。msitarzewski/agency-agents（+1,221★）118K★ Agent 技能库帝国二次上榜，SKILL.md 标准化席卷社区。browser-use/video-use（+976★）+ HKUDS/Vibe-Trading（+840★）双双连续登榜，AI 视频编辑和量化交易两大方向持续升温。altic-dev/FluidVoice（+836★）macOS 离线语音新物种，本地优先的隐私 AI 趋势加速。Agent 技能标准化、垂直场景深耕、隐私本地化——AI Agent 正从概念走向成熟生态。",
+  "lastUpdated": "2026-06-30",
+  "topic": "🔥 <strong>Agent 技能三连霸 + AI 投资连续登榜 + Superpowers 回归 + AI 网关与 Google CLI 双新入场</strong> —— msitarzewski/agency-agents（+1,793★）连续3天登榜，120K★ Agent 技能库生态持续壮大。xbtlin/ai-berkshire（+966★）同样连续3天登榜，AI 价值投资的需求远超预期。obra/superpowers（+884★）第11次登榜，242K★ 的 Agentic Skills 框架已成 Agent 技能分发的标准基础设施。diegosouzapw/OmniRoute（+617★）免费 AI 网关新物种首次上榜，160+ 提供商一站式接入。google/agents-cli（+433★）Google 官方出品的 Agent CLI，三大巨头齐聚 Agent 工具链。Agent 技能标准化 + AI 投资 + 云基础设施——Agent 生态正从野蛮生长走向平台化。",
   "days": [
     {
-      "date": "2026-06-29",
+      "date": "2026-06-30",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "msitarzewski",
+          "name": "agency-agents",
+          "fullName": "msitarzewski / agency-agents",
+          "org": "msitarzewski",
+          "url": "https://github.com/msitarzewski/agency-agents",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "120,275",
+          "forks": "19,656",
+          "starsToday": "1,793",
+          "count": 3,
+          "description": "🔥 亮点 —— 今日 +1,793★！120K★ 连续3天登榜。社区最大 AI Agent 专业技能库，涵盖前端、设计、营销、金融等全工种 Agent，SKILL.md 标准化标杆。",
+          "problems": [
+            "<strong>Agent 能力单一：</strong>很多 AI 编码助手只通一线，跨领域任务需要切换工具。",
+            "<strong>技能复用率低：</strong>每次新项目都要重新配置 Agent 角色，没有标准化模板。",
+            "<strong>社区 Agent 缺乏规范：</strong>各写各的 Agent 配置，质量和格式参差不齐。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/msitarzewski/agency-agents.git</code></pre>",
+            "浏览全部分类：<pre><code>ls -d */SKILL.md | sort</code></pre> 查看 50+ Agent 技能。",
+            "按需加载：将对应目录的 SKILL.md 放入 AI 助手的 skills 目录即可使用。"
+          ],
+          "insights": [
+            "<strong>连续3天登榜验证需求：</strong>从 +1,235★ (+2次) → +1,221★ (+2次) → +1,793★ (+3次)，热度不降反升。",
+            "<strong>SKILL.md 成事实标准：</strong>继 Anthropic 官方 skills 后，agency-agents 以最大技能库规模推动 SKILL.md 成为 Agent 技能通用格式。",
+            "<strong>社区自组织信号：</strong>120K★ 和 19.6K fork 说明社区正在主动共建 Agent 技能生态——不是靠任何一个公司推动。"
+          ],
+          "tags": [
+            "ai-agent",
+            "skills",
+            "agent-framework",
+            "productivity",
+            "automation"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "xbtlin",
+          "name": "ai-berkshire",
+          "fullName": "xbtlin / ai-berkshire",
+          "org": "xbtlin",
+          "url": "https://github.com/xbtlin/ai-berkshire",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "7,351",
+          "forks": "945",
+          "starsToday": "966",
+          "count": 3,
+          "description": "🔥 亮点 —— 今日 +966★！累计7.3K★，连续3天登榜。Claude Code / Codex 驱动的价值投资研究框架，四大师方法论多 Agent 对抗分析。",
+          "problems": [
+            "<strong>投资信息过载：</strong>散户面对财报、新闻、研报海量信息，缺乏系统化过滤和分析能力。",
+            "<strong>多元思维模型难以整合：</strong>巴菲特的价值派、芒格的心理模型、段永平的商业直觉、李录的历史视野难以在同一框架下融合。",
+            "<strong>缺乏投资纪律：</strong>研究→决策→执行链路易断裂，情绪化操作取代理性判断。"
+          ],
+          "usage": [
+            "克隆启动：<pre><code>git clone https://github.com/xbtlin/ai-berkshire.git && cd ai-berkshire</code></pre>",
+            "深度研究：<pre><code>python run.py --ticker AAPL --mode deep</code></pre> 输出四师全面分析报告。",
+            "批量筛选：<pre><code>python run.py --universe s&p500 --filter 'pe<15,roe>20'</code></pre>"
+          ],
+          "insights": [
+            "<strong>连续3天登榜 = 真需求：</strong>6/27 +686★ → 6/28 未上 → 6/29 +1,397★ → 6/30 +966★，AI 价值投资绝不是昙花一现。",
+            "<strong>AI Agent 改造传统行业的最佳示范：</strong>信息检索 → 模式识别 → 逻辑推理 → 报告生成，投资研究的每一步都是 LLM 强项。",
+            "<strong>多 Agent 对抗是核心理念：</strong>四种不同投资哲学并行分析，比单一 Agent 视角更接近真实投资决策。"
+          ],
+          "tags": [
+            "value-investing",
+            "ai-agent",
+            "claude-code",
+            "finance",
+            "multi-agent"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "obra",
+          "name": "superpowers",
+          "fullName": "obra / superpowers",
+          "org": "obra",
+          "url": "https://github.com/obra/superpowers",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "242,180",
+          "forks": "21,489",
+          "starsToday": "884",
+          "count": 11,
+          "description": "🔥 亮点 —— 今日 +884★！242K★ 的 Agentic Skills 框架，GitHub 第 11 次登榜。Agent 技能体系与软件开发方法论的集大成者。",
+          "problems": [
+            "<strong>Agent 技能碎片化：</strong>社区 Agent 技能散落在各处，缺乏统一发现、安装和更新机制。",
+            "<strong>开发方法论缺失：</strong>AI 编码 Agent 的能力很强，但缺乏配套的工作流和方法论指导。",
+            "<strong>跨平台兼容难题：</strong>Claude Code、Codex、Cursor 等平台各有插件格式，互不兼容。"
+          ],
+          "usage": [
+            "安装 CLI：<pre><code>npm install -g superpowers</code></pre>",
+            "搜索技能：<pre><code>superpowers search \"test generator\"</code></pre>",
+            "安装技能：<pre><code>superpowers install writing-plans</code></pre> 自动配置到当前编辑器中。"
+          ],
+          "insights": [
+            "<strong>第11次登榜 → 持久型项目：</strong>从 5月开始几乎每周登榜，242K★ 说明 superpowers 不是一时热度，而是持续被需要的基础设施。",
+            "<strong>跨平台 Agent 插件体系：</strong>同时支持 Claude、Codex、Cursor、Kimi、OpenCode 等平台，解决了 Agent 技能的分发和兼容问题。",
+            "<strong>技能即代码的趋势：</strong>superpowers 验证了 Agent 技能可以像 npm 包一样安装卸载——生态化的技能管理是 Agent 平台的下一个战场。"
+          ],
+          "tags": [
+            "agent-framework",
+            "skills",
+            "developer-tools",
+            "cli",
+            "agent-ecosystem"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "fullName": "diegosouzapw / OmniRoute",
+          "org": "diegosouzapw",
+          "url": "https://github.com/diegosouzapw/OmniRoute",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "8,223",
+          "forks": "1,375",
+          "starsToday": "617",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +617★！8.2K★ 免费 AI 网关。一个端点连接 160+ 模型提供商（50+ 免费），支持 Claude Code、Codex、Cursor、Cline 等工具。",
+          "problems": [
+            "<strong>AI API 费用高昂：</strong>开发者在多个平台间切换使用 API，成本不断累积。",
+            "<strong>提供商碎片化：</strong>不同 AI 模型提供商各自独立的 API、计费、认证方式令人头疼。",
+            "<strong>Token 浪费严重：</strong>编码对话中大量重复上下文导致不必要的 API 开销。"
+          ],
+          "usage": [
+            "一行命令启动：<pre><code>npx @omniroute/gateway --providers all</code></pre>",
+            "在 Claude Code 中配置：<pre><code>export PROVIDER=localhost:8080</code></pre> 即可连接免费模型。",
+            "支持智能回退：主模型超时自动切换到备用模型，保证编码不中断。"
+          ],
+          "insights": [
+            "<strong>AI 网关赛道升温：</strong>OmniRoute 的出现说明开发者对 AI 基础设施的多元化需求——不绑定单一提供商。",
+            "<strong>免费模型的市场经济：</strong>50+ 免费模型 + 160+ 提供商，AI 算力正在从卖方市场转向买方市场。",
+            "<strong>Token 压缩经济：</strong>RTK+Caveman 压缩号称节省 15-95% Token——在 API 定价背景下，省 Token 就是省大钱。"
+          ],
+          "tags": [
+            "ai-gateway",
+            "api-router",
+            "free-providers",
+            "token-compression",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "google",
+          "name": "agents-cli",
+          "fullName": "google / agents-cli",
+          "org": "Google",
+          "url": "https://github.com/google/agents-cli",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "3,908",
+          "forks": "439",
+          "starsToday": "433",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +433★！Google 官方出品的 Agent CLI 工具。将任何编码助手变为 Google Cloud 上的 AI Agent 创建、评估和部署专家。",
+          "problems": [
+            "<strong>Google Cloud Agent 门槛高：</strong>Agent 构建、评估、部署各环节需要理解多种 GCP 服务，上手复杂。",
+            "<strong>编码助手无法直接操作云：</strong>Claude Code、Codex 等可以写代码，但不能直接管理云资源。",
+            "<strong>缺少标准化 Agent 生命周期管理：</strong>从构建到评估到上线的端到端流程需要手动协调。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install agents-cli</code></pre>",
+            "创建 Agent：<pre><code>agents project create --name my-agent --template chatbot</code></pre>",
+            "评估并部署：<pre><code>agents eval run --project my-agent && agents deploy --project my-agent</code></pre>"
+          ],
+          "insights": [
+            "<strong>Google 正式入局 Agent 工具链：</strong>继 Anthropic、OpenAI 之后，Google 终于推出了自己的 Agent CLI——这也意味着 Agent 不再是附属功能，而是云平台的独立产品线。",
+            "<strong>AI 编码助手的云入口：</strong>agents-cli 让编码助手直接操作 GCP 资源——Claude Code 说「部署到 Cloud Run」，agents-cli 负责执行。",
+            "<strong>三家巨头齐聚 Agent CLI：</strong>Anthropic (skills)、OpenAI (Codex / agents SDK)、Google (agents-cli)——Agent 工具链的标准之争正式拉开。"
+          ],
+          "tags": [
+            "google-cloud",
+            "cli",
+            "agent-framework",
+            "deployment",
+            "devops"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-29",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -199,7 +391,7 @@ var siteData = {
     },
     {
       "date": "2026-06-28",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -391,7 +583,7 @@ var siteData = {
     },
     {
       "date": "2026-06-27",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -583,7 +775,7 @@ var siteData = {
     },
     {
       "date": "2026-06-23",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -775,7 +967,7 @@ var siteData = {
     },
     {
       "date": "2026-06-22",
-      "label": "8天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -967,7 +1159,7 @@ var siteData = {
     },
     {
       "date": "2026-06-21",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1159,7 +1351,7 @@ var siteData = {
     },
     {
       "date": "2026-06-20",
-      "label": "11天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1350,7 +1542,7 @@ var siteData = {
     },
     {
       "date": "2026-06-19",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1542,7 +1734,7 @@ var siteData = {
     },
     {
       "date": "2026-06-17",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -1734,7 +1926,7 @@ var siteData = {
     },
     {
       "date": "2026-06-16",
-      "label": "19天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -1926,7 +2118,7 @@ var siteData = {
     },
     {
       "date": "2026-06-15",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2118,7 +2310,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "22天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -2310,7 +2502,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -2503,7 +2695,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "28天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -2696,7 +2888,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -2889,7 +3081,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "30天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -3082,7 +3274,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "31天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -3280,7 +3472,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "32天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -3477,7 +3669,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "33天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -3674,7 +3866,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "34天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -3871,7 +4063,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "36天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -4069,7 +4261,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "37天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -4264,7 +4456,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "38天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -4459,7 +4651,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "39天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -4655,7 +4847,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "41天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -4851,7 +5043,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "42天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -5045,7 +5237,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "43天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -5243,7 +5435,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "45天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -5445,7 +5637,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "46天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -5647,7 +5839,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "47天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -5849,7 +6041,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "48天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -6051,7 +6243,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "49天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -6253,7 +6445,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "50天前",
+      "label": "52天前",
       "icon": "",
       "projects": [
         {
@@ -6455,7 +6647,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "51天前",
+      "label": "53天前",
       "icon": "",
       "projects": [
         {
@@ -6657,7 +6849,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "55天前",
+      "label": "57天前",
       "icon": "",
       "projects": [
         {
@@ -6857,7 +7049,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "56天前",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
@@ -7053,7 +7245,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "57天前",
+      "label": "59天前",
       "icon": "",
       "projects": [
         {
