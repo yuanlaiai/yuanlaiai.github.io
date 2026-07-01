@@ -1,10 +1,202 @@
 {
-  "lastUpdated": "2026-06-30",
-  "topic": "🔥 <strong>Agent 技能三连霸 + AI 投资连续登榜 + Superpowers 回归 + AI 网关与 Google CLI 双新入场</strong> —— msitarzewski/agency-agents（+1,793★）连续3天登榜，120K★ Agent 技能库生态持续壮大。xbtlin/ai-berkshire（+966★）同样连续3天登榜，AI 价值投资的需求远超预期。obra/superpowers（+884★）第11次登榜，242K★ 的 Agentic Skills 框架已成 Agent 技能分发的标准基础设施。diegosouzapw/OmniRoute（+617★）免费 AI 网关新物种首次上榜，160+ 提供商一站式接入。google/agents-cli（+433★）Google 官方出品的 Agent CLI，三大巨头齐聚 Agent 工具链。Agent 技能标准化 + AI 投资 + 云基础设施——Agent 生态正从野蛮生长走向平台化。",
+  "lastUpdated": "2026-07-02",
+  "topic": "🔥 <strong>Agent 技能四连霸 + AI 安全新赛道 + AI 教育增长 + AI 网关二次登榜 + AI 视频编辑三次上榜</strong> —— msitarzewski/agency-agents（+2,097★）连续4次登榜创纪录，123K★ Agent 技能库生态持续壮大。usestrix/strix（+1,195★）AI 渗透测试首次上榜，AI+安全赛道升温。microsoft/AI-For-Beginners（+1,086★）50K★ 微软官方 AI 入门课，AI 教育需求旺盛。diegosouzapw/OmniRoute（+1,012★）二次登榜，免费 AI 网关提供商已达 231+。browser-use/video-use（+690★）三次登榜，AI 视频编辑编程化趋势持续。Agent 技能标准化、AI 安全、AI 教育、AI 基础设施——AI Agent 生态正加速多元化。",
   "days": [
     {
-      "date": "2026-06-30",
+      "date": "2026-07-02",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "msitarzewski",
+          "name": "agency-agents",
+          "fullName": "msitarzewski / agency-agents",
+          "org": "msitarzewski",
+          "url": "https://github.com/msitarzewski/agency-agents",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "123,278",
+          "forks": "20,064",
+          "starsToday": "2,097",
+          "count": 4,
+          "description": "🔥 亮点 —— 今日 +2,097★！123K★ 连续4次登榜。社区最大 AI Agent 专业技能库，SCILL.md 格式已成 Agent 技能分发的事实标准。",
+          "problems": [
+            "<strong>Agent 能力碎片化：</strong>每个 AI 编码助手各有一套技能体系，跨平台迁移成本高。",
+            "<strong>技能复用率低：</strong>每次新项目都要重新调教 Agent 角色和提示词。",
+            "<strong>缺乏质量标准：</strong>社区 Agent 配置良莠不齐，没有统一评审机制。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/msitarzewski/agency-agents.git</code></pre>",
+            "浏览分类：<pre><code>ls */SKILL.md | sort</code></pre> 查看全部分类 Agent。",
+            "按需加载对应目录的 SKILL.md 到 AI 助手即可使用。"
+          ],
+          "insights": [
+            "<strong>连续4次登榜破纪录：</strong>从 6/12 首次上榜到 6/29→6/30→7/2 三连击，agency-agents 是近期最持久的 AI 项目。",
+            "<strong>社区共建的力量：</strong>123K★ + 20K fork，不是一个公司在推动，而是整个 Agent 社区的自组织生态。",
+            "<strong>SKILL.md 标准化进程：</strong>从 Anthropic 官方到社区自建，SKILL.md 正在成为 Agent 技能分发的基础设施协议。"
+          ],
+          "tags": [
+            "ai-agent",
+            "skills",
+            "agent-framework",
+            "productivity",
+            "automation"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "usestrix",
+          "name": "strix",
+          "fullName": "usestrix / strix",
+          "org": "usestrix",
+          "url": "https://github.com/usestrix/strix",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "29,632",
+          "forks": "3,219",
+          "starsToday": "1,195",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +1,195★！29.6K★ 的开源 AI 渗透测试工具。自动发现和修复应用安全漏洞，AI 驱动的白帽黑客。",
+          "problems": [
+            "<strong>安全测试门槛高：</strong>传统渗透测试需要专业技能和大量手动操作，中小企业难以负担。",
+            "<strong>漏洞发现周期长：</strong>从扫描到验证到修复，整个安全检测流程缓慢。",
+            "<strong>安全工具碎片化：</strong>不同扫描器各有专长，需要多种工具组合使用。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install strix</code></pre>",
+            "快速扫描：<pre><code>strix scan https://your-app.com</code></pre>",
+            "集成 CI/CD：<pre><code>strix ci --fail-on critical</code></pre> 在流水线中自动阻断高危漏洞。"
+          ],
+          "insights": [
+            "<strong>AI + Security 赛道升温：</strong>strix 29.6K★ 说明 AI 安全工具不再是小众需求——每个 AI 应用都需要 AI 驱动的安全测试。",
+            "<strong>红蓝对抗的 AI 化：</strong>传统渗透测试向 AI Agent 渗透测试演进，攻防双方都用上了 AI。",
+            "<strong>安全左移的新工具：</strong>CI/CD 集成能力让 strix 不只是扫描器，而是嵌入开发流程的安全检查点。"
+          ],
+          "tags": [
+            "security",
+            "penetration-testing",
+            "ai-agent",
+            "devsecops",
+            "vulnerability"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "microsoft",
+          "name": "AI-For-Beginners",
+          "fullName": "microsoft / AI-For-Beginners",
+          "org": "Microsoft",
+          "url": "https://github.com/microsoft/AI-For-Beginners",
+          "lang": "Jupyter Notebook",
+          "langClass": "jl",
+          "stars": "50,394",
+          "forks": "10,252",
+          "starsToday": "1,086",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +1,086★！50K★ 微软官方 AI 入门课程。12 周 24 课，从基础概念到实战项目，适合零基础开发者。",
+          "problems": [
+            "<strong>AI 学习曲线陡峭：</strong>初学者面对神经网络、Transformer 等概念往往无从下手。",
+            "<strong>缺乏系统性课程：</strong>网上的 AI 教程零散且质量参差不齐。",
+            "<strong>理论与实战脱节：</strong>看了很多理论但不知道怎么应用到实际项目中。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/microsoft/AI-For-Beginners.git</code></pre>",
+            "按章节学习：<pre><code>cd 1-Introduction && jupyter notebook</code></pre>",
+            "每个课程都附带 Jupyter Notebook 实战练习，边学边练。"
+          ],
+          "insights": [
+            "<strong>AI 教育需求持续旺盛：</strong>50K★ 的课程级项目仍在高速增长，说明 AI 学习的入门需求远未饱和。",
+            "<strong>微软在 AI 教育上的布局：</strong>从 ML-For-Beginners 到 AI-For-Beginners，微软正在打造完整的 AI 教育课程矩阵。",
+            "<strong>Jupyter Notebook 仍是 AI 教学主力：</strong>交互式学习体验在 AI 教育中不可替代，Notebook 形式最适合从理论到实践的过渡。"
+          ],
+          "tags": [
+            "ai-education",
+            "microsoft",
+            "course",
+            "beginners",
+            "jupyter"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "fullName": "diegosouzapw / OmniRoute",
+          "org": "diegosouzapw",
+          "url": "https://github.com/diegosouzapw/OmniRoute",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "9,480",
+          "forks": "1,462",
+          "starsToday": "1,012",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +1,012★！二次登榜，已达 231+ 提供商。免费 AI 网关，一个端点连接所有主流模型，Token 压缩节省 15-95% 成本。",
+          "problems": [
+            "<strong>AI API 费用居高不下：</strong>多个模型提供商之间切换成本高昂，Token 消耗不受控。",
+            "<strong>提供商锁定风险：</strong>深度绑定单一模型提供商，切换灵活度低。",
+            "<strong>可用性挑战：</strong>主流模型服务频繁中断，缺乏优雅的降级方案。"
+          ],
+          "usage": [
+            "一行启动：<pre><code>npx @omniroute/gateway --providers all</code></pre>",
+            "在 Claude Code / Codex 中配置指向本地网关即可使用免费模型。",
+            "智能回退：主模型超时自动切换到备用模型，零中断。"
+          ],
+          "insights": [
+            "<strong>二次登榜验证刚需：</strong>6/30 +617★ → 7/2 +1,012★，AI 网关的需求不减反增——开发者苦 API 费用久矣。",
+            "<strong>231+ 提供商生态：</strong>从 160+ 增长到 231+ 只用了 2 天，增长速度说明开源社区在疯狂接入新模型。",
+            "<strong>Token 压缩成杀手锏：</strong>节省 15-95% Token 不是噱头——在 AI 应用规模化部署中，省 Token 就是省利润。"
+          ],
+          "tags": [
+            "ai-gateway",
+            "api-router",
+            "free-providers",
+            "token-compression",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "browser-use",
+          "name": "video-use",
+          "fullName": "browser-use / video-use",
+          "org": "browser-use",
+          "url": "https://github.com/browser-use/video-use",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "13,197",
+          "forks": "1,654",
+          "starsToday": "690",
+          "count": 3,
+          "description": "🔥 亮点 —— 今日 +690★！13.1K★ 三次登榜。browser-use 生态，AI 编码 Agent 自动剪视频，Python 驱动全流程。",
+          "problems": [
+            "<strong>视频编辑门槛高：</strong>Premiere/达芬奇专业工具学习曲线陡，初学者简单剪辑也费劲。",
+            "<strong>重复劳动效率低：</strong>批量裁剪、字幕、转场等机械操作需重复进行。",
+            "<strong>AI 视频工具碎片化：</strong>各平台 AI 视频工具各自为政，缺乏程序化统一框架。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install video-use</code></pre>",
+            "Python 脚本剪辑：<pre><code>from video_use import VideoEditor; ed = VideoEditor(); ed.add_clip('in.mp4').render('out.mp4')</code></pre>",
+            "搭配 AI Agent：Claude/Cursor 根据自然语言描述生成剪辑脚本。"
+          ],
+          "insights": [
+            "<strong>三次登榜验证持久热度：</strong>6/28 +186★ → 6/29 +976★ → 6/30 未上 → 7/2 +690★，AI 视频编辑绝非短期炒作。",
+            "<strong>编程式视频编辑趋势：</strong>FFmpeg 级控制力 + Python 可读性，AI Agent 充当自然语言到编辑脚本的翻译层。",
+            "<strong>全自动视频生产闭环：</strong>video-use + AI 配音 + AI 字幕 + AI 素材选择，补齐全自动视频生产的编程拼图。"
+          ],
+          "tags": [
+            "video-editing",
+            "ai-agent",
+            "coding-agent",
+            "automation",
+            "creative-tools"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -196,7 +388,7 @@
     },
     {
       "date": "2026-06-29",
-      "label": "昨天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -388,7 +580,7 @@
     },
     {
       "date": "2026-06-28",
-      "label": "前天",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -580,7 +772,7 @@
     },
     {
       "date": "2026-06-27",
-      "label": "4天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -772,7 +964,7 @@
     },
     {
       "date": "2026-06-23",
-      "label": "8天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -964,7 +1156,7 @@
     },
     {
       "date": "2026-06-22",
-      "label": "10天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1156,7 +1348,7 @@
     },
     {
       "date": "2026-06-21",
-      "label": "11天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -1348,7 +1540,7 @@
     },
     {
       "date": "2026-06-20",
-      "label": "13天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -1539,7 +1731,7 @@
     },
     {
       "date": "2026-06-19",
-      "label": "15天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -1731,7 +1923,7 @@
     },
     {
       "date": "2026-06-17",
-      "label": "19天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -1923,7 +2115,7 @@
     },
     {
       "date": "2026-06-16",
-      "label": "21天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -2115,7 +2307,7 @@
     },
     {
       "date": "2026-06-15",
-      "label": "22天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -2307,7 +2499,7 @@
     },
     {
       "date": "2026-06-14",
-      "label": "24天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -2499,7 +2691,7 @@
     },
     {
       "date": "2026-06-12",
-      "label": "28天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -2692,7 +2884,7 @@
     },
     {
       "date": "2026-06-11",
-      "label": "30天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -2885,7 +3077,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "31天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -3078,7 +3270,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "32天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -3271,7 +3463,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "33天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -3469,7 +3661,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "34天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -3666,7 +3858,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "35天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -3863,7 +4055,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "36天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -4060,7 +4252,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "38天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -4258,7 +4450,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "39天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -4453,7 +4645,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "40天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -4648,7 +4840,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "41天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -4844,7 +5036,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "43天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -5040,7 +5232,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "44天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -5234,7 +5426,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "45天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -5432,7 +5624,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "47天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -5634,7 +5826,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "48天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -5836,7 +6028,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "49天前",
+      "label": "52天前",
       "icon": "",
       "projects": [
         {
@@ -6038,7 +6230,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "50天前",
+      "label": "53天前",
       "icon": "",
       "projects": [
         {
@@ -6240,7 +6432,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "51天前",
+      "label": "54天前",
       "icon": "",
       "projects": [
         {
@@ -6442,7 +6634,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "52天前",
+      "label": "55天前",
       "icon": "",
       "projects": [
         {
@@ -6644,7 +6836,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "53天前",
+      "label": "56天前",
       "icon": "",
       "projects": [
         {
@@ -6846,7 +7038,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "57天前",
+      "label": "60天前",
       "icon": "",
       "projects": [
         {
@@ -7046,7 +7238,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "58天前",
+      "label": "61天前",
       "icon": "",
       "projects": [
         {
@@ -7242,7 +7434,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "59天前",
+      "label": "62天前",
       "icon": "",
       "projects": [
         {
