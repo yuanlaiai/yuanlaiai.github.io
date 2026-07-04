@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-07-03",
-  "topic": "🔥 <strong>Agent 技能五连霸 + AI 安全翻倍 + 野人语 Token 省钱 + Superpowers 第12次 + AI 求职实用主义</strong> —— msitarzewski/agency-agents（+3,032★）连续5次登榜创纪录，单日 +3K★ 新高。usestrix/strix（+2,137★）二次登榜热度翻倍，AI+安全赛道爆发。JuliusBrussee/caveman（+926★）80K★ 野人语 Token 节省技能病毒式传播，省钱才是第一生产力。obra/superpowers（+897★）第12次登榜，Agent 技能分发基础设施。santifer/career-ops（+372★）二次上榜 AI 求职系统，开发者最痛的场景就是最好的 AI 落地场景。Agent 技能生态、AI 安全、Token 优化、求职自动化——AI Agent 正从炫技走向省钱和实用。",
+  "lastUpdated": "2026-07-04",
+  "topic": "🔥 <strong>AI 安全三连爆 + Agent 技能双雄 + 阿里入局网页 Agent + 野人语二连省 + Agent 多路复用新概念</strong> —— usestrix/strix（+1,910★）三次登榜创 AI 安全新高度，CI/CD 原生集成 SARIF。mattpocock/skills（+1,289★）TypeScript 权威出手，156K★ 证明个人 IP 技能的号召力。alibaba/page-agent（+1,110★）阿里入局浏览器 Agent 赛道。JuliusBrussee/caveman（+1,089★）二次登榜不减热情——省钱才是硬道理。ogulcancelik/herdr（+706★）终端 Agent 多路复用器新概念，Rust 写的 7MB 工具。AI 安全、Agent 技能生态、Token 省钱、多 Agent 协作——四面开花。",
   "days": [
     {
-      "date": "2026-07-03",
+      "date": "2026-07-04",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "usestrix",
+          "name": "strix",
+          "fullName": "usestrix / strix",
+          "org": "usestrix",
+          "url": "https://github.com/usestrix/strix",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "35,573",
+          "forks": "3,628",
+          "starsToday": "1,910",
+          "count": 3,
+          "description": "🔥 亮点 —— 今日 +1,910★！35.6K★ 三次登榜！开源 AI 渗透测试工具，自动发现和修复应用安全漏洞，CI/CD 集成。",
+          "problems": [
+            "<strong>安全漏洞发现滞后：</strong>传统安全扫描需要手动配置规则，跟不上 CI/CD 迭代节奏。",
+            "<strong>AI 应用攻击面扩大：</strong>LLM 注入、提示词攻击等新型威胁传统工具难以覆盖。",
+            "<strong>修复流程割裂：</strong>发现漏洞到修复的闭环周期长，开发和安全团队沟通成本高。"
+          ],
+          "usage": [
+            "快速扫描：<pre><code>strix scan --target https://your-app.com</code></pre>",
+            "CI/CD 集成：<pre><code>strix ci --sarif-output report.sarif</code></pre>",
+            "查看报告：<pre><code>strix report --format html</code></pre>"
+          ],
+          "insights": [
+            "<strong>三次登榜验证需求：</strong>从 7/3 到 7/4 连续两日 +1,900★+，AI 安全赛道是真的刚需。",
+            "<strong>CI/CD 原生集成：</strong>SARIF 2.1.0 输出格式意味着可无缝对接 GitHub Code Scanning——开发者在习惯的界面看到结果。",
+            "<strong>35.6K★ 的启示：</strong>安全工具在 AI 时代找到了新增长点——不是替代安全工程师，而是让每个开发者都能自助式安全检测。"
+          ],
+          "tags": [
+            "ai-security",
+            "penetration-testing",
+            "devsecops",
+            "ci-cd",
+            "vulnerability-detection"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "mattpocock",
+          "name": "skills",
+          "fullName": "mattpocock / skills",
+          "org": "mattpocock",
+          "url": "https://github.com/mattpocock/skills",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "156,184",
+          "forks": "13,446",
+          "starsToday": "1,289",
+          "count": 4,
+          "description": "🔥 亮点 —— 今日 +1,289★！156K★ TypeScript 权威的技能库！mattpocock 从 .claude 目录直接开源的 Agent 技能，工程实战派。",
+          "problems": [
+            "<strong>Agent 技能质量参差：</strong>社区技能库鱼龙混杂，缺乏来自一线工程实践的验证。",
+            "<strong>技能迁移成本高：</strong>从 Claude Code 换到 Codex 或 Cursor，技能文件结构不通用。",
+            "<strong>缺乏权威参考：</strong>开发者不知道该学谁的技能写法才算合格。"
+          ],
+          "usage": [
+            "克隆仓库：<pre><code>git clone https://github.com/mattpocock/skills.git</code></pre>",
+            "查看分类：<pre><code>ls -d */</code></pre>列出所有技能目录。",
+            "加载技能：将对应 .mdc / SKILL.md 文件放入 AI 助手的项目配置目录。"
+          ],
+          "insights": [
+            "<strong>TypeScript 第一人出手：</strong>mattpocock 是 TypeScript 社区权威，他的 Agent 技能写法就是最佳实践模板。",
+            "<strong>156K★ 的号召力：</strong>从 .claude 目录直接公开——工程专家在用 Agent 做什么，全在 repo 里。",
+            "<strong>技能生态正在分层：</strong>agency-agents（社区共建）、mattpocock/skills（个人权威）——两种模式都在繁荣。"
+          ],
+          "tags": [
+            "ai-agent",
+            "skills",
+            "typescript",
+            "claude-code",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "alibaba",
+          "name": "page-agent",
+          "fullName": "alibaba / page-agent",
+          "org": "阿里巴巴",
+          "url": "https://github.com/alibaba/page-agent",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "22,780",
+          "forks": "1,978",
+          "starsToday": "1,110",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +1,110★！22.8K★ 阿里巴巴开源！用自然语言控制网页界面的 JavaScript 页面 Agent。",
+          "problems": [
+            "<strong>网页自动化门槛高：</strong>传统 Selenium/Playwright 需要编写复杂的 CSS/XPath 选择器和等待逻辑。",
+            "<strong>跨框架适配难：</strong>React、Vue、Angular 等不同框架的 DOM 结构差异大，脚本难以复用。",
+            "<strong>稳定性差：</strong>前端 UI 频繁改版导致自动化脚本批量失效，维护成本极高。"
+          ],
+          "usage": [
+            "安装：<pre><code>npm install page-agent</code></pre>",
+            "启动交互式控制：<pre><code>page-agent --headless --url https://example.com</code></pre>",
+            "自然语言指令：输入「搜索 AI Agent 并点击第一个结果」，Agent 自动完成。"
+          ],
+          "insights": [
+            "<strong>阿里出手网页 Agent：</strong>阿里巴巴入局 browser-use 赛道——大厂背书意味着工程化水平成熟度高。",
+            "<strong>JavaScript 原生 Agent：</strong>与传统 Python 浏览器自动化不同，page-agent 直接在页面 JS 上下文中操作，性能更优。",
+            "<strong>22.8K★ 的首日爆发：</strong>上线即爆——网页自动化 + AI Agent 是开发者和 QA 工程师最迫切的需求之一。"
+          ],
+          "tags": [
+            "browser-agent",
+            "web-automation",
+            "alibaba",
+            "gui-agent",
+            "typescript"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "JuliusBrussee",
+          "name": "caveman",
+          "fullName": "JuliusBrussee / caveman",
+          "org": "JuliusBrussee",
+          "url": "https://github.com/JuliusBrussee/caveman",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "83,530",
+          "forks": "4,658",
+          "starsToday": "1,089",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +1,089★！83.5K★ 二次登榜！野人语 Token 节省技能——why use many token when few token do trick，砍掉 65% Token。",
+          "problems": [
+            "<strong>Token 消耗过快：</strong>复杂任务中详细推理和长上下文导致 Token 用量暴涨，API 成本失控。",
+            "<strong>Agent 响应啰嗦：</strong>LLM 默认输出冗长，包含大量不必要的分析和确认步骤。",
+            "<strong>小模型表现弱：</strong>低成本模型在长 Prompt 和长回复中效果下降，Token 效率直接影响质量。"
+          ],
+          "usage": [
+            "安装：<pre><code>claude add JuliusBrussee/caveman</code></pre>",
+            "加载技能后，Agent 自动切换到极简风格，回复缩短 65%。",
+            "适合快速原型、代码生成、批量任务等对 Token 敏感的场景。"
+          ],
+          "insights": [
+            "<strong>二次登榜不减热度：</strong>83.5K★ 二次上榜 +1,089★——野人语从猎奇到实用，开发者发现省钱真的香。",
+            "<strong>Token 经济学：</strong>不改变模型，只改变 Prompt 风格就能省 65% Token——这是目前 ROI 最高的优化手段。",
+            "<strong>幽默即传播力：</strong>原始人表情包 + 搞笑语法让这个工具成为社交传播爆款——技术工具也需要 personality。"
+          ],
+          "tags": [
+            "token-optimization",
+            "claude-code",
+            "cost-saving",
+            "prompt-engineering",
+            "fun"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "ogulcancelik",
+          "name": "herdr",
+          "fullName": "ogulcancelik / herdr",
+          "org": "ogulcancelik",
+          "url": "https://github.com/ogulcancelik/herdr",
+          "lang": "Rust",
+          "langClass": "rs",
+          "stars": "11,149",
+          "forks": "652",
+          "starsToday": "706",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +706★！11.1K★ 你的终端专属 Agent 多路复用器！在终端同时运行多个 AI Agent。",
+          "problems": [
+            "<strong>Agent 切换效率低：</strong>同时管理多个 AI Agent（Claude、Codex、Gemini 等）需要在不同终端窗口间反复切换。",
+            "<strong>上下文碎片化：</strong>同一任务跨 Agent 协作时，信息无法互通，手动搬运上下文。",
+            "<strong>资源浪费：</strong>每个 Agent 各自加载模型和环境，缺乏统一调度机制。"
+          ],
+          "usage": [
+            "安装：<pre><code>cargo install herdr</code></pre>",
+            "启动：<pre><code>herdr</code></pre>进入终端多路复用界面。",
+            "添加 Agent 通道：<pre><code>:add claude</code></pre>在新标签页中启动 Claude Code。"
+          ],
+          "insights": [
+            "<strong>Agent 管理新范式：</strong>tmux 式的多路复用器，但针对 AI Agent 深度优化——终端有多强，Agent 就有多强。",
+            "<strong>Rust + AI 组合：</strong>用 Rust 写 Agent 工具正在成为趋势（轻量、快启动、低内存），herdr 7MB 提即用。",
+            "<strong>多 Agent 工作流刚需：</strong>当一个人同时使用 3-5 个编码 Agent 时，统一的终端管理界面成了基础设施。"
+          ],
+          "tags": [
+            "agent-multiplexer",
+            "terminal",
+            "rust",
+            "multi-agent",
+            "productivity"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-03",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -199,7 +391,7 @@ var siteData = {
     },
     {
       "date": "2026-07-02",
-      "label": "昨天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -391,7 +583,7 @@ var siteData = {
     },
     {
       "date": "2026-06-30",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -583,7 +775,7 @@ var siteData = {
     },
     {
       "date": "2026-06-29",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -775,7 +967,7 @@ var siteData = {
     },
     {
       "date": "2026-06-28",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -967,7 +1159,7 @@ var siteData = {
     },
     {
       "date": "2026-06-27",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1159,7 +1351,7 @@ var siteData = {
     },
     {
       "date": "2026-06-23",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1351,7 +1543,7 @@ var siteData = {
     },
     {
       "date": "2026-06-22",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -1543,7 +1735,7 @@ var siteData = {
     },
     {
       "date": "2026-06-21",
-      "label": "16天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -1735,7 +1927,7 @@ var siteData = {
     },
     {
       "date": "2026-06-20",
-      "label": "18天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -1926,7 +2118,7 @@ var siteData = {
     },
     {
       "date": "2026-06-19",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2118,7 +2310,7 @@ var siteData = {
     },
     {
       "date": "2026-06-17",
-      "label": "24天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -2310,7 +2502,7 @@ var siteData = {
     },
     {
       "date": "2026-06-16",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -2502,7 +2694,7 @@ var siteData = {
     },
     {
       "date": "2026-06-15",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -2694,7 +2886,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -2886,7 +3078,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "33天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -3079,7 +3271,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "35天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -3272,7 +3464,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "36天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -3465,7 +3657,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "37天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -3658,7 +3850,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "38天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -3856,7 +4048,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "39天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -4053,7 +4245,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "40天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -4250,7 +4442,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "41天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -4447,7 +4639,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "43天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -4645,7 +4837,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "44天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -4840,7 +5032,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "45天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -5035,7 +5227,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "46天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -5231,7 +5423,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "48天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -5427,7 +5619,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "49天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -5621,7 +5813,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "50天前",
+      "label": "52天前",
       "icon": "",
       "projects": [
         {
@@ -5819,7 +6011,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "52天前",
+      "label": "54天前",
       "icon": "",
       "projects": [
         {
@@ -6021,7 +6213,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "53天前",
+      "label": "55天前",
       "icon": "",
       "projects": [
         {
@@ -6223,7 +6415,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "54天前",
+      "label": "56天前",
       "icon": "",
       "projects": [
         {
@@ -6425,7 +6617,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "55天前",
+      "label": "57天前",
       "icon": "",
       "projects": [
         {
@@ -6627,7 +6819,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "56天前",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
@@ -6829,7 +7021,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "57天前",
+      "label": "59天前",
       "icon": "",
       "projects": [
         {
@@ -7031,7 +7223,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "58天前",
+      "label": "60天前",
       "icon": "",
       "projects": [
         {
@@ -7233,7 +7425,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "62天前",
+      "label": "64天前",
       "icon": "",
       "projects": [
         {
@@ -7433,7 +7625,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "63天前",
+      "label": "65天前",
       "icon": "",
       "projects": [
         {
@@ -7629,7 +7821,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "64天前",
+      "label": "66天前",
       "icon": "",
       "projects": [
         {
