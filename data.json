@@ -1,10 +1,202 @@
 {
-  "lastUpdated": "2026-07-04",
-  "topic": "🔥 <strong>AI 安全三连爆 + Agent 技能双雄 + 阿里入局网页 Agent + 野人语二连省 + Agent 多路复用新概念</strong> —— usestrix/strix（+1,910★）三次登榜创 AI 安全新高度，CI/CD 原生集成 SARIF。mattpocock/skills（+1,289★）TypeScript 权威出手，156K★ 证明个人 IP 技能的号召力。alibaba/page-agent（+1,110★）阿里入局浏览器 Agent 赛道。JuliusBrussee/caveman（+1,089★）二次登榜不减热情——省钱才是硬道理。ogulcancelik/herdr（+706★）终端 Agent 多路复用器新概念，Rust 写的 7MB 工具。AI 安全、Agent 技能生态、Token 省钱、多 Agent 协作——四面开花。",
+  "lastUpdated": "2026-07-06",
+  "topic": "🔥 <strong>隐私会议 AI 爆发 + 审美技能四次登榜 + 系统提示词透明运动 + Chrome 权威技能 + OpenAI 跨 Agent 互操作</strong> —— Zackriya-Solutions/meetily（+2,493★）本地 AI 会议助手爆发式增长。Leonxlnx/taste-skill（+1,453★）58K★ 四次登榜，「反 AI 味」是开发者核心痛点。asgeirtj/system_prompts_leaks（+1,386★）50K★ 系统提示词透明化运动席卷社区。addyosmani/agent-skills（+1,114★）Google Chrome 工程总监出手，70K★ 权威技能。openai/codex-plugin-cc（+910★）OpenAI 为 Claude Code 做插件——跨 Agent 互操作时代来临。隐私、品味、透明、权威、协作——五个不同维度的 AI 趋势同日爆发。",
   "days": [
     {
-      "date": "2026-07-04",
+      "date": "2026-07-06",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "Zackriya-Solutions",
+          "name": "meetily",
+          "fullName": "Zackriya-Solutions / meetily",
+          "org": "Zackriya Solutions",
+          "url": "https://github.com/Zackriya-Solutions/meetily",
+          "lang": "Rust",
+          "langClass": "rs",
+          "stars": "18,577",
+          "forks": "1,897",
+          "starsToday": "2,493",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +2,493★！18.6K★ 本地优先 AI 会议助手！4x Parakeet/Whisper 实时转录 + Ollama 总结，100% 本地运行。",
+          "problems": [
+            "<strong>会议记录隐私危机：</strong>云端会议工具录音上传到第三方，敏感内容存在泄露风险。",
+            "<strong>实时转录延迟高：</strong>大多数会议助手依赖云 API，网络延迟影响实时体验。",
+            "<strong>本地部署门槛高：</strong>自建本地会议系统需要复杂的配置和硬件支持。"
+          ],
+          "usage": [
+            "下载安装：<pre><code>brew install meetily</code></pre>或从 GitHub Releases 下载。",
+            "启动：<pre><code>meetily</code></pre>自动监听系统音频。",
+            "查看转录：打开浏览器访问 <pre><code>http://localhost:5371</code></pre>"
+          ],
+          "insights": [
+            "<strong>本地 AI 会议助手爆发：</strong>多日连续登榜 +2,493★ 创新高——隐私 + 本地 AI = 刚需组合。",
+            "<strong>Rust + AI 双引擎：</strong>用 Rust 写的 Whisper 转录 4x 加速，证明本地推理也能有云端级别的性能。",
+            "<strong>Ollama 生态受益者：</strong>接入 Ollama 做本地总结，不依赖任何云 API——隐私敏感企业的最佳入门方案。"
+          ],
+          "tags": [
+            "meeting-assistant",
+            "whisper",
+            "rust",
+            "privacy",
+            "ollama"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "Leonxlnx",
+          "name": "taste-skill",
+          "fullName": "Leonxlnx / taste-skill",
+          "org": "Leonxlnx",
+          "url": "https://github.com/Leonxlnx/taste-skill",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "58,441",
+          "forks": "3,986",
+          "starsToday": "1,453",
+          "count": 4,
+          "description": "🔥 亮点 —— 今日 +1,453★！58.4K★ 四次登榜！给 AI 装上「审美」——阻止生成无聊 AI 味的技能。",
+          "problems": [
+            "<strong>AI 输出千篇一律：</strong>大模型生成的内容越来越同质化，「AI 味」让人一眼就能识别。",
+            "<strong>缺乏美学判断：</strong>LLM 写文案/做设计时，不知道什么是好的审美，什么是有品味的。",
+            "<strong>品牌一致性难保障：</strong>生成内容与品牌调性脱节，需要大量人工后处理。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/Leonxlnx/taste-skill.git</code></pre>",
+            "加载 SKILL.md 到 AI 助手，即可获得品味增强。",
+            "支持 Claude Code、Cursor、Codex 等主流编码 Agent。"
+          ],
+          "insights": [
+            "<strong>58K★ 四次登榜：</strong>从 5/26 首登以来持续增长——「反 AI 味」是真正的开发者刚需。",
+            "<strong>审美即生产力：</strong>AI 生成内容最大的瓶颈不是能力，是「有没有品味」——taste-skill 切中了核心痛点。",
+            "<strong>Agent 技能的品类化：</strong>继「省钱技能」（caveman）之后，「审美技能」成了第二个垂直品类——技能经济正在细分。"
+          ],
+          "tags": [
+            "ai-quality",
+            "taste",
+            "anti-slop",
+            "agent-skill",
+            "design"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "asgeirtj",
+          "name": "system_prompts_leaks",
+          "fullName": "asgeirtj / system_prompts_leaks",
+          "org": "asgeirtj",
+          "url": "https://github.com/asgeirtj/system_prompts_leaks",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "50,885",
+          "forks": "8,298",
+          "starsToday": "1,386",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +1,386★！50.9K★ AI 行业最高机密公开！提取各大厂商的系统提示词——Anthropic、OpenAI、Google、xAI 全收录。",
+          "problems": [
+            "<strong>系统提示词是黑盒：</strong>AI 模型的行为规则被锁在厂商的 API 里，开发者无从了解内部机制。",
+            "<strong>提示词工程缺乏参考：</strong>社区写 Prompt 全靠猜测，缺少真实世界顶级模型的系统提示作为标杆。",
+            "<strong>安全透明度不足：</strong>被删改的提示词说明什么？厂商的安全策略和内容过滤规则需要阳光。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/asgeirtj/system_prompts_leaks.git</code></pre>",
+            "浏览分类：<pre><code>ls */</code></pre>查看按厂商分类的提示词目录。",
+            "学习 Claude Fable 5、GPT 5.5 Thinking、Gemini 3.5 等顶级模型的系统提示设计。"
+          ],
+          "insights": [
+            "<strong>50K★ 的背后是好奇心：</strong>AI 用户对「模型背后怎么想的」有巨大好奇心——系统提示词成了 AI 时代的新考古学。",
+            "<strong>提示词透明化趋势：</strong>Claude Code、Codex、Cursor 等开源了系统提示，但闭源模型仍被社区反向提取。",
+            "<strong>安全博弈永不停歇：</strong>每次更新 Prompt 后社区都在对比差异——这是一场厂商和社区之间的猫鼠游戏。"
+          ],
+          "tags": [
+            "system-prompts",
+            "prompt-engineering",
+            "ai-transparency",
+            "reverse-engineering",
+            "llm"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "fullName": "addyosmani / agent-skills",
+          "org": "Google Chrome",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "70,389",
+          "forks": "7,628",
+          "starsToday": "1,114",
+          "count": 3,
+          "description": "🔥 亮点 —— 今日 +1,114★！70.4K★ 三次登榜！Google Chrome 团队技术负责人开源的工程级 Agent 技能库。",
+          "problems": [
+            "<strong>工程师不知道怎么用 Agent：</strong>AI Agent 能力很强，但实际工程场景中缺乏可靠的技能配置参考。",
+            "<strong>主流框架技能更新慢：</strong>React、TypeScript、Webpack 等框架的最佳实践在 Agent 技能领域还是空白。",
+            "<strong>缺乏权威来源认可：</strong>社区 Agent 技能水平不一，开发者需要来自一线大牛的信誉背书。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/addyosmani/agent-skills.git</code></pre>",
+            "按项目复制对应 SKILL.md 到你的 .claude 或项目目录。",
+            "支持 Claude Code、Codex、Cursor 等编码 Agent。"
+          ],
+          "insights": [
+            "<strong>Google Chrome 负责人出手：</strong>addyosmani 是 Google Chrome 工程总监，他的技能就是 Web 工程领域的最权威指南。",
+            "<strong>70K★ 的号召力：</strong>从 6/11 首登到 7/6 第三次登榜，持续增长——开发者迫切需要一个权威 Agent 技能参考。",
+            "<strong>技能生态分化：</strong>个人权威（mattpocock/skills）vs 社区共建（agency-agents）vs 工程实战（agent-skills）——三种模式并行繁荣。"
+          ],
+          "tags": [
+            "agent-skills",
+            "google-chrome",
+            "web-engineering",
+            "claude-code",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "openai",
+          "name": "codex-plugin-cc",
+          "fullName": "openai / codex-plugin-cc",
+          "org": "OpenAI",
+          "url": "https://github.com/openai/codex-plugin-cc",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "26,069",
+          "forks": "1,564",
+          "starsToday": "910",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +910★！26.1K★ OpenAI 官方出品！在 Claude Code 里用 Codex 审查代码、委派任务——跨 Agent 协作！",
+          "problems": [
+            "<strong>Agent 能力各有千秋：</strong>Claude Code 擅长长上下文推理，Codex 擅长代码审查，但无法互相调用。",
+            "<strong>工作流割裂：</strong>开发者需要在不同编码 Agent 之间手动切换，中断创作流。",
+            "<strong>缺少官方互操作方案：</strong>社区虽然做了各种整合，但缺少 OpenAI 官方支持。"
+          ],
+          "usage": [
+            "安装：<pre><code>claude add openai/codex-plugin-cc</code></pre>",
+            "在 Claude Code 中运行：<pre><code>/codex review</code></pre>委派 Codex 审查当前代码。",
+            "批量审查：<pre><code>/codex review src/</code></pre>对整个目录进行 Codex 安全扫描。"
+          ],
+          "insights": [
+            "<strong>跨 Agent 协作里程碑：</strong>OpenAI 官方为 Claude Code 做插件——竞品之间互操作，这才是真正的 AI 生态。",
+            "<strong>26K★ 的首日爆发：</strong>上线即爆，开发者一直在等这样的官方方案。",
+            "<strong>Codex 的新定位：</strong>从独立编码 Agent 变成「Claude Code 的审查引擎」——Agent 协作才是未来。"
+          ],
+          "tags": [
+            "openai",
+            "codex",
+            "claude-code",
+            "code-review",
+            "agent-interop"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-04",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -196,7 +388,7 @@
     },
     {
       "date": "2026-07-03",
-      "label": "昨天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -388,7 +580,7 @@
     },
     {
       "date": "2026-07-02",
-      "label": "4天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -580,7 +772,7 @@
     },
     {
       "date": "2026-06-30",
-      "label": "6天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -772,7 +964,7 @@
     },
     {
       "date": "2026-06-29",
-      "label": "8天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -964,7 +1156,7 @@
     },
     {
       "date": "2026-06-28",
-      "label": "9天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1156,7 +1348,7 @@
     },
     {
       "date": "2026-06-27",
-      "label": "11天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -1348,7 +1540,7 @@
     },
     {
       "date": "2026-06-23",
-      "label": "15天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -1540,7 +1732,7 @@
     },
     {
       "date": "2026-06-22",
-      "label": "17天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -1732,7 +1924,7 @@
     },
     {
       "date": "2026-06-21",
-      "label": "18天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -1924,7 +2116,7 @@
     },
     {
       "date": "2026-06-20",
-      "label": "20天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -2115,7 +2307,7 @@
     },
     {
       "date": "2026-06-19",
-      "label": "22天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -2307,7 +2499,7 @@
     },
     {
       "date": "2026-06-17",
-      "label": "26天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -2499,7 +2691,7 @@
     },
     {
       "date": "2026-06-16",
-      "label": "28天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -2691,7 +2883,7 @@
     },
     {
       "date": "2026-06-15",
-      "label": "29天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -2883,7 +3075,7 @@
     },
     {
       "date": "2026-06-14",
-      "label": "31天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -3075,7 +3267,7 @@
     },
     {
       "date": "2026-06-12",
-      "label": "35天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -3268,7 +3460,7 @@
     },
     {
       "date": "2026-06-11",
-      "label": "37天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -3461,7 +3653,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "38天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -3654,7 +3846,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "39天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -3847,7 +4039,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "40天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -4045,7 +4237,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "41天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -4242,7 +4434,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "42天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -4439,7 +4631,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "43天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -4636,7 +4828,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "45天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -4834,7 +5026,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "46天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -5029,7 +5221,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "47天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -5224,7 +5416,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "48天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -5420,7 +5612,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "50天前",
+      "label": "53天前",
       "icon": "",
       "projects": [
         {
@@ -5616,7 +5808,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "51天前",
+      "label": "54天前",
       "icon": "",
       "projects": [
         {
@@ -5810,7 +6002,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "52天前",
+      "label": "55天前",
       "icon": "",
       "projects": [
         {
@@ -6008,7 +6200,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "54天前",
+      "label": "57天前",
       "icon": "",
       "projects": [
         {
@@ -6210,7 +6402,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "55天前",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
@@ -6412,7 +6604,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "56天前",
+      "label": "59天前",
       "icon": "",
       "projects": [
         {
@@ -6614,7 +6806,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "57天前",
+      "label": "60天前",
       "icon": "",
       "projects": [
         {
@@ -6816,7 +7008,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "58天前",
+      "label": "61天前",
       "icon": "",
       "projects": [
         {
@@ -7018,7 +7210,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "59天前",
+      "label": "62天前",
       "icon": "",
       "projects": [
         {
@@ -7220,7 +7412,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "60天前",
+      "label": "63天前",
       "icon": "",
       "projects": [
         {
@@ -7422,7 +7614,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "64天前",
+      "label": "67天前",
       "icon": "",
       "projects": [
         {
@@ -7622,7 +7814,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "65天前",
+      "label": "68天前",
       "icon": "",
       "projects": [
         {
@@ -7818,7 +8010,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "66天前",
+      "label": "69天前",
       "icon": "",
       "projects": [
         {
