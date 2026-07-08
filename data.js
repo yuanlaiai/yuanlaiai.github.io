@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-07-06",
-  "topic": "🔥 <strong>隐私会议 AI 爆发 + 审美技能四次登榜 + 系统提示词透明运动 + Chrome 权威技能 + OpenAI 跨 Agent 互操作</strong> —— Zackriya-Solutions/meetily（+2,493★）本地 AI 会议助手爆发式增长。Leonxlnx/taste-skill（+1,453★）58K★ 四次登榜，「反 AI 味」是开发者核心痛点。asgeirtj/system_prompts_leaks（+1,386★）50K★ 系统提示词透明化运动席卷社区。addyosmani/agent-skills（+1,114★）Google Chrome 工程总监出手，70K★ 权威技能。openai/codex-plugin-cc（+910★）OpenAI 为 Claude Code 做插件——跨 Agent 互操作时代来临。隐私、品味、透明、权威、协作——五个不同维度的 AI 趋势同日爆发。",
+  "lastUpdated": "2026-07-08",
+  "topic": "🔥 <strong>AI 求职自动化爆发 + 提示词透明化二次登榜 + Agent 技能四次霸榜 + Claude 看视频 + Agent 办公新时代</strong> —— MadsLorentzen/ai-job-search（+2,514★）AI Agent 驱动求职流程，10K★ 首日爆发，「自动求职」是真实刚需。asgeirtj/system_prompts_leaks（+1,691★）53K★ 二次登榜热度过上次，系统提示词透明化运动持续发酵。addyosmani/agent-skills（+1,317★）72K★ 四次登榜，Agent Skills 已成趋势常青树。bradautomates/claude-video（+965★）给 Claude 装上「眼睛」——Agent 多模态的最后拼图。iOfficeAI/OfficeCLI（+893★）首个 Agent 原生 Office CLI——办公自动化的新基础设施。求职、透明、技能、视频、办公——五个维度的 AI Agent 应用同日爆发。",
   "days": [
     {
-      "date": "2026-07-06",
+      "date": "2026-07-08",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "MadsLorentzen",
+          "name": "ai-job-search",
+          "fullName": "MadsLorentzen / ai-job-search",
+          "org": "MadsLorentzen",
+          "url": "https://github.com/MadsLorentzen/ai-job-search",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "10,839",
+          "forks": "3,659",
+          "starsToday": "2,514",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +2,514★！10.8K★ AI 求职框架，Fork 后填简历，Claude 自动评估职位、定制简历、写求职信、准备面试。",
+          "problems": [
+            "<strong>海投效率低下：</strong>传统求职工具只能批量投递，无法针对每个职位定制申请材料。",
+            "<strong>职位匹配靠猜测：</strong>大量职位 JD 靠人工阅读和判断，耗时且容易遗漏。",
+            "<strong>面试准备碎片化：</strong>写简历、求职信、准备面试是三个割裂的过程，缺少统一工具链。"
+          ],
+          "usage": [
+            "Fork 后配置个人信息：<pre><code>cp profile.example.json profile.json</code></pre>填写你的技能和经验。",
+            "评估职位：<pre><code>claude -p \"evaluate job https://...\"</code></pre>让 AI 分析匹配度。",
+            "生成求职材料：<pre><code>claude -p \"apply to https://...\"</code></pre>自动定制简历 + 求职信。"
+          ],
+          "insights": [
+            "<strong>AI 求职进入自动化时代：</strong>从「AI 帮你写简历」升级到「AI 完整的求职工作流」——评估、定制、投递、面试一站搞定。",
+            "<strong>Claude Code 的新场景：</strong>不再只是写代码——Agent 赋能的求职流程正在打开一个新的垂直应用市场。",
+            "<strong>10K★ 首日爆发：</strong>首日 2,514★ 说明「AI Agent 求职」是真实刚需——求职痛苦越深，自动化价值越大。"
+          ],
+          "tags": [
+            "job-search",
+            "ai-agent",
+            "claude-code",
+            "career",
+            "automation"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "asgeirtj",
+          "name": "system_prompts_leaks",
+          "fullName": "asgeirtj / system_prompts_leaks",
+          "org": "asgeirtj",
+          "url": "https://github.com/asgeirtj/system_prompts_leaks",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "52,981",
+          "forks": "8,636",
+          "starsToday": "1,691",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +1,691★！53K★ 二次登榜！持续更新各大模型系统提示词——Claude Fable 5、GPT 5.5、Gemini 3.5 全收录。",
+          "problems": [
+            "<strong>系统提示词是黑盒：</strong>AI 模型的行为规则被锁在厂商的 API 里，开发者无从了解内部机制。",
+            "<strong>提示词工程缺乏参考：</strong>社区写 Prompt 全靠猜测，缺少真实世界顶级模型的系统提示作为标杆。",
+            "<strong>安全透明度不足：</strong>被删改的提示词说明什么？厂商的安全策略和内容过滤规则需要阳光。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/asgeirtj/system_prompts_leaks.git</code></pre>",
+            "浏览分类：<pre><code>ls */</code></pre>查看按厂商分类的提示词目录。",
+            "学习 Claude Fable 5、GPT 5.5 Thinking、Gemini 3.5 等顶级模型的系统提示设计。"
+          ],
+          "insights": [
+            "<strong>53K★ 二次登榜：</strong>从 7/6 首登 +1,386★ 到今天二次登榜 +1,691★——热度不降反升，提示词透明化运动持续发酵。",
+            "<strong>每周更新粘性高：</strong>每次厂商更新 Prompt 后立即对比差异，形成「追更」效应——这是活的 AI 考古档案。",
+            "<strong>行业影响远超工具本身：</strong>多家厂商因为被公开提示词而调整安全策略——社区反向推动了 AI 安全透明化。"
+          ],
+          "tags": [
+            "system-prompts",
+            "prompt-engineering",
+            "ai-transparency",
+            "reverse-engineering",
+            "llm"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "fullName": "addyosmani / agent-skills",
+          "org": "Google Chrome",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "72,127",
+          "forks": "7,815",
+          "starsToday": "1,317",
+          "count": 4,
+          "description": "🔥 亮点 —— 今日 +1,317★！72K★ 四次登榜！Google Chrome 工程总监的 Agent 技能库持续增长——Web 工程权威指南。",
+          "problems": [
+            "<strong>工程师不知道怎么用 Agent：</strong>AI Agent 能力很强，但实际工程场景中缺乏可靠的技能配置参考。",
+            "<strong>主流框架技能更新慢：</strong>React、TypeScript、Webpack 等框架的最佳实践在 Agent 技能领域还是空白。",
+            "<strong>缺乏权威来源认可：</strong>社区 Agent 技能水平不一，开发者需要来自一线大牛的信誉背书。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/addyosmani/agent-skills.git</code></pre>",
+            "按项目复制对应 SKILL.md 到你的 .claude 或项目目录。",
+            "支持 Claude Code、Codex、Cursor 等编码 Agent。"
+          ],
+          "insights": [
+            "<strong>72K★ 四次登榜：</strong>从 6/11 首登到现在 1 个月 4 次上榜——Agent Skills 品类持续爆发，已成趋势常青树。",
+            "<strong>技能规范的隐藏门槛：</strong>社区发现 addyosmani 的技能质量远超其他——写一个「能用」的技能容易，写一个「工程级」的技能极难。",
+            "<strong>生态上下游成型：</strong>上游 aggregator（awesome-claude-code/awesome-claude-skills）+ 中间作者（addyosmani/caveman）+ 下游使用者构成完整生态。"
+          ],
+          "tags": [
+            "agent-skills",
+            "google-chrome",
+            "web-engineering",
+            "claude-code",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "bradautomates",
+          "name": "claude-video",
+          "fullName": "bradautomates / claude-video",
+          "org": "bradautomates",
+          "url": "https://github.com/bradautomates/claude-video",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "5,152",
+          "forks": "662",
+          "starsToday": "965",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +965★！5.2K★ 给 Claude 装上「眼睛」——/watch 命令下载视频、提取帧、转写语音，全部交给 Claude 理解。",
+          "problems": [
+            "<strong>Claude 不能看视频：</strong>Claude Code 能读文字代码但不能看视频，视频信息完全无法利用。",
+            "<strong>视频分析流程割裂：</strong>下载→抽帧→转录→分析需要多个工具手动接力，效率极低。",
+            "<strong>缺少 Agent 原生视频方案：</strong>虽然有多模态模型，但没有一个编码 Agent 能直接「看」视频。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install claude-video</code></pre>",
+            "让 Claude 看视频：<pre><code>/watch https://youtube.com/watch?v=...</code></pre>",
+            "本地文件：<pre><code>/watch ~/Downloads/demo.mp4</code></pre>自动分析视频内容。"
+          ],
+          "insights": [
+            "<strong>Agent 多模态补全：</strong>Claude Code 已能读文件、写代码、跑终端——唯独缺视频。/watch 补上了最后一块拼图。",
+            "<strong>5K★ 的精准需求：</strong>视频理解是开发者高频场景（技术演讲、教学视频、录屏 Bug），但没有一个 CLI 工具提供这种能力。",
+            "<strong>PyTube + Whisper + Claude 的铁三角：</strong>下载→转录→分析的三段式流水线，证明开源组件组合就能做出惊艳产品。"
+          ],
+          "tags": [
+            "claude-code",
+            "video-analysis",
+            "whisper",
+            "multimodal",
+            "python"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "iOfficeAI",
+          "name": "OfficeCLI",
+          "fullName": "iOfficeAI / OfficeCLI",
+          "org": "iOfficeAI",
+          "url": "https://github.com/iOfficeAI/OfficeCLI",
+          "lang": "C#",
+          "langClass": "cs",
+          "stars": "9,925",
+          "forks": "677",
+          "starsToday": "893",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +893★！9.9K★ 首个为 AI Agent 打造的 Office 套件——CLI 读写 Word/Excel/PPT，单二进制、免 Office 安装。",
+          "problems": [
+            "<strong>Agent 不能操作 Office 文件：</strong>AI 能写代码，但读写 Word/Excel/PPT 只能靠打字和猜测。",
+            "<strong>传统 Office 自动化太重：</strong>需要安装完整 Office、COM 组件调用，Agent 根本跑不动。",
+            "<strong>格式兼容性灾难：</strong>不同版本的 .docx/.xlsx 解析不一致，自动化脚本频繁崩溃。"
+          ],
+          "usage": [
+            "安装：<pre><code>curl -L https://officecli.dev/install.sh | bash</code></pre>",
+            "读取 Excel：<pre><code>officecli read report.xlsx --sheet Sheet1</code></pre>",
+            "生成文档：<pre><code>officecli write report.docx --template template.docx --data data.json</code></pre>"
+          ],
+          "insights": [
+            "<strong>Agent 办公自动化新品类：</strong>以前的 Office CLI 工具都是给人用的，OfficeCLI 是第一个为 AI Agent 设计的——函数签名和输出格式都考虑了 LLM 调用。",
+            "<strong>单二进制免安装的诱惑：</strong>Agent 可以用一个命令在任何机器上处理 Office 文件——这不只是工具，这是 Agent 的基础设施。",
+            "<strong>C# 的回归：</strong>用 .NET AOT 编译的 C# 单二进制展示了 .NET 在 AI 工具链中的独特优势——性能与可移植性兼得。"
+          ],
+          "tags": [
+            "office-automation",
+            "cli-tools",
+            "agent-tools",
+            "dotnet",
+            "productivity"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-06",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -199,7 +391,7 @@ var siteData = {
     },
     {
       "date": "2026-07-04",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -391,7 +583,7 @@ var siteData = {
     },
     {
       "date": "2026-07-03",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -583,7 +775,7 @@ var siteData = {
     },
     {
       "date": "2026-07-02",
-      "label": "7天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -775,7 +967,7 @@ var siteData = {
     },
     {
       "date": "2026-06-30",
-      "label": "9天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -967,7 +1159,7 @@ var siteData = {
     },
     {
       "date": "2026-06-29",
-      "label": "11天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1159,7 +1351,7 @@ var siteData = {
     },
     {
       "date": "2026-06-28",
-      "label": "12天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1351,7 +1543,7 @@ var siteData = {
     },
     {
       "date": "2026-06-27",
-      "label": "14天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1543,7 +1735,7 @@ var siteData = {
     },
     {
       "date": "2026-06-23",
-      "label": "18天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1558,7 +1750,7 @@ var siteData = {
           "stars": "14,555",
           "forks": "1,753",
           "starsToday": "3,590",
-          "count": 5,
+          "count": 4,
           "description": "🔥 Agentic 视频制作三连冠 —— 今日 +3,590★，14.6K★！连续三天霸榜，从 +993→+2,935→+3,590 持续加速，全球首个开源 Agent 视频制作系统",
           "problems": [
             "<strong>AI 视频制作零散不成体系：</strong>生成、编辑、配音、字幕分布在多个工具，没有统一工作流。",
@@ -1735,7 +1927,7 @@ var siteData = {
     },
     {
       "date": "2026-06-22",
-      "label": "20天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -1750,7 +1942,7 @@ var siteData = {
           "stars": "10,640",
           "forks": "1,440",
           "starsToday": "2,935",
-          "count": 4,
+          "count": 3,
           "description": "🔥 Agentic 视频制作系统爆发 —— 今日 +2,935★，10.6K★！12 条管线、52 工具、500+ Agent 技能。全球首个开源方案，把你的编码助手变视频工作室",
           "problems": [
             "<strong>AI 视频制作零散不成体系：</strong>生成、编辑、配音、字幕分布在多个工具，没有统一工作流。",
@@ -1927,7 +2119,7 @@ var siteData = {
     },
     {
       "date": "2026-06-21",
-      "label": "21天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2053,7 +2245,7 @@ var siteData = {
           "stars": "7,593",
           "forks": "1,204",
           "starsToday": "993",
-          "count": 3,
+          "count": 2,
           "description": "全球首个开源 Agentic 视频制作系统 —— 今日 +993★！12 条管线、52 个工具、500+ Agent 技能。把你的 AI 编码助手变成视频制作工作室",
           "problems": [
             "<strong>AI 视频制作工具极度碎片化：</strong>生成、编辑、配音、字幕分布在不同的工具中，没有统一工作流。",
@@ -2119,7 +2311,7 @@ var siteData = {
     },
     {
       "date": "2026-06-20",
-      "label": "23天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2310,7 +2502,7 @@ var siteData = {
     },
     {
       "date": "2026-06-19",
-      "label": "25天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2436,7 +2628,7 @@ var siteData = {
           "stars": "5,707",
           "forks": "1,000",
           "starsToday": "738",
-          "count": 2,
+          "count": 1,
           "description": "开源蒙太奇 AI 生成平台 —— 今日 +738★！AI 视频/图像合成与编辑平台",
           "problems": [
             "<strong>AI 视频编辑工具碎片化：</strong>没有一个统一的平台能完成从生成到编辑的完整流程。",
@@ -2502,7 +2694,7 @@ var siteData = {
     },
     {
       "date": "2026-06-17",
-      "label": "29天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -2517,7 +2709,7 @@ var siteData = {
           "stars": "32,684",
           "forks": "2,635",
           "starsToday": "2,025",
-          "count": 5,
+          "count": 6,
           "description": "Agent 全网浏览器 —— 第五次上榜！今日 +2,025★，32.7K★。让 AI Agent 一键读取全网，持续爆发增长",
           "problems": [
             "<strong>Agent 无法访问实时网络：</strong>大多数 Agent 只能基于训练数据回答问题。",
@@ -2591,7 +2783,7 @@ var siteData = {
           "stars": "30,440",
           "forks": "3,450",
           "starsToday": "460",
-          "count": 4,
+          "count": 5,
           "description": "Tokenizer-Free TTS —— 今日 +460★，突破 30K★！清华 OpenBMB 多语言语音生成，连续四天上榜",
           "problems": [
             "<strong>传统 TTS 依赖 tokenizer：</strong>限制多语言和跨语言能力。",
@@ -2694,7 +2886,7 @@ var siteData = {
     },
     {
       "date": "2026-06-16",
-      "label": "31天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2709,7 +2901,7 @@ var siteData = {
           "stars": "31,593",
           "forks": "2,537",
           "starsToday": "2,150",
-          "count": 4,
+          "count": 5,
           "description": "Agent 全网浏览器 —— 今日爆炸 +2,150★！突破 31.5K★。让 AI Agent 一键读取 Twitter/Reddit/YouTube/GitHub/B站/小红书",
           "problems": [
             "<strong>Agent 无法访问实时网络：</strong>大多数 Agent 只能基于训练数据回答问题，无法获取最新信息。",
@@ -2746,7 +2938,7 @@ var siteData = {
           "stars": "33,569",
           "forks": "5,478",
           "starsToday": "833",
-          "count": 3,
+          "count": 5,
           "description": "AI 工程从零到一 —— 今日 +833★，33.6K★！连续三天上榜，Learn→Build→Ship 的理念征服了开发者",
           "problems": [
             "<strong>AI 工程学习路径不清晰：</strong>市面上的 AI 资源要么太学术、要么太营销。",
@@ -2783,7 +2975,7 @@ var siteData = {
           "stars": "29,980",
           "forks": "3,396",
           "starsToday": "413",
-          "count": 3,
+          "count": 4,
           "description": "Tokenizer-Free TTS —— 今日 +413★，逼近 30K★！清华 OpenBMB 出品的多语言语音生成，支持创意声音设计和真人级声音克隆",
           "problems": [
             "<strong>传统 TTS 依赖 tokenizer：</strong>大多数 TTS 系统需要文本 tokenizer，限制了多语言和跨语言能力。",
@@ -2857,7 +3049,7 @@ var siteData = {
           "stars": "14,626",
           "forks": "1,526",
           "starsToday": "255",
-          "count": 3,
+          "count": 2,
           "description": "统一多 AI 提供商接口 —— 今日 +255★，连续三天上榜！Andrew Ng 出品，一个 API 调用所有主流模型",
           "problems": [
             "<strong>多模型切换成本高：</strong>每个 AI 提供商有自己的 API。aisuite 提供统一抽象层。",
@@ -2886,7 +3078,7 @@ var siteData = {
     },
     {
       "date": "2026-06-15",
-      "label": "32天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -2938,7 +3130,7 @@ var siteData = {
           "stars": "29,548",
           "forks": "2,409",
           "starsToday": "1,045",
-          "count": 3,
+          "count": 4,
           "description": "Agent 全网浏览器 —— 今日 +1,045★，直奔 30K★！让 AI Agent 一键读取全网（Twitter/Reddit/YouTube/GitHub/B站/小红书）",
           "problems": [
             "<strong>Agent 无法访问实时网络：</strong>大多数 Agent 只能基于训练数据回答问题，无法获取最新信息。",
@@ -2975,7 +3167,7 @@ var siteData = {
           "stars": "32,786",
           "forks": "5,377",
           "starsToday": "538",
-          "count": 2,
+          "count": 4,
           "description": "AI 工程从零到一 —— 今日 +538★，32.8K★！Learn it. Build it. Ship it. 完整 AI 工程实战指南",
           "problems": [
             "<strong>AI 工程学习路径不清晰：</strong>市面上的 AI 资源要么太学术、要么太营销，缺少从工程视角的实战指南。",
@@ -3078,7 +3270,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "34天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -3270,7 +3462,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "38天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -3463,7 +3655,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "40天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -3656,7 +3848,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "41天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -3849,7 +4041,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "42天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -4042,7 +4234,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "43天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -4240,7 +4432,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "44天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -4437,7 +4629,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "45天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -4634,7 +4826,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "46天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -4831,7 +5023,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "48天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -5029,7 +5221,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "49天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -5224,7 +5416,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "50天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -5419,7 +5611,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "51天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -5615,7 +5807,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "53天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -5811,7 +6003,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "54天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -6005,7 +6197,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "55天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -6203,7 +6395,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "57天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -6405,7 +6597,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "58天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -6607,7 +6799,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "59天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -6809,7 +7001,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "60天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -7011,7 +7203,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "61天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -7213,7 +7405,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "62天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -7415,7 +7607,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "63天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -7617,7 +7809,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "67天前",
+      "label": "55天前",
       "icon": "",
       "projects": [
         {
@@ -7817,7 +8009,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "68天前",
+      "label": "56天前",
       "icon": "",
       "projects": [
         {
@@ -8013,7 +8205,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "69天前",
+      "label": "57天前",
       "icon": "",
       "projects": [
         {
