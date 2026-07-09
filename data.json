@@ -1,10 +1,202 @@
 {
-  "lastUpdated": "2026-07-08",
-  "topic": "🔥 <strong>AI 求职自动化爆发 + 提示词透明化二次登榜 + Agent 技能四次霸榜 + Claude 看视频 + Agent 办公新时代</strong> —— MadsLorentzen/ai-job-search（+2,514★）AI Agent 驱动求职流程，10K★ 首日爆发，「自动求职」是真实刚需。asgeirtj/system_prompts_leaks（+1,691★）53K★ 二次登榜热度过上次，系统提示词透明化运动持续发酵。addyosmani/agent-skills（+1,317★）72K★ 四次登榜，Agent Skills 已成趋势常青树。bradautomates/claude-video（+965★）给 Claude 装上「眼睛」——Agent 多模态的最后拼图。iOfficeAI/OfficeCLI（+893★）首个 Agent 原生 Office CLI——办公自动化的新基础设施。求职、透明、技能、视频、办公——五个维度的 AI Agent 应用同日爆发。",
+  "lastUpdated": "2026-07-09",
+  "topic": "🔥 <strong>AI 求职二次爆发 + Agent 技能五次登榜 + 办公自动化加速 + 品牌设计 Token 化 + 提示词透明化不可阻挡</strong> —— MadsLorentzen/ai-job-search（+3,728★）17.5K★ 二次登榜热度暴增 48%，AI 求职赛道现象级爆发。addyosmani/agent-skills（+2,582★）75.5K★ 五次登榜增速反而加快——技能经济飞轮已转起来。iOfficeAI/OfficeCLI（+1,923★）13K★ 二次登榜加速增长，Agent 办公自动化需求持续释放。VoltAgent/awesome-design-md（+1,569★）99K★ 品牌 Design Token 大合集——AI 时代的设计规范集。asgeirtj/system_prompts_leaks（+1,135★）55K★ 三次登榜，提示词透明化运动已成文化现象。求职×2、技能×5、办公、设计、透明——五个 AI 赛道同日共振。",
   "days": [
     {
-      "date": "2026-07-08",
+      "date": "2026-07-09",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "MadsLorentzen",
+          "name": "ai-job-search",
+          "fullName": "MadsLorentzen / ai-job-search",
+          "org": "MadsLorentzen",
+          "url": "https://github.com/MadsLorentzen/ai-job-search",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "17,498",
+          "forks": "5,156",
+          "starsToday": "3,728",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +3,728★！17.5K★ 二次登榜！AI 求职框架持续爆发——Fork 填简历，Claude 自动完成求职全流程。",
+          "problems": [
+            "<strong>海投效率低下：</strong>传统求职工具只能批量投递，无法针对每个职位定制申请材料。",
+            "<strong>职位匹配靠猜测：</strong>大量职位 JD 靠人工阅读和判断，耗时且容易遗漏。",
+            "<strong>面试准备碎片化：</strong>写简历、求职信、准备面试是三个割裂的过程，缺少统一工具链。"
+          ],
+          "usage": [
+            "Fork 后配置个人信息：<pre><code>cp profile.example.json profile.json</code></pre>填写你的技能和经验。",
+            "评估职位：<pre><code>claude -p \"evaluate job https://...\"</code></pre>让 AI 分析匹配度。",
+            "生成求职材料：<pre><code>claude -p \"apply to https://...\"</code></pre>自动定制简历 + 求职信。"
+          ],
+          "insights": [
+            "<strong>二次登榜反超 3.7K★：</strong>从昨日 2,514★ 到今天 3,728★ — 热度暴增 48%，AI 求职已成现象级赛道。",
+            "<strong>17.5K★ 两日积累：</strong>两天从 0 到 17.5K★，增长曲线堪比最顶级 AI 项目——求职痛苦度 = 病毒传播力。",
+            "<strong>Claude Code 出圈：</strong>这个项目让 Claude Code 从编码工具变成了职业生涯工具——Agent 的想象空间远不止写代码。"
+          ],
+          "tags": [
+            "job-search",
+            "ai-agent",
+            "claude-code",
+            "career",
+            "automation"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "fullName": "addyosmani / agent-skills",
+          "org": "Google Chrome",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "75,498",
+          "forks": "8,116",
+          "starsToday": "2,582",
+          "count": 5,
+          "description": "🔥 亮点 —— 今日 +2,582★！75.5K★ 五次登榜！Google Chrome 总监的工程级 Agent 技能库——还在涨。",
+          "problems": [
+            "<strong>工程师不知道怎么用 Agent：</strong>AI Agent 能力很强，但实际工程场景中缺乏可靠的技能配置参考。",
+            "<strong>主流框架技能更新慢：</strong>React、TypeScript、Webpack 等框架的最佳实践在 Agent 技能领域还是空白。",
+            "<strong>缺乏权威来源认可：</strong>社区 Agent 技能水平不一，开发者需要来自一线大牛的信誉背书。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/addyosmani/agent-skills.git</code></pre>",
+            "按项目复制对应 SKILL.md 到你的 .claude 或项目目录。",
+            "支持 Claude Code、Codex、Cursor 等编码 Agent。"
+          ],
+          "insights": [
+            "<strong>75K★ 五次登榜：</strong>一个月内 5 次上榜——Agent Skills 已经成为 GitHub Trending 的「钉子户」级品类。",
+            "<strong>从 60K 到 75K 的加速增长：</strong>增速非但没有放缓，反而从日均 +1,100 加速到 +2,500——技能经济正在起飞。",
+            "<strong>技能生态成熟信号：</strong>上游 aggregator（awesome-claude-code）→ 技能作者（addyosmani/taste-skill）→ 下游用户 → 又回到上游找新技能——正向飞轮已经转起来。"
+          ],
+          "tags": [
+            "agent-skills",
+            "google-chrome",
+            "web-engineering",
+            "claude-code",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "iOfficeAI",
+          "name": "OfficeCLI",
+          "fullName": "iOfficeAI / OfficeCLI",
+          "org": "iOfficeAI",
+          "url": "https://github.com/iOfficeAI/OfficeCLI",
+          "lang": "C#",
+          "langClass": "cs",
+          "stars": "13,006",
+          "forks": "876",
+          "starsToday": "1,923",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +1,923★！13K★ 二次登榜！首个为 AI Agent 打造的 Office 套件——单二进制读写 Word/Excel/PPT。",
+          "problems": [
+            "<strong>Agent 不能操作 Office 文件：</strong>AI 能写代码，但读写 Word/Excel/PPT 只能靠打字和猜测。",
+            "<strong>传统 Office 自动化太重：</strong>需要安装完整 Office、COM 组件调用，Agent 根本跑不动。",
+            "<strong>格式兼容性灾难：</strong>不同版本的 .docx/.xlsx 解析不一致，自动化脚本频繁崩溃。"
+          ],
+          "usage": [
+            "安装：<pre><code>curl -L https://officecli.dev/install.sh | bash</code></pre>",
+            "读取 Excel：<pre><code>officecli read report.xlsx --sheet Sheet1</code></pre>",
+            "生成文档：<pre><code>officecli write report.docx --template template.docx --data data.json</code></pre>"
+          ],
+          "insights": [
+            "<strong>二次登榜 13K★ 加速增长：</strong>从昨天的 +893★ 到今天 +1,923★ ——证明这不是一时热度，Agent 办公自动化是真实持久的需求。",
+            "<strong>Agent 基础设施化：</strong>OfficeCLI 的目标不是「更好的人用工具」，而是「Agent 能用」——这是一个根本性的定位转变。",
+            "<strong>C# AOT 的胜利：</strong>.NET AOT 编译的单二进制兼具性能和可移植性——在 AI 工具链中找到了独特定位。"
+          ],
+          "tags": [
+            "office-automation",
+            "cli-tools",
+            "agent-tools",
+            "dotnet",
+            "productivity"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "VoltAgent",
+          "name": "awesome-design-md",
+          "fullName": "VoltAgent / awesome-design-md",
+          "org": "VoltAgent",
+          "url": "https://github.com/VoltAgent/awesome-design-md",
+          "lang": "",
+          "langClass": "",
+          "stars": "99,165",
+          "forks": "11,543",
+          "starsToday": "1,569",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +1,569★！99K★ 著名品牌 DESIGN.md 合集——丢进项目，AI 自动生成匹配的 UI。",
+          "problems": [
+            "<strong>AI 生成 UI 没有品牌感：</strong>Agent 生成的界面千篇一律，无法匹配不同品牌的视觉风格。",
+            "<strong>DESIGN.md 规范碎片化：</strong>每个品牌的 Design Token 分散在 Figma/文档中，AI Agent 无法直接使用。",
+            "<strong>前端 Agent 缺乏审美指导：</strong>让 AI 写代码可以，但让它设计出符合品牌调性的 UI 很难。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/VoltAgent/awesome-design-md.git</code></pre>",
+            "复制对应品牌的 DESIGN.md 到项目根目录。",
+            "让 AI 编码 Agent 加载后生成匹配品牌视觉风格的 UI。"
+          ],
+          "insights": [
+            "<strong>99K★ 的隐藏需求：</strong>Agent 生成 UI 不难，难的是生成「好看的 UI」——DESIGN.md 把品牌规范变成了 AI 可读的 Token 文件。",
+            "<strong>品牌即系统：</strong>从 Stripe、Linear 到 Vercel，54 个顶级设计系统的 Token 汇总——这是 AI 时代的 Material Design 规范集。",
+            "<strong>前端 Agent 的缺失环节：</strong>taste-skill 解决了「不要丑」，DESIGN.md 解决了「要像某某品牌」——两个 skill 互补构成完整方案。"
+          ],
+          "tags": [
+            "design-systems",
+            "design-tokens",
+            "ui-design",
+            "agent-skills",
+            "brand"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "asgeirtj",
+          "name": "system_prompts_leaks",
+          "fullName": "asgeirtj / system_prompts_leaks",
+          "org": "asgeirtj",
+          "url": "https://github.com/asgeirtj/system_prompts_leaks",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "54,801",
+          "forks": "8,919",
+          "starsToday": "1,135",
+          "count": 3,
+          "description": "🔥 亮点 —— 今日 +1,135★！54.8K★ 三次登榜！持续更新各厂商系统提示词——提示词透明化运动不可阻挡。",
+          "problems": [
+            "<strong>系统提示词是黑盒：</strong>AI 模型的行为规则被锁在厂商的 API 里，开发者无从了解内部机制。",
+            "<strong>提示词工程缺乏参考：</strong>社区写 Prompt 全靠猜测，缺少真实世界顶级模型的系统提示作为标杆。",
+            "<strong>安全透明度不足：</strong>被删改的提示词说明什么？厂商的安全策略和内容过滤规则需要阳光。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/asgeirtj/system_prompts_leaks.git</code></pre>",
+            "浏览分类：<pre><code>ls */</code></pre>查看按厂商分类的提示词目录。",
+            "学习 Claude Fable 5、GPT 5.5 Thinking、Gemini 3.5 等顶级模型的系统提示设计。"
+          ],
+          "insights": [
+            "<strong>55K★ 三次登榜：</strong>从 7/6 到 7/9 连续三次登榜——不是昙花一现，而是持久的文化现象。",
+            "<strong>每周更新驱动追更：</strong>每次厂商更新 Prompt 后的对比 diff——社区把它当剧追。",
+            "<strong>透明化运动的新阶段：</strong>从好奇到常态，system_prompts_leaks 正在定义 AI 行业透明化的新标准。"
+          ],
+          "tags": [
+            "system-prompts",
+            "prompt-engineering",
+            "ai-transparency",
+            "reverse-engineering",
+            "llm"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-08",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -196,7 +388,7 @@
     },
     {
       "date": "2026-07-06",
-      "label": "前天",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -388,7 +580,7 @@
     },
     {
       "date": "2026-07-04",
-      "label": "4天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -580,7 +772,7 @@
     },
     {
       "date": "2026-07-03",
-      "label": "5天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -772,7 +964,7 @@
     },
     {
       "date": "2026-07-02",
-      "label": "6天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -964,7 +1156,7 @@
     },
     {
       "date": "2026-06-30",
-      "label": "8天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -1156,7 +1348,7 @@
     },
     {
       "date": "2026-06-29",
-      "label": "9天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -1348,7 +1540,7 @@
     },
     {
       "date": "2026-06-28",
-      "label": "10天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -1540,7 +1732,7 @@
     },
     {
       "date": "2026-06-27",
-      "label": "11天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1732,7 +1924,7 @@
     },
     {
       "date": "2026-06-23",
-      "label": "15天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -1924,7 +2116,7 @@
     },
     {
       "date": "2026-06-22",
-      "label": "16天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2116,7 +2308,7 @@
     },
     {
       "date": "2026-06-21",
-      "label": "17天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2308,7 +2500,7 @@
     },
     {
       "date": "2026-06-20",
-      "label": "18天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2499,7 +2691,7 @@
     },
     {
       "date": "2026-06-19",
-      "label": "19天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -2691,7 +2883,7 @@
     },
     {
       "date": "2026-06-17",
-      "label": "21天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2883,7 +3075,7 @@
     },
     {
       "date": "2026-06-16",
-      "label": "22天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3075,7 +3267,7 @@
     },
     {
       "date": "2026-06-15",
-      "label": "23天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -3267,7 +3459,7 @@
     },
     {
       "date": "2026-06-14",
-      "label": "24天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -3459,7 +3651,7 @@
     },
     {
       "date": "2026-06-12",
-      "label": "26天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -3652,7 +3844,7 @@
     },
     {
       "date": "2026-06-11",
-      "label": "27天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -3845,7 +4037,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "28天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -4038,7 +4230,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "30天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -4231,7 +4423,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "31天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -4429,7 +4621,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "32天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -4626,7 +4818,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "33天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -4823,7 +5015,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "34天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -5020,7 +5212,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "36天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -5218,7 +5410,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "37天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -5413,7 +5605,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "38天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -5608,7 +5800,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "39天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -5804,7 +5996,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "41天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -6000,7 +6192,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "42天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -6194,7 +6386,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "43天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -6392,7 +6584,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "45天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -6594,7 +6786,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "46天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -6796,7 +6988,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "47天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -6998,7 +7190,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "48天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -7200,7 +7392,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "49天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -7402,7 +7594,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "50天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -7604,7 +7796,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "51天前",
+      "label": "52天前",
       "icon": "",
       "projects": [
         {
@@ -7806,7 +7998,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "55天前",
+      "label": "56天前",
       "icon": "",
       "projects": [
         {
@@ -8006,7 +8198,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "56天前",
+      "label": "57天前",
       "icon": "",
       "projects": [
         {
@@ -8202,7 +8394,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "57天前",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
