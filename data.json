@@ -1,10 +1,202 @@
 {
-  "lastUpdated": "2026-07-13",
-  "topic": "🔥 <strong>Agent 安全新品类 + AI 交易爆发 + 知识图谱基建 + LLM 应用实践时代 + 反 AI 味 Skill 品类化</strong> —— Dicklesworthstone/destructive_command_guard（+1,290★）首日爆发——Agent 自主执行时代的「安全带」。HKUDS/Vibe-Trading（+1,148★）21K★「说人话的交易伙伴」——Vibe 从 Coding 扩展到 Trading。Graphify-Labs/graphify（+1,028★）84K★ 代码→知识图谱——AI Agent 的项目全景图。Shubhamsaboo/awesome-llm-apps（+1,006★）119K★ 100+ 真正能跑的 LLM 应用——实用主义压倒一切。Nutlope/hallmark（+802★）4.8K★ 标志性设计 Skill——「反 AI 味」Skill 品类持续壮大。安全×交易×图谱×实践×审美——五个方向覆盖 AI 应用的五个核心需求。",
+  "lastUpdated": "2026-07-15",
+  "topic": "🔥 <strong>TypeScript 权威技能爆发 + 知识图谱二次登榜 + 交易 Agent 三次登榜 + LLM 应用实践持续 + 设计 Skill 品类成熟</strong> —— mattpocock/skills（+1,864★）170K★ TypeScript 之神直出 Agent Skills——个人即品牌。Graphify-Labs/graphify（+1,858★）86K★ 二次登榜加速——代码知识图谱基建需求释放。HKUDS/Vibe-Trading（+1,265★）22.8K★ 三次登榜——AI 交易赛道走向主流。Shubhamsaboo/awesome-llm-apps（+1,104★）120.7K★ 二次登榜——LLM 实用主义时代已到。Nutlope/hallmark（+1,010★）6.1K★ 二次登榜——「反 AI 味」设计 Skill 品类成熟。权威、图谱、交易、实践、审美——五个方向同步增长，AI Agent 生态正在从爆发走向稳态。",
   "days": [
     {
-      "date": "2026-07-13",
+      "date": "2026-07-15",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "mattpocock",
+          "name": "skills",
+          "fullName": "mattpocock / skills",
+          "org": "mattpocock",
+          "url": "https://github.com/mattpocock/skills",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "170,161",
+          "forks": "14,640",
+          "starsToday": "1,864",
+          "description": "🔥 亮点 —— 今日 +1,864★！170K★ TypeScript 权威的 Agent 技能——从他的 .claude 目录直出——工程师的品质保证。",
+          "problems": [
+            "<strong>社区技能质量参差不齐：</strong>Agent Skills 市场虽大，但大多数技能只解决了「有没有」而不是「好不好用」。",
+            "<strong>缺乏 TypeScript 专精技能：</strong>TypeScript 是最复杂的语言之一，但 Agent 缺高质量的 TS 技能指导。",
+            "<strong>个人品牌 vs 社区共建：</strong>开发者更信任个人权威（mattpocock）而非社区合集——需要可信的技能来源。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/mattpocock/skills.git</code></pre>",
+            "从 .claude/ 目录复制所需 SKILL.md 到你的项目。",
+            "支持 Claude Code、Cursor、Codex 等主流编码 Agent。"
+          ],
+          "insights": [
+            "<strong>170K★ 的 TypeScript 之神：</strong>mattpocock 是 TypeScript 社区最具影响力的人物之一——他的技能就是 TS 领域的「圣经」。",
+            "<strong>个人权威技能的标杆：</strong>与 addyosmani（Google Chrome 总监）的技能并列为「个人即品牌」模式的双子星。",
+            "<strong>Skills 品类的终极分化：</strong>社区合集 → 个人权威 → 官方维护——三种模式共存，满足不同信任层级的需求。"
+          ],
+          "tags": [
+            "agent-skills",
+            "typescript",
+            "mattpocock",
+            "claude-code",
+            "developer-tools"
+          ],
+          "count": 5
+        },
+        {
+          "rank": 2,
+          "owner": "Graphify-Labs",
+          "name": "graphify",
+          "fullName": "Graphify-Labs / graphify",
+          "org": "Graphify-Labs",
+          "url": "https://github.com/Graphify-Labs/graphify",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "86,307",
+          "forks": "8,493",
+          "starsToday": "1,858",
+          "description": "🔥 亮点 —— 今日 +1,858★！86.3K★ 二次登榜！把任何文件夹变成可查询的知识图谱——代码、SQL、文档、图片、视频一键建图。",
+          "problems": [
+            "<strong>代码库理解成本高：</strong>新接手一个项目，靠阅读源码建立全局理解需要数天甚至数周。",
+            "<strong>跨语言跨类型难以关联：</strong>代码、数据库 Schema、配置文件、文档分散在不同格式中，无法统一查询。",
+            "<strong>AI Agent 缺少项目全景图：</strong>编码 Agent 只能看到当前文件，缺乏整个项目的上下文依赖关系。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install graphify-labs</code></pre>",
+            "索引项目：<pre><code>graphify index /path/to/project</code></pre>自动构建知识图谱。",
+            "查询：<pre><code>graphify query \"这个函数被哪些 API 调用了？\"</code></pre>用自然语言问问题。"
+          ],
+          "insights": [
+            "<strong>86K★ 二次登榜加速：</strong>从 7/13 首登 +1,028★ 到 7/15 二次登榜 +1,858★——代码知识图谱的需求正在加速释放。",
+            "<strong>Skill + 平台双模式验证：</strong>既可作为 Agent Skill 加载，也提供 CLI 独立使用——两种入口覆盖了「配置一次永久使用」的场景。",
+            "<strong>知识图谱赛道分化完成：</strong>codegraph（CodeGraph MCP）专注 IDE 集成、graphify 专注 Agent 原生、Understand-Anything 专注可视化——各占一个生态位。"
+          ],
+          "tags": [
+            "knowledge-graph",
+            "code-intelligence",
+            "agent-skills",
+            "python",
+            "developer-tools"
+          ],
+          "count": 2
+        },
+        {
+          "rank": 3,
+          "owner": "HKUDS",
+          "name": "Vibe-Trading",
+          "fullName": "HKUDS / Vibe-Trading",
+          "org": "HKUDS",
+          "url": "https://github.com/HKUDS/Vibe-Trading",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "22,808",
+          "forks": "3,915",
+          "starsToday": "1,265",
+          "description": "🔥 亮点 —— 今日 +1,265★！22.8K★ 三次登榜！个人 AI 交易 Agent——说人话的交易伙伴，Vibe Coding 进入交易领域。",
+          "problems": [
+            "<strong>个人量化交易门槛高：</strong>写策略需要编程+金融双背景，普通投资者根本无从下手。",
+            "<strong>现有交易工具不智能：</strong>传统量化框架（Backtrader/QuantConnect）是给专业人士用的，没有 AI 辅助。",
+            "<strong>缺少「说人话」的交易助手：</strong>用自然语言描述交易思路、让 AI 自动实现——这才是个人投资者的需求。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/HKUDS/Vibe-Trading.git</code></pre>",
+            "配置 API Key：<pre><code>cp .env.example .env</code></pre>填入你的交易所和 LLM Key。",
+            "启动：<pre><code>python main.py</code></pre>用自然语言描述策略即可。"
+          ],
+          "insights": [
+            "<strong>三次登榜 22.8K★：</strong>从首登 +840★ 到二次 +1,148★ 到三次 +1,265★——持续加速，AI 交易赛道正在走向主流。",
+            "<strong>HKUDS 的 AI 交易帝国：</strong>AI-Trader + Vibe-Trading + CLI-Anything——同一团队在 AI 交易赛道布局最完整。",
+            "<strong>Vibe × 金融的化学反应：</strong>「说人话」的交易体验把量化交易从极客的专业工具变成了普通人的投资助手。"
+          ],
+          "tags": [
+            "trading-agent",
+            "ai-agent",
+            "quantitative-trading",
+            "python",
+            "finance"
+          ],
+          "count": 4
+        },
+        {
+          "rank": 4,
+          "owner": "Shubhamsaboo",
+          "name": "awesome-llm-apps",
+          "fullName": "Shubhamsaboo / awesome-llm-apps",
+          "org": "Shubhamsaboo",
+          "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "120,739",
+          "forks": "17,871",
+          "starsToday": "1,104",
+          "description": "🔥 亮点 —— 今日 +1,104★！120.7K★ 二次登榜！100+ 真正能跑的 AI Agent & RAG 应用——克隆即可运行。",
+          "problems": [
+            "<strong>AI 教程多、能跑的少：</strong>网上 LLM 教程数不胜数，但大多数只贴代码片段，没有完整可运行的应用。",
+            "<strong>RAG 和 Agent 实践碎片化：</strong>想从零搭建一个 AI Agent 或 RAG 系统，需要拼凑多个教程和库。",
+            "<strong>缺乏高质量参考实现：</strong>开发者在学习阶段需要一个「能跑的通」的完整项目作为起点。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git</code></pre>",
+            "选择应用：<pre><code>cd awesome-llm-apps && ls</code></pre>浏览 100+ 应用目录。",
+            "运行：每个应用自带 README 和 requirements.txt，pip install 后即可启动。"
+          ],
+          "insights": [
+            "<strong>120.7K★ 二次登榜：</strong>从 7/13 首登 +1,006★ 到 7/15 二次登榜 +1,104★——LLM 应用实践的需求稳定且持续。",
+            "<strong>实用主义时代已到：</strong>LLM 生态的核心焦虑已经从「有什么模型」变成了「有什么能跑的应用」。",
+            "<strong>100+ 的规模效应：</strong>单个教程 repo 可能只有 1K★，但 100+ 应用的合集形成了网络效应——搜什么都有现成的。"
+          ],
+          "tags": [
+            "llm-apps",
+            "rag",
+            "ai-agent",
+            "tutorial",
+            "python"
+          ],
+          "count": 2
+        },
+        {
+          "rank": 5,
+          "owner": "Nutlope",
+          "name": "hallmark",
+          "fullName": "Nutlope / hallmark",
+          "org": "Nutlope",
+          "url": "https://github.com/Nutlope/hallmark",
+          "lang": "CSS",
+          "langClass": "css",
+          "stars": "6,103",
+          "forks": "349",
+          "starsToday": "1,010",
+          "description": "🔥 亮点 —— 今日 +1,010★！6.1K★ 二次登榜！反 AI Slop 设计 Skill——让 Agent 生成有「标志性」设计感的界面。",
+          "problems": [
+            "<strong>AI 生成 UI 千篇一律：</strong>编码 Agent 生成的界面都长一个样——没有个性、没有品牌、没有设计感。",
+            "<strong>缺少可用的设计 skill：</strong>taste-skill 开了先河，但设计类 Agent Skill 仍然稀缺，开发者找不到好用的。",
+            "<strong>设计师 vs 开发者的鸿沟：</strong>懂设计的开发者太少，Agent 需要内置设计品味才能规模化生产好 UI。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/Nutlope/hallmark.git</code></pre>",
+            "将 SKILL.md 放入项目 .claude/ 或 .cursor/ 目录。",
+            "在 Claude Code 中运行：<pre><code>/hallmark</code></pre>让 Agent 生成设计感更强的界面。"
+          ],
+          "insights": [
+            "<strong>6.1K★ 二次登榜持续增长：</strong>从首日 802★ 到二次 1,010★——hallmark 正在成为 taste-skill 之后的第二设计 Skill 爆款。",
+            "<strong>「反 AI 味」品类成熟：</strong>taste-skill（58K★）+ hallmark（6.1K★）+ stop-slop——三个不同入口进入同一个「不要丑」的市场。",
+            "<strong>CSS 作为 Agent 指令语言：</strong>hallmark 用 CSS 写 Agent Skill——设计 Token 和样式规则也能成为 Agent 的高质量指令。"
+          ],
+          "tags": [
+            "agent-skills",
+            "design",
+            "anti-slop",
+            "claude-code",
+            "ui-design"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -196,7 +388,7 @@
     },
     {
       "date": "2026-07-09",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -388,7 +580,7 @@
     },
     {
       "date": "2026-07-08",
-      "label": "5天前",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -580,7 +772,7 @@
     },
     {
       "date": "2026-07-06",
-      "label": "7天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -772,7 +964,7 @@
     },
     {
       "date": "2026-07-04",
-      "label": "9天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -964,7 +1156,7 @@
     },
     {
       "date": "2026-07-03",
-      "label": "10天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -1156,7 +1348,7 @@
     },
     {
       "date": "2026-07-02",
-      "label": "11天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1348,7 +1540,7 @@
     },
     {
       "date": "2026-06-30",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1540,7 +1732,7 @@
     },
     {
       "date": "2026-06-29",
-      "label": "14天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -1732,7 +1924,7 @@
     },
     {
       "date": "2026-06-28",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -1924,7 +2116,7 @@
     },
     {
       "date": "2026-06-27",
-      "label": "16天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -2116,7 +2308,7 @@
     },
     {
       "date": "2026-06-23",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2308,7 +2500,7 @@
     },
     {
       "date": "2026-06-22",
-      "label": "21天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -2500,7 +2692,7 @@
     },
     {
       "date": "2026-06-21",
-      "label": "22天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -2692,7 +2884,7 @@
     },
     {
       "date": "2026-06-20",
-      "label": "23天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -2883,7 +3075,7 @@
     },
     {
       "date": "2026-06-19",
-      "label": "24天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -3075,7 +3267,7 @@
     },
     {
       "date": "2026-06-17",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -3267,7 +3459,7 @@
     },
     {
       "date": "2026-06-16",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -3459,7 +3651,7 @@
     },
     {
       "date": "2026-06-15",
-      "label": "28天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -3651,7 +3843,7 @@
     },
     {
       "date": "2026-06-14",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -3843,7 +4035,7 @@
     },
     {
       "date": "2026-06-12",
-      "label": "31天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -4036,7 +4228,7 @@
     },
     {
       "date": "2026-06-11",
-      "label": "32天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -4229,7 +4421,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "33天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -4422,7 +4614,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "35天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -4615,7 +4807,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "36天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -4813,7 +5005,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "37天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -5010,7 +5202,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "38天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -5207,7 +5399,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "39天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -5404,7 +5596,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "41天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -5602,7 +5794,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "42天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -5797,7 +5989,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "43天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -5992,7 +6184,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "44天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -6188,7 +6380,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "46天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -6384,7 +6576,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "47天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -6578,7 +6770,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "48天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -6776,7 +6968,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "50天前",
+      "label": "52天前",
       "icon": "",
       "projects": [
         {
@@ -6978,7 +7170,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "51天前",
+      "label": "53天前",
       "icon": "",
       "projects": [
         {
@@ -7180,7 +7372,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "52天前",
+      "label": "54天前",
       "icon": "",
       "projects": [
         {
@@ -7382,7 +7574,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "53天前",
+      "label": "55天前",
       "icon": "",
       "projects": [
         {
@@ -7584,7 +7776,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "54天前",
+      "label": "56天前",
       "icon": "",
       "projects": [
         {
@@ -7786,7 +7978,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "55天前",
+      "label": "57天前",
       "icon": "",
       "projects": [
         {
@@ -7988,7 +8180,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "56天前",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
@@ -8190,7 +8382,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "60天前",
+      "label": "62天前",
       "icon": "",
       "projects": [
         {
@@ -8390,7 +8582,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "61天前",
+      "label": "63天前",
       "icon": "",
       "projects": [
         {
@@ -8586,7 +8778,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "62天前",
+      "label": "64天前",
       "icon": "",
       "projects": [
         {
