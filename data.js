@@ -2,12 +2,204 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-07-16",
-  "topic": "🔥 <strong>工程师技能六次登榜 + 知识图谱三连涨 + LLM 应用合集稳增长 + 设计 Skill 三次登榜 + 交易 Agent 四次霸榜</strong> —— mattpocock/skills（+2,160★）172K★ 六次登榜加速增长，头部效应明显。Graphify-Labs/graphify（+1,641★）87.7K★ 三日三涨——代码知识图谱成 Agent 基础设施。Shubhamsaboo/awesome-llm-apps（+1,278★）121.9K★ 三次登榜——规模效应护城河。Nutlope/hallmark（+1,119★）8.4K★ 三次登榜加速——「反 AI 味」成 Agent 必选项。HKUDS/Vibe-Trading（+924★）23.7K★ 四次登榜——HKUDS 用矩阵定义 AI 交易赛道。全部回榜——AI Trending 进入「强者恒强」的稳态阶段。",
+  "lastUpdated": "2026-07-19",
+  "topic": "🔥 <strong>3D 重建基础模型 + 代码审查 MCP + Agent 可观测性 + 零成本 Agent 搜索 + AI 工程化教育</strong> —— Robbyant/lingbot-map（+831★）前馈式 3D 场景重建——3D 领域的 ImageNet 时刻？tirth8205/code-review-graph（+355★）20K★ MCP 代码智能图——审查场景的 graphify。PostHog/posthog（+338★）36.6K★ 产品分析平台转向 AI Agent 可观测性——市场信号。KnockOutEZ/wigolo（+203★）零 API 费的 Agent 搜索基础设施——MCP 金铲子。rohitg00/ai-engineering-from-scratch（+191★）39K★ AI 工程化学习——从模型到系统转型。3D×MCP×可观测性×搜索×教育——五个方向覆盖 AI 基础设施的不同层次。",
   "days": [
     {
-      "date": "2026-07-16",
+      "date": "2026-07-19",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "Robbyant",
+          "name": "lingbot-map",
+          "fullName": "Robbyant / lingbot-map",
+          "org": "Robbyant",
+          "url": "https://github.com/Robbyant/lingbot-map",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "12,967",
+          "forks": "1,346",
+          "starsToday": "831",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +831★！13K★ 前馈式 3D 场景重建基础模型——从流数据中实时重建 3D 场景。",
+          "problems": [
+            "<strong>3D 重建计算量太大：</strong>传统 NeRF/3DGS 需要逐场景优化，训练时间长、无法实时。",
+            "<strong>流数据处理困难：</strong>视频流/传感器流的 3D 重建需要连续帧间的时空一致性，现有方案做不到。",
+            "<strong>缺少前馈式基础模型：</strong>3D 领域缺少像 ViT 在 2D 那样通用的前馈式架构。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/Robbyant/lingbot-map.git</code></pre>",
+            "安装依赖：<pre><code>pip install -r requirements.txt</code></pre>",
+            "推理：<pre><code>python run.py --input video.mp4 --output scene.ply</code></pre>"
+          ],
+          "insights": [
+            "<strong>3D 基础模型新方向：</strong>前馈式 + 流数据是 3D 重建从未有过的范式——不逐场景优化，一次推理出结果。",
+            "<strong>13K★ 的隐藏需求：</strong>3D 领域的'ImageNet 时刻'可能正在到来——通用基础模型替代专用优化管线。",
+            "<strong>Robotics 的底层基础设施：</strong>实时 3D 场景理解是机器人、自动驾驶、AR/VR 的共同基础设施需求。"
+          ],
+          "tags": [
+            "3d-reconstruction",
+            "foundation-model",
+            "computer-vision",
+            "python",
+            "deep-learning"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "fullName": "tirth8205 / code-review-graph",
+          "org": "tirth8205",
+          "url": "https://github.com/tirth8205/code-review-graph",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "20,182",
+          "forks": "2,125",
+          "starsToday": "355",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +355★！20K★ 本地优先的代码智能图——构建持久化的代码库地图，AI 编码工具只读真正需要的内容。",
+          "problems": [
+            "<strong>AI 编码工具读太多无关代码：</strong>审查 PR 时，AI 需要理解整个代码库上下文，但大部分内容与本次变更无关。",
+            "<strong>上下文窗口浪费严重：</strong>编码 Agent 把大量 token 浪费在不相关的文件中，影响推理质量。",
+            "<strong>缺少持久化代码图谱：</strong>每次审查都要重新建立代码关系图，没有可复用的数据库。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install code-review-graph</code></pre>",
+            "构建图谱：<pre><code>crg index /path/to/repo</code></pre>",
+            "连接 MCP：在 Claude Code 配置中添加 MCP 服务器地址。"
+          ],
+          "insights": [
+            "<strong>代码智能工具分化加速：</strong>继 graphify（代码→知识图谱）之后，code-review-graph 专注审查场景——工具越来越细分。",
+            "<strong>20K★ 验证了 MCP 生态的爆发：</strong>作为 MCP 服务器，它的成功本身就说明开发者正在大规模采用 Agent 工具链。",
+            "<strong>本地优先是核心卖点：</strong>不上传代码到云端——这对于企业用户来说是关键决策因素。"
+          ],
+          "tags": [
+            "code-review",
+            "mcp",
+            "code-intelligence",
+            "python",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "PostHog",
+          "name": "posthog",
+          "fullName": "PostHog / posthog",
+          "org": "PostHog",
+          "url": "https://github.com/PostHog/posthog",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "36,601",
+          "forks": "3,030",
+          "starsToday": "338",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +338★！36.6K★ AI Agent 的可观测性平台——分析、Session Replay、Feature Flags、A/B 测试，全链路 MCP 集成。",
+          "problems": [
+            "<strong>AI Agent 行为难以追踪：</strong>传统 APM 工具为人设计，Agent 的决策链条（思考→行动→结果）无法被有效记录。",
+            "<strong>Agent 调试靠猜：</strong>Agent 出错时开发者只能看日志，无法回放 Agent 的完整操作过程。",
+            "<strong>缺少 Agent 原生分析工具：</strong>现有产品分析工具（Amplitude/Mixpanel）不支持 Agent 的复杂行为路径。"
+          ],
+          "usage": [
+            "自部署：<pre><code>helm repo add posthog && helm install posthog posthog/posthog</code></pre>",
+            "连接 MCP：在 Agent 配置中设置 PostHog MCP 端点。",
+            "查看 Agent 回放：PostHog Session Replay 记录 Agent 完整操作。"
+          ],
+          "insights": [
+            "<strong>PostHog 的 AI 转型：</strong>从一个产品分析工具转型为「AI Agent 可观测性平台」——这是产品定位的重大转变，说明市场在变。",
+            "<strong>MCP 集成是新标配：</strong>PostHog 的 MCP 集成意味着——连产品分析工具都在主动接入 Agent 生态。",
+            "<strong>自驱产品的概念：</strong>PostHog 提出了「self-driving products」——Agent 不只是写代码，还要自己监控和优化产品。"
+          ],
+          "tags": [
+            "observability",
+            "ai-agent",
+            "analytics",
+            "mcp",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "KnockOutEZ",
+          "name": "wigolo",
+          "fullName": "KnockOutEZ / wigolo",
+          "org": "KnockOutEZ",
+          "url": "https://github.com/KnockOutEZ/wigolo",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "1,249",
+          "forks": "84",
+          "starsToday": "203",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +203★！1.2K★ AI 编码 Agent 的 Web 搜索工具——本地优先、零 API 费用、MCP 协议。",
+          "problems": [
+            "<strong>Agent 搜索网页成本高：</strong>现有方案要么用付费 API（Brave/Serp），要么自建爬虫——对小团队和独立开发者太贵。",
+            "<strong>API Key 管理麻烦：</strong>每个 Agent 都要配置搜索 API Key，多 Agent 环境更复杂。",
+            "<strong>云端搜索有隐私风险：</strong>Agent 搜索的内容可能涉及商业机密，上传到第三方搜索服务不安全。"
+          ],
+          "usage": [
+            "安装：<pre><code>npm install -g wigolo</code></pre>",
+            "启动 MCP 服务：<pre><code>wigolo serve</code></pre>",
+            "在 Agent 中配置 MCP 端点即可使用。"
+          ],
+          "insights": [
+            "<strong>MCP 生态的金铲子：</strong>wigolo 不是 AI 应用，而是 AI Agent 的「基础设施」——就像互联网时代的 DNS 解析器。",
+            "<strong>本地优先 + 零成本 = 病毒式传播：</strong>1.2K★ 首日 203★ 对于基础设施工具来说是很强的信号——开发者喜欢不花钱的方案。",
+            "<strong>MCP 市场规模正在膨胀：</strong>wigolo 搜索 + code-review-graph 代码审查 + PostHog 可观测性——Agent 的基础设施层正在快速成型。"
+          ],
+          "tags": [
+            "mcp",
+            "web-search",
+            "agent-tools",
+            "typescript",
+            "cli"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "rohitg00",
+          "name": "ai-engineering-from-scratch",
+          "fullName": "rohitg00 / ai-engineering-from-scratch",
+          "org": "rohitg00",
+          "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "39,109",
+          "forks": "6,553",
+          "starsToday": "191",
+          "count": 6,
+          "description": "🔥 亮点 —— 今日 +191★！39.1K★ AI 工程从零到一——学它、建它、交付它。",
+          "problems": [
+            "<strong>AI 工程学习路径混乱：</strong>从理论到实践的跨度太大，初学者不知道从哪开始。",
+            "<strong>教程多、项目少：</strong>网上教程碎片化严重，缺少能够一次学完、直接出活的完整课程。",
+            "<strong>缺少 AI 工程最佳实践：</strong>模型训练、部署、监控的完整工作流缺少系统化的教材。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/rohitg00/ai-engineering-from-scratch.git</code></pre>",
+            "按章节学习：<pre><code>ls chapters/</code></pre>",
+            "动手实践：每个章节包含 Jupyter Notebook 和可运行的代码。"
+          ],
+          "insights": [
+            "<strong>39K★ 的持续增长：</strong>作为一个教程项目能持续登榜，说明「AI 工程化」的学习需求仍然巨大且未被满足。",
+            "<strong>从模型到系统的转变：</strong>课程内容涵盖训练、部署、监控——反映了行业关注点从「训模型」到「管系统」的转变。",
+            "<strong>GitHub 成最大学习平台：</strong>rohitg00 的仓库 + Shubhamsaboo/awesome-llm-apps + datawhalechina——教程类项目在 GitHub 上持续火爆。"
+          ],
+          "tags": [
+            "ai-engineering",
+            "tutorial",
+            "machine-learning",
+            "python",
+            "education"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -199,7 +391,7 @@ var siteData = {
     },
     {
       "date": "2026-07-15",
-      "label": "昨天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -391,7 +583,7 @@ var siteData = {
     },
     {
       "date": "2026-07-13",
-      "label": "3天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -583,7 +775,7 @@ var siteData = {
     },
     {
       "date": "2026-07-09",
-      "label": "7天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -775,7 +967,7 @@ var siteData = {
     },
     {
       "date": "2026-07-08",
-      "label": "8天前",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -967,7 +1159,7 @@ var siteData = {
     },
     {
       "date": "2026-07-06",
-      "label": "10天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1159,7 +1351,7 @@ var siteData = {
     },
     {
       "date": "2026-07-04",
-      "label": "12天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1351,7 +1543,7 @@ var siteData = {
     },
     {
       "date": "2026-07-03",
-      "label": "13天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -1543,7 +1735,7 @@ var siteData = {
     },
     {
       "date": "2026-07-02",
-      "label": "14天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -1735,7 +1927,7 @@ var siteData = {
     },
     {
       "date": "2026-06-30",
-      "label": "16天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -1927,7 +2119,7 @@ var siteData = {
     },
     {
       "date": "2026-06-29",
-      "label": "17天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -2119,7 +2311,7 @@ var siteData = {
     },
     {
       "date": "2026-06-28",
-      "label": "18天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -2311,7 +2503,7 @@ var siteData = {
     },
     {
       "date": "2026-06-27",
-      "label": "19天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2503,7 +2695,7 @@ var siteData = {
     },
     {
       "date": "2026-06-23",
-      "label": "23天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -2695,7 +2887,7 @@ var siteData = {
     },
     {
       "date": "2026-06-22",
-      "label": "24天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -2887,7 +3079,7 @@ var siteData = {
     },
     {
       "date": "2026-06-21",
-      "label": "25天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -3079,7 +3271,7 @@ var siteData = {
     },
     {
       "date": "2026-06-20",
-      "label": "26天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -3270,7 +3462,7 @@ var siteData = {
     },
     {
       "date": "2026-06-19",
-      "label": "27天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -3462,7 +3654,7 @@ var siteData = {
     },
     {
       "date": "2026-06-17",
-      "label": "29天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -3654,7 +3846,7 @@ var siteData = {
     },
     {
       "date": "2026-06-16",
-      "label": "30天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -3846,7 +4038,7 @@ var siteData = {
     },
     {
       "date": "2026-06-15",
-      "label": "31天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -4038,7 +4230,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "32天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -4230,7 +4422,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "34天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -4423,7 +4615,7 @@ var siteData = {
     },
     {
       "date": "2026-06-11",
-      "label": "35天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -4616,7 +4808,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "36天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -4809,7 +5001,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "38天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -5002,7 +5194,7 @@ var siteData = {
     },
     {
       "date": "2026-06-07",
-      "label": "39天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -5200,7 +5392,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "40天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -5397,7 +5589,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "41天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -5594,7 +5786,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "42天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -5791,7 +5983,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "44天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -5989,7 +6181,7 @@ var siteData = {
     },
     {
       "date": "2026-06-01",
-      "label": "45天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -6184,7 +6376,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "46天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -6379,7 +6571,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "47天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -6575,7 +6767,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "49天前",
+      "label": "52天前",
       "icon": "",
       "projects": [
         {
@@ -6771,7 +6963,7 @@ var siteData = {
     },
     {
       "date": "2026-05-27",
-      "label": "50天前",
+      "label": "53天前",
       "icon": "",
       "projects": [
         {
@@ -6965,7 +7157,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "51天前",
+      "label": "54天前",
       "icon": "",
       "projects": [
         {
@@ -7163,7 +7355,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "53天前",
+      "label": "56天前",
       "icon": "",
       "projects": [
         {
@@ -7365,7 +7557,7 @@ var siteData = {
     },
     {
       "date": "2026-05-23",
-      "label": "54天前",
+      "label": "57天前",
       "icon": "",
       "projects": [
         {
@@ -7567,7 +7759,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "55天前",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
@@ -7769,7 +7961,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "56天前",
+      "label": "59天前",
       "icon": "",
       "projects": [
         {
@@ -7971,7 +8163,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "57天前",
+      "label": "60天前",
       "icon": "",
       "projects": [
         {
@@ -8173,7 +8365,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "58天前",
+      "label": "61天前",
       "icon": "",
       "projects": [
         {
@@ -8375,7 +8567,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "59天前",
+      "label": "62天前",
       "icon": "",
       "projects": [
         {
@@ -8577,7 +8769,7 @@ var siteData = {
     },
     {
       "date": "2026-05-14",
-      "label": "63天前",
+      "label": "66天前",
       "icon": "",
       "projects": [
         {
@@ -8777,7 +8969,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "64天前",
+      "label": "67天前",
       "icon": "",
       "projects": [
         {
@@ -8973,7 +9165,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "65天前",
+      "label": "68天前",
       "icon": "",
       "projects": [
         {
