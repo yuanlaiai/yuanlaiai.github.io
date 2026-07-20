@@ -1,10 +1,202 @@
 {
-  "lastUpdated": "2026-07-19",
-  "topic": "🔥 <strong>3D 重建基础模型 + 代码审查 MCP + Agent 可观测性 + 零成本 Agent 搜索 + AI 工程化教育</strong> —— Robbyant/lingbot-map（+831★）前馈式 3D 场景重建——3D 领域的 ImageNet 时刻？tirth8205/code-review-graph（+355★）20K★ MCP 代码智能图——审查场景的 graphify。PostHog/posthog（+338★）36.6K★ 产品分析平台转向 AI Agent 可观测性——市场信号。KnockOutEZ/wigolo（+203★）零 API 费的 Agent 搜索基础设施——MCP 金铲子。rohitg00/ai-engineering-from-scratch（+191★）39K★ AI 工程化学习——从模型到系统转型。3D×MCP×可观测性×搜索×教育——五个方向覆盖 AI 基础设施的不同层次。",
+  "lastUpdated": "2026-07-21",
+  "topic": "🔥 <strong>代码图谱 MCP 二次爆发 + AI 网关崛起 + 语音 AI 全面开花 + Agent 搜索 MCP 加速 + LLM 推理框架灵活化</strong> —— tirth8205/code-review-graph（+1,876★）23K★ 二次登榜热度暴增 5 倍——MCP 生态加速。diegosouzapw/OmniRoute（+1,300★）21.7K★ AI 网关 268+ 提供商——模型多到需要路由器。jamiepine/voicebox（+839★）44K★ 语音 AI 三连爆——听懂、生成、克隆全线开花。KnockOutEZ/wigolo（+695★）2.5K★ 二次登榜——MCP 搜索金铲子，零成本 Agent 基础设施。kvcache-ai/ktransformers（+448★）18.7K★ 灵活 LLM 推理框架——研究者的实验场。MCP×网关×语音×搜索×推理——AI 工具链五个方向齐头并进。",
   "days": [
     {
-      "date": "2026-07-19",
+      "date": "2026-07-21",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "fullName": "tirth8205 / code-review-graph",
+          "org": "tirth8205",
+          "url": "https://github.com/tirth8205/code-review-graph",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "23,075",
+          "forks": "2,272",
+          "starsToday": "1,876",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +1,876★！23K★ 本地优先的代码智能图——构建持久化的代码库地图，AI 审查时只读真正需要的内容。",
+          "problems": [
+            "<strong>AI 编码工具读太多无关代码：</strong>审查 PR 时，AI 需要理解整个代码库上下文，但大部分内容与本次变更无关。",
+            "<strong>上下文窗口浪费严重：</strong>编码 Agent 把大量 token 浪费在不相关的文件中，影响推理质量。",
+            "<strong>缺少持久化代码图谱：</strong>每次审查都要重新建立代码关系图，没有可复用的数据库。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install code-review-graph</code></pre>",
+            "构建图谱：<pre><code>crg index /path/to/repo</code></pre>",
+            "连接 MCP：在 Claude Code 配置中添加 MCP 服务器地址。"
+          ],
+          "insights": [
+            "<strong>23K★ 高速增长：</strong>从 7/19 首登 +355★ 到 7/21 二次登榜 +1,876★——两天暴增 5 倍热度，MCP 生态正在加速。",
+            "<strong>图谱 + MCP 是黄金组合：</strong>code-review-graph 的成功验证了一个模式——持久化代码图谱 + MCP 接口 = 开发者的新标配。",
+            "<strong>竞争格局在变化：</strong>graphify 走 CLI 路线，code-review-graph 走 MCP 路线——两条路都跑通了，说明需求是真实的，渠道不是关键。"
+          ],
+          "tags": [
+            "code-review",
+            "mcp",
+            "code-intelligence",
+            "python",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "fullName": "diegosouzapw / OmniRoute",
+          "org": "diegosouzapw",
+          "url": "https://github.com/diegosouzapw/OmniRoute",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "21,738",
+          "forks": "2,957",
+          "starsToday": "1,300",
+          "count": 3,
+          "description": "🔥 亮点 —— 今日 +1,300★！21.7K★ 免费 MIT AI 网关——268+ 提供商、500+ 模型一键切换，Claude/GPT/Gemini/Kimi K3 全通吃。",
+          "problems": [
+            "<strong>AI 提供商太多管不过来：</strong>不同模型不同 API 端点和 Key，开发和切换成本高。",
+            "<strong>API 费用不可控：</strong>单个提供商有配额限制，超额后需要手动切换，且不同模型价格差异巨大。",
+            "<strong>Agent 需要智能路由：</strong>编码 Agent 需要根据任务自动选择性价比最高的模型，但没有现成的路由层。"
+          ],
+          "usage": [
+            "安装：<pre><code>npx omniroute</code></pre>",
+            "一键启动：<pre><code>omniroute start</code></pre>，自动发现可用提供商。",
+            "在 Claude Code 中：<pre><code>claude config set apiBase http://localhost:8080</code></pre>"
+          ],
+          "insights": [
+            "<strong>21K★ 的 AI 网关时代：</strong>当模型多到开发者需要路由器——AI 网关成为基础设施，就像互联网时代的 DNS。",
+            "<strong>RTK + Caveman 压缩的思路：</strong>OmniRoute 内置 15-95% 的 token 压缩——在 AI 费用敏感期，省钱就是竞争力。",
+            "<strong>500+ 贡献者的社区力量：</strong>开源 AI 网关靠 500+ 贡献者覆盖 268 个提供商——单一公司做不到这种广度。"
+          ],
+          "tags": [
+            "ai-gateway",
+            "model-routing",
+            "open-source",
+            "typescript",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "jamiepine",
+          "name": "voicebox",
+          "fullName": "jamiepine / voicebox",
+          "org": "jamiepine",
+          "url": "https://github.com/jamiepine/voicebox",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "44,132",
+          "forks": "5,364",
+          "starsToday": "839",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +839★！44K★ 开源 AI 语音工作室——克隆声音、语音听写、语音创作，一套搞定。",
+          "problems": [
+            "<strong>语音 AI 工具碎片化：</strong>语音克隆用一个工具、听写用另一个、创作又用另一个——切换成本高。",
+            "<strong>开源语音方案少：</strong>ElevenLabs 等功能强大但闭源收费，开源方案分散且质量参差不齐。",
+            "<strong>缺乏统一的工作流：</strong>从语音录制到编辑到导出，缺少一站式流式处理管线。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/jamiepine/voicebox.git</code></pre>",
+            "安装：<pre><code>pip install -r requirements.txt && npm install</code></pre>",
+            "启动：<pre><code>npm run dev</code></pre>，打开浏览器使用语音工作室。"
+          ],
+          "insights": [
+            "<strong>44K★ 的语音 AI 爆发：</strong>Transcribe.cpp（523pts）+ Moonshine（453pts）+ Voicebox（44K★）——语音 AI 在三个维度同时爆发。",
+            "<strong>从转录到创作的跃迁：</strong>Transcribe.cpp 和 Moonshine 解决'听懂'，Voicebox 解决'生成'——语音 AI 的上下游都在成熟。",
+            "<strong>开源语音工作室的定位：</strong>对标 ElevenLabs 的开源替代，走的是一条已经被验证过的商业路径——只是这次是开源版。"
+          ],
+          "tags": [
+            "voice-ai",
+            "speech-recognition",
+            "tts",
+            "voice-cloning",
+            "open-source"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "KnockOutEZ",
+          "name": "wigolo",
+          "fullName": "KnockOutEZ / wigolo",
+          "org": "KnockOutEZ",
+          "url": "https://github.com/KnockOutEZ/wigolo",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "2,510",
+          "forks": "145",
+          "starsToday": "695",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +695★！2.5K★ 二次登榜！AI 编码 Agent 的 Web 搜索工具——本地优先、零 API 费用、MCP 协议。",
+          "problems": [
+            "<strong>Agent 搜索网页成本高：</strong>现有方案要么用付费 API（Brave/Serp），要么自建爬虫——对小团队和独立开发者太贵。",
+            "<strong>API Key 管理麻烦：</strong>每个 Agent 都要配置搜索 API Key，多 Agent 环境更复杂。",
+            "<strong>云端搜索有隐私风险：</strong>Agent 搜索的内容可能涉及商业机密，上传到第三方搜索服务不安全。"
+          ],
+          "usage": [
+            "安装：<pre><code>npm install -g wigolo</code></pre>",
+            "启动 MCP 服务：<pre><code>wigolo serve</code></pre>",
+            "在 Agent 中配置 MCP 端点即可使用。"
+          ],
+          "insights": [
+            "<strong>二次登榜 2.5K★ 持续爆发：</strong>从 7/19 首登 203★ 到 7/21 二次登榜 695★——Agent MCP 搜索工具需求在加速。",
+            "<strong>MCP 生态的金铲子逻辑：</strong>wigolo 不是 AI 应用，而是 AI Agent 的基础设施——每一次登榜都说明更多开发者在用 MCP。",
+            "<strong>本地优先 + 零成本的病毒效应：</strong>0 API 费对独立开发者是绝对的吸引力——在 token 费用敏感期，任何省钱工具都会爆发。"
+          ],
+          "tags": [
+            "mcp",
+            "web-search",
+            "agent-tools",
+            "typescript",
+            "cli"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "kvcache-ai",
+          "name": "ktransformers",
+          "fullName": "kvcache-ai / ktransformers",
+          "org": "kvcache-ai",
+          "url": "https://github.com/kvcache-ai/ktransformers",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "18,724",
+          "forks": "1,463",
+          "starsToday": "448",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +448★！18.7K★ 异构 LLM 推理/微调框架——灵活的实验框架，跑混合架构模型。",
+          "problems": [
+            "<strong>LLM 推理框架不够灵活：</strong>vLLM 快但不灵活，Transformers 灵活但慢——没有中间地带。",
+            "<strong>异构模型支持差：</strong>MoE、混合精度、量化等新架构需要底层框架支持，但现有方案兼容性差。",
+            "<strong>实验到生产转换成本高：</strong>研究用的框架到生产部署需要重写，缺少统一桥梁。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install ktransformers</code></pre>",
+            "推理：<pre><code>python -m ktransformers --model Qwen3-72B</code></pre>",
+            "微调：<pre><code>python -m ktransformers.train --config config.yaml</code></pre>"
+          ],
+          "insights": [
+            "<strong>LLM 框架赛道的差异化：</strong>在 vLLM 的事实标准地位下，ktransformers 找到了「灵活实验」的利基——研究人员喜欢它。",
+            "<strong>中国团队的活跃：</strong>从代码提交到模型支持，ktransformers 有大量中国贡献者的痕迹——中国 LLM 社区在工具链层面也很活跃。",
+            "<strong>推理优化永无止境：</strong>448★ 说明 LLM 推理优化仍然是开发者持续关注的方向——模型能力在涨，效率需求也在涨。"
+          ],
+          "tags": [
+            "llm-inference",
+            "fine-tuning",
+            "python",
+            "deep-learning",
+            "open-source"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -196,7 +388,7 @@
     },
     {
       "date": "2026-07-16",
-      "label": "3天前",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -388,7 +580,7 @@
     },
     {
       "date": "2026-07-15",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -580,7 +772,7 @@
     },
     {
       "date": "2026-07-13",
-      "label": "6天前",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -772,7 +964,7 @@
     },
     {
       "date": "2026-07-09",
-      "label": "10天前",
+      "label": "12天前",
       "icon": "",
       "projects": [
         {
@@ -964,7 +1156,7 @@
     },
     {
       "date": "2026-07-08",
-      "label": "11天前",
+      "label": "13天前",
       "icon": "",
       "projects": [
         {
@@ -1156,7 +1348,7 @@
     },
     {
       "date": "2026-07-06",
-      "label": "13天前",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1348,7 +1540,7 @@
     },
     {
       "date": "2026-07-04",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -1540,7 +1732,7 @@
     },
     {
       "date": "2026-07-03",
-      "label": "16天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -1732,7 +1924,7 @@
     },
     {
       "date": "2026-07-02",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -1924,7 +2116,7 @@
     },
     {
       "date": "2026-06-30",
-      "label": "19天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -2116,7 +2308,7 @@
     },
     {
       "date": "2026-06-29",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2308,7 +2500,7 @@
     },
     {
       "date": "2026-06-28",
-      "label": "21天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -2500,7 +2692,7 @@
     },
     {
       "date": "2026-06-27",
-      "label": "22天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -2692,7 +2884,7 @@
     },
     {
       "date": "2026-06-23",
-      "label": "26天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -2884,7 +3076,7 @@
     },
     {
       "date": "2026-06-22",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -3076,7 +3268,7 @@
     },
     {
       "date": "2026-06-21",
-      "label": "28天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -3268,7 +3460,7 @@
     },
     {
       "date": "2026-06-20",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -3459,7 +3651,7 @@
     },
     {
       "date": "2026-06-19",
-      "label": "30天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -3651,7 +3843,7 @@
     },
     {
       "date": "2026-06-17",
-      "label": "32天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -3843,7 +4035,7 @@
     },
     {
       "date": "2026-06-16",
-      "label": "33天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -4035,7 +4227,7 @@
     },
     {
       "date": "2026-06-15",
-      "label": "34天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -4227,7 +4419,7 @@
     },
     {
       "date": "2026-06-14",
-      "label": "35天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -4419,7 +4611,7 @@
     },
     {
       "date": "2026-06-12",
-      "label": "37天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -4612,7 +4804,7 @@
     },
     {
       "date": "2026-06-11",
-      "label": "38天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -4805,7 +4997,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "39天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -4998,7 +5190,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "41天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -5191,7 +5383,7 @@
     },
     {
       "date": "2026-06-07",
-      "label": "42天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -5389,7 +5581,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "43天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -5586,7 +5778,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "44天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -5783,7 +5975,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "45天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -5980,7 +6172,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "47天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -6178,7 +6370,7 @@
     },
     {
       "date": "2026-06-01",
-      "label": "48天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -6373,7 +6565,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "49天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -6568,7 +6760,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "50天前",
+      "label": "52天前",
       "icon": "",
       "projects": [
         {
@@ -6764,7 +6956,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "52天前",
+      "label": "54天前",
       "icon": "",
       "projects": [
         {
@@ -6960,7 +7152,7 @@
     },
     {
       "date": "2026-05-27",
-      "label": "53天前",
+      "label": "55天前",
       "icon": "",
       "projects": [
         {
@@ -7154,7 +7346,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "54天前",
+      "label": "56天前",
       "icon": "",
       "projects": [
         {
@@ -7352,7 +7544,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "56天前",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
@@ -7554,7 +7746,7 @@
     },
     {
       "date": "2026-05-23",
-      "label": "57天前",
+      "label": "59天前",
       "icon": "",
       "projects": [
         {
@@ -7756,7 +7948,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "58天前",
+      "label": "60天前",
       "icon": "",
       "projects": [
         {
@@ -7958,7 +8150,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "59天前",
+      "label": "61天前",
       "icon": "",
       "projects": [
         {
@@ -8160,7 +8352,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "60天前",
+      "label": "62天前",
       "icon": "",
       "projects": [
         {
@@ -8362,7 +8554,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "61天前",
+      "label": "63天前",
       "icon": "",
       "projects": [
         {
@@ -8564,7 +8756,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "62天前",
+      "label": "64天前",
       "icon": "",
       "projects": [
         {
@@ -8766,7 +8958,7 @@
     },
     {
       "date": "2026-05-14",
-      "label": "66天前",
+      "label": "68天前",
       "icon": "",
       "projects": [
         {
@@ -8966,7 +9158,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "67天前",
+      "label": "69天前",
       "icon": "",
       "projects": [
         {
@@ -9162,7 +9354,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "68天前",
+      "label": "70天前",
       "icon": "",
       "projects": [
         {
