@@ -376,6 +376,97 @@ var toolsData = {
     {name:"maziyarpanahi/openmed", url:"https://github.com/maziyarpanahi/openmed", desc:"开源医疗 AI", price:"+427 首次上榜", priceClass:"price-free", reason:"healthcare"}
   ]};
 
+// ── RENDER ─────────────────────────────────────────
+var activeCat = 'all';
+
+function renderTools() {
+  var container = document.getElementById('toolsContainer');
+  if (!container) return;
+  var searchVal = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+  container.innerHTML = '';
+  var html = '';
+
+  Object.keys(toolsData).forEach(function(cat) {
+    var tools = toolsData[cat].filter(function(t) {
+      if (activeCat !== 'all' && cat !== activeCat) return false;
+      if (searchVal) {
+        var match = t.name.toLowerCase().indexOf(searchVal) !== -1
+          || t.desc.toLowerCase().indexOf(searchVal) !== -1;
+        if (!match) return false;
+      }
+      return true;
+    });
+    if (!tools.length) return;
+
+    html += '<div class="tools-section">';
+    html += '<div class="section-title">' + cat + ' <span style="font-size:0.75rem;color:var(--text3);font-weight:400;">' + tools.length + '</span></div>';
+    tools.forEach(function(t) {
+      html += '<div class="tool-card">';
+      html += '<div><a class="tool-name" href="' + t.url + '" target="_blank" rel="noopener">' + escapeHtml(t.name) + '</a>';
+      html += '<div class="tool-desc">' + escapeHtml(t.desc) + '</div></div>';
+      html += '<span class="tool-price ' + t.priceClass + '">' + escapeHtml(t.price) + '</span>';
+      html += '<span class="tool-reason">' + escapeHtml(t.reason) + '</span>';
+      html += '</div>';
+    });
+    html += '</div>';
+  });
+
+  if (!html) {
+    html = '<div style="text-align:center;padding:60px 0;color:var(--text3);"><div style="font-size:2rem;margin-bottom:8px;">🔍</div><p>没有找到匹配的工具</p></div>';
+  }
+  container.innerHTML = html;
+}
+
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+function filterTools() { renderTools(); }
+
+function filterByCat(cat) {
+  activeCat = cat;
+  document.querySelectorAll('.cat-btn').forEach(function(b) { b.classList.remove('active'); });
+  var btns = document.querySelectorAll('.cat-btn');
+  for (var i = 0; i < btns.length; i++) {
+    if (btns[i].getAttribute('data-cat') === cat) btns[i].classList.add('active');
+  }
+  renderTools();
+}
+
+// build category nav
+(function() {
+  var nav = document.getElementById('catNav');
+  var seen = {};
+  var allCats = ['all'];
+  Object.keys(toolsData).forEach(function(cat) {
+    var base = cat.replace(/^[^\s]+\s/, '').trim();
+    if (!seen[base]) { seen[base] = true; allCats.push(cat); }
+    else { allCats.push(cat); }
+  });
+  // deduplicate display names
+  var display = {};
+  allCats.forEach(function(cat) {
+    var show = cat;
+    if (cat !== 'all') {
+      show = cat.replace(/^[^\s]+\s/, '').trim();
+      if (display[show]) return;
+      display[show] = true;
+    }
+    var btn = document.createElement('button');
+    btn.className = 'cat-btn' + (cat === 'all' ? ' active' : '');
+    btn.setAttribute('data-cat', cat);
+    btn.textContent = cat === 'all' ? '全部' : show;
+    btn.onclick = function() { filterByCat(cat); };
+    nav.appendChild(btn);
+  });
+  // update category count in hero
+  var total = Object.keys(toolsData).length;
+  var catCountEl = document.getElementById('catCount');
+  if (catCountEl) catCountEl.textContent = total;
+  renderTools();
+})();
 </script>
 </body>
 </html>
