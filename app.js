@@ -335,7 +335,7 @@ function renderArticles(filter) {
   var showCount = Math.min(filtered.length, 6);
 
   grid.innerHTML = filtered.slice(0, showCount).map(function(a, i) {
-    return '<a href="articles/' + a.slug + '/" class="article-card reveal" style="text-decoration:none;transition-delay: ' + (i * 0.07) + 's">' +
+    return '<a href="article.html?slug=' + a.slug + '" class="article-card reveal" style="text-decoration:none;transition-delay: ' + (i * 0.07) + 's">' +
       '<div class="card-meta">' +
         a.tags.map(function(t, idx) { return '<span class="card-tag' + (idx % 2 === 1 ? ' purple' : '') + '">' + t + '</span>'; }).join('') +
         '<span class="card-date">' + a.date + '</span>' +

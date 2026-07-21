@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>猿来AI</title>
+<script>
+(function(){
+  var path = window.location.pathname;
+  var match = path.match(/\/articles\/([^\/]+)/);
+  if (match) {
+    window.location.replace('/article.html?slug=' + match[1]);
+    return;
+  }
+  document.write('<h2 style="text-align:center;padding:80px 20px;font-family:sans-serif">Page not found</h2>');
+  document.write('<p style="text-align:center"><a href="/">← 回到首页</a></p>');
+})();
+</script>
+</head><body></body></html>

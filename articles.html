@@ -109,7 +109,7 @@
   </div>
 </div>
 
-<script src="data.js?v=20260721c"></script>
+<script src="data.js?v=20260721d"></script>
 <script>
   var articles = window.siteData && window.siteData.articles ? window.siteData.articles : [];
   var PAGE_SIZE = 10;
@@ -121,7 +121,7 @@
     for (var i = loadedCount; i < end; i++) {
       var a = articles[i];
       var html = '';
-      html += '<a href="articles/' + a.slug + '/" class="article-item">';
+      html += '<a href="article.html?slug=' + a.slug + '" class="article-item">';
       html += '<div class="meta">';
       for (var j = 0; j < a.tags.length; j++) {
         html += '<span class="tag">' + a.tags[j] + '</span>';

@@ -114,15 +114,41 @@
   <div id="articleContent" class="active"></div>
 </div>
 
-<script src="data.js?v=20260721c"></script>
+<script src="data.js?v=20260721d"></script>
 <script>
   var params = new URLSearchParams(window.location.search);
   var id = parseInt(params.get('id')) || 0;
+  var slugParam = params.get('slug');
   var articles = window.siteData && window.siteData.articles ? window.siteData.articles : [];
 
+  // Also try to extract slug from URL path (e.g. /articles/slug/)
+  var pathParts = window.location.pathname.split('/').filter(function(p) { return p; });
+  var slugFromPath = null;
+  for (var pi = 0; pi < pathParts.length; pi++) {
+    if (pathParts[pi] === 'articles' && pi + 1 < pathParts.length) {
+      slugFromPath = pathParts[pi + 1];
+      break;
+    }
+  }
+
   function findArticle() {
-    for (var i = 0; i < articles.length; i++) {
-      if (articles[i].id === id) return articles[i];
+    // First try by id (from ?id=N)
+    if (id) {
+      for (var i = 0; i < articles.length; i++) {
+        if (articles[i].id === id) return articles[i];
+      }
+    }
+    // Then try by slug param (from ?slug=xxx)
+    if (slugParam) {
+      for (var i = 0; i < articles.length; i++) {
+        if (articles[i].slug === slugParam) return articles[i];
+      }
+    }
+    // Finally try by slug from URL path (e.g. /articles/slug/)
+    if (slugFromPath) {
+      for (var i = 0; i < articles.length; i++) {
+        if (articles[i].slug === slugFromPath) return articles[i];
+      }
     }
     return null;
   }
