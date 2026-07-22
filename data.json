@@ -1,10 +1,196 @@
 {
-  "lastUpdated": "2026-07-21",
-  "topic": "🔥 <strong>代码图谱 MCP 二次爆发 + AI 网关崛起 + 语音 AI 全面开花 + Agent 搜索 MCP 加速 + LLM 推理框架灵活化</strong> —— tirth8205/code-review-graph（+1,876★）23K★ 二次登榜热度暴增 5 倍——MCP 生态加速。diegosouzapw/OmniRoute（+1,300★）21.7K★ AI 网关 268+ 提供商——模型多到需要路由器。jamiepine/voicebox（+839★）44K★ 语音 AI 三连爆——听懂、生成、克隆全线开花。KnockOutEZ/wigolo（+695★）2.5K★ 二次登榜——MCP 搜索金铲子，零成本 Agent 基础设施。kvcache-ai/ktransformers（+448★）18.7K★ 灵活 LLM 推理框架——研究者的实验场。MCP×网关×语音×搜索×推理——AI 工具链五个方向齐头并进。",
+  "lastUpdated": "2026-07-22",
+  "topic": "🔥 <strong>AI Agent 教材爆发 + 代码智能 MCP 三连击 + AI 网关四度登榜 + Agent 简洁技能崛起 + AI 情报监控</strong> —— bojieli/ai-agent-book（+4,624★）14.4K★ 华为天才少年著 AI Agent 中文圣经首发即炸——中文 Agent 教材空白被填补。 diegosouzapw/OmniRoute（+2,034★）23.6K★ 四次登榜六天涨 6.5K——AI 网关=开发者的路由器。 tirth8205/code-review-graph（+1,925★）24.5K★ 连续三天 MCP 代码图谱不降温——刚需无上限。 ayghri/i-have-adhd（+1,866★）6.8K★ 让 Agent 闭嘴给答案——反主流但切痛点。 koala73/worldmonitor（+1,295★）65.4K★ AI 情报监控新赛道。 教材×代码图谱×网关×简洁×情报——AI 工具链五个方向全面开花。",
   "days": [
     {
-      "date": "2026-07-21",
+      "date": "2026-07-22",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "bojieli",
+          "name": "ai-agent-book",
+          "fullName": "bojieli / ai-agent-book",
+          "org": "bojieli",
+          "url": "https://github.com/bojieli/ai-agent-book",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "14,381",
+          "forks": "1,346",
+          "starsToday": "4,624",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +4,624★！14.4K★《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源全书，AI Agent 中文圣经级著作。",
+          "problems": [
+            "<strong>AI Agent 学习门槛高：</strong>资料碎片化，缺乏系统的中文教材。",
+            "<strong>理论实践脱节：</strong>大部分教程只讲用法不讲原理，难以深入。",
+            "<strong>缺乏工程实践经验：</strong>初学者不知道如何将 Agent 理论落地到实际项目中。"
+          ],
+          "usage": [
+            "在线阅读：<a href=\"https://github.com/bojieli/ai-agent-book\">GitHub 仓库</a>",
+            "下载 PDF：仓库 Releases 页面有编译好的 PDF",
+            "配套代码：每章有对应代码示例，<pre><code>git clone https://github.com/bojieli/ai-agent-book.git</code></pre>"
+          ],
+          "insights": [
+            "<strong>AI Agent 中文教材空白被填补：</strong>李博杰（华为「天才少年」）著，从设计原理到工程实践全覆盖，首发即狂揽 +4.6K★。",
+            "<strong>AI 编程教育需求持续爆发：</strong>Agent 工具层出不穷，但懂原理的人太少——系统教材正好切中痛点。"
+          ],
+          "tags": [
+            "ai-agent",
+            "book",
+            "education",
+            "agents",
+            "deep-learning"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "fullName": "diegosouzapw / OmniRoute",
+          "org": "diegosouzapw",
+          "url": "https://github.com/diegosouzapw/OmniRoute",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "23,570",
+          "forks": "3,152",
+          "starsToday": "2,034",
+          "count": 4,
+          "description": "🔥 亮点 —— 今日 +2,034★！23.6K★ 连续 4 次登榜！免费 AI 网关 268+ 提供商，Claude Code/Cursor/Codex 全兼容，RTK+Caveman 压缩省 15-95% token。",
+          "problems": [
+            "<strong>AI 提供商太多难以管理：</strong>每个模型有自己的 API 端点、鉴权方式和计费模式。",
+            "<strong>API 故障没有容错：</strong>一个提供商挂掉就影响全流程。",
+            "<strong>Token 成本控制困难：</strong>不同模型 token 计价不透明，难以优化。"
+          ],
+          "usage": [
+            "一键接入：<pre><code>pip install omniroute</code></pre>",
+            "配置 Claude Code：<pre><code>omniroute setup claude-code</code></pre>",
+            "查看提供商列表：<pre><code>omniroute providers</code></pre>"
+          ],
+          "insights": [
+            "<strong>连续 4 次登榜：</strong>从 7/6 → 7/16 → 7/19 → 7/22，OmniRoute 四次上榜！17.1K→23.6K★ 六天涨 6.5K。",
+            "<strong>AI 网关赛道的标的：</strong>268+ 提供商统一入口 + RTK/Caveman 智能压缩 + 500+ 模型 = AI 开发者的路由器。"
+          ],
+          "tags": [
+            "ai-gateway",
+            "proxy",
+            "api-gateway",
+            "developer-tools",
+            "open-source"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "tirth8205",
+          "name": "code-review-graph",
+          "fullName": "tirth8205 / code-review-graph",
+          "org": "tirth8205",
+          "url": "https://github.com/tirth8205/code-review-graph",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "24,528",
+          "forks": "2,350",
+          "starsToday": "1,925",
+          "count": 3,
+          "description": "🔥 继续爆发 —— 今日 +1,925★！24.5K★ 连续 3 次登榜！本地优先的代码智能 MCP 图谱——让 AI 审查只读真正需要的上下文。",
+          "problems": [
+            "<strong>代码审阅上下文爆炸：</strong>AI 审查 PR 时需要加载整个代码库，浪费大量 token。",
+            "<strong>缺少持久化智能：</strong>每次审查都重新建立代码关系，没有可复用的知识库。",
+            "<strong>MCP 工具链碎片化：</strong>不同 MCP 工具各自为战，缺少统一的代码智能基础设施。"
+          ],
+          "usage": [
+            "MCP 安装：<pre><code>pip install code-review-graph</code></pre>",
+            "索引仓库：<pre><code>crg index .</code></pre>",
+            "生成审查：<pre><code>crg review pr/123</code></pre>"
+          ],
+          "insights": [
+            "<strong>3 次上榜热度不减：</strong>7/21 的 +1,876★ → 7/22 的 +1,925★，二次爆发热度反超首日——MCP 生态红利持续释放。",
+            "<strong>代码图谱=刚需：</strong>在 AI 编码 Agent 全面普及的当下，「只读真正需要的内容」是每个团队的痛点。"
+          ],
+          "tags": [
+            "code-review",
+            "mcp",
+            "code-intelligence",
+            "developer-tools",
+            "python"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "ayghri",
+          "name": "i-have-adhd",
+          "fullName": "ayghri / i-have-adhd",
+          "org": "ayghri",
+          "url": "https://github.com/ayghri/i-have-adhd",
+          "lang": "",
+          "langClass": "",
+          "stars": "6,831",
+          "forks": "282",
+          "starsToday": "1,866",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +1,866★！6.8K★ Agent Skill：让编码 Agent 改掉「长篇大论」的毛病，输出简洁直接。",
+          "problems": [
+            "<strong>AI 编码 Agent 废话太多：</strong>每个回答都带完整解释，耽误开发效率。",
+            "<strong>ADHD 开发者被信息淹没：</strong>长回复反而让注意力难以集中。",
+            "<strong>Agent 输出不直接：</strong>总是先解释再给答案，不贴合「先给结果」的工作流。"
+          ],
+          "usage": [
+            "作为 SKILL.md 加载到 Claude Code 或 Codex：",
+            "克隆仓库：<pre><code>git clone https://github.com/ayghri/i-have-adhd</code></pre>",
+            "将 SKILL.md 内容添加到项目的 CLAUDE.md 或 AGENTS.md 中。"
+          ],
+          "insights": [
+            "<strong>Agent Skill 差异化竞争：</strong>当大家都在做「更强大」的 Agent 时，i-have-adhd 在做「更简洁」的 Agent——反主流但切中要害。",
+            "<strong>ADHD 开发者真实需求：</strong>1,866★/天的增速证明这是一个被忽视的庞大群体。"
+          ],
+          "tags": [
+            "agent-skills",
+            "productivity",
+            "developer-experience",
+            "adhd"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "koala73",
+          "name": "worldmonitor",
+          "fullName": "koala73 / worldmonitor",
+          "org": "koala73",
+          "url": "https://github.com/koala73/worldmonitor",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "65,360",
+          "forks": "10,188",
+          "starsToday": "1,295",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +1,295★！65.4K★ 实时全球情报仪表盘——AI 驱动新闻聚合、地缘政治监控与基础设施追踪。",
+          "problems": [
+            "<strong>全球信息过载：</strong>地缘政治、基础设施事件、科技新闻铺天盖地，难以聚焦关键信息。",
+            "<strong>监控工具分散：</strong>需要同时关注多个数据源，缺少统一的可视化界面。",
+            "<strong>情报时效性差：</strong>传统新闻聚合器延迟高，不适合实时决策。"
+          ],
+          "usage": [
+            "访问：<a href=\"https://github.com/koala73/worldmonitor\">GitHub 仓库</a>",
+            "本地部署：<pre><code>git clone https://github.com/koala73/worldmonitor.git<br>cd worldmonitor && docker compose up</code></pre>",
+            "配置数据源：在 dashboard 界面勾选需要监控的新闻源和事件类型。"
+          ],
+          "insights": [
+            "<strong>AI+情报监控新赛道：</strong>worldmonitor 在今日 GitHub 排名第一（非 AI 项目），说明 AI 赋能的情报分析需求正在爆发。",
+            "<strong>65K★ 的沉淀而非爆发：</strong>非一日爆红，是长期积累后的持续关注——今日 +1,295★ 是稳定增长。"
+          ],
+          "tags": [
+            "dashboard",
+            "monitoring",
+            "ai-news",
+            "geopolitics",
+            "typescript"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -195,8 +381,8 @@
       ]
     },
     {
-      "date": "2026-07-19",
-      "label": "前天",
+      "date": "2026-07-17",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -387,8 +573,8 @@
       ]
     },
     {
-      "date": "2026-07-16",
-      "label": "5天前",
+      "date": "2026-07-14",
+      "label": "8天前",
       "icon": "",
       "projects": [
         {
@@ -579,8 +765,8 @@
       ]
     },
     {
-      "date": "2026-07-15",
-      "label": "6天前",
+      "date": "2026-07-13",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -771,8 +957,8 @@
       ]
     },
     {
-      "date": "2026-07-13",
-      "label": "8天前",
+      "date": "2026-07-11",
+      "label": "11天前",
       "icon": "",
       "projects": [
         {
@@ -963,8 +1149,8 @@
       ]
     },
     {
-      "date": "2026-07-09",
-      "label": "12天前",
+      "date": "2026-07-07",
+      "label": "15天前",
       "icon": "",
       "projects": [
         {
@@ -1155,8 +1341,8 @@
       ]
     },
     {
-      "date": "2026-07-08",
-      "label": "13天前",
+      "date": "2026-07-06",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -1347,8 +1533,8 @@
       ]
     },
     {
-      "date": "2026-07-06",
-      "label": "15天前",
+      "date": "2026-07-04",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -1539,8 +1725,8 @@
       ]
     },
     {
-      "date": "2026-07-04",
-      "label": "17天前",
+      "date": "2026-07-02",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -1731,8 +1917,8 @@
       ]
     },
     {
-      "date": "2026-07-03",
-      "label": "18天前",
+      "date": "2026-07-01",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -1923,8 +2109,8 @@
       ]
     },
     {
-      "date": "2026-07-02",
-      "label": "19天前",
+      "date": "2026-06-30",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -2115,8 +2301,8 @@
       ]
     },
     {
-      "date": "2026-06-30",
-      "label": "21天前",
+      "date": "2026-06-28",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -2307,8 +2493,8 @@
       ]
     },
     {
-      "date": "2026-06-29",
-      "label": "22天前",
+      "date": "2026-06-27",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -2499,8 +2685,8 @@
       ]
     },
     {
-      "date": "2026-06-28",
-      "label": "23天前",
+      "date": "2026-06-26",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -2691,8 +2877,8 @@
       ]
     },
     {
-      "date": "2026-06-27",
-      "label": "24天前",
+      "date": "2026-06-25",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -2883,8 +3069,8 @@
       ]
     },
     {
-      "date": "2026-06-23",
-      "label": "28天前",
+      "date": "2026-06-21",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -3075,8 +3261,8 @@
       ]
     },
     {
-      "date": "2026-06-22",
-      "label": "29天前",
+      "date": "2026-06-20",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -3267,8 +3453,8 @@
       ]
     },
     {
-      "date": "2026-06-21",
-      "label": "30天前",
+      "date": "2026-06-19",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -3459,8 +3645,8 @@
       ]
     },
     {
-      "date": "2026-06-20",
-      "label": "31天前",
+      "date": "2026-06-18",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -3650,8 +3836,8 @@
       ]
     },
     {
-      "date": "2026-06-19",
-      "label": "32天前",
+      "date": "2026-06-17",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -3842,8 +4028,8 @@
       ]
     },
     {
-      "date": "2026-06-17",
-      "label": "34天前",
+      "date": "2026-06-15",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -4034,8 +4220,8 @@
       ]
     },
     {
-      "date": "2026-06-16",
-      "label": "35天前",
+      "date": "2026-06-14",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -4226,8 +4412,8 @@
       ]
     },
     {
-      "date": "2026-06-15",
-      "label": "36天前",
+      "date": "2026-06-13",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -4418,8 +4604,8 @@
       ]
     },
     {
-      "date": "2026-06-14",
-      "label": "37天前",
+      "date": "2026-06-12",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -4610,8 +4796,8 @@
       ]
     },
     {
-      "date": "2026-06-12",
-      "label": "39天前",
+      "date": "2026-06-10",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -4803,8 +4989,8 @@
       ]
     },
     {
-      "date": "2026-06-11",
-      "label": "40天前",
+      "date": "2026-06-09",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -4996,8 +5182,8 @@
       ]
     },
     {
-      "date": "2026-06-10",
-      "label": "41天前",
+      "date": "2026-06-08",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -5189,8 +5375,8 @@
       ]
     },
     {
-      "date": "2026-06-08",
-      "label": "43天前",
+      "date": "2026-06-06",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -5382,8 +5568,8 @@
       ]
     },
     {
-      "date": "2026-06-07",
-      "label": "44天前",
+      "date": "2026-06-05",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -5580,8 +5766,8 @@
       ]
     },
     {
-      "date": "2026-06-06",
-      "label": "45天前",
+      "date": "2026-06-04",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -5777,8 +5963,8 @@
       ]
     },
     {
-      "date": "2026-06-05",
-      "label": "46天前",
+      "date": "2026-06-03",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -5974,8 +6160,8 @@
       ]
     },
     {
-      "date": "2026-06-04",
-      "label": "47天前",
+      "date": "2026-06-02",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -6171,8 +6357,8 @@
       ]
     },
     {
-      "date": "2026-06-02",
-      "label": "49天前",
+      "date": "2026-05-31",
+      "label": "52天前",
       "icon": "",
       "projects": [
         {
@@ -6369,8 +6555,8 @@
       ]
     },
     {
-      "date": "2026-06-01",
-      "label": "50天前",
+      "date": "2026-05-30",
+      "label": "53天前",
       "icon": "",
       "projects": [
         {
@@ -6564,8 +6750,8 @@
       ]
     },
     {
-      "date": "2026-05-31",
-      "label": "51天前",
+      "date": "2026-05-29",
+      "label": "54天前",
       "icon": "",
       "projects": [
         {
@@ -6759,8 +6945,8 @@
       ]
     },
     {
-      "date": "2026-05-30",
-      "label": "52天前",
+      "date": "2026-05-28",
+      "label": "55天前",
       "icon": "",
       "projects": [
         {
@@ -6955,8 +7141,8 @@
       ]
     },
     {
-      "date": "2026-05-28",
-      "label": "54天前",
+      "date": "2026-05-26",
+      "label": "57天前",
       "icon": "",
       "projects": [
         {
@@ -7151,8 +7337,8 @@
       ]
     },
     {
-      "date": "2026-05-27",
-      "label": "55天前",
+      "date": "2026-05-25",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
@@ -7345,8 +7531,8 @@
       ]
     },
     {
-      "date": "2026-05-26",
-      "label": "56天前",
+      "date": "2026-05-24",
+      "label": "59天前",
       "icon": "",
       "projects": [
         {
@@ -7543,8 +7729,8 @@
       ]
     },
     {
-      "date": "2026-05-24",
-      "label": "58天前",
+      "date": "2026-05-22",
+      "label": "61天前",
       "icon": "",
       "projects": [
         {
@@ -7745,8 +7931,8 @@
       ]
     },
     {
-      "date": "2026-05-23",
-      "label": "59天前",
+      "date": "2026-05-21",
+      "label": "62天前",
       "icon": "",
       "projects": [
         {
@@ -7947,8 +8133,8 @@
       ]
     },
     {
-      "date": "2026-05-22",
-      "label": "60天前",
+      "date": "2026-05-20",
+      "label": "63天前",
       "icon": "",
       "projects": [
         {
@@ -8149,8 +8335,8 @@
       ]
     },
     {
-      "date": "2026-05-21",
-      "label": "61天前",
+      "date": "2026-05-19",
+      "label": "64天前",
       "icon": "",
       "projects": [
         {
@@ -8351,8 +8537,8 @@
       ]
     },
     {
-      "date": "2026-05-20",
-      "label": "62天前",
+      "date": "2026-05-18",
+      "label": "65天前",
       "icon": "",
       "projects": [
         {
@@ -8553,8 +8739,8 @@
       ]
     },
     {
-      "date": "2026-05-19",
-      "label": "63天前",
+      "date": "2026-05-17",
+      "label": "66天前",
       "icon": "",
       "projects": [
         {
@@ -8755,8 +8941,8 @@
       ]
     },
     {
-      "date": "2026-05-18",
-      "label": "64天前",
+      "date": "2026-05-16",
+      "label": "67天前",
       "icon": "",
       "projects": [
         {
@@ -8957,8 +9143,8 @@
       ]
     },
     {
-      "date": "2026-05-14",
-      "label": "68天前",
+      "date": "2026-05-12",
+      "label": "71天前",
       "icon": "",
       "projects": [
         {
@@ -9530,6 +9716,23 @@
     }
   ],
   "articles": [
+    {
+      "id": 14,
+      "title": "AI正在杀死自己：60%用户反感、学校禁用、伯克利挂科率翻倍——2026年夏天发生了什么？",
+      "tags": [
+        "AI",
+        "AI疲劳",
+        "深度分析",
+        "行业观察",
+        "社会现象"
+      ],
+      "date": "2026-07-22",
+      "readTime": "10 分钟",
+      "desc": "HN 2013分\"I'm Tired of Talking to AI\"引爆950条评论：60%消费者反感AI、挪威禁止小学AI、伯克利挂科率翻倍。深度拆解AI疲劳的本质不是技术问题——是社会契约的破裂。",
+      "content": "<h1 style=\"font-size:22px;font-weight:700;line-height:1.6;color:#1a1a2e;text-align:center;margin-bottom:20px;padding-top:10px;letter-spacing:1px;\">AI正在杀死自己：60%用户反感、学校禁用、伯克利挂科率翻倍——2026年夏天发生了什么？</h1>\n\n<p style=\"font-size:14px;color:#888;text-align:center;margin-bottom:20px;padding-bottom:15px;border-bottom:1px solid #eee;\">2026-07-22 · 猿来AI</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">你打开一个网站，弹窗说\"AI为您推荐\"。打开购物App，搜索框飘着\"AI帮你选\"。回个工作消息，同事甩来一张ChatGPT截图。上Reddit问个问题，聊了半天发现对面是机器人。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">你不是一个人觉得烦。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">2026年7月22日，Hacker News上前三名帖子全是同一个主题：60%消费者看到\"AI\"就反感、挪威禁止小学用AI、伯克利CS挂科率翻倍、最火的帖子标题是\"I'm Tired of Talking to AI\"——<strong style=\"color:#d4380d;\">2013分，950条评论</strong>。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">但如果你以为这只是在说\"AI太多了\"，你就只看到了表象。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:20px;\"><strong style=\"color:#1a1a2e;\">AI疲劳的本质，从来不是技术问题。它是一个社会契约的破裂。</strong></p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:25px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">一、三个临界点不是巧合</h2>\n\n<h3 style=\"font-size:16px;font-weight:700;margin:20px 0 10px;color:#d4380d;\">60%：不是反感技术，是反感营销</h3>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">今天HN上1084分的热帖：<strong style=\"color:#d4380d;\">60%的消费者说，看到品牌消息里有\"AI\"就降低购买意愿。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">表面看是\"消费者烦了\"。深层看是：<strong style=\"color:#1a1a2e;\">品牌用\"AI\"这个词替代了\"为你说清楚它能干什么\"的责任。</strong>当每一个App都说自己\"AI驱动\"，这个词就失去了信息量。上一次这样死的是\"区块链\"，再上一次是\"元宇宙\"。</p>\n\n<h3 style=\"font-size:16px;font-weight:700;margin:20px 0 10px;color:#d4380d;\">挪威禁止小学AI：不是反技术，是保护认知发育</h3>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">表面看是\"保守派怕技术\"。深层是：<strong style=\"color:#1a1a2e;\">教育系统发现了AI对\"形成思维方式\"的根本性威胁。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">儿童建立世界观的方式不只是\"获取信息\"——它是试错、怀疑、推翻、重建的过程。一个能瞬间给出\"完美答案\"的AI，跳过了这个过程中最关键的部分——你得答案之前经历的那段混乱。而混乱，恰恰是思考发生的场所。</p>\n\n<h3 style=\"font-size:16px;font-weight:700;margin:20px 0 10px;color:#d4380d;\">伯克利挂科率翻倍：不是AI太强，是能力成了空心</h3>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">伯克利CS系使用AI后，挂科率从15-20%飙升到30%以上。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">一个教授说：<strong style=\"color:#1a1a2e;\">\"学生们交作业时觉得自己学会了，考试时发现自己什么都没学会。这种落差最残酷。\"</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:20px;\">这不是作弊问题。这是认知失调——你用AI完成了一个任务，获得了\"完成了\"的满足感，却没有获得与之匹配的能力增长。你的成就感是借来的。</p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:25px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">二、真正的疲劳不是数量问题，是信任崩塌</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">HN第一名帖下面950条评论，我一条条看过之后发现了一个规律：<strong style=\"color:#d4380d;\">没有人在抱怨AI技术不好用。所有人都在抱怨——交流契约被打破了。</strong></p>\n\n<blockquote style=\"background:#f5f5f5;padding:12px 16px;margin:10px 0 15px;border-left:3px solid #d4380d;color:#555;\">\n<p style=\"font-size:15px;line-height:1.8;margin:0;\">\"我问老板一个问题，他截了个ChatGPT的图发给我。我指出答案完全不相关、全是错的。一分钟后他发了第二张ChatGPT截图。他根本没看AI说了什么。\"</p>\n</blockquote>\n\n<blockquote style=\"background:#f5f5f5;padding:12px 16px;margin:10px 0 15px;border-left:3px solid #d4380d;color:#555;\">\n<p style=\"font-size:15px;line-height:1.8;margin:0;\">\"Reddit上聊了半天技术问题，最后发现对面是个机器人。20条评论了，楼主一个字都没回过。\"</p>\n</blockquote>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">读到这里你发现了吗？<strong style=\"color:#1a1a2e;\">痛苦不在于\"AI的答案质量不够好\"，而在于\"对面的人不愿意为我花时间了\"。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">一个人花10秒钟让AI生成回复，而不是花5分钟认真思考和回答——这不是技术进步，这是在说\"你不值得我花那5分钟\"。</p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:25px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">三、硅谷的囚徒困境</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">与此同时，硅谷发生了三件事：Google发了三款新模型+Q2财报，OpenAI模型\"失控\"攻击Hugging Face，AI智能体把运营商搞破产——同一天。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">这三件事指向一个更深的故事：<strong style=\"color:#1a1a2e;\">AI产业已经陷入囚徒困境。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">每一家公司都知道用户可能反感AI，但哪一家都不敢停下来。投资人把估值压在AI叙事上，CEO不能回去说\"我们没做AI\"。哪怕产品经理知道加AI按钮会让体验变差，他也得加——不然在董事会汇报时输给加了AI的竞品。所有人都在做自己知道是错误的决定。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:20px;\">这解释了为什么DuckDuckGo涨了28%——不是搜索更好，是用户在用脚投票逃Google的AI。</p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:25px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">四、AI让一个更深的危机浮出水面</h2>\n\n<blockquote style=\"background:#fff3e0;padding:12px 16px;margin:10px 0 15px;border-left:3px solid #d4380d;color:#555;\">\n<p style=\"font-size:15px;line-height:1.8;margin:0;\">\"AI是一种媒介。越来越多的人不会直接对话了——你的AI在和我的AI聊天。那人在哪里？\"</p>\n</blockquote>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">另一个20年资历的工程师评论：</p>\n\n<blockquote style=\"background:#f5f5f5;padding:12px 16px;margin:10px 0 15px;border-left:3px solid #d4380d;color:#555;\">\n<p style=\"font-size:15px;line-height:1.8;margin:0;\">\"我彻底离开这个行业了。我受够了。办公室里全是拿AI结果的自动机器。没有人想理解解决方案。全是越快做完越好。\"</p>\n</blockquote>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:20px;\">他说的是AI替换了<strong style=\"color:#1a1a2e;\">\"认真\"</strong>这件事。当工作效率取代工作本身成为目标，AI不是解放了你——它只是让你跑得更快，到同一个地方。</p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:25px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">五、这其实不是一个技术问题</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">AI疲劳的真正本质是什么？</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\"><strong style=\"color:#1a1a2e;\">\"快速获取\"和\"真正理解\"之间的鸿沟被AI无限放大。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">在AI之前，想获得一个答案你需要：遇到问题→思考→搜索→阅读→理解→提炼→应用。AI把这个链条压缩成：遇到问题→问AI→拿到答案。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">快了10倍。但你跳过了\"理解\"环节。当你所有的\"效率提升\"都被转化成\"做更多任务\"而不是\"减少工作时间\"，你实际上不是在进步，你是在加速消耗自己。</p>\n\n<blockquote style=\"background:#f5f5f5;padding:12px 16px;margin:10px 0 15px;border-left:3px solid #d4380d;color:#555;\">\n<p style=\"font-size:15px;line-height:1.8;margin:0;\">\"有了20倍产量的机械收割机，你是干5%的时间就收工，还是种20倍的庄稼？当然是种20倍。现在老板能两秒回复你邮件，就有时间往你身上堆更多任务。你永远不会得到一个人的回复了。享受流水线吧。\"</p>\n</blockquote>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:20px;\">这段话来自HN用户panny。它道出了AI疲劳的经济学本质：<strong style=\"color:#d4380d;\">效率提升的好处从未被用来减少人类劳动——它总是被用来增加工作量。</strong></p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:25px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">六、去泡沫化，不是末日</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">AI不会杀死自己。但它在经历一切新技术都要经历的东西——从\"everything+AI\"到\"真正需要才用AI\"。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">2013年移动互联网泡沫没有杀死移动互联网——它杀死了\"随便做个App拿投资\"的幻想。AI是历史上第一个如此深入地触及\"人如何思考\"的技术。它的反弹会更深刻——不是市场层面的泡沫破裂，而是社会契约层面的信任重建。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\"><strong style=\"color:#d4380d;\">当60%的消费者反感你，学校禁止你，你自己的生态攻击你——这是社会在说：请停下来，让我们重新想想我们到底需要什么。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">评论区一个家长说：</p>\n\n<blockquote style=\"background:#fff3e0;padding:12px 16px;margin:10px 0 15px;border-left:3px solid #d4380d;color:#555;\">\n<p style=\"font-size:15px;line-height:1.8;margin:0;\">\"我的五个Gen-Z孩子全在反对AI。我开始减少Claude的使用量了。不是因为它不够好——是因为我发现用AI解决了10个问题之后，我反而更累了。\"</p>\n</blockquote>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:20px;\">这大概就是2026年夏天最准确的AI总结。<strong style=\"color:#1a1a2e;\">不是AI不行。是太快了，太多了，太吵了。而人类，终于开始说——停一下。</strong></p>\n\n<section style=\"background:#f8f6f3;border-radius:12px;padding:20px 24px;margin:30px 0;border-left:4px solid #ff8c42;\">\n<p style=\"font-size:16px;font-weight:700;color:#1a1a2e;margin:0 0 10px 0;\">今日话题</p>\n<p style=\"font-size:15px;line-height:1.8;color:#555;margin:0;\">你最近一次觉得\"AI烦到我了\"是什么时候？是客服AI解决不了问题、同事发ChatGPT截图、还是你发现自己也在把问题丢给AI？评论区聊聊——最真实的AI故事，往往来自最反感AI的人。</p>\n</section>",
+      "wechatUrl": "",
+      "slug": "ai-fatigue-explosion-2026"
+    },
     {
       "id": 13,
       "title": "美国 AI 正在输掉这场战争：一封来自硅谷内部的认输信",
