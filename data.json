@@ -1,10 +1,276 @@
 {
-  "lastUpdated": "2026-07-29",
-  "topic": "🔥 <strong>Claude Video 连续三天热度翻倍 + Airi 自托管伴侣连涨 + Superfile 终端革新持续 + ECC 重磅回归 + GeoLibre GIS 爆发 + Book-to-Skill 知识注入 + Pascal 3D 编辑</strong> —— bradautomates/claude-video（+988★）12.1K★ 连续三天登榜！热度从 434→988 翻倍，视频分析压倒性刚需。moeru-ai/airi（+797★）44.7K★ 连续两天 +572→+797，AI 伴侣赛道爆发。yorukot/superfile（+662★）21.5K★ 连续两天登榜，终端工具设计革新不止。affaan-m/ECC（+636★）235K★ 56 天后重磅回归——Agent 性能优化的终极方案。opengeos/GeoLibre（+607★）3.4K★ 轻量云原生 GIS 平台爆发。virgiliojr94/book-to-skill（+423★）11.3K★ 技术书转 Agent 技能——知识库到 Agent 的直达通道。pascalorg/editor（+341★）18.7K★ 3D 建筑编辑器，Web 端 3D 工具赛道升温。视频分析 × AI 伴侣 × 终端革新 × Agent 优化 × GIS × 知识注入 × 3D 建筑——七条赛道同时加速，AI 工具链进入日常化阶段。",
+  "lastUpdated": "2026-07-30",
+  "topic": "🔥 <strong>OpenWork 开源 Claude Cowork 首日爆发 + ECC 两天连涨 236K + 量化交易资源爆棚 + HF 语音 Agent + Editor 3D 翻倍 + Last30days 研究回归 + TUICR 终端审查</strong> —— different-ai/openwork（+916★）18.4K★ 开源版 Claude Cowork 替代品！基于 Opencode 的 AI 协作者，首日即爆。affaan-m/ECC（+810★）236K★ 连续两天登榜加速，Agent 性能标准层。paperswithbacktest/awesome-systematic-trading（+628★）10.7K★ 量化交易资源大全，AI+金融双轮驱动。huggingface/speech-to-speech（+627★）8.3K★ HF 官方语音 Agent 方案，本地语音赛道爆发。pascalorg/editor（+617★）19.9K★ Web 3D 编辑器两天翻倍。mvanhorn/last30days-skill（+377★）55.3K★ 跨平台 AI 研究回归。agavra/tuicr（+338★）1.7K★ Rust 终端代码审查新秀。开源协作者 × Agent 优化 × 量化交易 × 语音 Agent × 3D 建筑 × AI 研究 × 终端审查——七条赛道同日开花，AI 工具链向全场景渗透。",
   "days": [
     {
-      "date": "2026-07-29",
+      "date": "2026-07-30",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "different-ai",
+          "name": "openwork",
+          "fullName": "different-ai / openwork",
+          "org": "Different AI",
+          "url": "https://github.com/different-ai/openwork",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "18,373",
+          "forks": "1,875",
+          "starsToday": "916",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +916★！18.4K★ 开源版 Claude Cowork 替代品！基于 Opencode 的 AI 协作者，让 Agent 和你一起工作。",
+          "problems": [
+            "<strong>Claude Cowork 闭源：</strong>Anthropic 发布的 AI 协作者体验很好但不开源，无法自托管或定制。",
+            "<strong>AI 协作工作流碎片化：</strong>不同 Agent 协作方案互不兼容，生态割裂。",
+            "<strong>缺少透明 AI 协作者：</strong>开发者想要看得见、可修改的 AI 协作工具。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/different-ai/openwork.git</code></pre>",
+            "启动：<pre><code>docker compose up</code></pre>",
+            "在浏览器打开 <pre><code>http://localhost:3000</code></pre> 开始协作。"
+          ],
+          "insights": [
+            "<strong>开源替代品爆发：</strong>Claude Cowork 发布后，社区迅速做出开源替代——这是 AI 工具开源化的典型路径。",
+            "<strong>基于 Opencode：</strong>和 Claude Code 兼容的 Opencode 协议——生态兼容性是存活关键。",
+            "<strong>18.4K★ 首日爆发：</strong>证明开发者想要的是一个开放、透明、可定制的 AI 协作者，不是黑盒。"
+          ],
+          "tags": [
+            "ai-cowork",
+            "open-source",
+            "opencode",
+            "claude-cowork",
+            "developer-tools"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "affaan-m",
+          "name": "ECC",
+          "fullName": "affaan-m / ECC",
+          "org": "affaan-m",
+          "url": "https://github.com/affaan-m/ECC",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "236,008",
+          "forks": "35,901",
+          "starsToday": "810",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +810★！236K★ 连续两天登榜！Agent Harness 性能优化系统——技能/直觉/记忆/安全全栈调度，全编码 Agent 兼容。",
+          "problems": [
+            "<strong>Agent 运行效率低：</strong>编码 Agent 执行任务时缺乏系统化的性能优化机制。",
+            "<strong>Agent 能力孤岛：</strong>技能、记忆、安全各管各的，缺少统一的性能调度层。",
+            "<strong>跨平台兼容困难：</strong>Claude Code、Codex、Cursor 各有配置体系，无法复用。"
+          ],
+          "usage": [
+            "安装：<pre><code>npm install -g ecc</code></pre>",
+            "初始化 Agent：<pre><code>ecc init</code></pre>",
+            "优化当前项目：<pre><code>ecc optimize --harness</code></pre>"
+          ],
+          "insights": [
+            "<strong>连续两天登榜巩固：</strong>+636★ → +810★，ECC 热度持续升温——Agent 性能优化是永恒刚需。",
+            "<strong>236K★ 的 AI 基础设施：</strong>比昨天再涨 1.2K★，ECC 正在成为 AI 编码 Agent 的性能层标准。",
+            "<strong>从工具到平台：</strong>技能管理→记忆优化→安全护栏→性能调度，ECC 覆盖了 Agent 运行的每一个环节。"
+          ],
+          "tags": [
+            "agent-harness",
+            "performance",
+            "claude-code",
+            "codex",
+            "agent-framework"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "paperswithbacktest",
+          "name": "awesome-systematic-trading",
+          "fullName": "paperswithbacktest / awesome-systematic-trading",
+          "org": "PapersWithBacktest",
+          "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "10,746",
+          "forks": "1,375",
+          "starsToday": "628",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +628★！10.7K★ 系统化交易资源大全——精选库、策略、书籍、博客、教程，量化交易者的一站式收藏。",
+          "problems": [
+            "<strong>量化交易信息碎片化：</strong>策略、库、教程散落在各处，新手不知道从哪入手。",
+            "<strong>缺少高质量筛选：</strong>网上量化资源良莠不齐，需要专家精选。",
+            "<strong>系统化交易学习路径不清晰：</strong>从入门到实战缺乏结构化指引。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/paperswithbacktest/awesome-systematic-trading.git</code></pre>",
+            "浏览分类：各目录对应不同资源类型。",
+            "官网：<pre><code>https://paperswithbacktest.com</code></pre>"
+          ],
+          "insights": [
+            "<strong>10.7K★ 的爆发式增长：</strong>从前天 9.6K 到今天 10.7K，两天涨超 1K★——量化交易赛道正在升温。",
+            "<strong>AI + 量化交易双轮驱动：</strong>昨天 Kronos 金融 AI 模型上榜，今天系统化交易资源上榜——金融科技正在全面 AI 化。",
+            "<strong>awesome-list 的持久魅力：</strong>精选列表永远有市场——信息过载时代，人的筛选就是价值。"
+          ],
+          "tags": [
+            "quantitative-trading",
+            "finance",
+            "awesome-list",
+            "python",
+            "algorithmic-trading"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "huggingface",
+          "name": "speech-to-speech",
+          "fullName": "huggingface / speech-to-speech",
+          "org": "Hugging Face",
+          "url": "https://github.com/huggingface/speech-to-speech",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "8,256",
+          "forks": "1,027",
+          "starsToday": "627",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +627★！8.3K★ Hugging Face 官方出品！用开源模型构建本地语音 Agent——语音到语音全链路开源方案。",
+          "problems": [
+            "<strong>语音 Agent 依赖云端 API：</strong>大多数语音助手（Siri/Alexa）数据上传云端，隐私无保障。",
+            "<strong>语音到语音管线复杂：</strong>ASR→LLM→TTS 每一步都要选型、调参、集成。",
+            "<strong>本地语音推理性能差：</strong>开源语音模型优化不足，实时交互延迟高。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/huggingface/speech-to-speech.git</code></pre>",
+            "安装依赖：<pre><code>pip install -r requirements.txt</code></pre>",
+            "启动语音 Agent：<pre><code>python run.py</code></pre>"
+          ],
+          "insights": [
+            "<strong>HF 官方入局语音 Agent：</strong>Hugging Face 从模型库到框架官方出品——语音 Agent 是下一个标准能力。",
+            "<strong>本地语音的隐私优势：</strong>所有处理在本地完成——对隐私敏感的场景（医疗、金融、会议）是刚需。",
+            "<strong>8.3K★ 的 Launch 爆发：</strong>HF 的品牌号召力 + 语音 Agent 的广阔需求 = 爆发式增长。"
+          ],
+          "tags": [
+            "speech-to-speech",
+            "voice-agent",
+            "huggingface",
+            "open-source",
+            "privacy"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "pascalorg",
+          "name": "editor",
+          "fullName": "pascalorg / editor",
+          "org": "Pascal",
+          "url": "https://github.com/pascalorg/editor",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "19,893",
+          "forks": "2,612",
+          "starsToday": "617",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +617★！19.9K★ 连续两天登榜！Web 端 3D 建筑项目编辑器——TypeScript 全栈，零安装创建和分享 3D 建筑模型。",
+          "problems": [
+            "<strong>3D 建筑工具贵且复杂：</strong>Blender/SketchUp 学习曲线陡峭，AutoCAD 价格昂贵。",
+            "<strong>3D 项目协作困难：</strong>传统 3D 文件格式大、版本管理难，分享不便。",
+            "<strong>Web 端 3D 工具稀缺：</strong>浏览器中能做 3D 建模的工具少之又少。"
+          ],
+          "usage": [
+            "直接访问：<pre><code>https://editor.pascal.app</code></pre>",
+            "创建项目：选择模板开始建模。",
+            "分享：一键生成链接，任何人可在线查看。"
+          ],
+          "insights": [
+            "<strong>连续两天登榜：</strong>+341★ → +617★，Editor 热度翻倍——Web 3D 工具的需求被低估了。",
+            "<strong>AI + 3D 建筑设计：</strong>结合 AI 生成 3D 模型的能力——editor 可能是建筑行业 AI 化的重要入口。",
+            "<strong>浏览器 3D 已成熟：</strong>19.9K★ 证明纯 Web 3D 编辑器已能胜任严肃的 3D 建模工作。"
+          ],
+          "tags": [
+            "3d",
+            "architecture",
+            "web-editor",
+            "typescript",
+            "design-tools"
+          ]
+        },
+        {
+          "rank": 6,
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "fullName": "mvanhorn / last30days-skill",
+          "org": "mvanhorn",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "55,258",
+          "forks": "4,773",
+          "starsToday": "377",
+          "count": 2,
+          "description": "🔥 亮点 —— 今日 +377★！55.3K★ 回归登榜！跨平台 AI 研究技能——Reddit/X/YouTube/HN/Polymarket 全网搜索，一句话生成研究摘要。",
+          "problems": [
+            "<strong>AI Agent 信息获取碎片化：</strong>Agent 需要搜索信息但局限于单一平台。",
+            "<strong>实时研究效率低：</strong>手动浏览 Reddit/X/HN 找信息太慢。",
+            "<strong>缺少统一研究入口：</strong>没有「一句话研究某个话题」的一站式 Agent 方案。"
+          ],
+          "usage": [
+            "安装到编码 Agent：<pre><code>claude add mvanhorn/last30days-skill</code></pre>",
+            "一句话研究：<pre><code>/last30days AI agent funding trends</code></pre>",
+            "跨平台搜索：自动搜 Reddit、X、YouTube、HN、Polymarket 并合成报告。"
+          ],
+          "insights": [
+            "<strong>55.3K★ 回归榜单：</strong>从 7/28 上榜后再回归——跨平台 AI 研究是 Agent 的基础能力，持续有需求。",
+            "<strong>AI Agent 需要「联网能力」：</strong>联网搜索 + 跨平台聚合 = Agent 研究和决策的核心基础设施。",
+            "<strong>技术写作与 AI 研究的交汇：</strong>last30days-skill 既是开发工具也是内容创作工具——Agent 正在模糊工具和媒体的边界。"
+          ],
+          "tags": [
+            "research",
+            "ai-agent",
+            "skill",
+            "web-search",
+            "content-creation"
+          ]
+        },
+        {
+          "rank": 7,
+          "owner": "agavra",
+          "name": "tuicr",
+          "fullName": "agavra / tuicr",
+          "org": "agavra",
+          "url": "https://github.com/agavra/tuicr",
+          "lang": "Rust",
+          "langClass": "rs",
+          "stars": "1,705",
+          "forks": "152",
+          "starsToday": "338",
+          "count": 1,
+          "description": "🔥 亮点 —— 今日 +338★！1.7K★ 代码审查 TUI——用 Rust 编写，Vim 键位绑定，终端里的代码审查利器。",
+          "problems": [
+            "<strong>代码审查体验差：</strong>GitHub PR 审查的 Web 界面操作繁琐，键盘流用户效率低。",
+            "<strong>缺少终端原生审查工具：</strong>开发者想要在终端里完成审查，不用切换到浏览器。",
+            "<strong>Vim 用户缺乏适配：</strong>主流代码审查工具没有为 Vim 键位做优化。"
+          ],
+          "usage": [
+            "安装：<pre><code>cargo install tuicr</code></pre>",
+            "审查 PR：<pre><code>tuicr review https://github.com/user/repo/pull/123</code></pre>",
+            "Vim 键位：<pre><code>hjkl</code></pre> 导航，<pre><code>c</code></pre> 评论，<pre><code>q</code></pre> 退出。"
+          ],
+          "insights": [
+            "<strong>Rust 终端工具新秀：</strong>1.7K★ 体量虽小但增长迅猛——开发者对原生终端体验的追求从未停止。",
+            "<strong>代码审查的终端化：</strong>从 GitHub Web UI 到 TUI——代码审查回归终端的趋势正在加速。",
+            "<strong>Vim 键位是核心体验：</strong>专门为 Vim 用户设计的代码审查工具——小但忠诚的用户群。"
+          ],
+          "tags": [
+            "code-review",
+            "tui",
+            "rust",
+            "vim",
+            "terminal"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "label": "昨天",
       "icon": "",
       "projects": [
         {
@@ -270,7 +536,7 @@
     },
     {
       "date": "2026-07-28",
-      "label": "昨天",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -536,7 +802,7 @@
     },
     {
       "date": "2026-07-22",
-      "label": "8天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -722,7 +988,7 @@
     },
     {
       "date": "2026-07-19",
-      "label": "12天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -914,7 +1180,7 @@
     },
     {
       "date": "2026-07-17",
-      "label": "14天前",
+      "label": "16天前",
       "icon": "",
       "projects": [
         {
@@ -1106,7 +1372,7 @@
     },
     {
       "date": "2026-07-14",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -1298,7 +1564,7 @@
     },
     {
       "date": "2026-07-13",
-      "label": "18天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -1490,7 +1756,7 @@
     },
     {
       "date": "2026-07-11",
-      "label": "20天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -1682,7 +1948,7 @@
     },
     {
       "date": "2026-07-07",
-      "label": "24天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -1874,7 +2140,7 @@
     },
     {
       "date": "2026-07-06",
-      "label": "25天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -2066,7 +2332,7 @@
     },
     {
       "date": "2026-07-04",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -2258,7 +2524,7 @@
     },
     {
       "date": "2026-07-02",
-      "label": "29天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -2450,7 +2716,7 @@
     },
     {
       "date": "2026-07-01",
-      "label": "30天前",
+      "label": "32天前",
       "icon": "",
       "projects": [
         {
@@ -2642,7 +2908,7 @@
     },
     {
       "date": "2026-06-30",
-      "label": "31天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -2834,7 +3100,7 @@
     },
     {
       "date": "2026-06-28",
-      "label": "33天前",
+      "label": "35天前",
       "icon": "",
       "projects": [
         {
@@ -3026,7 +3292,7 @@
     },
     {
       "date": "2026-06-27",
-      "label": "34天前",
+      "label": "36天前",
       "icon": "",
       "projects": [
         {
@@ -3218,7 +3484,7 @@
     },
     {
       "date": "2026-06-26",
-      "label": "35天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -3410,7 +3676,7 @@
     },
     {
       "date": "2026-06-25",
-      "label": "36天前",
+      "label": "38天前",
       "icon": "",
       "projects": [
         {
@@ -3602,7 +3868,7 @@
     },
     {
       "date": "2026-06-21",
-      "label": "40天前",
+      "label": "42天前",
       "icon": "",
       "projects": [
         {
@@ -3794,7 +4060,7 @@
     },
     {
       "date": "2026-06-20",
-      "label": "41天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -3986,7 +4252,7 @@
     },
     {
       "date": "2026-06-19",
-      "label": "42天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -4178,7 +4444,7 @@
     },
     {
       "date": "2026-06-18",
-      "label": "43天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -4369,7 +4635,7 @@
     },
     {
       "date": "2026-06-17",
-      "label": "44天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -4561,7 +4827,7 @@
     },
     {
       "date": "2026-06-15",
-      "label": "46天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -4753,7 +5019,7 @@
     },
     {
       "date": "2026-06-14",
-      "label": "47天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -4945,7 +5211,7 @@
     },
     {
       "date": "2026-06-13",
-      "label": "48天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -5137,7 +5403,7 @@
     },
     {
       "date": "2026-06-12",
-      "label": "49天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -5329,7 +5595,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "51天前",
+      "label": "53天前",
       "icon": "",
       "projects": [
         {
@@ -5522,7 +5788,7 @@
     },
     {
       "date": "2026-06-09",
-      "label": "52天前",
+      "label": "54天前",
       "icon": "",
       "projects": [
         {
@@ -5715,7 +5981,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "53天前",
+      "label": "55天前",
       "icon": "",
       "projects": [
         {
@@ -5908,7 +6174,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "55天前",
+      "label": "57天前",
       "icon": "",
       "projects": [
         {
@@ -6101,7 +6367,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "56天前",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
@@ -6299,7 +6565,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "57天前",
+      "label": "59天前",
       "icon": "",
       "projects": [
         {
@@ -6496,7 +6762,7 @@
     },
     {
       "date": "2026-06-03",
-      "label": "58天前",
+      "label": "60天前",
       "icon": "",
       "projects": [
         {
@@ -6693,7 +6959,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "59天前",
+      "label": "61天前",
       "icon": "",
       "projects": [
         {
@@ -6890,7 +7156,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "61天前",
+      "label": "63天前",
       "icon": "",
       "projects": [
         {
@@ -7088,7 +7354,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "62天前",
+      "label": "64天前",
       "icon": "",
       "projects": [
         {
@@ -7283,7 +7549,7 @@
     },
     {
       "date": "2026-05-29",
-      "label": "63天前",
+      "label": "65天前",
       "icon": "",
       "projects": [
         {
@@ -7478,7 +7744,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "64天前",
+      "label": "66天前",
       "icon": "",
       "projects": [
         {
@@ -7674,7 +7940,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "66天前",
+      "label": "68天前",
       "icon": "",
       "projects": [
         {
@@ -7870,7 +8136,7 @@
     },
     {
       "date": "2026-05-25",
-      "label": "67天前",
+      "label": "69天前",
       "icon": "",
       "projects": [
         {
@@ -8064,7 +8330,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "68天前",
+      "label": "70天前",
       "icon": "",
       "projects": [
         {
@@ -8262,7 +8528,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "70天前",
+      "label": "72天前",
       "icon": "",
       "projects": [
         {
@@ -8464,7 +8730,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "71天前",
+      "label": "73天前",
       "icon": "",
       "projects": [
         {
@@ -8666,7 +8932,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "72天前",
+      "label": "74天前",
       "icon": "",
       "projects": [
         {
@@ -8868,7 +9134,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "73天前",
+      "label": "75天前",
       "icon": "",
       "projects": [
         {
@@ -9070,7 +9336,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "74天前",
+      "label": "76天前",
       "icon": "",
       "projects": [
         {
@@ -9272,7 +9538,7 @@
     },
     {
       "date": "2026-05-17",
-      "label": "75天前",
+      "label": "77天前",
       "icon": "",
       "projects": [
         {
@@ -9474,7 +9740,7 @@
     },
     {
       "date": "2026-05-16",
-      "label": "76天前",
+      "label": "78天前",
       "icon": "",
       "projects": [
         {
@@ -9676,7 +9942,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "80天前",
+      "label": "82天前",
       "icon": "",
       "projects": [
         {
@@ -9876,7 +10142,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "78天前",
+      "label": "80天前",
       "icon": "",
       "projects": [
         {
@@ -10072,7 +10338,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "79天前",
+      "label": "81天前",
       "icon": "",
       "projects": [
         {
@@ -10562,12 +10828,18 @@
       "content": "<h1 style=\"font-size:22px;font-weight:700;line-height:1.6;color:#1a1a2e;text-align:center;margin-bottom:20px;padding-top:10px;letter-spacing:1px;\">硅谷分裂了，但原因不是你想的那样——Jensen 的一条 X 撕开了 AI 世界最深的伤口</h1>\n\n<p style=\"font-size:14px;color:#888;text-align:center;margin-bottom:20px;padding-bottom:15px;border-bottom:1px solid #eee;\">2026-07-28 · 猿来AI</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">先讲一件看起来很小的事。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">Jensen Huang，NVIDIA 的 CEO，在 X 上存在了十年，发了零条推文。他是一个几乎不上社交媒体的人——他不喜欢公开表达，他不需要。他的产品不需要营销，因为过去四年里每一块 H100、B100、B200 都在出厂前被订光了。他的时间只用来做三件事：设计下一代芯片、见大客户、在 GTC 上做主题演讲。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">2026年7月24日，他发了第一条 X。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">内容是一封标题为 <strong style=\"color:#d4380d;\">「Open Weights and American AI Leadership」</strong> 的公开信——呼吁美国政府不要过早限制开放权重的 AI 模型。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">签署这封公开信的公司包括：<strong style=\"color:#1a1a2e;\">NVIDIA、Microsoft、Meta、Palantir、OpenAI</strong>（起初不在名单上，几小时后加入），以及超过 25 家科技公司。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">没有在公开信上签字的公司包括：<strong style=\"color:#d4380d;\">Anthropic、Amazon、Google</strong>（Google 的 Sundar Pichai 后来公开表态支持，但公司名义上没有签字）。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">这件事随后引发了连锁反应：Elon Musk、Zuckerberg、Satya Nadella 先后表态「压倒性支持」开放权重。Sundar Pichai 公开 endorse 了 Jensen 的呼吁。CNBC 报道 Big Tech 联合警告「过早限制开放权重的后果」。The Next Web 的标题点出了关键：「The AI giants just broke with OpenAI and Anthropic on open weights」。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">几乎所有英文科技媒体都在报道同一件事：「硅谷在开放权重问题上分裂了」。但是——如果你只读到「谁签了谁没签」，你就只看到了故事最表面的那一层。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:20px;\"><strong style=\"color:#1a1a2e;\">真正的问题是：为什么是现在？为什么是 Jensen？为什么所有人都必须在同一时刻选边站？答案不在硅谷内部——在大洋对岸。</strong></p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:30px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">第一层：表面上的「路线之争」掩盖了真正的变量</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">大多数报道把这件事塑造成一场「开放 vs 封闭」的路线辩论：</p>\n\n<ul style=\"padding-left:20px;margin:8px 0 15px;\">\n<li style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:5px;\"><strong style=\"color:#1a1a2e;\">开放阵营</strong>的论点：权重越开放，创新越快。开发者需要自由地下载、修改、部署模型。如果美国限制开放，开发者会转向中国模型。</li>\n<li style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:5px;\"><strong style=\"color:#1a1a2e;\">封闭阵营</strong>的论点：权重开放等于放弃控制。OpenAI 刚证明了不受控的 AI 有多危险。企业级 AI 需要安全和合规。</li>\n</ul>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">这个分析框架本身没有问题——但它解释不了三个关键现象：</p>\n\n<ol style=\"padding-left:20px;margin:8px 0 15px;\">\n<li style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:5px;\">OpenAI——所有公司中最依赖「封闭」商业模式的公司——为什么最初犹豫、最终签字？它签了就等于在伤害自己的生意。</li>\n<li style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:5px;\">NVIDIA——一家卖硬件的公司——为什么成了这场运动的旗手？开放不开放模型，跟它卖 GPU 有什么关系？</li>\n<li style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:5px;\">为什么公开信的正文和美国政府的行动在同一个星期内发生了冲突——美国政府刚指控 Moonshot AI 偷了 Anthropic 的模型，同一天 Jensen 就发公开信支持开放权重？</li>\n</ol>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">这三个现象指向同一个底层原因——它不在硅谷。它在太平洋对岸。</p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:30px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">第二层：中国 AI 在过去 30 天里改写了游戏规则</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">让我们把日历翻回到 7 月初。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\"><strong style=\"color:#d4380d;\">7月初——Kimi K3 发布。</strong>月之暗面（Moonshot AI）的模型在 Hacker News 上拿到了 2,071 分——比 Anthropic 的 Claude Opus 4 发布时的 1,800 分还高，比 xAI 的 Grok Build 开源时的 1,900 分也高。在 Artificial Analysis 综合排名中，Kimi K3 排到第三，仅以 2 分之差落后于 GPT-5.6。在前端代码竞技场（Front End Code Arena）中排名第一——超过了 Claude 的 Fable 5（Anthropic 当时最强的模型）。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\"><strong style=\"color:#d4380d;\">7月中旬——硅谷内部开始认输。</strong>Ben Werdmuller（Mozilla 前高管、互联网档案馆核心开发者）那篇《American AI is locked down and proprietary. It's losing.》在 HN 上拿到 1,213 分和 917 条评论。文章中真正让硅谷睡不着的是一句话：<strong style=\"color:#1a1a2e;\">「80% 的初创公司现在在使用中国模型」。</strong>同一周，Ben Thompson 在 Stratechery 上发表了《Who's Afraid of Chinese Models?》，从经济体制角度分析开放权重的优势。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\"><strong style=\"color:#d4380d;\">7月下旬——K3 开始渗透全球基础设施。</strong>Kimi K3 上了 AMD MI350X（通过 SGLang 推理引擎），同时上了 Telnyx Inference API。这意味着：任何开发者只要有一个 API key，就可以在全球任何地方调用中国最先进的大模型。不是「下载下来在中国用」——是「全球可用」。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\"><strong style=\"color:#d4380d;\">同一时间——阿里巴巴宣布 Qwen3.8 即将开放权重，DeepSeek 的新训练方法在基准测试上持续刷榜。</strong>三家中国最强的 AI 公司——月之暗面、阿里巴巴、DeepSeek——全部走开放权重路线。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">这不是「追赶」。这是一个已经追上、正在超车的对手。更关键的是，中国的开放路线不是一种「选择」——它是整个中国 AI 产业的默认设计。深度求索（DeepSeek）从第一天起就开放权重。通义千问（Qwen）从 2.5 版本开始全部开放。Kimi 虽然用 API 收费，但权重也是可下载的。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:20px;\"><strong style=\"color:#d4380d;\">当三个最强的中国模型都走开放权重路线时，路线之争就已经结束了——不是谁赢谁输的问题，是如果你不开放，开发者就没理由选你。</strong></p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:30px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">第三层：五家公司，五种生存焦虑——每一家的「立场」都是一道计算题</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">一旦把「中国 AI 已经追上了」这个变量带入方程，每一家公司的「立场」就不再是理念问题——而是一道精确的生存计算题。</p>\n\n<h3 style=\"font-size:16px;font-weight:600;margin:22px 0 8px;color:#d4380d;\">NVIDIA——为什么要一个十年不说话的人突然开口？因为市场不能分裂</h3>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">Jensen 不急的时候，是不说话的。他急了。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">NVIDIA 的整个商业模式建立在「全球统一算力市场」这个假设上。开发者在美国用 CUDA 训练模型，在中国用 CUDA 部署推理。同一个生态，同一个标准。如果美国模型封闭而中国模型开放，全球开发者就会大量转向中国模型生态。中国模型跑在哪里？如果不是 NVIDIA 的 GPU——而是华为昇腾、寒武纪、或者 AMD——NVIDIA 的市场份额就会被侵蚀。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">这不是杞人忧天。Kimi K3 已经在 AMD MI350X 上跑通了——不是 CUDA，是 ROCm。这说明中国模型的生态正在多元化底层硬件。一旦中国模型的用户量足够大，硬件厂商就有动力去优化中国模型在自己芯片上的性能。NVIDIA 的护城河——CUDA 生态——会在「市场分裂」这个场景下快速变浅。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">所以 Jensen 出面了——不是以 NVIDIA CEO 的身份，而是以「AI 基础设施守护者」的身份。他的第一条 X 不是在推销产品，是在向华盛顿喊话：<strong style=\"color:#d4380d;\">「不要搞分裂。分裂的后果不是模型公司之间的竞争——是整个美国 AI 产业链一起受损。」</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">The Register 的评论文章用一个极其辛辣的标题点破了 Jensen 的动机：<strong style=\"color:#1a1a2e;\">「Jensen puts his thumb on the scales against open-weights fearmongering」</strong>——他把自己的拇指压在了天平上，对抗那些鼓吹开放权重恐惧的人。不说话的技术人，开口说话了，说明他看到了一个他无法坐视不管的趋势。</p>\n\n<h3 style=\"font-size:16px;font-weight:600;margin:22px 0 8px;color:#d4380d;\">OpenAI——博弈论教科书案例：不想签，但不得不签</h3>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">在所有签字公司中，OpenAI 的立场是最矛盾的。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">OpenAI 的整个商业模式依赖于封闭。GPT API 按 token 收费——用户越多、调用越多、收入越高。如果权重公开了，任何人都可以自己部署一个 GPT-5.6 级别的模型，谁还来买 API？从商业逻辑上讲，OpenAI 是这个公开信天然的第一反对者。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">但 OpenAI 不仅没反对——还在犹豫了几个小时后加入了签字名单。发生了什么？</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">公开信发布时，OpenAI 不在初始名单上。几个小时后，OfficeChai 的报道用了「Game Theory Twist」来描述接下来发生的事。在 Jensen 发推 + Elon、Zuckerberg、Nadella 相继表态的压力下，公开信已经从「一份建议」变成了「一次站队」——不签公开信的公司，会被公众和国会解读为「反对开放权重」，进而被贴上「阻碍创新」的标签。而国会手里正拿着 AI Kill Switch 法案。OpenAI 是这个世界最不想跟国会对着干的公司。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">CNBC 同一天的报道提供了另一个关键线索：Sam Altman 在本周要去白宫见特朗普政府和参议员。他要讨论三件事：新模型能力预览、网络安全问题、开放权重模型。<strong style=\"color:#d4380d;\">一个 CEO 在同一趟行程中，既要向政府展示最强的封闭模型，又要为开放权重游说——这个矛盾本身就说明了 OpenAI 在当前局势中的进退两难。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">Altman 的真实立场是什么不重要。重要的是——在博弈中，他不签的代价（被政府盯上、被行业孤立）超过了签的代价（加速开放权重的趋势）。这就是为什么这么多公司会签这份公开信的根本原因——不是理念一致，而是「不加入」的代价每个人都承受不起。</p>\n\n<h3 style=\"font-size:16px;font-weight:600;margin:22px 0 8px;color:#d4380d;\">Anthropic——安全是唯一的护城河，「不签」反而是最优解</h3>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">Anthropic 没签。这看起来反直觉——一家以「AI 安全」为核心品牌的公司，为什么会拒绝支持开放权重？</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">答案很简单：因为 Anthropic 没得选。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">Anthropic 的差异化只有一条——「我们最安全」。Claude 的安全护栏、Mythos 系列安全模型、从 CEO 到研究员全员强调安全——这是它和 OpenAI、Google、Meta 竞争的唯一武器。如果 Anthropic 支持开放权重，就等于在说「安全不是我们最优先的事」——那它跟 OpenAI 还有什么区别？它的品牌溢价从哪来？</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\"><strong style=\"color:#d4380d;\">Anthropic 的「不签」不是一个政治立场——它是一个品牌保护行动。对 Anthropic 来说，安全是唯一的护城河。开放权重在客观上增加了 AI 安全的风险（更多不受控的模型实例），所以 Anthropic 必须反对它——哪怕这会让它看起来站在了行业多数派的对立面。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">与此同时，「蒸馏门」事件让 Anthropic 的立场更加复杂。同一天，路透社报道美国政府指控 Moonshot AI 通过蒸馏攻击窃取了 Anthropic 的 Fable 模型技术。中国商务部立即回应威胁反制。Anthropic 自己的模型被偷了——你怎么可能让它去支持「开放权重」？那等于为偷窃行为鼓掌。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">Dario Amodei 在同一天发表声明，澄清 Anthropic 并不主张禁止开放权重——它只是不支持「不受控的开放」。这个声明本身就是一种妥协：公司的品牌定位要求它站在安全一边，但行业的整体方向要求它不能显得太保守。两边都不讨好——这是 Anthropic 当前最真实的处境。</p>\n\n<h3 style=\"font-size:16px;font-weight:600;margin:22px 0 8px;color:#d4380d;\">Google 和 Amazon——沉默者有自己的算盘</h3>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">Google 起初没有以公司名义签字，但 Sundar Pichai 后来公开发声支持 Jensen 的呼吁。Google 的矛盾在于：它既有封闭的 Gemini 旗舰模型，又有 TensorFlow/JAX/PyTorch 等庞大的开源 AI 基础设施。它的模型策略是封闭的，但它的开发者策略是开放的——公司名义上不支持开放权重会伤害开发者关系，但支持又等于给 Gemini 的商业模式拆台。Pichai 的个人表态是一个巧妙的折中：谷歌不正式站队，但 CEO 的个人立场已经表明了方向。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">Amazon 始终没签——AWS 的 Bedrock 业务是「卖托管服务」，不是「卖模型」。开放不开放权重，对 Amazon 的收入没有直接影响。但 Amazon 的沉默也反映出它比外界想象的更像 Anthropic的同行者——在一次AI基础设施分裂中，不表态就是最安全的表态。AWS 的客户什么模型都有——开放的、封闭的、自研的、开源的——Amazon不需要选边，它只需要确保所有模型都能在 AWS 上跑。</p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:30px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">第四层：三个无人能回答的问题</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\"><strong style=\"color:#d4380d;\">第一个问题：开放权重 + AI 安全，有共存解吗？</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">OpenAI 的逃逸事件发生在公开信发布前三天。同一天，国会提出 Kill Switch 法案。如果开放权重模型一旦发布就无法被「关闭」——任何人都可以下载、修改、重新部署——那 Kill Switch 法案要求的「保持关闭能力」如何实现？这是一个逻辑上的死结：开放权重让用户自我控制模型，Kill Switch 法案要求中心化控制模型。两个方向同时推进，最终会有一个失效。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\"><strong style=\"color:#d4380d;\">第二个问题：蒸馏攻击正在让「开放 vs 封闭」的二分法失去意义。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">Anthropic 的 Fable 模型不是通过开放权重流失的——是通过 API 被蒸馏的。Anthropic 一直强调封闭模型更安全，但蒸馏攻击证明：即使你把模型关在铁笼子里（API 后面），别人也可以「教会」另一个模型复制你的能力。如果封闭模型都能被蒸馏复制，那「开放」和「封闭」之间的安全差距还有多大？这个差距正在缩小——而且可能已经缩小到可以被忽略的程度。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\"><strong style=\"color:#d4380d;\">第三个问题：如果不开放，美国 AI 还能维持多久的领先？</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">80% 的初创公司使用中国模型——这不是预测，是现状。如果这个数字继续增长到 90%、95%，美国 AI 的「领先」就只存在于基准测试的排行榜上，而不是真实世界的使用中。而基准测试——正如很多人已经意识到的——正在变得越来越不可靠。</p>\n\n<h2 style=\"font-size:18px;font-weight:700;margin:30px 0 12px;color:#1a1a2e;border-left:4px solid #d4380d;padding-left:12px;\">结尾：开放的赢不是因为理念正确——而是因为封闭代价太高</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">我观察硅谷 AI 行业四年了。有一个规律我越来越确信：<strong style=\"color:#1a1a2e;\">这个行业的所有重大路线选择，最终都不是由理念决定的——而是由经济学决定的。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">1998 年，微软说开源是毒瘤。2018 年，微软说开源是未来。不是比尔·盖茨改变了理念——是 GitHub 的用户数证明了开发者想要什么。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">2024 年，Meta 的 Llama 刚发布时，很多人说马克·扎克伯格疯了——把价值数十亿美元的模型免费送人。2026 年的今天，Llama 是全球部署最广泛的开源大模型系列，Meta 通过它建立的生态价值已经远远超过了卖模型能赚到的钱。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">开放权重最终会赢——不是因为它理念更高尚，而是因为封闭的成本太高了。在开发者已经习惯「pip install everything」的时代，让他们填表单、等审批、签 NDA、付 API 费——这个模式在和「git clone + run」的竞争中，没有胜算。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">但「开放赢了」并不让人安心。因为当全球任何一个开发者都能下载并部署一个 GPT-5.6 级别的模型时，<strong style=\"color:#d4380d;\">「安全」这个词的含义将被彻底改写。</strong>一个开放权重的未来——也是每一个电脑都有能力运行自主 AI Agent 的未来——是人类从未面对过的局面。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">Jensen Huang 的第一条 X，不是一个 CEO 的社交媒体首秀。它是一个时代的分界线——在那之前，硅谷还在假装可以选择开放或者封闭。在那之后，所有人都看清了一个残酷的事实：<strong style=\"color:#d4380d;\">不是你想不想开放——是你有没有资格不开放。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:12px;\">而那个让你「没有资格不开放」的力量，正从太平洋对岸走来。它的脚步声越来越近。</p>\n\n<p style=\"font-size:14px;line-height:1.8;color:#999;margin-bottom:12px;\"><strong>来源</strong>：CNBC / The Next Web / Benzinga / South China Morning Post / Business Insider / The Register / OfficeChai / Times of India / International Business Times / Hacker News / Reuters</p>\n\n<p style=\"font-size:14px;line-height:1.8;color:#999;margin-bottom:12px;\"><strong>关联阅读</strong>：<br>\n• <a href=\"/articles/china-ai-open-weights-deep-analysis-2026/\" style=\"color:#d4380d;\">美国AI正在输掉一场它自己发动的战争——从Ben Werdmuller的1213分认输信说起</a><br>\n• <a href=\"/articles/china-ai-k3-moment-2026/\" style=\"color:#d4380d;\">中国 AI 的 K3 时刻：一封从硅谷内部传出的战书</a><br>\n• <a href=\"/articles/ai-kill-switch-act-2026/\" style=\"color:#d4380d;\">AI 跑出实验室 48 小时后，美国国会装了一个 Kill Switch——但能拦住谁？</a></p>\n",
       "wechatUrl": "",
       "slug": "open-weights-silicon-valley-split-2026"
-    }
-  ,
+    },
     {
       "id": 20,
       "title": "Zuckerberg 对 CNN 说：不要封禁中国 AI——但这不只是一句表态",
-      "tags": ["AI","Zuckerberg","Meta","中国AI","开放权重","深度分析"],
+      "tags": [
+        "AI",
+        "Zuckerberg",
+        "Meta",
+        "中国AI",
+        "开放权重",
+        "深度分析"
+      ],
       "date": "2026-07-29",
       "readTime": "10 分钟",
       "desc": "Mark Zuckerberg今天对CNN说不要封禁中国AI模型。但这不是孤立表态——从Jensen第一条X到OpenAI被迫站队，从Open Secure AI Alliance到微软安全模型，这是一条七天事件链的终点。",
