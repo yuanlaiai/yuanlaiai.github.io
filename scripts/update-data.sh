@@ -17,5 +17,7 @@ echo '' >> data.js
 echo -n 'var siteData = ' >> data.js
 cat data.json >> data.js
 echo ';' >> data.js
+# Backward-compat alias so article pages using window.__YUANLAI_DATA__ still work
+echo 'window.__YUANLAI_DATA__ = siteData;' >> data.js
 
 echo "Done! data.js regenerated from data.json ($(wc -c < data.json) bytes -> $(wc -c < data.js) bytes)"
