@@ -233,6 +233,25 @@ a { text-decoration: none; color: inherit; }
   background: var(--accent-orange-dim);
 }
 
+.fullscreen-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 6px 8px;
+  line-height: 1;
+  transition: all var(--transition);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.fullscreen-toggle:hover {
+  border-color: var(--accent-orange);
+  background: var(--accent-orange-dim);
+  color: var(--accent-orange);
+}
+
 .nav-github {
   font-size: 1.15rem;
   text-decoration: none;

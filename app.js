@@ -826,3 +826,26 @@ document.addEventListener('DOMContentLoaded', function() {
   loadPrompts();
   initBgParticles();
 });
+
+// ── Fullscreen Toggle ─────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  var fsBtn = document.getElementById('fullscreenToggle');
+  if (!fsBtn) return;
+  fsBtn.addEventListener('click', function() {
+    if (!document.fullscreenElement) {
+      var el = document.documentElement;
+      if (el.requestFullscreen) { el.requestFullscreen().catch(function(){}); }
+      else if (el.webkitRequestFullscreen) { el.webkitRequestFullscreen(); }
+    } else {
+      if (document.exitFullscreen) { document.exitFullscreen().catch(function(){}); }
+      else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
+    }
+  });
+  document.addEventListener('fullscreenchange', function() {
+    var entering = !!document.fullscreenElement;
+    var enterIcon = fsBtn.querySelector('.fs-enter');
+    var exitIcon = fsBtn.querySelector('.fs-exit');
+    if (enterIcon) enterIcon.style.display = entering ? 'none' : '';
+    if (exitIcon) exitIcon.style.display = entering ? '' : 'none';
+  });
+});
