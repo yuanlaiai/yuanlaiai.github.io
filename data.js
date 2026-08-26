@@ -45,7 +45,8 @@ var siteData = {
             "templates",
             "ai-image",
             "awesome-list"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 2,
@@ -82,7 +83,8 @@ var siteData = {
             "dhh",
             "distro",
             "developer-tools"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 3,
@@ -119,7 +121,8 @@ var siteData = {
             "diagrams",
             "html",
             "visualization"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 4,
@@ -156,7 +159,8 @@ var siteData = {
             "second-brain",
             "knowledge-graph",
             "markdown"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 5,
@@ -193,7 +197,8 @@ var siteData = {
             "codex",
             "tokens",
             "developer-tools"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 6,
@@ -230,7 +235,8 @@ var siteData = {
             "plugins",
             "marketplace",
             "ecosystem"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 7,
@@ -267,7 +273,8 @@ var siteData = {
             "rust",
             "agent-orchestration",
             "local-first"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 8,
@@ -304,7 +311,8 @@ var siteData = {
             "framework",
             "open-source",
             "ai"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 9,
@@ -341,7 +349,8 @@ var siteData = {
             "plugins",
             "official",
             "ecosystem"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 10,
@@ -378,7 +387,8 @@ var siteData = {
             "knowledge",
             "image-generation",
             "chinese-dev"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 11,
@@ -415,7 +425,8 @@ var siteData = {
             "automation",
             "web",
             "llm"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 12,
@@ -452,7 +463,8 @@ var siteData = {
             "research",
             "biology",
             "science"
-          ]
+          ],
+          "badge": "新面孔"
         }
       ]
     },

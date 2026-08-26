@@ -42,7 +42,8 @@
             "templates",
             "ai-image",
             "awesome-list"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 2,
@@ -79,7 +80,8 @@
             "dhh",
             "distro",
             "developer-tools"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 3,
@@ -116,7 +118,8 @@
             "diagrams",
             "html",
             "visualization"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 4,
@@ -153,7 +156,8 @@
             "second-brain",
             "knowledge-graph",
             "markdown"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 5,
@@ -190,7 +194,8 @@
             "codex",
             "tokens",
             "developer-tools"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 6,
@@ -227,7 +232,8 @@
             "plugins",
             "marketplace",
             "ecosystem"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 7,
@@ -264,7 +270,8 @@
             "rust",
             "agent-orchestration",
             "local-first"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 8,
@@ -301,7 +308,8 @@
             "framework",
             "open-source",
             "ai"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 9,
@@ -338,7 +346,8 @@
             "plugins",
             "official",
             "ecosystem"
-          ]
+          ],
+          "badge": "连登"
         },
         {
           "rank": 10,
@@ -375,7 +384,8 @@
             "knowledge",
             "image-generation",
             "chinese-dev"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 11,
@@ -412,7 +422,8 @@
             "automation",
             "web",
             "llm"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 12,
@@ -449,7 +460,8 @@
             "research",
             "biology",
             "science"
-          ]
+          ],
+          "badge": "新面孔"
         }
       ]
     },

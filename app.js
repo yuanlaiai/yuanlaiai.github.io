@@ -96,49 +96,69 @@ function buildTimelineHtml(showUpTo) {
     html += '<div class="day-body' + bodyExtra + '">';
     html += '<div class="day-projects">';
 
+    // 分组渲染：新面孔 / 连登追踪（方案B双栏）
+    var newFaces = [];
+    var streaks = [];
     day.projects.forEach(function(p) {
-      var cardExtra = isFirst ? '' : ' dimmed';
-
-      var problemsHtml = '<ul>';
-      if (p.problems) p.problems.forEach(function(x) { problemsHtml += '<li>' + x + '</li>'; });
-      problemsHtml += '</ul>';
-
-      var usageHtml = '<ol>';
-      if (p.usage) p.usage.forEach(function(x) { usageHtml += '<li>' + x + '</li>'; });
-      usageHtml += '</ol>';
-
-      var insightsHtml = '<ul>';
-      if (p.insights) p.insights.forEach(function(x) { insightsHtml += '<li>' + x + '</li>'; });
-      insightsHtml += '</ul>';
-
-      html += '<div class="project-card reveal' + cardExtra + '" data-rank="' + p.rank + '" style="transition-delay:' + (di * 0.05 + 0.05) + 's">';
-      html += '<div class="rank-ribbon"></div>';
-      html += '<div class="pc-header">';
-      html += '<span class="rank-num">#' + p.rank + '</span>';
-      html += '<a href="' + p.url + '" class="repo-name" target="_blank">' + p.fullName + '</a>';
-      html += '<span class="org">' + p.org + '</span>';
-      html += '</div>';
-      html += '<div class="pc-meta">';
-      html += '<span class="lang">' + p.lang + '</span>';
-      html += '<span class="stats">';
-      html += '⭐ <strong>' + p.stars + '</strong>';
-      html += ' · 🍴 <strong>' + p.forks + '</strong>';
-      html += '</span>';
-      html += '<span class="today">+ ' + p.starsToday + ' today</span>';
-      html += '</div>';
-      html += '<p class="pc-desc">' + p.description + '</p>';
-      html += '<div class="pc-details">';
-      html += '<div class="pc-section"><div class="pc-section-label problem">📌 解决什么问题</div><div class="pc-section-content">' + problemsHtml + '</div></div>';
-      html += '<div class="pc-section"><div class="pc-section-label usage">🔧 如何使用</div><div class="pc-section-content">' + usageHtml + '</div></div>';
-      html += '<div class="pc-section"><div class="pc-section-label insight">💡 产品价值思路</div><div class="pc-section-content">' + insightsHtml + '</div></div>';
-      html += '</div>';
-      html += '<div class="pc-tags">';
-      p.tags.forEach(function(t) { html += '<span class="pc-tag">' + t + '</span>'; });
-      var countText = p.count > 1 ? p.count + '次上榜' : '首次上榜';
-      html += '<span class="pc-count">' + countText + '</span>';
-      html += '</div>';
-      html += '</div>';
+      if (p.badge === '新面孔') { newFaces.push(p); } else { streaks.push(p); }
     });
+
+    function renderProjectCards(projs, isFirst, di) {
+      var out = '';
+      projs.forEach(function(p) {
+        var cardExtra = isFirst ? '' : ' dimmed';
+
+        var problemsHtml = '<ul>';
+        if (p.problems) p.problems.forEach(function(x) { problemsHtml += '<li>' + x + '</li>'; });
+        problemsHtml += '</ul>';
+
+        var usageHtml = '<ol>';
+        if (p.usage) p.usage.forEach(function(x) { usageHtml += '<li>' + x + '</li>'; });
+        usageHtml += '</ol>';
+
+        var insightsHtml = '<ul>';
+        if (p.insights) p.insights.forEach(function(x) { insightsHtml += '<li>' + x + '</li>'; });
+        insightsHtml += '</ul>';
+
+        out += '<div class="project-card reveal' + cardExtra + '" data-rank="' + p.rank + '" style="transition-delay:' + (di * 0.05 + 0.05) + 's">';
+        out += '<div class="rank-ribbon"></div>';
+        out += '<div class="pc-header">';
+        out += '<span class="rank-num">#' + p.rank + '</span>';
+        out += '<a href="' + p.url + '" class="repo-name" target="_blank">' + p.fullName + '</a>';
+        out += '<span class="org">' + p.org + '</span>';
+        out += '</div>';
+        out += '<div class="pc-meta">';
+        out += '<span class="lang">' + p.lang + '</span>';
+        out += '<span class="stats">';
+        out += '⭐ <strong>' + p.stars + '</strong>';
+        out += ' · 🍴 <strong>' + p.forks + '</strong>';
+        out += '</span>';
+        out += '<span class="today">+ ' + p.starsToday + ' today</span>';
+        out += '</div>';
+        out += '<p class="pc-desc">' + p.description + '</p>';
+        out += '<div class="pc-details">';
+        out += '<div class="pc-section"><div class="pc-section-label problem">📌 解决什么问题</div><div class="pc-section-content">' + problemsHtml + '</div></div>';
+        out += '<div class="pc-section"><div class="pc-section-label usage">🔧 如何使用</div><div class="pc-section-content">' + usageHtml + '</div></div>';
+        out += '<div class="pc-section"><div class="pc-section-label insight">💡 产品价值思路</div><div class="pc-section-content">' + insightsHtml + '</div></div>';
+        out += '</div>';
+        out += '<div class="pc-tags">';
+        p.tags.forEach(function(t) { out += '<span class="pc-tag">' + t + '</span>'; });
+        var countText = p.count > 1 ? p.count + '次上榜' : '首次上榜';
+        out += '<span class="pc-count">' + countText + '</span>';
+        out += '</div>';
+        out += '</div>';
+      });
+      return out;
+    }
+
+    if (newFaces.length > 0 && streaks.length > 0) {
+      html += '<div class="day-group-label new">🆕 今日新面孔</div>';
+      html += renderProjectCards(newFaces, isFirst, di);
+      html += '<div class="day-group-label streak">🔥 连登追踪</div>';
+      html += renderProjectCards(streaks, isFirst, di);
+    } else {
+      html += renderProjectCards(day.projects, isFirst, di);
+    }
 
     html += '</div>'; // day-projects
     html += '<div class="day-fade"></div>';
