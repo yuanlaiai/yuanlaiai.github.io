@@ -6,13 +6,41 @@ import json, os, sys, time, uuid, urllib.request
 APPID = 'wx1a4dec7ba7da8975'
 SECRET = 'bed0d73029e00d2e569baa67295b3d07'
 BASE = '/Users/xuefei/ai_project/yuanlaiai/yuanlaiai.github.io/'
-COVER = '/tmp/cover-ai-homework.png'
+COVER = '/tmp/cover-oxalpha.png'
 
 def get_token():
     url = ("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential"
            f"&appid={APPID}&secret={SECRET}")
     with urllib.request.urlopen(url, timeout=20) as r:
         return json.load(r)
+
+
+def gen_cover():
+    import os
+    if os.path.exists(COVER):
+        return
+    from PIL import Image, ImageDraw, ImageFont
+    img = Image.new('RGB', (900, 500))
+    draw = ImageDraw.Draw(img)
+    for y in range(500):
+        blend = y / 500
+        r = int(26*(1-blend) + 20*blend); g = int(26*(1-blend) + 31*blend); b = int(46*(1-blend) + 60*blend)
+        for x in range(900):
+            img.putpixel((x, y), (r, g, b))
+    def font(size):
+        for fp in ['/System/Library/Fonts/PingFang.ttc','/System/Library/Fonts/STHeiti Light.ttc']:
+            if os.path.exists(fp):
+                try: return ImageFont.truetype(fp, size)
+                except Exception: continue
+        return ImageFont.load_default()
+    tf, sf, lf = font(72), font(40), font(22)
+    draw.rectangle([60, 90, 160, 94], fill='#ff8c42')
+    draw.text((60, 150), "Ox Alpha 真身曝光", fill='#ffffff', font=tf)
+    draw.text((60, 250), "智谱 GLM-5.3-Flash · 10万颗国产芯片", fill='#ff8c42', font=sf)
+    draw.rectangle([60, 340, 260, 343], fill='#ff8c42')
+    draw.text((60, 370), "猿来AI · 2026-08-27 深度解读", fill='#8a8a9a', font=lf)
+    img.save(COVER)
+    print("cover generated:", COVER)
 
 def upload_material(token, path):
     boundary = '----HermesBoundary' + uuid.uuid4().hex
@@ -77,6 +105,7 @@ else:
     sys.exit(1)
 
 # Proceed
+gen_cover()
 print("uploading cover...")
 du = upload_material(token, COVER)
 if 'media_id' not in du:
