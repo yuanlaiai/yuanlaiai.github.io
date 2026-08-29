@@ -83,7 +83,8 @@ var siteData = {
             "api",
             "aggregator",
             "openai-compatible"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 3,
@@ -120,7 +121,8 @@ var siteData = {
             "malware",
             "nsa",
             "binary-analysis"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 4,
@@ -157,7 +159,8 @@ var siteData = {
             "ide",
             "ecosystem",
             "typescript"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 5,
@@ -194,7 +197,8 @@ var siteData = {
             "agent",
             "webrtc",
             "python"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 6,
@@ -231,7 +235,8 @@ var siteData = {
             "devtools",
             "coding-agent",
             "debugging"
-          ]
+          ],
+          "badge": "新面孔"
         },
         {
           "rank": 7,
