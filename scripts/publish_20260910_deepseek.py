@@ -10,7 +10,7 @@ SLUG = 'deepseek-v41-flash-kv-cache-cost-2026'
 TITLE = '552B 模型只激活 8B 参数，价格是 Opus-5 的 1/33——DeepSeek 把 Agent 时代最贵的账单改写了'
 DATE = '2026-09-10'
 TAGS = ['DeepSeek', 'AI成本', 'Agent', '开源模型', 'KV缓存', '深度分析']
-DESC = 'DeepSeek V4.1-Flash 用 552B 骨架只激活 8B 参数，KV 缓存压到 1/4、持久化降到 1/8，API 价格是 Opus-5 的 1/33，并把自家旗舰 V4-Pro 下架。拆三层：降价只是表象、真正的战场是「记忆」、同一天两种 AI 经济学同台。'
+DESC = 'DeepSeek V4.1-Flash 用 552B 骨架只激活 8B 参数，KV 缓存压到 1/4，价格是 Opus-5 的 1/33，还把自家旗舰 V4-Pro 下架了。'
 
 P = 'font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;'
 H2 = 'font-size:18px;font-weight:700;color:#1a1a2e;margin-top:32px;margin-bottom:14px;padding-left:10px;border-left:3px solid #e67e22;'
@@ -65,7 +65,7 @@ content = f'''<h1 style="font-size:22px;font-weight:700;line-height:1.6;color:#1
 
 <p style="{P}">DeepSeek 这次动的，正是这笔账。</p>
 
-<p style="{P}">技术细节值得认真看：它用了新的因果编码器—解码器（CED）架构，40 层 Transformer 拆成 20 层编码器 + 20 层解码器，解码器的全局 KV 缓存直接从编码器最终隐状态投影出来，而不是每层各自生成。结果是<b>预填充阶段每 token 只激活 8B 参数、解码阶段 16B</b>——对照上一代旗舰 V4-Pro 的 49B、V4-Flash 的 13B。计算量本身被砍掉了一个数量级。</p>
+<p style="{P}">技术细节值得认真看：它用了新的因果编码器—解码器（CED）架构，40 层 Transformer 拆成 20 层编码器 + 20 层解码器，解码器的全局 KV 缓存直接从编码器最终隐状态投影出来，而不是每层各自生成。结果是<strong style="{RED}">预填充阶段每 token 只激活 8B 参数、解码阶段 16B</strong>——对照上一代旗舰 V4-Pro 的 49B、V4-Flash 的 13B。计算量本身被砍掉了一个数量级。</p>
 
 <p style="{P}">然后是缓存本身。新架构用 CSA2（压缩稀疏注意力 v2）在三层之间共享主 KV 与索引器 K，配合分层稀疏索引器，让更深的索引层只在一个受限候选池里工作——代价不再随上下文长度线性膨胀。缓存用 FP4 格式存储（E2M1，每 16 通道一个 E4M3 缩放因子），全局 KV 缓存被压到每个 token 890 字节，约为 V4-Flash 的四分之一。另一个叫 SWA Bounded Replay 的机制通过只重放最近 n 个窗口的 token 来重建缺失状态，持久化缓存占用降到约八分之一，不再需要写入 SSD。</p>
 
@@ -149,7 +149,7 @@ content = f'''<h1 style="font-size:22px;font-weight:700;line-height:1.6;color:#1
 
 <p style="font-size:13px;color:#aaa;line-height:1.6;text-align:center;">⚠️ 证据级别说明：模型规格、基准分数、API 价格、KV 缓存压缩比例为官方公开数据（可放心引用）；DeepSeek IPO 属「据报道」级别（知情人士，未获官方确认）；「427 token/秒」与供应商 $1.20 输出标价来自第三方渠道，非官方承诺。</p>
 
-<p style="font-size:13px;color:#aaa;line-height:1.6;text-align:center;">关联阅读：<a href="/articles/openai-sandbox-escape-huggingface-2026/" style="color:#e67e22;">AI 沙箱越狱：700 个 Agent 如何攻破 Hugging Face</a></p>'''
+<p style="font-size:13px;color:#aaa;line-height:1.6;text-align:center;">关联阅读：<a href="https://yuanlaiai.github.io/articles/openai-sandbox-escape-huggingface-2026/" style="color:#e67e22;">AI 沙箱越狱：700 个 Agent 如何攻破 Hugging Face</a></p>'''
 
 article = {
     "title": TITLE,
