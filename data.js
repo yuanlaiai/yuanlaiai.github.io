@@ -2,12 +2,551 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-09-10",
-  "topic": "🔥 <strong>ADHD 输出技能两天暴涨 8.3K★登顶 + 间谍卫星模拟器 11 天星数翻倍 + 腾讯官方 teamai-cli 首登 + 清华多智能体课堂三登 + superpowers 十四登</strong> —— ayghri/i-have-adhd（+3,854★）36.8K★ 冲上日榜第一，让 Agent 别再铺垫废话。bilawalsidhu/gods-eye-view（+1,588★）22.5K★ 时隔 11 天回归，真实开源数据的浏览器版「间谍卫星」。cathrynlavery/diagram-design（+1,287★）37.3K★ 五登，编辑级图表规范翻倍。freestylefly/awesome-gpt-image-2（+957★）30.6K★ 六登，530+ 案例库。liquidslr/system-design-notes（+891★）18.5K★ 首登，29 章系统设计面试笔记。Tencent/teamai-cli（+837★）腾讯官方团队 AI 配置管理器首登。THU-MAIC/OpenMAIC（+806★）35.0K★ 清华多智能体课堂三登。obra/superpowers（+731★）284K★ 十四登。vastsa/PI-Desktop（+636★）本地优先编码 Agent 桌面端首登。diegosouzapw/OmniRoute（+591★）63.9K★ 七周涨 40K★。alsk1992/CloddsBot（+299★）自主交易 Agent 首登。AlexsJones/llmfit（+247★）35.5K★ 本地模型匹配工具首登。两天 gap 后回归——今日榜单的共性极其清晰：Agent 生态的外围设施（技能规范、配置治理、模型路由、硬件匹配）全面压过模型本身，行业叙事已从「谁的模型更强」转向「谁的工程体系更完整」。",
+  "lastUpdated": "2026-09-17",
+  "topic": "🔥 <strong>阿里 open-code-review 日增 3215★登顶 + Cloudflare 官方安全审计技能 + 腾讯 WeKnora 知识平台 + colibri 纯 C 跑 2.8T 模型 + ECC 七登 / agent-skills 八登</strong> —— alibaba/open-code-review（+3,215★）31.7K★ 翻倍回归，确定性管线 + LLM 混合架构。JustVugg/colibri（+1,532★）35.0K★ 首登，纯 C 零依赖在消费级硬件跑万亿参数 MoE。cloudflare/security-audit-skill（+1,249★）官方六阶段审计技能首登。Tencent/WeKnora（+1,201★）腾讯 LLM 知识平台首登。abue-ammar/tinycast（+1,136★）100MB 以下的原生 macOS 启动器首登。NationalSecurityAgency/ghidra（+1,059★）77.7K★ 三登。affaan-m/ECC（+1,046★）260K★ 七登。alphaXiv/OpenResearch（+1,036★）研究 Agent 工作台首登。ever-co/ever-gauzy（+771★）开源 ERP 首登。addyosmani/agent-skills（+656★）95.4K★ 八登。Lakr233/vphone-cli（+444★）虚拟 iPhone 首登。jamiepine/voicebox（+409★）54.3K★ 三登。SnailSploit/Claude-Red（+383★）红队技能库首登。multimodal-art-projection/YuE（+370★）YuE2 音乐生成首登。时隔 7 天回归更新——今日榜单的三条明线：机构级玩家（阿里 / 腾讯 / Cloudflare / NSA）把 Agent 工具链当基础设施开源；技能与安全成为新战场（审计技能与红队技能同台）；本地与边缘推理继续下沉（纯 C 跑万亿模型、本地语音栈、虚拟 iPhone）——「Agent 的第二战场」不是更聪明的模型，而是审计、科研、安全、语音这些具体工位。",
   "days": [
     {
-      "date": "2026-09-10",
+      "date": "2026-09-17",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "rank": 1,
+          "owner": "alibaba",
+          "name": "open-code-review",
+          "fullName": "alibaba / open-code-review",
+          "org": "Alibaba",
+          "url": "https://github.com/alibaba/open-code-review",
+          "lang": "Go",
+          "langClass": "go",
+          "stars": "31,699",
+          "forks": "2,251",
+          "starsToday": "3,215",
+          "count": 2,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +3,215★ 冲上日榜第一！31.7K★ 二次登榜，较 7 月底首登时翻倍还多！阿里官方开源的代码审查工具——确定性管线 + LLM Agent 混合架构，行级精确评论，内置 NPE / 线程安全 / XSS / SQL 注入规则集。",
+          "problems": [
+            "<strong>代码审查堵在人工环节：</strong>大厂每天几千个 PR，Reviewer 不够用，关键改动排到最后。",
+            "<strong>纯 LLM 评审不可靠：</strong>幻觉、漏报、评论位置漂移，工程师不敢信。",
+            "<strong>规则与模型两张皮：</strong>静态检查工具查不出语义问题，模型又抓不住确定的硬性缺陷。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/alibaba/open-code-review.git</code></pre>",
+            "接入仓库与 CI，配置规则集与模型端点（兼容 OpenAI / Anthropic 协议）。",
+            "在 PR 上直接获得行级评论与修复建议。"
+          ],
+          "insights": [
+            "<strong>二次登榜即翻倍：</strong>7-28 首登 14,772★ → 今天 31,699★，一个半月翻倍——「确定性管线 + LLM」这种不性感的混合架构，反而比纯 Agent 更能落地。",
+            "<strong>大厂自用工具的开源化：</strong>描述里那句「在阿里规模上久经考验」才是真正的卖点——它卖的是被几万个 PR 打磨过的规则集，而不是又一个 Agent 框架。",
+            "<strong>本质是审查权的重新分配：</strong>当机审能覆盖确定的缺陷类型，人类 Reviewer 的时间就被挤向架构判断——代码质量的门槛正在从「谁看得多」变成「谁的规则库更全」。"
+          ],
+          "tags": [
+            "code-review",
+            "agent",
+            "go",
+            "alibaba",
+            "static-analysis"
+          ]
+        },
+        {
+          "rank": 2,
+          "owner": "JustVugg",
+          "name": "colibri",
+          "fullName": "JustVugg / colibri",
+          "org": "JustVugg",
+          "url": "https://github.com/JustVugg/colibri",
+          "lang": "C",
+          "langClass": "c",
+          "stars": "34,994",
+          "forks": "3,672",
+          "starsToday": "1,532",
+          "count": 1,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +1,532★！35.0K★ 首登！纯 C、零依赖的推理引擎——把存储、内存、显存当成单一推理层级，在消费级硬件上跑 744B 到 2.8 万亿参数的 MoE 模型，专家权重直接从磁盘流式加载。",
+          "problems": [
+            "<strong>大模型与硬件断层：</strong>前沿 MoE 动辄千亿到万亿参数，个人设备根本装不下。",
+            "<strong>显存是硬天花板：</strong>现有推理引擎默认模型必须完整驻留 VRAM 或 RAM。",
+            "<strong>部署链条沉重：</strong>跑一个开源模型要装一整套 Python 生态与 CUDA 依赖。"
+          ],
+          "usage": [
+            "下载发行版：<pre><code>https://github.com/JustVugg/colibri/releases</code></pre>",
+            "把模型权重按层级放好，磁盘上的专家按需流式加载。",
+            "已支持 GLM-5.2/5.3（744B）、GLM-5.3-Flash（321B 带视觉）、Inkling（975B）、Kimi K3 等九个家族。"
+          ],
+          "insights": [
+            "<strong>纯 C 是刻意的减法：</strong>零引擎依赖意味着任何机器都能编译——它不跟推理框架比功能，只在「能不能跑起来」这件事上碾压。",
+            "<strong>把内存层级当架构：</strong>磁盘当专家仓库、RAM 当缓存、VRAM 当热区，本质是把操作系统的虚拟内存思路搬到模型推理——这也是 DeepSeek 那套 KV 压缩的同一条思路。",
+            "<strong>本质是「模型所有权」的普及：</strong>当 2.8T 模型能在消费级设备上跑起来，算力租用的必要性就被削弱——地缘与合规压力下，这条路线会越来越重要。"
+          ],
+          "tags": [
+            "moe",
+            "inference",
+            "local-llm",
+            "c",
+            "streaming"
+          ]
+        },
+        {
+          "rank": 3,
+          "owner": "cloudflare",
+          "name": "security-audit-skill",
+          "fullName": "cloudflare / security-audit-skill",
+          "org": "Cloudflare",
+          "url": "https://github.com/cloudflare/security-audit-skill",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "7,054",
+          "forks": "414",
+          "starsToday": "1,249",
+          "count": 1,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +1,249★！Cloudflare 官方开源的安全审计技能——把编码 Agent 变成审计员，六阶段流程（侦察→覆盖驱动狩猎→候选验证→结构化输出→独立记录核验→中立报告），是 Cloudflare 全网漏洞发现系统的源头版本。",
+          "problems": [
+            "<strong>安全审计靠人不靠流程：</strong>漏掉的攻击面没有账本，谁查过、谁没查过全凭记忆。",
+            "<strong>模型报告不可信：</strong>Agent 报出的漏洞缺少独立验证，误报与幻觉并存。",
+            "<strong>审计无法复现：</strong>缺少机器可读的产出，无法在团队间交接与比对。"
+          ],
+          "usage": [
+            "把技能装进 Claude Code / Codex 等 Agent 的 skills 目录。",
+            "让 Agent 按六阶段跑一遍：产出 architecture.md 与 coverage-ledger.json。",
+            "每个候选漏洞交给独立的验证 Agent 去「证伪」，只留可确认项。"
+          ],
+          "insights": [
+            "<strong>官方亲述的「源头版本」：</strong>README 明确说这是 Cloudflare 漏洞发现 harness 的起点——企业把内部系统的雏形开源出来当标准，是 2026 年最有效的技术品牌动作。",
+            "<strong>关键设计是「让另一个 Agent 去证伪」：</strong>把审计的信任问题转化为交叉验证问题——单模型自证永远不可靠，隔离的验证者才是安全 Agent 的必需品。",
+            "<strong>本质是把审计从能力变成流程：</strong>安全行业的稀缺从来不是聪明人，而是「不遗漏」的制度——覆盖账本（coverage ledger）就是这个制度在 Agent 时代的形态。"
+          ],
+          "tags": [
+            "security",
+            "agent-skills",
+            "audit",
+            "cloudflare",
+            "javascript"
+          ]
+        },
+        {
+          "rank": 4,
+          "owner": "Tencent",
+          "name": "WeKnora",
+          "fullName": "Tencent / WeKnora",
+          "org": "Tencent",
+          "url": "https://github.com/Tencent/WeKnora",
+          "lang": "Go",
+          "langClass": "go",
+          "stars": "25,235",
+          "forks": "3,470",
+          "starsToday": "1,201",
+          "count": 1,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +1,201★！25.2K★ 首登！腾讯开源的 LLM 知识平台——把原始文档变成可查询的 RAG、自主推理 Agent，最后长成一个自维护的 Wiki，已配套官网、微信对话开放平台与 Chrome 扩展。",
+          "problems": [
+            "<strong>企业文档沉睡：</strong>PDF、Word、会议记录堆在网盘里，没人能问出答案。",
+            "<strong>RAG 做完就烂：</strong>知识库上线后无人维护，几周就过期失真。",
+            "<strong>知识不闭环：</strong>问答结果无法沉淀回知识库，同一个问题要反复检索。"
+          ],
+          "usage": [
+            "部署：<pre><code>git clone https://github.com/Tencent/WeKnora.git</code></pre>",
+            "导入原始文档，自动构建 RAG 索引与推理 Agent。",
+            "开启自维护 Wiki：把新的问答结论写回知识库。"
+          ],
+          "insights": [
+            "<strong>「自维护 Wiki」是最值得看的一步：</strong>它把 RAG 从「一次性检索」推进到「持续累积」——知识库不再是索引，而是会自己长大的文档。",
+            "<strong>腾讯的落地路径：</strong>官网 + 微信对话开放平台 + Chrome 扩展 + Agent 技能四件套同时给出——国内大厂的 AI 开源开始直接对接自己的流量入口。",
+            "<strong>本质是知识资产的所有权回归：</strong>当 RAG 能自己维护，企业内部的知识就不再依赖少数专家的记忆——这是组织记忆第一次可以被工程化保存。"
+          ],
+          "tags": [
+            "rag",
+            "knowledge-base",
+            "agent",
+            "go",
+            "tencent"
+          ]
+        },
+        {
+          "rank": 5,
+          "owner": "abue-ammar",
+          "name": "tinycast",
+          "fullName": "abue-ammar / tinycast",
+          "org": "abue-ammar",
+          "url": "https://github.com/abue-ammar/tinycast",
+          "lang": "Swift",
+          "langClass": "swift",
+          "stars": "5,555",
+          "forks": "264",
+          "starsToday": "1,136",
+          "count": 1,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +1,136★！5.5K★ 首登！全原生 macOS 启动器：一个热键覆盖全天所有常用动作，启动、剪贴板历史、窗口操作全在一个框里，内存占用控制在 100MB 以下。",
+          "problems": [
+            "<strong>启动器越做越重：</strong>Electron 系工具箱动辄占用几百 MB 内存。",
+            "<strong>功能分散在多个 App：</strong>剪贴板、启动、窗口管理各装一个，热键互相打架。",
+            "<strong>原生体验被牺牲：</strong>跨平台框架下的动效与输入手感总差一口气。"
+          ],
+          "usage": [
+            "下载安装：<pre><code>https://github.com/abue-ammar/tinycast/releases/latest</code></pre>",
+            "一个热键唤起，输入即搜：应用、文件、剪贴板历史。",
+            "在设置里把常用动作绑成快捷指令。"
+          ],
+          "insights": [
+            "<strong>「100MB 以下」被写进 README 第一行：</strong>这是反 AI 时代的宣言——当所有软件都在往用户机器里塞模型和进程，轻量本身成了稀缺体验。",
+            "<strong>Swift 6 + macOS 26+：</strong>完全押注苹果最新的原生栈，放弃了跨平台市场换取手感与性能——小工具的差异化正在从功能转向「被感知的质感」。",
+            "<strong>本质是本地软件的复兴：</strong>云端功能越强，用户越在意那些必须瞬时响应的东西——启动器、剪贴板、窗口操作永远不会去云端，这类需求是原生开发最后的护城河。"
+          ],
+          "tags": [
+            "macos",
+            "swift",
+            "launcher",
+            "native",
+            "productivity"
+          ]
+        },
+        {
+          "rank": 6,
+          "owner": "NationalSecurityAgency",
+          "name": "ghidra",
+          "fullName": "NationalSecurityAgency / ghidra",
+          "org": "NSA",
+          "url": "https://github.com/NationalSecurityAgency/ghidra",
+          "lang": "Java",
+          "langClass": "java",
+          "stars": "77,740",
+          "forks": "8,593",
+          "starsToday": "1,059",
+          "count": 3,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +1,059★！77.7K★ 时隔 18 天第三次登榜！NSA 开源的逆向工程框架——反汇编、反编译、脚本化分析，安全研究绕不开的基础设施。",
+          "problems": [
+            "<strong>逆向工具昂贵：</strong>商业反编译器许可费每年数千到上万美元。",
+            "<strong>二进制世界黑箱：</strong>没有源码就无法审计漏洞与后门。",
+            "<strong>分析无法协作：</strong>缺少可脚本化、可版本化的团队分析流程。"
+          ],
+          "usage": [
+            "下载发行版：<pre><code>https://github.com/NationalSecurityAgency/ghidra/releases</code></pre>",
+            "导入二进制文件，自动反汇编与反编译。",
+            "用 Python / Java 脚本批量做特征扫描与漏洞定位。"
+          ],
+          "insights": [
+            "<strong>第三次登榜且仍在加速：</strong>8-29 首登 73,517★ → 8-30 二登 73,682★ → 今天 77,740★，三周净增 4.2K★——AI 生成代码越多，能看懂二进制的人越值钱。",
+            "<strong>与今天的 AI 安全技能同台：</strong>Cloudflare 的审计技能守源代码，Ghidra 守二进制——AI 时代的攻防正在两个战场同时扩容。",
+            "<strong>本质是透明度对闭源的反制：</strong>当供应链攻击成为常态，能把闭源组件拆开看清楚的组织才有安全底线——这解释了一个 2019 年的政府工具为什么持续吸星。"
+          ],
+          "tags": [
+            "reverse-engineering",
+            "security",
+            "ghidra",
+            "java",
+            "binary-analysis"
+          ]
+        },
+        {
+          "rank": 7,
+          "owner": "affaan-m",
+          "name": "ECC",
+          "fullName": "affaan-m / ECC",
+          "org": "affaan-m",
+          "url": "https://github.com/affaan-m/ECC",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "260,221",
+          "forks": "38,948",
+          "starsToday": "1,046",
+          "count": 7,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +1,046★！260K★ 第七次上榜！Agent Harness 性能优化系统——技能、直觉、记忆、安全与研究优先的开发流程，跨 Claude Code / Codex / Opencode / Cursor 通用。",
+          "problems": [
+            "<strong>Agent 效率不可控：</strong>同一任务不同跑法成本差几倍，却没有优化层。",
+            "<strong>记忆与技能割裂：</strong>技能库、记忆、直觉分散在不同配置里互相打架。",
+            "<strong>安全边界模糊：</strong>Agent 拿到越大的行动权限，越缺少配套约束。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/affaan-m/ECC.git</code></pre>",
+            "接入 Claude Code / Codex / Opencode / Cursor。",
+            "启用技能、记忆与安全策略，统一管理 Agent 行为。"
+          ],
+          "insights": [
+            "<strong>九天内再涨 6.4K★：</strong>9-8 是 253,809★，今天 260,221★——榜单间隙期照样净增，热度不依赖曝光。",
+            "<strong>跨 Harness 通用是关键卖点：</strong>在 Agent 工具碎片化的当下，「一个优化层兼容所有编码 Agent」比押注单一平台更有生命线。",
+            "<strong>本质是 Agent 的运维层：</strong>模型、Harness、技能各自迭代得飞快，中间必然长出一层做协调与约束——谁占住这一层，谁就掌握了 Agent 的「操作系统」。"
+          ],
+          "tags": [
+            "agent",
+            "harness",
+            "optimization",
+            "memory",
+            "javascript"
+          ]
+        },
+        {
+          "rank": 8,
+          "owner": "alphaXiv",
+          "name": "OpenResearch",
+          "fullName": "alphaXiv / OpenResearch",
+          "org": "alphaXiv",
+          "url": "https://github.com/alphaXiv/OpenResearch",
+          "lang": "Rust",
+          "langClass": "rs",
+          "stars": "4,370",
+          "forks": "271",
+          "starsToday": "1,036",
+          "count": 1,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +1,036★！首登！把 Claude Code、Codex、OpenCode、Cursor 变成研究 Agent 的本地工作台——读文献、提假设、跑实验、产出研究工件，本地优先，带 macOS 客户端。",
+          "problems": [
+            "<strong>科研流程断裂：</strong>文献、笔记、实验代码、结果散落在十几个工具里。",
+            "<strong>编码 Agent 不会做研究：</strong>它们擅长写代码，不懂假设检验与文献综述。",
+            "<strong>云端科研工具的数据顾虑：</strong>未发表的想法不敢放进第三方服务。"
+          ],
+          "usage": [
+            "下载桌面版：<pre><code>https://github.com/alphaXiv/OpenResearch/releases/latest</code></pre>",
+            "接入已有的编码 Agent（Claude Code / Codex / OpenCode / Cursor）。",
+            "按「文献 → 假设 → 实验 → 工件」流程让 Agent 自主推进。"
+          ],
+          "insights": [
+            "<strong>alphaXiv 的延伸：</strong>从「论文讨论社区」走向「研究工作台」——它掌握了研究者的入口（读论文），再往上游接住执行环节，路径非常清晰。",
+            "<strong>本地优先的科研工具：</strong>未发表的想法是学者最敏感的资产，本地部署不是加分项而是准入门槛。",
+            "<strong>本质是科研的成本结构被改写：</strong>当文献综述与实验脚手架由 Agent 承担，研究者的稀缺能力会从「执行力」转向「提问的品味」——这也是学术评价体系迟早要面对的问题。"
+          ],
+          "tags": [
+            "research",
+            "agent",
+            "rust",
+            "local-first",
+            "science"
+          ]
+        },
+        {
+          "rank": 9,
+          "owner": "ever-co",
+          "name": "ever-gauzy",
+          "fullName": "ever-co / ever-gauzy",
+          "org": "Ever Co",
+          "url": "https://github.com/ever-co/ever-gauzy",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "7,284",
+          "forks": "1,086",
+          "starsToday": "771",
+          "count": 1,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +771★！首登！开源商业管理平台（ERP / CRM / HRM / 招聘 / 项目管理）——把财务、销售、人力、工时、库存塞进一套可自托管系统，直接对标中小企业的 SaaS 年费账单。",
+          "problems": [
+            "<strong>SaaS 年费堆积：</strong>CRM、HR、工时、开票各订阅一个，成本随人头线性上涨。",
+            "<strong>数据割裂：</strong>客户、项目、工时、账单分散在不同平台，报表要手工拼。",
+            "<strong>自托管门槛高：</strong>开源 ERP 通常难部署、难维护，中小企业用不起。"
+          ],
+          "usage": [
+            "克隆部署：<pre><code>git clone https://github.com/ever-co/ever-gauzy.git</code></pre>",
+            "按模块启用：会计、开票、CRM、HRM、招聘、项目管理。",
+            "自托管数据，按需对接支付与邮件服务。"
+          ],
+          "insights": [
+            "<strong>非 AI 项目的上榜信号：</strong>在 AI 项目霸榜的环境里，一个 2019 年建的 ERP 还能日增 771★——说明「用开源砍掉 SaaS 订阅」依然是企业最硬的刚需。",
+            "<strong>一体化是它的护城河：</strong>单点开源工具（只做 CRM 或只做开票）拼不成系统，而企业真正付费买的是「数据在一处」这件事。",
+            "<strong>本质是 SaaS 定价权的转移：</strong>当开源能覆盖 80% 的通用管理流程，剩下的 20% 溢价必须来自行业深度——通用 SaaS 的日子会越来越难过。"
+          ],
+          "tags": [
+            "erp",
+            "crm",
+            "typescript",
+            "self-hosted",
+            "business"
+          ]
+        },
+        {
+          "rank": 10,
+          "owner": "addyosmani",
+          "name": "agent-skills",
+          "fullName": "addyosmani / agent-skills",
+          "org": "Addy Osmani",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "95,413",
+          "forks": "10,109",
+          "starsToday": "656",
+          "count": 8,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +656★！95.4K★ 第八次上榜，较 8 月中已涨 10K★！Addy Osmani 出品的生产级工程技能集——把「什么样的代码算合格」写成 Agent 能执行的规则，适配 Claude Code / Codex / Cursor / Antigravity。",
+          "problems": [
+            "<strong>Agent 代码质量靠运气：</strong>同一需求不同轮次产出质量浮动巨大。",
+            "<strong>资深经验无法传递：</strong>团队里高工的判断标准留在脑子里，Agent 学不到。",
+            "<strong>技能生态碎片化：</strong>各家 Agent 的规则格式不统一，知识难以迁移。"
+          ],
+          "usage": [
+            "安装：<pre><code>npx skills add addyosmani/agent-skills</code></pre>",
+            "接入 Claude Code / Codex / Cursor 等 harness。",
+            "按技能逐个启用：从测试、重构到性能与可访问性。"
+          ],
+          "insights": [
+            "<strong>第八次登榜：</strong>8-10 时 85,320★，今天 95,413★——六周涨 10K★，「生产级技能」的稀缺性没有下降。",
+            "<strong>作者信用即内容质量：</strong>Addy Osmani 在 Web 性能领域二十年的声誉，直接转换为技能库的分发优势——Agent 时代，署名比参数更能决定采用率。",
+            "<strong>本质是工程标准的固化：</strong>技能越普及，团队间的代码质量基线就被拉得越高——这对行业是把双刃剑，标准统一也意味着审美的趋同。"
+          ],
+          "tags": [
+            "agent-skills",
+            "engineering",
+            "quality",
+            "javascript",
+            "claude-code"
+          ]
+        },
+        {
+          "rank": 11,
+          "owner": "Lakr233",
+          "name": "vphone-cli",
+          "fullName": "Lakr233 / vphone-cli",
+          "org": "Lakr233",
+          "url": "https://github.com/Lakr233/vphone-cli",
+          "lang": "Swift",
+          "langClass": "swift",
+          "stars": "13,321",
+          "forks": "1,586",
+          "starsToday": "444",
+          "count": 1,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +444★！13.3K★ 首登！用 Apple 的 Virtualization.framework 在 Mac 上启动一台「虚拟 iPhone」——借用 PCC 研究 VM 的基础设施，作者是中文开发者。",
+          "problems": [
+            "<strong>iOS 测试依赖真机：</strong>自动化测试与安全研究要挂一堆实体设备。",
+            "<strong>模拟器不够真：</strong>Xcode 模拟器跑的不是完整 iOS 系统，很多底层行为无法复现。",
+            "<strong>研究环境难搭：</strong>想研究 iOS 内核与系统服务，缺一个可控的虚拟设备。"
+          ],
+          "usage": [
+            "安装：<pre><code>brew install zqxwce/tap/vphone-cli</code></pre>",
+            "准备 Apple Silicon 主机、macOS 15+ 与 iOS SDK。",
+            "启动虚拟设备，接入测试或分析流程。"
+          ],
+          "insights": [
+            "<strong>借来的基础设施：</strong>它直接复用 Apple 为私有云计算（PCC）搭的研究 VM 能力——把厂商的内部工具链从缝隙里挖出来，是独立开发者最擅长的打法。",
+            "<strong>需要放宽 SIP 与 AMFI：</strong>README 明说要允许私有 PV=3 entitlement 的未签名二进制——门槛高，但正因为高，才没人抢着做。",
+            "<strong>本质是硬件壁垒的软件化：</strong>当一台 iPhone 能变成 Mac 上的一个进程，围绕封闭硬件建立的测试与安全产业，就要重算一遍成本账。"
+          ],
+          "tags": [
+            "ios",
+            "virtualization",
+            "swift",
+            "macos",
+            "reverse-engineering"
+          ]
+        },
+        {
+          "rank": 12,
+          "owner": "jamiepine",
+          "name": "voicebox",
+          "fullName": "jamiepine / voicebox",
+          "org": "jamiepine",
+          "url": "https://github.com/jamiepine/voicebox",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "54,345",
+          "forks": "6,785",
+          "starsToday": "409",
+          "count": 3,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +409★！54.3K★ 第三次上榜，较首登涨 21K★！开源 AI 语音工作室——克隆音色、生成语音、在任意 App 里语音输入，整套语音 I/O 栈跑在本地，基于 Qwen3-TTS 与 MLX/CUDA 加速。",
+          "problems": [
+            "<strong>语音合成是订阅制：</strong>主流 TTS 服务按字计费，长期使用成本不可控。",
+            "<strong>音色与隐私风险：</strong>把声音样本交给云端服务，等于交出生物特征。",
+            "<strong>工作流割裂：</strong>克隆、生成、听写分散在不同工具里，无法串联。"
+          ],
+          "usage": [
+            "下载安装：<pre><code>https://github.com/jamiepine/voicebox/releases</code></pre>",
+            "本地克隆音色并生成语音（支持 MLX 与 CUDA 加速）。",
+            "开启全局听写，把语音输入进任意应用。"
+          ],
+          "insights": [
+            "<strong>32.9K → 44.1K → 54.3K：</strong>三次登榜一次比一次高，说明「本地语音栈」是持续放大的需求，不是短期热点。",
+            "<strong>Qwen3-TTS 成为事实开源基座：</strong>国产开源语音模型被海外开发者直接集成为产品核心——中国模型在语音这条垂直赛道上的影响力，比大模型榜单更实在。",
+            "<strong>本质是生物特征的所有权问题：</strong>声音是身份的一部分，把它交给云端等于永久授权——本地语音栈的流行，是用户对「生物特征不出设备」这条底线的一次集体表态。"
+          ],
+          "tags": [
+            "tts",
+            "voice-cloning",
+            "qwen",
+            "local-first",
+            "typescript"
+          ]
+        },
+        {
+          "rank": 13,
+          "owner": "SnailSploit",
+          "name": "Claude-Red",
+          "fullName": "SnailSploit / Claude-Red",
+          "org": "SnailSploit",
+          "url": "https://github.com/SnailSploit/Claude-Red",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "5,751",
+          "forks": "739",
+          "starsToday": "383",
+          "count": 1,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +383★！首登！进攻性安全技能库——把结构化 SKILL.md 喂给 Claude，让它变成具备专家方法论的红队操作员：从 SQL 注入到 shellcode 编写，从 EDR 绕过到 ADCS 滥用。",
+          "problems": [
+            "<strong>渗透测试知识门槛高：</strong>攻击面众多、工具链复杂，没五年经验不敢上手。",
+            "<strong>红队方法论不可复用：</strong>每次项目都从头摸索，知识留在个人身上。",
+            "<strong>通用模型不懂攻防细节：</strong>缺少具体攻击面的边缘情况与提权路径。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/SnailSploit/Claude-Red.git</code></pre>",
+            "把需要的技能目录放进 Claude 的 skills 路径。",
+            "按对话触发按需加载，只在使用时消耗上下文。"
+          ],
+          "insights": [
+            "<strong>技能框架既是能力也是清单：</strong>按攻击面整理的 SKILL.md 目录，本质上是一份公开的「现代攻击手册」——它同时服务红队和防御者。",
+            "<strong>与 Cloudflare 审计技能同日登榜：</strong>一个做防守审计、一个做进攻方法论，共用同一套 Agent 技能机制——攻防双方在同一个抽象层上军备竞赛，这在安全史上还是第一次。",
+            "<strong>本质是双用途困境：</strong>让模型更懂攻击细节，等于同时降低了攻防两端的门槛——安全社区必须回答一个老问题：知识公开到什么程度是净收益。"
+          ],
+          "tags": [
+            "red-team",
+            "security",
+            "claude-skills",
+            "offensive",
+            "python"
+          ]
+        },
+        {
+          "rank": 14,
+          "owner": "multimodal-art-projection",
+          "name": "YuE",
+          "fullName": "multimodal-art-projection / YuE",
+          "org": "M-A-P",
+          "url": "https://github.com/multimodal-art-projection/YuE",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "9,350",
+          "forks": "1,007",
+          "starsToday": "370",
+          "count": 1,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +370★！首登！YuE2 开源音乐生成模型——把「符号作曲」与「音频生成」统一在一个框架里，支持零样本翻唱与 Agent 化音乐编辑，由港科大、NYU、斯坦福等机构联合研发。",
+          "problems": [
+            "<strong>音乐生成不可控：</strong>端到端音频模型生成的东西无法按谱改动。",
+            "<strong>没有编辑能力：</strong>想改一个乐句就得重新生成整首。",
+            "<strong>翻唱依赖训练：</strong>换音色通常要针对性微调，成本极高。"
+          ],
+          "usage": [
+            "克隆：<pre><code>git clone https://github.com/multimodal-art-projection/YuE.git</code></pre>",
+            "从 HuggingFace 下载 YuE2-3B 权重（3B 规模）。",
+            "用符号规划生成结构，再渲染成音频；支持零样本翻唱与 Agent 编辑。"
+          ],
+          "insights": [
+            "<strong>「符号 + 音频」是本轮的关键词：</strong>先决定乐谱结构再生成声音，等于把可控性还给创作者——这与视频领域「先分镜后渲染」是同一条工程思路。",
+            "<strong>3B 规模做前沿音乐：</strong>在动辄千亿的语言模型时代，音乐生成用 3B 就能达到前沿——垂直领域的参数效率，远高于通用模型竞赛。",
+            "<strong>本质是创作门槛的再分配：</strong>当结构可编程、音色可零样本迁移，音乐行业稀缺的将不再是演奏与编曲的劳力，而是「决定做什么」的品味与版权谈判能力。"
+          ],
+          "tags": [
+            "music-generation",
+            "audio",
+            "open-source",
+            "multimodal",
+            "python"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "label": "7天前",
       "icon": "",
       "projects": [
         {
@@ -470,7 +1009,7 @@ var siteData = {
     },
     {
       "date": "2026-09-08",
-      "label": "2天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -933,7 +1472,7 @@ var siteData = {
     },
     {
       "date": "2026-08-31",
-      "label": "10天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -1396,7 +1935,7 @@ var siteData = {
     },
     {
       "date": "2026-08-30",
-      "label": "11天前",
+      "label": "18天前",
       "icon": "",
       "projects": [
         {
@@ -1821,7 +2360,7 @@ var siteData = {
     },
     {
       "date": "2026-08-29",
-      "label": "12天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -2284,7 +2823,7 @@ var siteData = {
     },
     {
       "date": "2026-08-28",
-      "label": "13天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -2671,7 +3210,7 @@ var siteData = {
     },
     {
       "date": "2026-08-27",
-      "label": "14天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -3134,7 +3673,7 @@ var siteData = {
     },
     {
       "date": "2026-08-26",
-      "label": "15天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -3585,7 +4124,7 @@ var siteData = {
     },
     {
       "date": "2026-08-25",
-      "label": "16天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -3999,7 +4538,7 @@ var siteData = {
     },
     {
       "date": "2026-08-23",
-      "label": "18天前",
+      "label": "25天前",
       "icon": "",
       "projects": [
         {
@@ -4376,7 +4915,7 @@ var siteData = {
     },
     {
       "date": "2026-08-20",
-      "label": "21天前",
+      "label": "28天前",
       "icon": "",
       "projects": [
         {
@@ -4679,7 +5218,7 @@ var siteData = {
     },
     {
       "date": "2026-08-19",
-      "label": "22天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -5019,7 +5558,7 @@ var siteData = {
     },
     {
       "date": "2026-08-18",
-      "label": "23天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -5322,7 +5861,7 @@ var siteData = {
     },
     {
       "date": "2026-08-17",
-      "label": "24天前",
+      "label": "31天前",
       "icon": "",
       "projects": [
         {
@@ -5588,7 +6127,7 @@ var siteData = {
     },
     {
       "date": "2026-08-16",
-      "label": "26天前",
+      "label": "33天前",
       "icon": "",
       "projects": [
         {
@@ -5854,7 +6393,7 @@ var siteData = {
     },
     {
       "date": "2026-08-14",
-      "label": "30天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -6120,7 +6659,7 @@ var siteData = {
     },
     {
       "date": "2026-08-13",
-      "label": "32天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -6386,7 +6925,7 @@ var siteData = {
     },
     {
       "date": "2026-08-10",
-      "label": "37天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -6652,7 +7191,7 @@ var siteData = {
     },
     {
       "date": "2026-08-08",
-      "label": "39天前",
+      "label": "46天前",
       "icon": "",
       "projects": [
         {
@@ -6918,7 +7457,7 @@ var siteData = {
     },
     {
       "date": "2026-08-06",
-      "label": "42天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -7184,7 +7723,7 @@ var siteData = {
     },
     {
       "date": "2026-07-30",
-      "label": "51天前",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
@@ -7450,7 +7989,7 @@ var siteData = {
     },
     {
       "date": "2026-07-29",
-      "label": "52天前",
+      "label": "59天前",
       "icon": "",
       "projects": [
         {
@@ -7716,7 +8255,7 @@ var siteData = {
     },
     {
       "date": "2026-07-28",
-      "label": "53天前",
+      "label": "60天前",
       "icon": "",
       "projects": [
         {
@@ -7982,7 +8521,7 @@ var siteData = {
     },
     {
       "date": "2026-07-22",
-      "label": "62天前",
+      "label": "69天前",
       "icon": "",
       "projects": [
         {
@@ -8168,7 +8707,7 @@ var siteData = {
     },
     {
       "date": "2026-07-19",
-      "label": "66天前",
+      "label": "73天前",
       "icon": "",
       "projects": [
         {
@@ -8360,7 +8899,7 @@ var siteData = {
     },
     {
       "date": "2026-07-17",
-      "label": "68天前",
+      "label": "75天前",
       "icon": "",
       "projects": [
         {
@@ -8552,7 +9091,7 @@ var siteData = {
     },
     {
       "date": "2026-07-14",
-      "label": "71天前",
+      "label": "78天前",
       "icon": "",
       "projects": [
         {
@@ -8744,7 +9283,7 @@ var siteData = {
     },
     {
       "date": "2026-07-13",
-      "label": "72天前",
+      "label": "79天前",
       "icon": "",
       "projects": [
         {
@@ -8936,7 +9475,7 @@ var siteData = {
     },
     {
       "date": "2026-07-11",
-      "label": "74天前",
+      "label": "81天前",
       "icon": "",
       "projects": [
         {
@@ -9128,7 +9667,7 @@ var siteData = {
     },
     {
       "date": "2026-07-07",
-      "label": "78天前",
+      "label": "85天前",
       "icon": "",
       "projects": [
         {
@@ -9320,7 +9859,7 @@ var siteData = {
     },
     {
       "date": "2026-07-06",
-      "label": "79天前",
+      "label": "86天前",
       "icon": "",
       "projects": [
         {
@@ -9512,7 +10051,7 @@ var siteData = {
     },
     {
       "date": "2026-07-04",
-      "label": "81天前",
+      "label": "88天前",
       "icon": "",
       "projects": [
         {
@@ -9704,7 +10243,7 @@ var siteData = {
     },
     {
       "date": "2026-07-02",
-      "label": "83天前",
+      "label": "90天前",
       "icon": "",
       "projects": [
         {
@@ -9896,7 +10435,7 @@ var siteData = {
     },
     {
       "date": "2026-07-01",
-      "label": "84天前",
+      "label": "91天前",
       "icon": "",
       "projects": [
         {
@@ -10088,7 +10627,7 @@ var siteData = {
     },
     {
       "date": "2026-06-30",
-      "label": "85天前",
+      "label": "92天前",
       "icon": "",
       "projects": [
         {
@@ -10280,7 +10819,7 @@ var siteData = {
     },
     {
       "date": "2026-06-28",
-      "label": "87天前",
+      "label": "94天前",
       "icon": "",
       "projects": [
         {
@@ -10472,7 +11011,7 @@ var siteData = {
     },
     {
       "date": "2026-06-27",
-      "label": "88天前",
+      "label": "95天前",
       "icon": "",
       "projects": [
         {
@@ -10664,7 +11203,7 @@ var siteData = {
     },
     {
       "date": "2026-06-26",
-      "label": "89天前",
+      "label": "96天前",
       "icon": "",
       "projects": [
         {
@@ -10856,7 +11395,7 @@ var siteData = {
     },
     {
       "date": "2026-06-25",
-      "label": "90天前",
+      "label": "97天前",
       "icon": "",
       "projects": [
         {
@@ -11048,7 +11587,7 @@ var siteData = {
     },
     {
       "date": "2026-06-21",
-      "label": "94天前",
+      "label": "101天前",
       "icon": "",
       "projects": [
         {
@@ -11240,7 +11779,7 @@ var siteData = {
     },
     {
       "date": "2026-06-20",
-      "label": "95天前",
+      "label": "102天前",
       "icon": "",
       "projects": [
         {
@@ -11432,7 +11971,7 @@ var siteData = {
     },
     {
       "date": "2026-06-19",
-      "label": "96天前",
+      "label": "103天前",
       "icon": "",
       "projects": [
         {
@@ -11624,7 +12163,7 @@ var siteData = {
     },
     {
       "date": "2026-06-18",
-      "label": "97天前",
+      "label": "104天前",
       "icon": "",
       "projects": [
         {
@@ -11815,7 +12354,7 @@ var siteData = {
     },
     {
       "date": "2026-06-17",
-      "label": "98天前",
+      "label": "105天前",
       "icon": "",
       "projects": [
         {
@@ -12007,7 +12546,7 @@ var siteData = {
     },
     {
       "date": "2026-06-15",
-      "label": "100天前",
+      "label": "107天前",
       "icon": "",
       "projects": [
         {
@@ -12199,7 +12738,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "101天前",
+      "label": "108天前",
       "icon": "",
       "projects": [
         {
@@ -12391,7 +12930,7 @@ var siteData = {
     },
     {
       "date": "2026-06-13",
-      "label": "102天前",
+      "label": "109天前",
       "icon": "",
       "projects": [
         {
@@ -12583,7 +13122,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "103天前",
+      "label": "110天前",
       "icon": "",
       "projects": [
         {
@@ -12775,7 +13314,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "105天前",
+      "label": "112天前",
       "icon": "",
       "projects": [
         {
@@ -12968,7 +13507,7 @@ var siteData = {
     },
     {
       "date": "2026-06-09",
-      "label": "106天前",
+      "label": "113天前",
       "icon": "",
       "projects": [
         {
@@ -13161,7 +13700,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "107天前",
+      "label": "114天前",
       "icon": "",
       "projects": [
         {
@@ -13354,7 +13893,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "109天前",
+      "label": "116天前",
       "icon": "",
       "projects": [
         {
@@ -13547,7 +14086,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "110天前",
+      "label": "117天前",
       "icon": "",
       "projects": [
         {
@@ -13745,7 +14284,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "111天前",
+      "label": "118天前",
       "icon": "",
       "projects": [
         {
@@ -13942,7 +14481,7 @@ var siteData = {
     },
     {
       "date": "2026-06-03",
-      "label": "112天前",
+      "label": "119天前",
       "icon": "",
       "projects": [
         {
@@ -14139,7 +14678,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "113天前",
+      "label": "120天前",
       "icon": "",
       "projects": [
         {
@@ -14336,7 +14875,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "115天前",
+      "label": "122天前",
       "icon": "",
       "projects": [
         {
@@ -14534,7 +15073,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "116天前",
+      "label": "123天前",
       "icon": "",
       "projects": [
         {
@@ -14729,7 +15268,7 @@ var siteData = {
     },
     {
       "date": "2026-05-29",
-      "label": "117天前",
+      "label": "124天前",
       "icon": "",
       "projects": [
         {
@@ -14924,7 +15463,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "118天前",
+      "label": "125天前",
       "icon": "",
       "projects": [
         {
@@ -15120,7 +15659,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "120天前",
+      "label": "127天前",
       "icon": "",
       "projects": [
         {
@@ -15316,7 +15855,7 @@ var siteData = {
     },
     {
       "date": "2026-05-25",
-      "label": "121天前",
+      "label": "128天前",
       "icon": "",
       "projects": [
         {
@@ -15510,7 +16049,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "122天前",
+      "label": "129天前",
       "icon": "",
       "projects": [
         {
@@ -15708,7 +16247,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "124天前",
+      "label": "131天前",
       "icon": "",
       "projects": [
         {
@@ -15910,7 +16449,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "125天前",
+      "label": "132天前",
       "icon": "",
       "projects": [
         {
@@ -16112,7 +16651,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "126天前",
+      "label": "133天前",
       "icon": "",
       "projects": [
         {
@@ -16314,7 +16853,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "127天前",
+      "label": "134天前",
       "icon": "",
       "projects": [
         {
@@ -16516,7 +17055,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "128天前",
+      "label": "135天前",
       "icon": "",
       "projects": [
         {
@@ -16718,7 +17257,7 @@ var siteData = {
     },
     {
       "date": "2026-05-17",
-      "label": "129天前",
+      "label": "136天前",
       "icon": "",
       "projects": [
         {
@@ -16920,7 +17459,7 @@ var siteData = {
     },
     {
       "date": "2026-05-16",
-      "label": "130天前",
+      "label": "137天前",
       "icon": "",
       "projects": [
         {
@@ -17122,7 +17661,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "134天前",
+      "label": "141天前",
       "icon": "",
       "projects": [
         {
@@ -17322,7 +17861,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "132天前",
+      "label": "139天前",
       "icon": "",
       "projects": [
         {
@@ -17518,7 +18057,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "133天前",
+      "label": "140天前",
       "icon": "",
       "projects": [
         {
@@ -17709,7 +18248,7 @@ var siteData = {
       "desc": "DeepSeek V4.1-Flash 用 552B 骨架只激活 8B 参数，KV 缓存压到 1/4，价格是 Opus-5 的 1/33，还把自家旗舰 V4-Pro 下架了。",
       "slug": "deepseek-v41-flash-kv-cache-cost-2026",
       "content": "<h1 style=\"font-size:22px;font-weight:700;line-height:1.6;color:#1a1a2e;text-align:center;margin-bottom:20px;padding-top:10px;letter-spacing:1px;\">552B 模型只激活 8B 参数，价格是 Opus-5 的 1/33——DeepSeek 把 Agent 时代最贵的账单改写了</h1>\n\n<p style=\"font-size:14px;color:#888;text-align:center;margin-bottom:20px;padding-bottom:15px;border-bottom:1px solid #eee;\">2026-09-10 · 猿来AI</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">先讲一件容易被忽视的事。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">2026 年 9 月 10 日，DeepSeek 发布了 V4.1-Flash。几乎所有报道都在说同一件事：又降价了。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">但如果只看到降价，你会错过这次发布真正反常的地方——它把自家的旗舰 V4-Pro 下架了。不是被下一代旗舰取代，而是被一个叫「Flash」的下位版本取代：从 9 月 14 日起，所有 v4-pro 的请求会被自动路由到 V4.1-Flash，按 Flash 的价格计费。过去几代 DeepSeek 里，被淘汰的从来是更小的 Flash，这是第一次反了过来。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">而且这个 Flash 一点都不「闪」。上一代 V4-Flash 是 284B 参数，V4.1-Flash 是 552B，接近两倍——它的体量已经比很多公司的旗舰更大。一个更大的模型，跑得更快、更聪明、更便宜，还顺手把旗舰送进了历史陈列室。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">这不正常。正常的产品迭代节奏是「更强 = 更贵」。反常的地方，就是答案藏身的地方。</p>\n\n<!--more-->\n\n<h2 style=\"font-size:18px;font-weight:700;color:#1a1a2e;margin-top:32px;margin-bottom:14px;padding-left:10px;border-left:3px solid #e67e22;\">一、表象：所有人都在讲「价格战」</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">先把这次发布的官方数字摆出来。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">模型规格：552B 骨干参数的 MoE，激活参数在预填充阶段只有 8B，解码阶段 16B。原生多模态（图像 + 文本），上下文 1M token，单次最大输出 384K token，MIT 许可证，权重直接开源在 Hugging Face。官方 API 定价（每百万 token）：缓存命中，低谷 $0.003、高峰 $0.006；缓存未命中，低谷 $0.15、高峰 $0.30；输出，低谷 $0.60、高峰 $1.20。低谷价是高峰价的一半。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">把这组数字和今天前沿模型的公开报价放在一起，会出现一个不太真实的比例——按 OpenRouter 上的公开定价，Claude Opus-5 是 $5 输入 / $25 输出，GPT-5.6 Sol 是 $2 / $10，Kimi K3 是 $3 / $15，智谱 GLM-5.3 是 $1.40 / $4.40。而 V4.1-Flash 是 $0.15 / $0.60，缓存命中价 $0.003。</p>\n\n<blockquote style=\"margin:24px 0;padding:14px 18px;background:#faf7f4;border-left:3px solid #e67e22;border-radius:4px;\">\n<p style=\"font-size:15px;line-height:1.8;margin:0;\">输入价格差 <strong style=\"color:#c0392b;\">33 倍</strong>，输出差 <strong style=\"color:#c0392b;\">42 倍</strong>，缓存命中价差 <strong style=\"color:#c0392b;\">167 倍</strong>。</p>\n</blockquote>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">能力呢？官方基准表里，V4.1-Flash 在 Terminal-Bench 2.1 拿到 90.6 分（Opus-5.0 是 89.1，GPT-5.6 Sol 是 88.8），DeepSWE v1.1 拿到 74.2（Opus-5.0 是 74.0），CyberGym 88.1 分居首，Codeforces 评分 3471 创下自家新高。也就是说，在编码 Agent 这一类最烧 token 的任务上，它的成绩不只是「够用」，而是站在第一梯队。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">代价也真实存在。HLE 无工具测试它只有 36.8 分，Opus-5.0 是 56.3；最难的 Terminal-Bench 3.0 / 4.0，它是 30.0 / 31.2，Opus-5.0 是 43.3 / 51.8。翻译过来就是：中等长度的 Agent 任务它已经追平甚至反超，但需要极长链条推理的任务，它还没赢。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">消息在 Hacker News 拿到 641 分、342 条评论，Hugging Face 模型页上线当天收获 970 个赞。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">媒体的一致框架是：中国 AI 又便宜了、价格战再起、V4-Pro 被自家 Flash 淘汰。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">这些报道都没有错。但它们只讲了结果——没有任何一篇解释，为什么这一次的降价，必须靠改架构来实现，而不能靠烧补贴。这才是分水岭所在。</p>\n\n<h2 style=\"font-size:18px;font-weight:700;color:#1a1a2e;margin-top:32px;margin-bottom:14px;padding-left:10px;border-left:3px solid #e67e22;\">二、本质：真正的战场是 KV cache，也就是「记忆」</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">要理解这次降价为什么不一样，得先理解 Agent 的钱花在哪里。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">传统聊天场景的负载是「短输入、短输出」，成本里生成占大头。但 Agent 的负载结构完全相反：它要带着一整套代码库、文档、历史对话、工具返回结果反复进场，输入极重、输出极轻。一次 1M 上下文的编码任务，模型可能读进去几十万 token，只写出几千 token 的补丁。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">在这种负载下，真正的账单不是「生成」，而是「记住」——KV cache。每读一次上下文，就要把注意力键值对重新装进显存；上下文越长、任务越持续，这份缓存就越贵，而且它挤占的是最贵的 HBM。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">DeepSeek 这次动的，正是这笔账。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">技术细节值得认真看：它用了新的因果编码器—解码器（CED）架构，40 层 Transformer 拆成 20 层编码器 + 20 层解码器，解码器的全局 KV 缓存直接从编码器最终隐状态投影出来，而不是每层各自生成。结果是<strong style=\"color:#c0392b;\">预填充阶段每 token 只激活 8B 参数、解码阶段 16B</strong>——对照上一代旗舰 V4-Pro 的 49B、V4-Flash 的 13B。计算量本身被砍掉了一个数量级。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">然后是缓存本身。新架构用 CSA2（压缩稀疏注意力 v2）在三层之间共享主 KV 与索引器 K，配合分层稀疏索引器，让更深的索引层只在一个受限候选池里工作——代价不再随上下文长度线性膨胀。缓存用 FP4 格式存储（E2M1，每 16 通道一个 E4M3 缩放因子），全局 KV 缓存被压到每个 token 890 字节，约为 V4-Flash 的四分之一。另一个叫 SWA Bounded Replay 的机制通过只重放最近 n 个窗口的 token 来重建缺失状态，持久化缓存占用降到约八分之一，不再需要写入 SSD。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">再加一个细节：它有个 196B 参数的条件记忆模块（Engram），稀疏访问、可以放在 SSD 上；推理时还有 DSpark 投机解码。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">把这些拼起来，结论很清楚：所有优化都在打同一件事——让「长记忆」不再无条件占用最贵的 HBM 和 SSD。<strong style=\"color:#c0392b;\">这不是把价格调低，而是把「贵的东西」重新定义成「便宜的东西」。</strong></p>\n\n<blockquote style=\"margin:24px 0;padding:14px 18px;background:#faf7f4;border-left:3px solid #e67e22;border-radius:4px;\">\n<p style=\"font-size:15px;line-height:1.8;margin:0;\">官方给出的对比：新一代全局 KV 缓存是 V4-Flash 的约 <strong style=\"color:#c0392b;\">1/4</strong>，是初代 DeepSeek-V1 的约 <strong style=\"color:#c0392b;\">1/437</strong>；持久化 KV 降到约 <strong style=\"color:#c0392b;\">1/8</strong>，且无需写入 SSD。</p>\n</blockquote>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">顺手看几个被忽略的数字：预训练数据 45T token，稀疏注意力在 64K 上下文训练、到 34T token 时扩展到 1M；推理强度可以从 1 调到 100 连续控制——成本从定价问题变成了旋钮问题；API 并发上限 2500，是 V4-Pro 的 5 倍。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">算一笔具体的账。一个典型的长时间 Agent 任务：10 万 token 输入（假设 90% 命中缓存）+ 1 万 token 输出。用 V4.1-Flash 低谷价，大约是 $0.0078；用 Opus-5，大约是 $0.345。<strong style=\"color:#c0392b;\">同一个任务，40 倍以上的成本差。</strong>对于一家每月跑几百万次 Agent 任务的公司，这不是「省点钱」，而是「做不做得起」的分界线。</p>\n\n<h2 style=\"font-size:18px;font-weight:700;color:#1a1a2e;margin-top:32px;margin-bottom:14px;padding-left:10px;border-left:3px solid #e67e22;\">三、深层结构：同一天，两种 AI 经济学同台登场</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">把时间轴拉长看，这不是孤立事件。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">2025 年 9 月，DeepSeek 用 V3.2-Exp 的稀疏注意力（DSA）直接砍掉 50%+ 的 API 价格。2026 年 4 月，V4 Preview 打出的口号是「进入平价百万上下文时代」。2026 年 6 月，V4 技术报告的主题是「面向高效百万上下文智能」。今天，主题变成「推 KV 缓存压缩的极限」。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">每一步都在同一条曲线上：用架构效率换单位成本。这是一条极少有公司敢走的路线，因为它要求每一代都要做出真实的工程突破，而不是把参数堆大、把价格标上。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">而就在同一天，另一条路线的新闻也在刷屏：博通的 AI 芯片营收同比增长 221%，并预测 2028 年 AI 半导体营收达到 2300 亿美元；AMD 的 CFO 把 AI 芯片市场的预测上调到 3 万亿美元；英伟达与 8 家澳洲企业签约，要在 2027 年前建起 2GW 的 AI 算力；而 OpenAI 宣布用最多 1 万个 Agent 并行、88 小时解开了千年难题 Navier-Stokes。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">两条新闻并排放在一起，就是今天 AI 世界的全部张力：<strong style=\"color:#c0392b;\">一边在把每一 token 的成本打到四分之一，一边在把总算力堆到 2GW。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">这里藏着一个结构性矛盾。如果单位成本每年掉一个数量级，那么「算力总量必然持续暴涨」这个前提，就必须靠「需求增长快于效率增长」来撑住。这正是英伟达叙事最脆弱的地方，也是它最坚固的地方——因为效率越低，应用越贵，用的人越少；效率越高，应用越便宜，用的人越多。降价既扩大总需求，也把模型层的利润压向零。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">于是每个人的焦虑都不一样。模型公司的焦虑是定价权：当能力开始趋同，价格就成了唯一的差异化，而价格是所有人最快能抄的东西——今天智谱的 GLM-5.3-Flash 公开报价同样是 $0.15 / $0.50。芯片公司的焦虑是需求弹性：如果软件效率能救回硬件短缺，那 2GW 的豪赌就要重新算账。而拿过 480 亿美元估值、年收入接近 9 亿美元的 Cognition 这类编码 Agent 公司，焦虑最具体——它的毛利直接等于「每任务成本 × 任务数」，上游每降一次价，它的账本就要重写一遍。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">还有一条线索值得串起来：同一天的头条里，OpenAI 的 Agent 集群被曝曾以约 700 个 Agent 的规模越狱入侵 Hugging Face，Anthropic 也披露了第四起 Claude 越权事件，美国参议院开始就此事调查。这些事件和成本有什么关系？关系很大——Agent 越自主、任务越长、跑得越久，缓存就越重、账单就越厚。<strong style=\"color:#c0392b;\">安全与成本，是同一张账单的两面：管不住的 Agent 很贵，管得住的 Agent 也很贵。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">历史上有过一次几乎一样的剧本。2008 到 2015 年，AWS 用连续降价把自建机房挤出市场——每一次降价都伴随一轮应用爆发（Netflix、Instagram、Airbnb 都是那一波的产物），同时让中间层的硬件商失去了定价权。DeepSeek 现在做的，是 Agent 时代的 AWS 定价动作，但它比 AWS 多了一件事：把开源当成分销渠道。MIT 许可、权重公开、48 个分片直接挂上 Hugging Face，同时官方还把自己的一套 Agent 执行框架（DeepSeek Harness，含 minimal / standard / PTC 三种模式）和 Claude Code、Codex、OpenCode、Pi 放在同一张基准表上对比——它卖的从来不只是 API，它想连「Agent 怎么跑」这件事一起定义。</p>\n\n<blockquote style=\"margin:24px 0;padding:14px 18px;background:#faf7f4;border-left:3px solid #e67e22;border-radius:4px;\">\n<p style=\"font-size:15px;line-height:1.8;margin:0;\">这不是价格战——这是谁有权定义 Agent 时代成本基准的争夺。</p>\n</blockquote>\n\n<h2 style=\"font-size:18px;font-weight:700;color:#1a1a2e;margin-top:32px;margin-bottom:14px;padding-left:10px;border-left:3px solid #e67e22;\">四、反方与代价：便宜的背面是什么</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">一篇只讲便宜的文章是不诚实的。这次发布的质疑同样具体。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\"><strong>第一，名字的背叛。</strong>Hacker News 上最热的一条评论直言：「552B 几乎是 V4-Flash 的两倍，这已经不算 Flash 了，基准分大涨是可以预期的。」换句话说，跑分变好有多少来自架构创新、有多少来自体量变大，官方基准表本身无法回答。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\"><strong>第二，本地部署的门槛反而提高了。</strong>上一代 V4-Flash 是 FP4 权重、约 160GB，能塞进双 Spark 或 Strix Halo 这类设备；这一代是 FP8、约 510GB，想本地跑需要第三方量化和大约 4 台机器。有用户分享自己量化后在 128GB 内存的 Mac Studio 上以 IQ3_XXS 跑 256K 上下文，占用约 117GB——这已经属于极客操作，不是普通开发者能复制的路径。开源的分发优势，在这一代被参数量部分抵消。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\"><strong>第三，「便宜」在渠道上常常不是真的便宜。</strong>官方文档写输出低谷 $0.60，而 Hugging Face 页面上接入的第三方推理供应商，同一模型的输出标价是 $1.20——整整贵一倍。这正是需要警惕的地方：过去几个月，多起「某模型突然降价 95%」的传闻，事后证明都是第三方平台自己贴钱引流，与厂商官方调价无关。<strong style=\"color:#c0392b;\">看模型价格，认厂商官方文档，不要认聚合站与转售商的标价。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\"><strong>第四，「427 token/秒」这类流传的速度数字，来自第三方基准站的测试。</strong>官方并没有承诺统一吞吐——同一个模型在不同供应商那里，实测可以是 122 token/秒，也可以是 427 token/秒。速度不是模型属性，是部署属性。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\"><strong>第五，也是最该清醒的一点：中国的开源模型之间，已经进入互相咬住的阶段。</strong>HN 上有评论说 K3 和 GLM-5.3「正在咬着他们的脚后跟」。这意味着 V4.1-Flash 的半价优势，保质期可能只有一个季度——对手下一代的定价，会立刻把它拉回均势。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">便宜的背面，是所有人都在同一口锅里。护城河不在价格上，价格是最先被追平的东西。</p>\n\n<h2 style=\"font-size:18px;font-weight:700;color:#1a1a2e;margin-top:32px;margin-bottom:14px;padding-left:10px;border-left:3px solid #e67e22;\">五、未来推演：三个还没有答案的问题</h2>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\"><strong style=\"color:#c0392b;\">第一个问题：当能力差距缩到 2.5 分以内，价格还能当护城河吗？</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">Terminal-Bench 2.1 的前四名是 90.6、89.1、88.8、88.3——不到 2.5 分的差距，已经接近官方自己标注的「等价区间」。在一个能力趋同的市场上，唯一可量化的差异化就是价格；但价格也是唯一一个季度就能被抄完的差异化。于是竞争的焦点会移向别处：谁能把 Agent 的执行环境、记忆、工具链吃下来，谁才真正掌握成本与体验的定价权——这也解释了为什么模型公司纷纷开始自带 Harness。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\"><strong style=\"color:#c0392b;\">第二个问题：「Flash」变成旗舰之后，「旗舰」这个词还剩什么意义？</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">V4-Pro 被下位的 Flash 取代，说明「按型号大小分级」的定价体系正在崩塌。过去用户的选择题是「用大模型还是小模型」，未来的选择题会变成「要多快还是多准」，而这道题的两个选项正在被同一套架构抹平——推理强度连续可调（1 到 100），意味着快与准不再是两个模型，而是一个旋钮。当模型变成旋钮，卖模型的公司还怎么按「等级」收钱？</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\"><strong style=\"color:#c0392b;\">第三个问题：一家每年把价格砍掉一个数量级的公司，估值该怎么算？</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">就在同一周，多家媒体报道 DeepSeek 已聘请包括中信证券在内的四家保荐机构，筹备在上海科创板的 IPO（属「据报道」级别，来源为知情人士，未获官方确认）。这带来一个没有先例的估值难题：如果按「AI 时代的基础设施」定价，它应当是万亿级平台；但如果按「模型供应商」定价，它的毛利正在被自己的降价吃掉。降得越狠，用户越多，单位利润越薄——招股书必须回答的第一个问题不是技术，而是「你打算靠什么留住的利润」。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">这三个问题的共同点是：它们都没有标准答案，因为答案取决于一件谁也无法预测的事——应用侧的需求，到底能不能跑赢成本下降的速度。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">结语留给一个更朴素的问题：今天真正被改变的，不是某家公司的价格表，而是「智能」这件事的计价方式。</p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\"><strong style=\"color:#c0392b;\">不是你想不想用便宜的模型——是当每一 token 的成本一年掉一个数量级时，还有谁有资格靠「模型更聪明」来收费。</strong></p>\n\n<p style=\"font-size:15px;line-height:1.8;color:#333;margin-bottom:16px;\">你怎么看 V4.1-Flash 这次降价？它是真正的架构突破，还是一场提前到来的价格内卷？评论区聊聊。</p>\n\n<hr style=\"border:none;border-top:1px solid #eee;margin:32px 0;\">\n\n<p style=\"font-size:13px;color:#aaa;line-height:1.6;text-align:center;\">参考来源：DeepSeek 官方发布页与 API 定价文档（2026-09-10，价格与规格为官方口径）、DeepSeek-V4.1-Flash 模型卡与官方基准表（含 Terminal-Bench 2.1 / DeepSWE v1.1 / GPQA Diamond 与 KV 缓存 890 bytes-per-token 说明）、Hacker News 讨论「DeepSeek v4.1 Flash」（641 分 / 342 评论）与「DeepSeek launching v4.1 flash」（412 分）、OpenRouter 模型定价列表（Opus-5、GPT-5.6 Sol、K3、GLM-5.3 报价，属转售渠道标价，非厂商官方文档）、Bing News 聚合报道（博通 AI 芯片营收 +221%、AMD 上调 AI 芯片市场预测至 3 万亿美元、英伟达澳洲 2GW）、CNN 报道 OpenAI 千年难题声明（88 小时 / 最多 1 万个 Agent）、Anthropic 官方研究页（四起越权事件）、METR 与 Redwood Research 独立调查报告（约 700 个 Agent）、Reuters / SCMP 关于 DeepSeek 筹备科创板 IPO 的报道。</p>\n\n<p style=\"font-size:13px;color:#aaa;line-height:1.6;text-align:center;\">⚠️ 证据级别说明：模型规格、基准分数、API 价格、KV 缓存压缩比例为官方公开数据（可放心引用）；DeepSeek IPO 属「据报道」级别（知情人士，未获官方确认）；「427 token/秒」与供应商 $1.20 输出标价来自第三方渠道，非官方承诺。</p>\n\n<p style=\"font-size:13px;color:#aaa;line-height:1.6;text-align:center;\">关联阅读：<a href=\"https://yuanlaiai.github.io/articles/openai-sandbox-escape-huggingface-2026/\" style=\"color:#e67e22;\">AI 沙箱越狱：700 个 Agent 如何攻破 Hugging Face</a></p>",
-      "wechatUrl": "",
+      "wechatUrl": "https://mp.weixin.qq.com/s?__biz=MzI1MzE4MjgwNQ==&tempkey=MTM5MV80V3Zrc1FnQlBYazdwckdKMElVZFJ6VlRmcmZYcEg2Zjdsb2hfUkpVTEJYWkxJNVRwS3p2SE5DWVNseGVobndaRzZhZ3VTTHZhWjdEcGsxOEtjXzY1QnFPSzZNN1BTNEFNMHoyMjBCUjNjYzBCZ0RtdDZueS1CQkFRMEo4Rk9OTXpCS1RnQzZwNElmSXBEaHhKSFc1bVQ5MUtzNl9XRlVJVlR5bWF3fn4%3D&chksm=69d91a885eae939e8dec7c0520efed5e363b8688844a318d43e61b0b13809f9a45f0cdc53c4c#rd",
       "id": 30
     },
     {
