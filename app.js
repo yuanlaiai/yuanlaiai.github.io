@@ -376,14 +376,19 @@ function renderArticles(filter) {
 function renderFilters() {
   var container = document.getElementById('filterTags');
   if (!container) return;
-  // Collect all unique tags from articles
+  // Collect all unique tags from articles (with counts)
   var tagSet = {};
   for (var i = 0; i < articles.length; i++) {
     for (var j = 0; j < articles[i].tags.length; j++) {
-      tagSet[articles[i].tags[j]] = true;
+      var tg = articles[i].tags[j];
+      tagSet[tg] = (tagSet[tg] || 0) + 1;
     }
   }
-  var allTags = Object.keys(tagSet).sort();
+  // 按文章数降序排列（最多内容的分类排前面），数量相同则按中文拼音
+  var allTags = Object.keys(tagSet).sort(function(a, b) {
+    if (tagSet[b] !== tagSet[a]) return tagSet[b] - tagSet[a];
+    return a.localeCompare(b, 'zh');
+  });
   // Build filter buttons
   var html = '<button class="filter-btn active" data-filter="all">全部</button>';
   for (var k = 0; k < allTags.length; k++) {

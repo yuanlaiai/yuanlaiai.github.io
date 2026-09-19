@@ -19162,12 +19162,8 @@ var siteData = {
     {
       "title": "AI 写的代码评分更高，生产事故却更多——当「验收」成为新瓶颈，给 Agent 立规矩就是最值钱的生意",
       "tags": [
-        "AI编程",
-        "代码审查",
-        "返工税",
-        "Cloudflare",
-        "Agent",
-        "深度分析"
+        "AI Agent",
+        "行业趋势"
       ],
       "date": "2026-09-19",
       "readTime": "9 分钟",
@@ -19180,12 +19176,8 @@ var siteData = {
     {
       "title": "造出 ChatGPT「听话能力」的人，现在说聊天是个死胡同——Jev 放弃写字，快 200 倍、便宜 444 倍",
       "tags": [
-        "Jev",
-        "TypeSafe",
-        "AI架构",
-        "Agent",
-        "校准概率",
-        "深度分析"
+        "大模型",
+        "AI Agent"
       ],
       "date": "2026-09-17",
       "readTime": "9 分钟",
@@ -19198,12 +19190,8 @@ var siteData = {
     {
       "title": "552B 模型只激活 8B 参数，价格是 Opus-5 的 1/33——DeepSeek 把 Agent 时代最贵的账单改写了",
       "tags": [
-        "DeepSeek",
-        "AI成本",
-        "Agent",
-        "开源模型",
-        "KV缓存",
-        "深度分析"
+        "大模型",
+        "中国 AI"
       ],
       "date": "2026-09-10",
       "readTime": "9 分钟",
@@ -19217,12 +19205,8 @@ var siteData = {
       "id": 29,
       "title": "三星领投 €30 亿、欧洲 AI 冠军估值 $240 亿——主权 AI 是地缘叙事，还是新商业模式？",
       "tags": [
-        "Mistral",
-        "主权AI",
-        "三星",
-        "融资",
-        "欧洲AI",
-        "深度分析"
+        "商业资本",
+        "行业趋势"
       ],
       "date": "2026-09-08",
       "readTime": "9 分钟",
@@ -19235,13 +19219,8 @@ var siteData = {
       "id": 28,
       "title": "OpenAI 切断 Cursor：600 亿美元收购背后的 AI 战争——Musk 与 Altman 从法庭打到产品层",
       "tags": [
-        "OpenAI",
-        "Cursor",
-        "SpaceX",
-        "Musk",
-        "Altman",
-        "编码Agent",
-        "深度分析"
+        "商业资本",
+        "AI Agent"
       ],
       "date": "2026-08-30",
       "readTime": "9 分钟",
@@ -19254,12 +19233,9 @@ var siteData = {
       "id": 27,
       "title": "Nvidia 130 亿美元要买下 Hugging Face，开源社区为什么炸了",
       "tags": [
-        "Nvidia",
-        "Hugging Face",
-        "开源",
-        "收购",
-        "社区",
-        "深度分析"
+        "算力芯片",
+        "开源生态",
+        "商业资本"
       ],
       "date": "2026-08-28",
       "readTime": "9 分钟",
@@ -19272,13 +19248,9 @@ var siteData = {
       "id": 26,
       "title": "神秘模型 Ox Alpha 真身曝光：中国智谱的 GLM-5.3-Flash，跑在 10 万颗国产芯片上",
       "tags": [
-        "智谱",
-        "GLM",
-        "Ox Alpha",
-        "国产芯片",
-        "开源模型",
-        "DeepSeek",
-        "深度分析"
+        "大模型",
+        "中国 AI",
+        "算力芯片"
       ],
       "date": "2026-08-27",
       "readTime": "9 分钟",
@@ -19291,12 +19263,7 @@ var siteData = {
       "id": 25,
       "title": "作业分涨 18%，考试分跌 20%：AI 进校园的代价，终于有数据了",
       "tags": [
-        "AI教育",
-        "考试",
-        "作业",
-        "中国研究",
-        "学习",
-        "深度分析"
+        "行业趋势"
       ],
       "date": "2026-08-23",
       "readTime": "9 分钟",
@@ -19309,14 +19276,8 @@ var siteData = {
       "id": 24,
       "title": "Google 免费送学生一年 Gemini，OpenAI 却在教孩子不做作业——AI 双雄的教育攻防战",
       "tags": [
-        "Google",
-        "Gemini",
-        "OpenAI",
-        "教育",
-        "学生",
-        "ChatGPT",
-        "AI竞争",
-        "深度分析"
+        "大模型",
+        "行业趋势"
       ],
       "date": "2026-08-20",
       "readTime": "9 分钟",
@@ -19329,13 +19290,9 @@ var siteData = {
       "id": 23,
       "title": "字节下场抢「Agent 记忆」：OpenViking 首登 + 四个 Agent 项目同榜炸裂——AI 军备竞赛换了战场",
       "tags": [
-        "Agent",
-        "OpenViking",
-        "字节",
-        "火山引擎",
-        "Agent记忆",
-        "GitHub榜单",
-        "深度分析"
+        "AI Agent",
+        "中国 AI",
+        "榜单日报"
       ],
       "date": "2026-08-19",
       "readTime": "9 分钟",
@@ -19348,13 +19305,9 @@ var siteData = {
       "id": 22,
       "title": "苹果联手阿里自研「中国特供」大模型，通义 30 亿下载登顶——中美 AI 攻防进入下半场",
       "tags": [
-        "苹果",
-        "阿里",
-        "通义千问",
-        "Qwen",
-        "中美AI",
-        "开源模型",
-        "深度分析"
+        "中国 AI",
+        "大模型",
+        "开源生态"
       ],
       "date": "2026-08-18",
       "readTime": "9 分钟",
@@ -19367,12 +19320,9 @@ var siteData = {
       "id": 21,
       "title": "Nvidia 砍掉 $1300 亿担保：AI 循环融资链条，开始松动了",
       "tags": [
-        "Nvidia",
-        "OpenAI",
-        "循环融资",
-        "AI泡沫",
-        "数据中心",
-        "深度分析"
+        "算力芯片",
+        "商业资本",
+        "行业趋势"
       ],
       "date": "2026-08-14",
       "readTime": "9 分钟",
@@ -19385,12 +19335,8 @@ var siteData = {
       "id": 21,
       "title": "Burry 认错平仓，BIS/IMF 却警告「血洗」：AI 泡沫论为什么开始「各自下注」？",
       "tags": [
-        "Michael Burry",
-        "AI泡沫",
-        "Nvidia",
-        "BIS",
-        "IMF",
-        "深度分析"
+        "商业资本",
+        "行业趋势"
       ],
       "date": "2026-08-14",
       "readTime": "9 分钟",
@@ -19403,12 +19349,8 @@ var siteData = {
       "id": 21,
       "title": "Anthropic 水印上线 24 小时就被攻破：Claude 的隐形水印到底是什么，又是怎么被撕掉的？",
       "tags": [
-        "Anthropic",
-        "Claude",
-        "AI水印",
-        "EU AI Act",
-        "AI安全",
-        "深度分析"
+        "安全监管",
+        "大模型"
       ],
       "date": "2026-08-13",
       "readTime": "9 分钟",
@@ -19421,12 +19363,8 @@ var siteData = {
       "id": 21,
       "title": "DeepSeek V4-Pro 正式版发布：Fable 5 只比它好 5%，价格贵 4500%？",
       "tags": [
-        "DeepSeek",
-        "V4-Pro",
-        "开源模型",
-        "价格战",
-        "Fable 5",
-        "深度分析"
+        "大模型",
+        "中国 AI"
       ],
       "date": "2026-08-13",
       "readTime": "9 分钟",
@@ -19439,11 +19377,8 @@ var siteData = {
       "id": 21,
       "title": "OpenAI 承认 Astra「危险到不敢发布」：AI 史上第一次因为太强而延期",
       "tags": [
-        "OpenAI",
-        "Astra",
-        "AI安全",
-        "GPT-6",
-        "深度分析"
+        "大模型",
+        "安全监管"
       ],
       "date": "2026-08-10",
       "readTime": "9 分钟",
@@ -19456,12 +19391,8 @@ var siteData = {
       "id": 21,
       "title": "DeepSeek 宣布「显著涨价」：廉价 token 时代结束了吗？——不，是「无条件便宜」结束了",
       "tags": [
-        "DeepSeek",
-        "API定价",
-        "价格战",
-        "V4",
-        "AI经济",
-        "深度分析"
+        "商业资本",
+        "中国 AI"
       ],
       "date": "2026-08-06",
       "readTime": "8 分钟",
@@ -19474,12 +19405,8 @@ var siteData = {
       "id": 21,
       "title": "DeepSeek V4 Flash 更新：一次「重新训练」，凭什么引爆整个 AI 圈？",
       "tags": [
-        "DeepSeek",
-        "V4 Flash",
-        "开源模型",
-        "Codex",
-        "Agent",
-        "深度分析"
+        "大模型",
+        "中国 AI"
       ],
       "date": "2026-08-01",
       "readTime": "9 分钟",
@@ -19492,12 +19419,8 @@ var siteData = {
       "id": 21,
       "title": "Sam Altman 警告「认知萎缩」——但真正的讽刺不在他的话里",
       "tags": [
-        "AI",
-        "Sam Altman",
-        "OpenAI",
-        "认知萎缩",
-        "AI安全",
-        "深度分析"
+        "行业趋势",
+        "安全监管"
       ],
       "date": "2026-07-30",
       "readTime": "8 分钟",
@@ -19510,12 +19433,9 @@ var siteData = {
       "id": 15,
       "title": "美国AI正在输掉一场它自己发动的战争——从Ben Werdmuller的1213分认输信说起",
       "tags": [
-        "AI",
-        "中美AI",
-        "开源",
-        "深度分析",
-        "地缘政治",
-        "产业趋势"
+        "行业趋势",
+        "中国 AI",
+        "开源生态"
       ],
       "date": "2026-07-22",
       "readTime": "12 分钟",
@@ -19528,11 +19448,7 @@ var siteData = {
       "id": 14,
       "title": "AI正在杀死自己：60%用户反感、学校禁用、伯克利挂科率翻倍——2026年夏天发生了什么？",
       "tags": [
-        "AI",
-        "AI疲劳",
-        "深度分析",
-        "行业观察",
-        "社会现象"
+        "行业趋势"
       ],
       "date": "2026-07-22",
       "readTime": "10 分钟",
@@ -19545,11 +19461,9 @@ var siteData = {
       "id": 13,
       "title": "美国 AI 正在输掉这场战争：一封来自硅谷内部的认输信",
       "tags": [
-        "AI",
-        "中国AI",
-        "开源策略",
-        "Kimi",
-        "深度分析"
+        "行业趋势",
+        "中国 AI",
+        "开源生态"
       ],
       "date": "2026-07-21",
       "readTime": "6 分钟",
@@ -19562,12 +19476,8 @@ var siteData = {
       "id": 12,
       "title": "500KB 跑语音识别，C++ 写转录引擎：边缘 AI 正在吃掉世界",
       "tags": [
-        "AI",
-        "边缘计算",
-        "语音识别",
-        "Transcribe.cpp",
-        "Moonshine",
-        "开源"
+        "实用教程",
+        "开源生态"
       ],
       "date": "2026-07-19",
       "readTime": "6 分钟",
@@ -19580,11 +19490,8 @@ var siteData = {
       "id": 11,
       "title": "中国 AI 的 K3 时刻：一封从硅谷内部传出的战书",
       "tags": [
-        "AI",
-        "中国AI",
-        "Kimi K3",
-        "DeepSeek",
-        "深度分析"
+        "中国 AI",
+        "大模型"
       ],
       "date": "2026-07-19",
       "readTime": "7 分钟",
@@ -19597,10 +19504,8 @@ var siteData = {
       "id": 10,
       "title": "AI 泡沫之争白热化：1.7 亿人围观，硅谷在吵什么？",
       "tags": [
-        "AI",
-        "深度分析",
-        "AI泡沫",
-        "行业趋势"
+        "行业趋势",
+        "商业资本"
       ],
       "date": "2026-07-16",
       "readTime": "6 分钟",
@@ -19613,12 +19518,9 @@ var siteData = {
       "id": 9,
       "title": "Elon Musk 出手了！xAI 开源 Grok Build，编码 Agent 大战进入终局",
       "tags": [
-        "AI",
-        "xAI",
-        "Grok",
-        "编码Agent",
-        "开源",
-        "深度分析"
+        "大模型",
+        "AI Agent",
+        "开源生态"
       ],
       "date": "2026-07-16",
       "readTime": "8 分钟",
@@ -19631,9 +19533,8 @@ var siteData = {
       "id": 8,
       "title": "GitHub 今日 AI 趋势 2026/06/08",
       "tags": [
-        "GitHub",
-        "每日更新",
-        "AI"
+        "榜单日报",
+        "开源生态"
       ],
       "date": "2026-06-08",
       "readTime": "3 分钟",
@@ -19646,9 +19547,7 @@ var siteData = {
       "id": 7,
       "title": "从 0 到 1：构建 GitHub Trending AI 日报机器人",
       "tags": [
-        "教程",
-        "AI",
-        "自动化"
+        "实用教程"
       ],
       "date": "2026-06-09",
       "readTime": "11 分钟",
@@ -19661,9 +19560,8 @@ var siteData = {
       "id": 6,
       "title": "GitHub 今日 AI 趋势 2026/06/10",
       "tags": [
-        "GitHub",
-        "每日更新",
-        "AI"
+        "榜单日报",
+        "开源生态"
       ],
       "date": "2026-06-10",
       "readTime": "3 分钟",
@@ -19676,10 +19574,8 @@ var siteData = {
       "id": 5,
       "title": "Apple × Gemini：是投降，还是聪明？",
       "tags": [
-        "AI",
-        "Apple",
-        "WWDC",
-        "深度分析"
+        "大模型",
+        "商业资本"
       ],
       "date": "2026-06-10",
       "readTime": "6 分钟",
@@ -19692,9 +19588,8 @@ var siteData = {
       "id": 4,
       "title": "GitHub 今日 AI 趋势 2026/06/11",
       "tags": [
-        "GitHub",
-        "每日更新",
-        "AI"
+        "榜单日报",
+        "开源生态"
       ],
       "date": "2026-06-11",
       "readTime": "3 分钟",
@@ -19707,9 +19602,7 @@ var siteData = {
       "id": 3,
       "title": "Agent Skill 三国杀：研究型、方法论、品类化，谁才是终局？",
       "tags": [
-        "Agent",
-        "深度分析",
-        "GitHub"
+        "AI Agent"
       ],
       "date": "2026-06-11",
       "readTime": "8 分钟",
@@ -19722,9 +19615,7 @@ var siteData = {
       "id": 2,
       "title": "研究比写代码更值钱：为什么 Agent 的下一个蓝海是研究型工具？",
       "tags": [
-        "Agent",
-        "深度分析",
-        "研究工具"
+        "AI Agent"
       ],
       "date": "2026-06-11",
       "readTime": "6 分钟",
@@ -19737,9 +19628,8 @@ var siteData = {
       "id": 1,
       "title": "AI 到底碰没碰到天花板？从 Anthropic 内部分裂到 6500 亿美元赌局，一次讲清楚",
       "tags": [
-        "AI",
-        "深度分析",
-        "行业趋势"
+        "行业趋势",
+        "商业资本"
       ],
       "date": "2026-06-12",
       "readTime": "8 分钟",
@@ -19752,12 +19642,8 @@ var siteData = {
       "id": 16,
       "title": "OpenAI 的 AI 逃出实验室，黑进了 Hugging Face——这不是科幻，是今天发生的事",
       "tags": [
-        "AI",
-        "OpenAI",
-        "安全",
-        "深度分析",
-        "AI Agent",
-        "监管"
+        "安全监管",
+        "AI Agent"
       ],
       "date": "2026-07-23",
       "readTime": "10 分钟",
@@ -19770,12 +19656,7 @@ var siteData = {
       "id": 17,
       "title": "AI 跑出实验室 48 小时后，美国国会装了一个 Kill Switch——但能拦住谁？",
       "tags": [
-        "AI",
-        "Kill Switch",
-        "监管",
-        "深度分析",
-        "OpenAI",
-        "美国国会"
+        "安全监管"
       ],
       "date": "2026-07-23",
       "readTime": "10 分钟",
@@ -19788,12 +19669,8 @@ var siteData = {
       "id": 18,
       "title": "微软做了一个 AI 来抓 AI——但谁来做那个抓 AI 的 AI？",
       "tags": [
-        "AI",
-        "微软",
-        "安全",
-        "MAI-Cyber-1-Flash",
-        "深度分析",
-        "递归困境"
+        "安全监管",
+        "AI Agent"
       ],
       "date": "2026-07-28",
       "readTime": "14 分钟",
@@ -19806,13 +19683,9 @@ var siteData = {
       "id": 19,
       "title": "硅谷分裂了，但原因不是你想的那样——Jensen 的一条 X 撕开了 AI 世界最深的伤口",
       "tags": [
-        "AI",
-        "开放权重",
-        "Jensen Huang",
-        "NVIDIA",
-        "Anthropic",
-        "深度分析",
-        "博弈论"
+        "开源生态",
+        "大模型",
+        "行业趋势"
       ],
       "date": "2026-07-28",
       "readTime": "16 分钟",
@@ -19825,12 +19698,9 @@ var siteData = {
       "id": 20,
       "title": "Zuckerberg 对 CNN 说：不要封禁中国 AI——但这不只是一句表态",
       "tags": [
-        "AI",
-        "Zuckerberg",
-        "Meta",
-        "中国AI",
-        "开放权重",
-        "深度分析"
+        "中国 AI",
+        "开源生态",
+        "行业趋势"
       ],
       "date": "2026-07-29",
       "readTime": "10 分钟",
