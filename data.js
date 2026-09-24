@@ -3,7 +3,7 @@
 
 var siteData = {
   "lastUpdated": "2026-09-24",
-  "topic": "🔥 <strong>Agent 记忆登顶 + 「harness」正式成为品类词 + 技能框架长成 29 万星巨兽</strong> —— vectorize-io/hindsight（+1,607★）榜首：会学习的 Agent 记忆系统，LongMemEval 长期记忆基准最准，自带论文与云托管。obra/superpowers（+474★）29.1 万星：从头脑风暴、写计划、TDD 到子代理开发的完整方法论，支持近二十种 coding agent。rohitg00/ai-engineering-from-scratch（+310★）5.6 万星：523 节课、20 阶段、约 342 小时，每节产出一个可复用产物。strands-agents/harness-sdk（+115★）把 agent harness 做成 SDK：跑在自己进程里、没有托管控制面、任何模型任何云。julyx10/lap（+71★）离线相册与 FxEmbed（+165★）修跨平台嵌入，是今天两个非 AI 项目。连登：google/ax（+1,543★）9,653★、dream-num/univer（+1,142★）16,941★、anthropics/financial-services（+664★）37,187★、mvt-project/mvt（+543★）、superdesigndev/treg（+506★）。今日三条主线：一、记忆成为 Agent 竞赛的新战场——不是更长的上下文，而是会沉淀的学习；二、「harness」一天内出现两次（univer 的 Office Harness、strands 的 harness-sdk），运行时抽象正在收敛成正式品类；三、纪律与知识在工业化——29 万星的技能方法论与 523 节手写课程，说明「教 Agent 怎么干活」已经变成基础设施。",
+  "topic": "🔥 <strong>Agent 记忆登顶 + 「harness」正式成为品类词 + 技能框架长成 29 万星巨兽</strong> —— vectorize-io/hindsight（+1,607★）榜首：会学习的 Agent 记忆系统，LongMemEval 长期记忆基准最准，自带论文与云托管。obra/superpowers（+606★）29.1 万星：从头脑风暴、写计划、TDD 到子代理开发的完整方法论，支持近二十种 coding agent。rohitg00/ai-engineering-from-scratch（+310★）5.6 万星：523 节课、20 阶段、约 342 小时，每节产出一个可复用产物。strands-agents/harness-sdk（+463★）把 agent harness 做成 SDK：跑在自己进程里、没有托管控制面、任何模型任何云。julyx10/lap（+71★）离线相册与 FxEmbed（+165★）修跨平台嵌入，是今天两个非 AI 项目。连登：google/ax（+1,376★）9,714★、dream-num/univer（+1,060★）17,123★、anthropics/financial-services（+510★）37,208★、mvt-project/mvt（+275★）、superdesigndev/treg（+470★）。今日三条主线：一、记忆成为 Agent 竞赛的新战场——不是更长的上下文，而是会沉淀的学习；二、「harness」一天内出现两次（univer 的 Office Harness、strands 的 harness-sdk），运行时抽象正在收敛成正式品类；三、纪律与知识在工业化——29 万星的技能方法论与 523 节手写课程，说明「教 Agent 怎么干活」已经变成基础设施。（榜单于 09-24 20:37 二次刷新，同日重取快照）",
   "days": [
     {
       "date": "2026-09-24",
@@ -19,8 +19,8 @@ var siteData = {
           "url": "https://github.com/vectorize-io/hindsight",
           "lang": "Python",
           "langClass": "py",
-          "stars": "26,888",
-          "forks": "2,525",
+          "stars": "26,963",
+          "forks": "2,533",
           "starsToday": "1,607",
           "count": 1,
           "badge": "新面孔",
@@ -57,12 +57,12 @@ var siteData = {
           "url": "https://github.com/obra/superpowers",
           "lang": "Shell",
           "langClass": "sh",
-          "stars": "290,968",
-          "forks": "26,034",
-          "starsToday": "474",
+          "stars": "290,994",
+          "forks": "26,037",
+          "starsToday": "606",
           "count": 1,
           "badge": "新面孔",
-          "description": "🔥 亮点 —— 今日 +474★！29.1 万星（2.6 万 fork）的巨兽：一套完整的软件开发方法论 + 可组合技能包，插进 coding agent 之后，它不会直接开始写代码——先追问你到底要做什么，把设计分块给你确认，再产出细到「热情但没品味的新人也能照做」的实施计划，然后启动子代理开发流程，逐任务执行、逐任务复查。",
+          "description": "🔥 亮点 —— 今日 +606★！29.1 万星（2.6 万 fork）的巨兽：一套完整的软件开发方法论 + 可组合技能包，插进 coding agent 之后，它不会直接开始写代码——先追问你到底要做什么，把设计分块给你确认，再产出细到「热情但没品味的新人也能照做」的实施计划，然后启动子代理开发流程，逐任务执行、逐任务复查。",
           "problems": [
             "<strong>Agent 上来就写代码：</strong>需求还没讲清，它已经改了三个文件，回头看全是返工。",
             "<strong>计划太粗：</strong>「实现登录功能」这种任务丢给 Agent，等于让它自由发挥。",
@@ -88,6 +88,44 @@ var siteData = {
         },
         {
           "rank": 3,
+          "owner": "strands-agents",
+          "name": "harness-sdk",
+          "fullName": "strands-agents / harness-sdk",
+          "org": "strands-agents",
+          "url": "https://github.com/strands-agents/harness-sdk",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "8,081",
+          "forks": "1,218",
+          "starsToday": "463",
+          "count": 1,
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +463★！「harness」正式做成 SDK：官方定位是「当你本来要自己写 agent 循环时，改用这个」——跑在你自己的进程里，没有托管控制面，一个 SDK 覆盖回合上限、token 预算、取消、停止原因等生命周期控制，加上工具调用、结构化输出、MCP、多 Agent 模式、记忆与会话、模型可移植与流式输出、护栏。Python 与 TypeScript 双语，任何模型、任何云。",
+          "problems": [
+            "<strong>手写 agent 循环越写越乱：</strong>一开始只要调用工具，半年后长出重试、超时、预算控制、会话恢复。",
+            "<strong>被托管平台绑死：</strong>用厂商的托管编排服务，模型和云都换不了，数据还要出境。",
+            "<strong>看不见花了多少：</strong>没有 token 预算与停止原因，跑飞了才发现账单。"
+          ],
+          "usage": [
+            "安装 SDK：<pre><code>pip install strands-agents</code></pre>（或用 TypeScript 包）。",
+            "配置模型供应商，定义工具与结构化输出。",
+            "接上 MCP 服务器、记忆与会话管理，用回合上限与 token 预算给 Agent 设边界。"
+          ],
+          "insights": [
+            "<strong>「harness」这个词今天在榜上出现两次：</strong>univer 把自己叫做 Office Harness，strands 直接把 harness 做成 SDK——从「框架」「编排」到「harness」，Agent 的运行时抽象正在收敛成一个正式品类。",
+            "<strong>「没有托管控制面」是被强调的卖点：</strong>官方把「跑在你自己的进程里」写在第一段——企业要的不是能力更强，而是模型可换、数据不出境、账单可控。",
+            "<strong>本质是接力棒从云厂商手里被抢：</strong>上一代平台靠托管编排锁定客户，这一代把编排重新塞回用户进程——同样的功能，归属权换了一边。"
+          ],
+          "tags": [
+            "agent-harness",
+            "sdk",
+            "mcp",
+            "bedrock",
+            "multi-agent"
+          ]
+        },
+        {
+          "rank": 4,
           "owner": "rohitg00",
           "name": "ai-engineering-from-scratch",
           "fullName": "rohitg00 / ai-engineering-from-scratch",
@@ -95,8 +133,8 @@ var siteData = {
           "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
           "lang": "Python",
           "langClass": "py",
-          "stars": "55,879",
-          "forks": "9,865",
+          "stars": "55,943",
+          "forks": "9,873",
           "starsToday": "310",
           "count": 1,
           "badge": "新面孔",
@@ -125,7 +163,7 @@ var siteData = {
           ]
         },
         {
-          "rank": 4,
+          "rank": 5,
           "owner": "FxEmbed",
           "name": "FxEmbed",
           "fullName": "FxEmbed / FxEmbed",
@@ -133,8 +171,8 @@ var siteData = {
           "url": "https://github.com/FxEmbed/FxEmbed",
           "lang": "TypeScript",
           "langClass": "ts",
-          "stars": "5,252",
-          "forks": "242",
+          "stars": "5,270",
+          "forks": "243",
           "starsToday": "165",
           "count": 1,
           "badge": "新面孔",
@@ -163,44 +201,6 @@ var siteData = {
           ]
         },
         {
-          "rank": 5,
-          "owner": "strands-agents",
-          "name": "harness-sdk",
-          "fullName": "strands-agents / harness-sdk",
-          "org": "strands-agents",
-          "url": "https://github.com/strands-agents/harness-sdk",
-          "lang": "Python",
-          "langClass": "py",
-          "stars": "8,057",
-          "forks": "1,216",
-          "starsToday": "115",
-          "count": 1,
-          "badge": "新面孔",
-          "description": "🔥 亮点 —— 今日 +115★！「harness」正式做成 SDK：官方定位是「当你本来要自己写 agent 循环时，改用这个」——跑在你自己的进程里，没有托管控制面，一个 SDK 覆盖回合上限、token 预算、取消、停止原因等生命周期控制，加上工具调用、结构化输出、MCP、多 Agent 模式、记忆与会话、模型可移植与流式输出、护栏。Python 与 TypeScript 双语，任何模型、任何云。",
-          "problems": [
-            "<strong>手写 agent 循环越写越乱：</strong>一开始只要调用工具，半年后长出重试、超时、预算控制、会话恢复。",
-            "<strong>被托管平台绑死：</strong>用厂商的托管编排服务，模型和云都换不了，数据还要出境。",
-            "<strong>看不见花了多少：</strong>没有 token 预算与停止原因，跑飞了才发现账单。"
-          ],
-          "usage": [
-            "安装 SDK：<pre><code>pip install strands-agents</code></pre>（或用 TypeScript 包）。",
-            "配置模型供应商，定义工具与结构化输出。",
-            "接上 MCP 服务器、记忆与会话管理，用回合上限与 token 预算给 Agent 设边界。"
-          ],
-          "insights": [
-            "<strong>「harness」这个词今天在榜上出现两次：</strong>univer 把自己叫做 Office Harness，strands 直接把 harness 做成 SDK——从「框架」「编排」到「harness」，Agent 的运行时抽象正在收敛成一个正式品类。",
-            "<strong>「没有托管控制面」是被强调的卖点：</strong>官方把「跑在你自己的进程里」写在第一段——企业要的不是能力更强，而是模型可换、数据不出境、账单可控。",
-            "<strong>本质是接力棒从云厂商手里被抢：</strong>上一代平台靠托管编排锁定客户，这一代把编排重新塞回用户进程——同样的功能，归属权换了一边。"
-          ],
-          "tags": [
-            "agent-harness",
-            "sdk",
-            "mcp",
-            "bedrock",
-            "multi-agent"
-          ]
-        },
-        {
           "rank": 6,
           "owner": "julyx10",
           "name": "lap",
@@ -209,7 +209,7 @@ var siteData = {
           "url": "https://github.com/julyx10/lap",
           "lang": "Vue",
           "langClass": "vue",
-          "stars": "2,669",
+          "stars": "2,696",
           "forks": "165",
           "starsToday": "71",
           "count": 1,
@@ -247,12 +247,12 @@ var siteData = {
           "url": "https://github.com/google/ax",
           "lang": "Go",
           "langClass": "go",
-          "stars": "9,653",
-          "forks": "475",
-          "starsToday": "1,543",
+          "stars": "9,714",
+          "forks": "476",
+          "starsToday": "1,376",
           "count": 2,
           "badge": "连登",
-          "description": "🔥 亮点 —— 连登第二天，今日 +1,543★（7,525★ → 9,653★）！Google 的声明式 Agent 编排器：Task / Workspace / Gateway / Model 四原语，kubectl 式 CLI（apply / watch / ssh / suspend / resume），把 Agent 当「第三种工作负载」——既不是无状态微服务，也不是跑完就退出的批处理。",
+          "description": "🔥 亮点 —— 连登第二天，今日 +1,376★（7,525★ → 9,714★）！Google 的声明式 Agent 编排器：Task / Workspace / Gateway / Model 四原语，kubectl 式 CLI（apply / watch / ssh / suspend / resume），把 Agent 当「第三种工作负载」——既不是无状态微服务，也不是跑完就退出的批处理。",
           "problems": [
             "<strong>Agent 断了只能重来：</strong>四十分钟的任务中途失败，既不知道做到哪一步也没法接着做。",
             "<strong>沙箱要自己拼：</strong>容器隔离、网络白名单、凭证轮换、闲置成本，全得自己写。",
@@ -285,12 +285,12 @@ var siteData = {
           "url": "https://github.com/dream-num/univer",
           "lang": "TypeScript",
           "langClass": "ts",
-          "stars": "16,941",
-          "forks": "1,489",
-          "starsToday": "1,142",
+          "stars": "17,123",
+          "forks": "1,495",
+          "starsToday": "1,060",
           "count": 2,
           "badge": "连登",
-          "description": "🔥 亮点 —— 连登第二天，今日 +1,142★（15,352★ → 16,941★）！2022 年建仓的开源 Office SDK，简介改成了「The Office Harness for AI Agents」：表格、文档、幻灯片、画布、关系表、PDF 一套运行时，Canvas 渲染 + 公式引擎 + 插件架构 + 浏览器与 Node 同构的 Facade API。",
+          "description": "🔥 亮点 —— 连登第二天，今日 +1,060★（15,352★ → 17,123★）！2022 年建仓的开源 Office SDK，简介改成了「The Office Harness for AI Agents」：表格、文档、幻灯片、画布、关系表、PDF 一套运行时，Canvas 渲染 + 公式引擎 + 插件架构 + 浏览器与 Node 同构的 Facade API。",
           "problems": [
             "<strong>Office 能力嵌不进产品：</strong>想在自己应用里放一张能算的表格，商业组件贵、开源组件弱。",
             "<strong>模型读不懂文件结构：</strong>Agent 能写代码，却常常读不出表格里的公式依赖与文档层级。",
@@ -323,12 +323,12 @@ var siteData = {
           "url": "https://github.com/anthropics/financial-services",
           "lang": "Python",
           "langClass": "py",
-          "stars": "37,187",
-          "forks": "5,407",
-          "starsToday": "664",
+          "stars": "37,208",
+          "forks": "5,406",
+          "starsToday": "510",
           "count": 2,
           "badge": "连登",
-          "description": "🔥 亮点 —— 连登第二天，今日 +664★（36,304★ → 37,187★）！模型公司卖行业成品：投行、股票研究、私募与财富管理的参考 Agent、技能与数据连接器——Pitch Agent（路演材料）、Market Researcher、GL Reconciler（总账对账），附 /comps、/dcf 等斜杠命令。一套源码两种交付：Cowork 插件，或走 Managed Agents API 部署在你自己的流程引擎后面。",
+          "description": "🔥 亮点 —— 连登第二天，今日 +510★（36,304★ → 37,208★）！模型公司卖行业成品：投行、股票研究、私募与财富管理的参考 Agent、技能与数据连接器——Pitch Agent（路演材料）、Market Researcher、GL Reconciler（总账对账），附 /comps、/dcf 等斜杠命令。一套源码两种交付：Cowork 插件，或走 Managed Agents API 部署在你自己的流程引擎后面。",
           "problems": [
             "<strong>行业 Agent 从零搭：</strong>模型会写代码，但不知道 pitch book 该怎么组织、估值模型该怎么摆。",
             "<strong>数据接口各接各的：</strong>行情、财报、内部总账三套接口，接一次换一次。",
@@ -354,44 +354,6 @@ var siteData = {
         },
         {
           "rank": 10,
-          "owner": "mvt-project",
-          "name": "mvt",
-          "fullName": "mvt-project / mvt",
-          "org": "mvt-project",
-          "url": "https://github.com/mvt-project/mvt",
-          "lang": "Python",
-          "langClass": "py",
-          "stars": "14,594",
-          "forks": "1,390",
-          "starsToday": "543",
-          "count": 2,
-          "badge": "连登",
-          "description": "🔥 亮点 —— 连登第二天，今日 +543★（14,067★ → 14,594★）！Amnesty International 安全实验室 2021 年随「Pegasus 计划」发布的移动取证工具：在 Android / iOS 上找出间谍软件痕迹；本轮热度的直接原因是 v3 分支合并带来破坏性变更，依赖它输出的脚本需要改造。",
-          "problems": [
-            "<strong>被入侵查不出来：</strong>商业间谍软件的痕迹藏在系统日志与配置文件里，普通人连入口都不知道在哪。",
-            "<strong>取证门槛高：</strong>需要命令行与数字取证经验，当事人无法自证清白。",
-            "<strong>证据稍纵即逝：</strong>设备一重启或一升级，关键日志就可能被清掉。"
-          ],
-          "usage": [
-            "安装：<pre><code>pip install mvt</code></pre>",
-            "备份设备后跑 <pre><code>mvt-ios check-backup --iocs STIX2_FILE ./backup</code></pre>",
-            "对照 IOC 指标（如 Pegasus 的 STIX2 文件）定位可疑进程与配置。"
-          ],
-          "insights": [
-            "<strong>连登说明「升级即事件」：</strong>一个维护五年的取证工具靠破坏性变更连续两天在榜——老基建的接口变更会波及整条下游，这个影响面本身就是热度来源。",
-            "<strong>它和 superpowers 形成今天的两个极端：</strong>一个教 Agent 守规矩，一个查人是否被监控——都在回答「怎么证明发生了什么」，只是对象一个是机器，一个是权力机构。",
-            "<strong>本质是证据能力的民主化：</strong>Amnesty 把最贵的取证方法开源，把「谁能证明自己被监控」从机构特权变成可复制流程——监控工具按目标收费，反制工具免费开放，这本身就是答案。"
-          ],
-          "tags": [
-            "forensics",
-            "security",
-            "ios",
-            "android",
-            "amnesty"
-          ]
-        },
-        {
-          "rank": 11,
           "owner": "superdesigndev",
           "name": "treg",
           "fullName": "superdesigndev / treg",
@@ -399,12 +361,12 @@ var siteData = {
           "url": "https://github.com/superdesigndev/treg",
           "lang": "Python",
           "langClass": "py",
-          "stars": "2,928",
-          "forks": "250",
-          "starsToday": "506",
+          "stars": "2,955",
+          "forks": "251",
+          "starsToday": "470",
           "count": 2,
           "badge": "连登",
-          "description": "🔥 亮点 —— 连登第二天，今日 +506★（2,191★ → 2,928★）！自称「Agent 工具的 OpenRouter」：一个 base URL、一个 token 调用 3,000+ 端点、60+ 供应商（SEO 外链、社媒趋势、人物与公司信息、广告、抓取、图像与视频生成），按次计价低至一美分，无需逐个注册；团队密钥与 CL​I 存服务端，凭证不出服务器，可自托管。",
+          "description": "🔥 亮点 —— 连登第二天，今日 +470★（2,191★ → 2,955★）！自称「Agent 工具的 OpenRouter」：一个 base URL、一个 token 调用 3,000+ 端点、60+ 供应商（SEO 外链、社媒趋势、人物与公司信息、广告、抓取、图像与视频生成），按次计价低至一美分，无需逐个注册；团队密钥与 CL​I 存服务端，凭证不出服务器，可自托管。",
           "problems": [
             "<strong>好工具都锁在订阅墙后：</strong>Semrush $139/月、Moz $99/月、Crunchbase $99/月、Apollo $59/座——为跑一次任务买一个月不划算。",
             "<strong>有些工具没有公开 API：</strong>邀请制、合作方制、应用审核制，Agent 连门票都没有。",
@@ -426,6 +388,44 @@ var siteData = {
             "credentials",
             "mcp",
             "developer-tools"
+          ]
+        },
+        {
+          "rank": 11,
+          "owner": "mvt-project",
+          "name": "mvt",
+          "fullName": "mvt-project / mvt",
+          "org": "mvt-project",
+          "url": "https://github.com/mvt-project/mvt",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "14,607",
+          "forks": "1,390",
+          "starsToday": "275",
+          "count": 2,
+          "badge": "连登",
+          "description": "🔥 亮点 —— 连登第二天，今日 +275★（14,067★ → 14,607★）！Amnesty International 安全实验室 2021 年随「Pegasus 计划」发布的移动取证工具：在 Android / iOS 上找出间谍软件痕迹；本轮热度的直接原因是 v3 分支合并带来破坏性变更，依赖它输出的脚本需要改造。",
+          "problems": [
+            "<strong>被入侵查不出来：</strong>商业间谍软件的痕迹藏在系统日志与配置文件里，普通人连入口都不知道在哪。",
+            "<strong>取证门槛高：</strong>需要命令行与数字取证经验，当事人无法自证清白。",
+            "<strong>证据稍纵即逝：</strong>设备一重启或一升级，关键日志就可能被清掉。"
+          ],
+          "usage": [
+            "安装：<pre><code>pip install mvt</code></pre>",
+            "备份设备后跑 <pre><code>mvt-ios check-backup --iocs STIX2_FILE ./backup</code></pre>",
+            "对照 IOC 指标（如 Pegasus 的 STIX2 文件）定位可疑进程与配置。"
+          ],
+          "insights": [
+            "<strong>连登说明「升级即事件」：</strong>一个维护五年的取证工具靠破坏性变更连续两天在榜——老基建的接口变更会波及整条下游，这个影响面本身就是热度来源。",
+            "<strong>它和 superpowers 形成今天的两个极端：</strong>一个教 Agent 守规矩，一个查人是否被监控——都在回答「怎么证明发生了什么」，只是对象一个是机器，一个是权力机构。",
+            "<strong>本质是证据能力的民主化：</strong>Amnesty 把最贵的取证方法开源，把「谁能证明自己被监控」从机构特权变成可复制流程——监控工具按目标收费，反制工具免费开放，这本身就是答案。"
+          ],
+          "tags": [
+            "forensics",
+            "security",
+            "ios",
+            "android",
+            "amnesty"
           ]
         }
       ]
