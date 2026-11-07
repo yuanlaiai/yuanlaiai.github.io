@@ -1,10 +1,511 @@
 {
-  "lastUpdated": "2026-11-05",
-  "topic": "🔥 <strong>今日主题：从能生成到敢用。</strong>榜首 NVIDIA auto-ontology 一行内容都不生成，它只做一件事：告诉 agent 这个指标怎么定义、数字从哪来、能不能信。同样的逻辑在别处重复出现：scenario-labs 的技能先报价再生成，pr-agent 在合并前拦一道，spec-kit 把需求和验收写死在实现之前，VibeVoice 把语音模型压到 CPU 上以便常驻。生成能力已经过剩，稀缺的是验收。这也解释了为什么两份 skills 库（Google 官方、mattpocock）和一个工作流框架能同时在前排：大家不再比谁会生成，开始比谁能证明生成的东西可用。",
+  "lastUpdated": "2026-11-07",
+  "topic": "🔥 <strong>今日主题：技能库开始有厂牌。</strong>Cloudflare 的安全审计技能一天涨 2,088★，Google 和 Anthropic 的官方技能库同时在榜，加上 Matt Pocock 的个人技能集，13 个位置里 4 个是 skills 仓库。它们干的是同一件事：把「怎么做」写成 markdown 发给 agent。另一条线是语音，voicebox 一个应用里塞了 8 个 TTS 引擎，VibeVoice 半个月第三次上榜。真正的变化不在技能数量，在于厂商开始用技能库抢标准：谁能定义技能怎么写、能调什么，谁就定义了 agent 的能力边界。",
   "days": [
     {
-      "date": "2026-11-05",
+      "date": "2026-11-07",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "owner": "cloudflare",
+          "name": "security-audit-skill",
+          "fullName": "cloudflare / security-audit-skill",
+          "org": "cloudflare",
+          "url": "https://github.com/cloudflare/security-audit-skill",
+          "lang": "JavaScript",
+          "langClass": "js",
+          "stars": "64,961",
+          "forks": "4,213",
+          "starsToday": "2,088",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— 今日 +2,088★ 第一，6.5万★，第 7 次上榜。Cloudflare 开源的安全审计技能：六阶段跑完侦察、覆盖式挖掘、候选验证、结构化输出和独立复核，把 agent 变成审计员。",
+          "problems": [
+            "<strong>agent 审代码靠瞎猜：</strong>读一遍就报告「可能有注入」，说不出覆盖到哪、漏了哪。",
+            "<strong>误报淹没人：</strong>找十个问题九个是假的，工程师干脆不看报告。",
+            "<strong>审计过程不可复核：</strong>结论从哪来、谁验证的，事后没人能追溯。"
+          ],
+          "usage": [
+            "把技能装进 Claude Code 等 agent 的 skills 目录。",
+            "第一阶段先产 architecture.md 和 coverage-ledger.json，把信任边界和覆盖范围写清。",
+            "每个候选漏洞交给全新的验证 agent 去证伪，通过的结构化写入 findings.json 并按 schema 校验，最后再做一次独立复核。"
+          ],
+          "insights": [
+            "<strong>两个月从 1.75 万★ 涨到 6.5 万★：</strong>安全审计是全公司都在等 agent 接手的活，需求比工具迭代快得多。",
+            "<strong>它的核心设计是「证伪」而不是「发现」：</strong>每个候选都交给一个想去推翻它的 agent，误报率就是这么压下来的。",
+            "<strong>Cloudflare 先写博客再开源技能：</strong>大厂把自己的内部方法做成技能发出来，既拿声誉也定标准。"
+          ],
+          "tags": [
+            "security",
+            "audit",
+            "skills",
+            "agents",
+            "cloudflare"
+          ],
+          "rank": 1,
+          "count": 7
+        },
+        {
+          "owner": "milind-soni",
+          "name": "OpenMausBot",
+          "fullName": "milind-soni / OpenMausBot",
+          "org": "milind-soni",
+          "url": "https://github.com/milind-soni/OpenMausBot",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "16,354",
+          "forks": "2,320",
+          "starsToday": "1,986",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +1,986★，1.64万★，第 2 次上榜。Grok Bot 的开源替代：侧边栏每个 bot 都是本地跑的 Claude 或 Codex，各有性格、模型、云电脑和接好的应用，像联系人一样指挥。",
+          "problems": [
+            "<strong>官方 bot 锁在自己生态里：</strong>模型、记忆、能连的应用都由厂商决定。",
+            "<strong>一套人格应付所有事：</strong>写代码、查资料、盯邮件需要不同工作方式。",
+            "<strong>长任务看不见过程：</strong>扔一句话进去，中间做了什么你无从判断。"
+          ],
+          "usage": [
+            "从 openmausbot.com 下 macOS/Windows/Ubuntu 客户端。",
+            "给每个 bot 配模型（本地 Claude 或 Codex）和人格，各自接自己的应用。",
+            "重要操作弹审批，执行过程在聊天窗口里直接可见。"
+          ],
+          "insights": [
+            "<strong>六天前 9,662★，今天 1.64万★：</strong>官方 bot 产品把好奇心拉起来，开源替代接住了这批人。",
+            "<strong>底层是本地 Claude/Codex，说明上层不掌握模型：</strong>这类产品的竞争力全在编排和界面。",
+            "<strong>「agent 当联系人」是交互上的迁移：</strong>人从操作者变成管理者，这个转变比模型升级更能改变日常。"
+          ],
+          "tags": [
+            "ai-agent",
+            "electron",
+            "local-first",
+            "chat",
+            "typescript"
+          ],
+          "rank": 2,
+          "count": 2
+        },
+        {
+          "owner": "NVIDIA",
+          "name": "auto-ontology",
+          "fullName": "NVIDIA / auto-ontology",
+          "org": "NVIDIA",
+          "url": "https://github.com/NVIDIA/auto-ontology",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "9,601",
+          "forks": "772",
+          "starsToday": "1,322",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +1,322★，9,601★，第 2 次上榜。NVIDIA 的语义层框架：把企业元数据编成知识图谱，告诉 agent 每个指标怎么定义、数字从哪来、能不能拿来算。",
+          "problems": [
+            "<strong>agent 查数快但不敢用：</strong>问一句营收，它给一个数，你没法确认这个口径和财务是不是同一个。",
+            "<strong>同名指标到处不一致：</strong>BI、数仓、业务表格各一套定义。",
+            "<strong>生成的 SQL 没有验收：</strong>结果对不对没人校验。"
+          ],
+          "usage": [
+            "克隆仓库，<code>cp .env.example .env</code> 填 build.nvidia.com 申请到的 key。",
+            "用 Docker Compose 接 Wide World Importers 示例库跑通。",
+            "通过 MCP、CLI 或 API 接入自己的 agent，生成查询时对着认证定义校验并返回来源。"
+          ],
+          "insights": [
+            "<strong>两天从 6,456★ 到 9,601★：</strong>企业场景的付费意愿比消费级工具强，热度虽然不高但落得实。",
+            "<strong>它只做约束，不做生成：</strong>在所有人都往上堆能力的时候，NVIDIA 卖的是「这个数字能不能信」。",
+            "<strong>每次纠错回写本体：</strong>用得越久越准，这是数据资产唯一能复利的地方。"
+          ],
+          "tags": [
+            "ontology",
+            "text-to-sql",
+            "semantic-layer",
+            "mcp",
+            "nvidia"
+          ],
+          "rank": 3,
+          "count": 2
+        },
+        {
+          "owner": "mattpocock",
+          "name": "skills",
+          "fullName": "mattpocock / skills",
+          "org": "mattpocock",
+          "url": "https://github.com/mattpocock/skills",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "317,258",
+          "forks": "26,548",
+          "starsToday": "1,111",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +1,111★，31.73万★，第 14 次上榜。日常工程技能集，小而可组合、鼓励改成自己的，明确反对把流程收走的框架。",
+          "problems": [
+            "<strong>流程框架替你握方向盘：</strong>出问题连从哪查都不知道。",
+            "<strong>大而全的规范比代码慢：</strong>文档写一堆，最后没人读。",
+            "<strong>绑死某个 agent 等于自废武功：</strong>模型换代，写法全废。"
+          ],
+          "usage": [
+            "按 README 的 30 秒流程装成 plugin。",
+            "从一个小技能开始，按自己习惯改。",
+            "技能就是 markdown，换任何模型都能读。"
+          ],
+          "insights": [
+            "<strong>14 次上榜，几乎每次日增都在千星以上：</strong>这个仓库已经变成技能生态的默认入口之一。",
+            "<strong>它的立场和 GitHub 官方 spec-kit 正好相反：</strong>一个要规范流程，一个坚决不碰，两边都在涨，说明用户分层已经很明显。",
+            "<strong>30 万★ 的资产是判断力：</strong>代码可以生成，判断不行。"
+          ],
+          "tags": [
+            "skills",
+            "engineering",
+            "typescript",
+            "workflow",
+            "composable"
+          ],
+          "rank": 4,
+          "count": 14
+        },
+        {
+          "owner": "google",
+          "name": "skills",
+          "fullName": "google / skills",
+          "org": "google",
+          "url": "https://github.com/google/skills",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "23,104",
+          "forks": "1,940",
+          "starsToday": "449",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +449★，2.31万★，第 3 次上榜。Google 官方的 Agent Skills 仓库，覆盖 Google Cloud 等自家产品，一条 <code>npx skills add</code> 装上。",
+          "problems": [
+            "<strong>云服务知识和 agent 隔着层：</strong>文档写得全，但 agent 不知道什么时候该用哪条命令。",
+            "<strong>技能格式不统一：</strong>装一个能用的技能，先读半天结构说明。",
+            "<strong>认证权限区域容易配错：</strong>错一个参数卡半天。"
+          ],
+          "usage": [
+            "<code>npx skills add google/skills</code>，按提示选技能和目标 agent。",
+            "选项目级或全局安装，后续用 <code>npx skills update</code> 更新。",
+            "从认证授权那组开始装，再接云资源操作。"
+          ],
+          "insights": [
+            "<strong>两天前刚上过榜，今天又回来：</strong>官方技能库不是一次性曝光，而是持续被搜索安装的常客。",
+            "<strong>云厂商把文档改写成技能：</strong>这是最便宜的生态投入，写一次，所有 agent 都能读。",
+            "<strong>它的对手是自家 CLI：</strong>装技能和让人读文档，抢的是同一批操作。"
+          ],
+          "tags": [
+            "skills",
+            "google-cloud",
+            "agents",
+            "cli",
+            "standards"
+          ],
+          "rank": 5,
+          "count": 3
+        },
+        {
+          "owner": "anthropics",
+          "name": "skills",
+          "fullName": "anthropics / skills",
+          "org": "anthropics",
+          "url": "https://github.com/anthropics/skills",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "188,398",
+          "forks": "22,220",
+          "starsToday": "386",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +386★，18.84万★，第 3 次上榜。Anthropic 官方的技能示例库：从画图、做音乐到测试 Web 应用、生成 MCP server，配套 agentskills.io 标准。",
+          "problems": [
+            "<strong>官方文档只讲概念：</strong>技能到底能干什么，得自己一个个试。",
+            "<strong>社区技能质量参差：</strong>没有基准，装十个不如自己写一个。",
+            "<strong>格式各家不一致：</strong>Claude、Cursor、Codex 的技能目录结构各有一套。"
+          ],
+          "usage": [
+            "克隆仓库，按技能目录结构放进本地 skills 路径。",
+            "用 <code>/plugin</code> 安装，或直接复制某个技能去改。",
+            "重点参考 MCP server 生成、Web 应用测试几个样例。"
+          ],
+          "insights": [
+            "<strong>和 Cloudflare、Google 的官方技能库同天在榜：</strong>三家的技能库同时出现在 13 个位置里，标准之争已经摆在台面上。",
+            "<strong>示例库的价值是降低第一次尝试的门槛：</strong>用户学技能的第一站通常就是这里。",
+            "<strong>谁定义格式，谁就定义能力的边界：</strong>技能能调用什么工具，取决于厂商把哪些接口写进标准。"
+          ],
+          "tags": [
+            "skills",
+            "anthropic",
+            "examples",
+            "mcp",
+            "standard"
+          ],
+          "rank": 6,
+          "count": 3
+        },
+        {
+          "owner": "jamiepine",
+          "name": "voicebox",
+          "fullName": "jamiepine / voicebox",
+          "org": "jamiepine",
+          "url": "https://github.com/jamiepine/voicebox",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "59,872",
+          "forks": "7,512",
+          "starsToday": "318",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +318★，5.99万★，第 4 次上榜。开源的 AI 语音工作室：一个应用里可切换 8 个 TTS 引擎，能克隆音色、按情绪和语气标记生成，还能全局听写和语音转写。",
+          "problems": [
+            "<strong>语音工具各管一段：</strong>克隆一个工具、合成一个工具、听写又一个工具，音色对不上。",
+            "<strong>换引擎等于换工作流：</strong>想试新模型，先重学一套接口和参数。",
+            "<strong>云服务按秒计费：</strong>做长音频或批量生成，账单涨得比进度快。"
+          ],
+          "usage": [
+            "从 Releases 下对应平台的安装包。",
+            "按任务切引擎：多语言克隆用 Qwen3-TTS，轻量高速用 LuxTTS，23 种语言用 Chatterbox Multilingual。",
+            "用 Stories Editor 拼长音频，生成的版本可回退，配音稿和音色分开管理。"
+          ],
+          "insights": [
+            "<strong>八个引擎并列是可用的关键：</strong>没有哪个 TTS 在所有场景都最好，能随手切换比押注一家实际。",
+            "<strong>它把「语音 I/O」当成一整套做：</strong>合成、听写、转写在同一个应用里，音色才能贯穿始终。",
+            "<strong>半年从 3.29 万★ 涨到 5.99 万★：</strong>本地跑全栈对创作者最实在，长音频和批量生成按秒计费的模式撑不住，一次性买断的机器可以。"
+          ],
+          "tags": [
+            "tts",
+            "voice-clone",
+            "dictation",
+            "local-first",
+            "audio"
+          ],
+          "rank": 7,
+          "count": 4
+        },
+        {
+          "owner": "microsoft",
+          "name": "VibeVoice",
+          "fullName": "microsoft / VibeVoice",
+          "org": "microsoft",
+          "url": "https://github.com/microsoft/VibeVoice",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "56,616",
+          "forks": "6,375",
+          "starsToday": "237",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +237★，5.66万★，第 3 次上榜。微软开源语音栈：TTS 之外有流式 ASR，能边听边转写「谁说了什么」，还有压到 CPU 的 BitNet 版本。",
+          "problems": [
+            "<strong>会议转写分不清谁在说：</strong>整段文字没有说话人，纪要等于白做。",
+            "<strong>语音模型离不开显卡：</strong>想本地或边缘跑，先得有张卡。",
+            "<strong>长音频一段段切：</strong>切碎丢上下文，拼起来前后不接。"
+          ],
+          "usage": [
+            "从 Hugging Face 的 microsoft/vibevoice 集合下权重。",
+            "TTS 用 Colab 示例跑通，ASR 用官方 playground 试「谁说了什么」。",
+            "边缘场景用 VibeASR.cpp 的 BitNet 版本，纯 CPU 推理。"
+          ],
+          "insights": [
+            "<strong>半个月第三次上榜：</strong>语音这类基础能力的复访率比工具高，因为它一直在被集成。",
+            "<strong>压到 CPU 才是分水岭：</strong>语音入口要常驻，常驻的东西不能占着显卡。",
+            "<strong>TTS 和 ASR 一起开源：</strong>两端都在自己手里，才有资格谈标准。"
+          ],
+          "tags": [
+            "voice",
+            "tts",
+            "asr",
+            "microsoft",
+            "edge"
+          ],
+          "rank": 8,
+          "count": 3
+        },
+        {
+          "owner": "meta",
+          "name": "astryx",
+          "fullName": "meta / astryx",
+          "org": "meta",
+          "url": "https://github.com/meta/astryx",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "14,177",
+          "forks": "1,171",
+          "starsToday": "198",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +198★，1.42万★ 首登。Meta 开源的 React 设计系统，基于 React 19 和 StyleX，明确按「人和身边的 agent 一起做界面」来设计，目前 Beta。",
+          "problems": [
+            "<strong>agent 写界面不懂设计系统：</strong>生成一堆样式内联的组件，和现有规范对不上。",
+            "<strong>组件库对机器不友好：</strong>文档给人看，agent 读不出「什么场景该用哪个组件」。",
+            "<strong>改主题要动代码：</strong>品牌换色时逐个文件改，一致性靠人盯。"
+          ],
+          "usage": [
+            "用 <code>npm i @astryxdesign/core</code> 装上，按文档接进现有 React 项目。",
+            "先用 Storybook 看组件形态，再决定怎么覆盖主题。",
+            "让 agent 读组件文档和约束，生成时按规范选组件而不是自己拼样式。"
+          ],
+          "insights": [
+            "<strong>设计系统第一次把 agent 列为目标用户：</strong>它是给「写代码的不是人」这个场景重新整理组件边界。",
+            "<strong>Beta 就开源，Meta 在抢标准：</strong>设计系统的价值在生态规模，越早开放越容易被当成默认。",
+            "<strong>React 19 加 StyleX 是明确取舍：</strong>它赌编译期样式能同时满足人和机器对一致性的要求。"
+          ],
+          "tags": [
+            "design-system",
+            "react",
+            "stylex",
+            "meta",
+            "components"
+          ],
+          "rank": 9,
+          "count": 1
+        },
+        {
+          "owner": "ranxianglei",
+          "name": "billion-context",
+          "fullName": "ranxianglei / billion-context",
+          "org": "ranxianglei",
+          "url": "https://github.com/ranxianglei/billion-context",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "4,435",
+          "forks": "359",
+          "starsToday": "185",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +185★，4,435★ 首登。一个上下文压缩代理：把 agent 的 base URL 指过来，历史对话被压成分层摘要，可按需解压，号称省 5 倍 token，能撑月级长会话。",
+          "problems": [
+            "<strong>长会话必定撞墙：</strong>越接近上下文窗口上限，模型表现越差，最后直接崩。",
+            "<strong>宿主自带的摘要不可逆：</strong>压完细节就没了，需要回头查原文时找不回来。",
+            "<strong>压缩破坏缓存：</strong>前缀一变，prefix cache 全失效，省下的 token 又赔回去。"
+          ],
+          "usage": [
+            "<code>npm install -g billion-context</code>，用 <code>bili claude</code> 之类的启动器指向你的 agent。",
+            "代理注入 compress、decompress、search_context、acp_status 四个工具，由模型自己决定何时压缩。",
+            "被折叠的区间留在历史里保持摘要状态，需要细节时再解压回来。"
+          ],
+          "insights": [
+            "<strong>「增量、可逆、缓存友好」三个词定义了它和宿主自带摘要的区别：</strong>可逆是最难也最有用的一条。",
+            "<strong>支持近二十种 harness，包括 Hermes：</strong>做在代理层而不是插件层，一次适配就全通，这是协议位置的杠杆。",
+            "<strong>省 token 只是表象：</strong>真正解决的是「一个项目跑一星期」这件事，会话不该因为窗口满而重启。"
+          ],
+          "tags": [
+            "context",
+            "compression",
+            "proxy",
+            "tokens",
+            "coding-agent"
+          ],
+          "rank": 10,
+          "count": 1
+        },
+        {
+          "owner": "vercel-labs",
+          "name": "agent-browser",
+          "fullName": "vercel-labs / agent-browser",
+          "org": "vercel-labs",
+          "url": "https://github.com/vercel-labs/agent-browser",
+          "lang": "Rust",
+          "langClass": "rs",
+          "stars": "46,469",
+          "forks": "3,186",
+          "starsToday": "180",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +180★，4.65万★ 首登。Vercel Labs 给 agent 用的浏览器自动化 CLI：打开页面、读成无障碍树、在 shell 里对元素直接操作。",
+          "problems": [
+            "<strong>agent 读网页靠截图：</strong>烧 token 还不准，长页面直接被截断。",
+            "<strong>Playwright 脚本要人写：</strong>agent 想自己操作浏览器，得先学一套测试框架。",
+            "<strong>页面结构变了就找不到元素：</strong>选择器一崩，整条流程中断。"
+          ],
+          "usage": [
+            "npm 装上 CLI，直接 <code>agent-browser open</code> 一个地址。",
+            "用无障碍树读页面，元素带引用，操作时按引用点。",
+            "在 agent 里把这几个命令当工具调，形成「读、点、再读」的循环。"
+          ],
+          "insights": [
+            "<strong>它和 agent-desktop 是同一个思路的两种边界：</strong>一个管浏览器，一个管操作系统，都用无障碍树代替像素。",
+            "<strong>Vercel 一周内两个项目上榜：</strong>它们在赌 agent 的行动能力是下一个入口。",
+            "<strong>以 CLI 形式发布而不是 SDK：</strong>因为 CLI 能被任何 agent 直接调用，不用适配各家框架。"
+          ],
+          "tags": [
+            "browser",
+            "automation",
+            "cli",
+            "rust",
+            "accessibility"
+          ],
+          "rank": 11,
+          "count": 1
+        },
+        {
+          "owner": "Usagi-org",
+          "name": "ai-goofish-monitor",
+          "fullName": "Usagi-org / ai-goofish-monitor",
+          "org": "Usagi-org",
+          "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "18,285",
+          "forks": "3,014",
+          "starsToday": "146",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +146★，1.83万★，第 2 次上榜。Playwright 加多模态模型的闲鱼监控：自然语言建任务，按价格、区域、包邮筛选，命中推飞书、企业微信、Bark 或 Telegram。",
+          "problems": [
+            "<strong>好价商品活不过几分钟：</strong>等你刷到，已经被拍下。",
+            "<strong>筛选条件太粗：</strong>平台只能按关键词和价格，看不出成色和猫腻。",
+            "<strong>多账号易被风控：</strong>手动切号换 IP，效率极低。"
+          ],
+          "usage": [
+            "克隆仓库，<code>cp .env.example .env</code> 填配置，<code>docker compose up -d</code>。",
+            "打开 Web 界面用自然语言建任务，配 AI 评分标准。",
+            "绑通知渠道，配 Cron 定时跑，多账号和代理池轮换。"
+          ],
+          "insights": [
+            "<strong>隔一天又上榜：</strong>这类工具的热度不看技术，看某个品类最近有没有行情。",
+            "<strong>多模态模型在二手场景才显出价值：</strong>判断成色、识别图片里的坑，关键词匹配做不到。",
+            "<strong>账号池和代理轮换说明对抗成本：</strong>平台风控和工具一直在互相升级，这类项目天然短命。"
+          ],
+          "tags": [
+            "ecommerce",
+            "monitoring",
+            "multimodal",
+            "playwright",
+            "china"
+          ],
+          "rank": 12,
+          "count": 2
+        },
+        {
+          "owner": "dsx-ai-factory",
+          "name": "nvke",
+          "fullName": "dsx-ai-factory / nvke",
+          "org": "dsx-ai-factory",
+          "url": "https://github.com/dsx-ai-factory/nvke",
+          "lang": "Go",
+          "langClass": "go",
+          "stars": "381",
+          "forks": "78",
+          "starsToday": "125",
+          "badge": "新面孔",
+          "description": "🔥 亮点 —— +125★，381★ 首登。NVIDIA Kubernetes Engine：给 GPU 裸金属机器装一个管理面，让平台团队像卖云一样给自己的客户开 K8s 集群。",
+          "problems": [
+            "<strong>GPU 机器各自为政：</strong>一堆裸金属服务器，调度、隔离、分租全靠手工。",
+            "<strong>自建托管 K8s 太重：</strong>控制面、etcd、节点池都要自己搭。",
+            "<strong>算力卖不上价：</strong>没有多租户和配额，只能整机出租。"
+          ],
+          "usage": [
+            "按文档在管理节点上装 NVKE 管理面。",
+            "为每个租户创建独立的 workload 集群，各自带控制面、etcd 和节点池。",
+            "客户用自己的 kubectl 访问集群，平台侧只管管理面和配额。"
+          ],
+          "insights": [
+            "<strong>星星很少但位置关键：</strong>它解决的是算力怎么像水电一样分租出去，这决定了 GPU 云的成本结构。",
+            "<strong>明确标注 Preview：</strong>NVIDIA 在试探自建云这条路，买不买单取决于中小规模机房。",
+            "<strong>裸金属托管 K8s 是边缘算力的基建：</strong>推理下沉之后，机房会从超大规模变成很多中小节点。"
+          ],
+          "tags": [
+            "kubernetes",
+            "gpu",
+            "infra",
+            "nvidia",
+            "bare-metal"
+          ],
+          "rank": 13,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "label": "前天",
       "icon": "",
       "projects": [
         {
@@ -543,7 +1044,7 @@
     },
     {
       "date": "2026-11-03",
-      "label": "前天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -1082,7 +1583,7 @@
     },
     {
       "date": "2026-11-01",
-      "label": "4天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -1583,7 +2084,7 @@
     },
     {
       "date": "2026-10-28",
-      "label": "8天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -2122,7 +2623,7 @@
     },
     {
       "date": "2026-10-24",
-      "label": "12天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -2433,7 +2934,7 @@
     },
     {
       "date": "2026-10-21",
-      "label": "15天前",
+      "label": "17天前",
       "icon": "",
       "projects": [
         {
@@ -2934,7 +3435,7 @@
     },
     {
       "date": "2026-10-19",
-      "label": "17天前",
+      "label": "19天前",
       "icon": "",
       "projects": [
         {
@@ -3359,7 +3860,7 @@
     },
     {
       "date": "2026-10-18",
-      "label": "18天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -3860,7 +4361,7 @@
     },
     {
       "date": "2026-10-17",
-      "label": "19天前",
+      "label": "21天前",
       "icon": "",
       "projects": [
         {
@@ -4361,7 +4862,7 @@
     },
     {
       "date": "2026-10-15",
-      "label": "21天前",
+      "label": "23天前",
       "icon": "",
       "projects": [
         {
@@ -4824,7 +5325,7 @@
     },
     {
       "date": "2026-10-11",
-      "label": "25天前",
+      "label": "27天前",
       "icon": "",
       "projects": [
         {
@@ -5325,7 +5826,7 @@
     },
     {
       "date": "2026-10-09",
-      "label": "27天前",
+      "label": "29天前",
       "icon": "",
       "projects": [
         {
@@ -5674,7 +6175,7 @@
     },
     {
       "date": "2026-09-29",
-      "label": "37天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -6137,7 +6638,7 @@
     },
     {
       "date": "2026-09-28",
-      "label": "38天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -6448,7 +6949,7 @@
     },
     {
       "date": "2026-09-27",
-      "label": "39天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -6797,7 +7298,7 @@
     },
     {
       "date": "2026-09-24",
-      "label": "42天前",
+      "label": "44天前",
       "icon": "",
       "projects": [
         {
@@ -7222,7 +7723,7 @@
     },
     {
       "date": "2026-09-23",
-      "label": "43天前",
+      "label": "45天前",
       "icon": "",
       "projects": [
         {
@@ -7533,7 +8034,7 @@
     },
     {
       "date": "2026-09-21",
-      "label": "45天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -7920,7 +8421,7 @@
     },
     {
       "date": "2026-09-20",
-      "label": "46天前",
+      "label": "48天前",
       "icon": "",
       "projects": [
         {
@@ -8345,7 +8846,7 @@
     },
     {
       "date": "2026-09-19",
-      "label": "47天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -8808,7 +9309,7 @@
     },
     {
       "date": "2026-09-18",
-      "label": "48天前",
+      "label": "50天前",
       "icon": "",
       "projects": [
         {
@@ -9271,7 +9772,7 @@
     },
     {
       "date": "2026-09-17",
-      "label": "49天前",
+      "label": "51天前",
       "icon": "",
       "projects": [
         {
@@ -9810,7 +10311,7 @@
     },
     {
       "date": "2026-09-10",
-      "label": "56天前",
+      "label": "58天前",
       "icon": "",
       "projects": [
         {
@@ -10273,7 +10774,7 @@
     },
     {
       "date": "2026-09-08",
-      "label": "58天前",
+      "label": "60天前",
       "icon": "",
       "projects": [
         {
@@ -10736,7 +11237,7 @@
     },
     {
       "date": "2026-08-31",
-      "label": "66天前",
+      "label": "68天前",
       "icon": "",
       "projects": [
         {
@@ -11199,7 +11700,7 @@
     },
     {
       "date": "2026-08-30",
-      "label": "67天前",
+      "label": "69天前",
       "icon": "",
       "projects": [
         {
@@ -11624,7 +12125,7 @@
     },
     {
       "date": "2026-08-29",
-      "label": "68天前",
+      "label": "70天前",
       "icon": "",
       "projects": [
         {
@@ -12087,7 +12588,7 @@
     },
     {
       "date": "2026-08-28",
-      "label": "69天前",
+      "label": "71天前",
       "icon": "",
       "projects": [
         {
@@ -12474,7 +12975,7 @@
     },
     {
       "date": "2026-08-27",
-      "label": "70天前",
+      "label": "72天前",
       "icon": "",
       "projects": [
         {
@@ -12937,7 +13438,7 @@
     },
     {
       "date": "2026-08-26",
-      "label": "71天前",
+      "label": "73天前",
       "icon": "",
       "projects": [
         {
@@ -13388,7 +13889,7 @@
     },
     {
       "date": "2026-08-25",
-      "label": "72天前",
+      "label": "74天前",
       "icon": "",
       "projects": [
         {
@@ -13802,7 +14303,7 @@
     },
     {
       "date": "2026-08-23",
-      "label": "74天前",
+      "label": "76天前",
       "icon": "",
       "projects": [
         {
@@ -14179,7 +14680,7 @@
     },
     {
       "date": "2026-08-20",
-      "label": "77天前",
+      "label": "79天前",
       "icon": "",
       "projects": [
         {
@@ -14482,7 +14983,7 @@
     },
     {
       "date": "2026-08-19",
-      "label": "78天前",
+      "label": "80天前",
       "icon": "",
       "projects": [
         {
@@ -14822,7 +15323,7 @@
     },
     {
       "date": "2026-08-18",
-      "label": "79天前",
+      "label": "81天前",
       "icon": "",
       "projects": [
         {
@@ -15125,7 +15626,7 @@
     },
     {
       "date": "2026-08-17",
-      "label": "80天前",
+      "label": "82天前",
       "icon": "",
       "projects": [
         {
@@ -15391,7 +15892,7 @@
     },
     {
       "date": "2026-08-16",
-      "label": "81天前",
+      "label": "83天前",
       "icon": "",
       "projects": [
         {
@@ -15657,7 +16158,7 @@
     },
     {
       "date": "2026-08-14",
-      "label": "83天前",
+      "label": "85天前",
       "icon": "",
       "projects": [
         {
@@ -15923,7 +16424,7 @@
     },
     {
       "date": "2026-08-13",
-      "label": "84天前",
+      "label": "86天前",
       "icon": "",
       "projects": [
         {
@@ -16189,7 +16690,7 @@
     },
     {
       "date": "2026-08-10",
-      "label": "87天前",
+      "label": "89天前",
       "icon": "",
       "projects": [
         {
@@ -16455,7 +16956,7 @@
     },
     {
       "date": "2026-08-08",
-      "label": "89天前",
+      "label": "91天前",
       "icon": "",
       "projects": [
         {
@@ -16721,7 +17222,7 @@
     },
     {
       "date": "2026-08-06",
-      "label": "91天前",
+      "label": "93天前",
       "icon": "",
       "projects": [
         {
@@ -16987,7 +17488,7 @@
     },
     {
       "date": "2026-07-30",
-      "label": "98天前",
+      "label": "100天前",
       "icon": "",
       "projects": [
         {
@@ -17253,7 +17754,7 @@
     },
     {
       "date": "2026-07-29",
-      "label": "99天前",
+      "label": "101天前",
       "icon": "",
       "projects": [
         {
@@ -17519,7 +18020,7 @@
     },
     {
       "date": "2026-07-28",
-      "label": "100天前",
+      "label": "102天前",
       "icon": "",
       "projects": [
         {
@@ -17785,7 +18286,7 @@
     },
     {
       "date": "2026-07-22",
-      "label": "106天前",
+      "label": "108天前",
       "icon": "",
       "projects": [
         {
@@ -17971,7 +18472,7 @@
     },
     {
       "date": "2026-07-19",
-      "label": "109天前",
+      "label": "111天前",
       "icon": "",
       "projects": [
         {
@@ -18163,7 +18664,7 @@
     },
     {
       "date": "2026-07-17",
-      "label": "111天前",
+      "label": "113天前",
       "icon": "",
       "projects": [
         {
@@ -18355,7 +18856,7 @@
     },
     {
       "date": "2026-07-14",
-      "label": "114天前",
+      "label": "116天前",
       "icon": "",
       "projects": [
         {
@@ -18547,7 +19048,7 @@
     },
     {
       "date": "2026-07-13",
-      "label": "115天前",
+      "label": "117天前",
       "icon": "",
       "projects": [
         {
@@ -18739,7 +19240,7 @@
     },
     {
       "date": "2026-07-11",
-      "label": "117天前",
+      "label": "119天前",
       "icon": "",
       "projects": [
         {
@@ -18931,7 +19432,7 @@
     },
     {
       "date": "2026-07-07",
-      "label": "121天前",
+      "label": "123天前",
       "icon": "",
       "projects": [
         {
@@ -19123,7 +19624,7 @@
     },
     {
       "date": "2026-07-06",
-      "label": "122天前",
+      "label": "124天前",
       "icon": "",
       "projects": [
         {
@@ -19315,7 +19816,7 @@
     },
     {
       "date": "2026-07-04",
-      "label": "124天前",
+      "label": "126天前",
       "icon": "",
       "projects": [
         {
@@ -19507,7 +20008,7 @@
     },
     {
       "date": "2026-07-02",
-      "label": "126天前",
+      "label": "128天前",
       "icon": "",
       "projects": [
         {
@@ -19699,7 +20200,7 @@
     },
     {
       "date": "2026-07-01",
-      "label": "127天前",
+      "label": "129天前",
       "icon": "",
       "projects": [
         {
@@ -19891,7 +20392,7 @@
     },
     {
       "date": "2026-06-30",
-      "label": "128天前",
+      "label": "130天前",
       "icon": "",
       "projects": [
         {
@@ -20083,7 +20584,7 @@
     },
     {
       "date": "2026-06-28",
-      "label": "130天前",
+      "label": "132天前",
       "icon": "",
       "projects": [
         {
@@ -20275,7 +20776,7 @@
     },
     {
       "date": "2026-06-27",
-      "label": "131天前",
+      "label": "133天前",
       "icon": "",
       "projects": [
         {
@@ -20467,7 +20968,7 @@
     },
     {
       "date": "2026-06-26",
-      "label": "132天前",
+      "label": "134天前",
       "icon": "",
       "projects": [
         {
@@ -20659,7 +21160,7 @@
     },
     {
       "date": "2026-06-25",
-      "label": "133天前",
+      "label": "135天前",
       "icon": "",
       "projects": [
         {
@@ -20851,7 +21352,7 @@
     },
     {
       "date": "2026-06-21",
-      "label": "137天前",
+      "label": "139天前",
       "icon": "",
       "projects": [
         {
@@ -21043,7 +21544,7 @@
     },
     {
       "date": "2026-06-20",
-      "label": "138天前",
+      "label": "140天前",
       "icon": "",
       "projects": [
         {
@@ -21235,7 +21736,7 @@
     },
     {
       "date": "2026-06-19",
-      "label": "139天前",
+      "label": "141天前",
       "icon": "",
       "projects": [
         {
@@ -21427,7 +21928,7 @@
     },
     {
       "date": "2026-06-18",
-      "label": "140天前",
+      "label": "142天前",
       "icon": "",
       "projects": [
         {
@@ -21618,7 +22119,7 @@
     },
     {
       "date": "2026-06-17",
-      "label": "141天前",
+      "label": "143天前",
       "icon": "",
       "projects": [
         {
@@ -21810,7 +22311,7 @@
     },
     {
       "date": "2026-06-15",
-      "label": "143天前",
+      "label": "145天前",
       "icon": "",
       "projects": [
         {
@@ -22002,7 +22503,7 @@
     },
     {
       "date": "2026-06-14",
-      "label": "144天前",
+      "label": "146天前",
       "icon": "",
       "projects": [
         {
@@ -22194,7 +22695,7 @@
     },
     {
       "date": "2026-06-13",
-      "label": "145天前",
+      "label": "147天前",
       "icon": "",
       "projects": [
         {
@@ -22386,7 +22887,7 @@
     },
     {
       "date": "2026-06-12",
-      "label": "146天前",
+      "label": "148天前",
       "icon": "",
       "projects": [
         {
@@ -22578,7 +23079,7 @@
     },
     {
       "date": "2026-06-10",
-      "label": "148天前",
+      "label": "150天前",
       "icon": "",
       "projects": [
         {
@@ -22771,7 +23272,7 @@
     },
     {
       "date": "2026-06-09",
-      "label": "149天前",
+      "label": "151天前",
       "icon": "",
       "projects": [
         {
@@ -22964,7 +23465,7 @@
     },
     {
       "date": "2026-06-08",
-      "label": "150天前",
+      "label": "152天前",
       "icon": "",
       "projects": [
         {
@@ -23157,7 +23658,7 @@
     },
     {
       "date": "2026-06-06",
-      "label": "152天前",
+      "label": "154天前",
       "icon": "",
       "projects": [
         {
@@ -23350,7 +23851,7 @@
     },
     {
       "date": "2026-06-05",
-      "label": "153天前",
+      "label": "155天前",
       "icon": "",
       "projects": [
         {
@@ -23548,7 +24049,7 @@
     },
     {
       "date": "2026-06-04",
-      "label": "154天前",
+      "label": "156天前",
       "icon": "",
       "projects": [
         {
@@ -23745,7 +24246,7 @@
     },
     {
       "date": "2026-06-03",
-      "label": "155天前",
+      "label": "157天前",
       "icon": "",
       "projects": [
         {
@@ -23942,7 +24443,7 @@
     },
     {
       "date": "2026-06-02",
-      "label": "156天前",
+      "label": "158天前",
       "icon": "",
       "projects": [
         {
@@ -24139,7 +24640,7 @@
     },
     {
       "date": "2026-05-31",
-      "label": "158天前",
+      "label": "160天前",
       "icon": "",
       "projects": [
         {
@@ -24337,7 +24838,7 @@
     },
     {
       "date": "2026-05-30",
-      "label": "159天前",
+      "label": "161天前",
       "icon": "",
       "projects": [
         {
@@ -24532,7 +25033,7 @@
     },
     {
       "date": "2026-05-29",
-      "label": "160天前",
+      "label": "162天前",
       "icon": "",
       "projects": [
         {
@@ -24727,7 +25228,7 @@
     },
     {
       "date": "2026-05-28",
-      "label": "161天前",
+      "label": "163天前",
       "icon": "",
       "projects": [
         {
@@ -24923,7 +25424,7 @@
     },
     {
       "date": "2026-05-26",
-      "label": "163天前",
+      "label": "165天前",
       "icon": "",
       "projects": [
         {
@@ -25119,7 +25620,7 @@
     },
     {
       "date": "2026-05-25",
-      "label": "164天前",
+      "label": "166天前",
       "icon": "",
       "projects": [
         {
@@ -25313,7 +25814,7 @@
     },
     {
       "date": "2026-05-24",
-      "label": "165天前",
+      "label": "167天前",
       "icon": "",
       "projects": [
         {
@@ -25511,7 +26012,7 @@
     },
     {
       "date": "2026-05-22",
-      "label": "167天前",
+      "label": "169天前",
       "icon": "",
       "projects": [
         {
@@ -25713,7 +26214,7 @@
     },
     {
       "date": "2026-05-21",
-      "label": "168天前",
+      "label": "170天前",
       "icon": "",
       "projects": [
         {
@@ -25915,7 +26416,7 @@
     },
     {
       "date": "2026-05-20",
-      "label": "169天前",
+      "label": "171天前",
       "icon": "",
       "projects": [
         {
@@ -26117,7 +26618,7 @@
     },
     {
       "date": "2026-05-19",
-      "label": "170天前",
+      "label": "172天前",
       "icon": "",
       "projects": [
         {
@@ -26319,7 +26820,7 @@
     },
     {
       "date": "2026-05-18",
-      "label": "171天前",
+      "label": "173天前",
       "icon": "",
       "projects": [
         {
@@ -26521,7 +27022,7 @@
     },
     {
       "date": "2026-05-17",
-      "label": "172天前",
+      "label": "174天前",
       "icon": "",
       "projects": [
         {
@@ -26723,7 +27224,7 @@
     },
     {
       "date": "2026-05-16",
-      "label": "173天前",
+      "label": "175天前",
       "icon": "",
       "projects": [
         {
@@ -26925,7 +27426,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "177天前",
+      "label": "179天前",
       "icon": "",
       "projects": [
         {
@@ -27125,7 +27626,7 @@
     },
     {
       "date": "2026-05-13",
-      "label": "176天前",
+      "label": "178天前",
       "icon": "",
       "projects": [
         {
@@ -27321,7 +27822,7 @@
     },
     {
       "date": "2026-05-12",
-      "label": "177天前",
+      "label": "179天前",
       "icon": "",
       "projects": [
         {
