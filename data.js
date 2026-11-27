@@ -2,12 +2,513 @@
 // Edit data.json and run: bash scripts/update-data.sh
 
 var siteData = {
-  "lastUpdated": "2026-11-24",
-  "topic": "🔥 <strong>今日主题：热度不在模型，在「AI 怎么被装进软件」。</strong>Cursor 把官方插件写成带 manifest 的应用商店、CLI-Anything 给 GUI 软件套一层命令行、superpowers 给编码 agent 灌方法论，三者抢的是同一个位置：agent 与现有软件之间的接口。另一条线是上下文清洗，markitdown 把文档转成 Markdown、firecrawl 把网页洗成干净输入，它们的共同前提是模型已经够用，脏数据才是瓶颈。判断：工具层已经饱和，接下来比的是谁定义标准、谁掌握分发。",
+  "lastUpdated": "2026-11-27",
+  "topic": "🔥 <strong>今日主题：agent 开始长出具体的手脚，技能包变成了分发单元。</strong>phone-harness 让它点手机、opensre 让它修 CI、autoclip 把剪辑变成 MCP 可调用的动作、treg 把上千个付费接口折成按次计费——这些项目的共同点是不再争论模型多聪明，直接去补 agent 够不到的地方。另一边，Claude-BugHunter、superpowers、diagram-design、stitch-skills 连续霸榜，说明竞争已经从「谁的模型强」转到「谁的技能包先被装进客户端」。判断：模型能力正在变成水电，接口和凭据才是稀缺资源；接下来一年，能赢的项目是那些握着别人拿不到的数据源与操作权的项目。",
   "days": [
     {
-      "date": "2026-11-24",
+      "date": "2026-11-27",
       "label": "今天",
+      "icon": "",
+      "projects": [
+        {
+          "owner": "elementalsouls",
+          "name": "Claude-BugHunter",
+          "fullName": "elementalsouls / Claude-BugHunter",
+          "org": "elementalsouls",
+          "url": "https://github.com/elementalsouls/Claude-BugHunter",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "25,492",
+          "forks": "2,604",
+          "starsToday": "1,615",
+          "badge": "新面孔",
+          "description": "🔥 当天最高 +1,615★ —— 2.5 万★，第 7 次上榜。85 个技能、16 个斜杠命令、681 份披露报告拆成四层：先想、再打 Web、再打边界、最后交付。",
+          "problems": [
+            "<strong>挖洞知识不成体系：</strong>方法、payload、绕过表散在博客和笔记里，实战时凑不齐一条完整链路。",
+            "<strong>边界资产最难打：</strong>M365/Entra、Okta、vCenter、SSL-VPN 这些企业外围，公开资料只到 CVE 编号。",
+            "<strong>写到报告就散架：</strong>严重性评级、OOS 反驳、PII 脱敏，每份报告都在重新发明流程。"
+          ],
+          "usage": [
+            "把 skills 目录放进 Claude Code 技能路径，重启后按话题自动触发对应技能。",
+            "打 Web 应用时用 58 个 hunt-* 技能里的检测模式、payload 与链式模板，别再手搓字典。",
+            "收尾走 triage-validation 的七问门禁与 VRT 评级，报告与证据脱敏一步到位。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>四层结构（think / hunt / perimeter / ship）比技能数量更值钱，它把一次红队作业的完整流程框住了。",
+            "<strong>判断：</strong>681 份报告里挑出 58 个类别的检测模式，这是把公开情报变成可执行动作的少数成功案例。",
+            "<strong>判断：</strong>README 反复强调 stay in scope。工具越强，越需要把授权边界写进流程，否则第一批受害者会是使用者自己。"
+          ],
+          "tags": [
+            "security",
+            "red-team",
+            "claude-skills",
+            "bug-bounty",
+            "pentest"
+          ],
+          "rank": 1,
+          "count": 7
+        },
+        {
+          "owner": "obra",
+          "name": "superpowers",
+          "fullName": "obra / superpowers",
+          "org": "obra",
+          "url": "https://github.com/obra/superpowers",
+          "lang": "Shell",
+          "langClass": "sh",
+          "stars": "328,002",
+          "forks": "29,132",
+          "starsToday": "916",
+          "badge": "新面孔",
+          "description": "🔥 第 27 次上榜 —— +916★，32.8 万★。给编码 agent 装一套开发方法论：先问清要什么，再把规格拆成能读完的小块，然后才写代码。",
+          "problems": [
+            "<strong>一看到需求就开写：</strong>方向错了才发现，返工比从零做还贵。",
+            "<strong>规格没人读完：</strong>几十页文档躺在仓库里，执行时无人对照。",
+            "<strong>换个客户端就重教：</strong>Claude Code、Codex、Cursor 各有一套工作流，团队里三种习惯并存。"
+          ],
+          "usage": [
+            "按 README 的安装段挑客户端，十几家（含 Hermes Agent）都有对应命令。",
+            "启动后它会追问真实目标，并把 spec 分块推给你确认。",
+            "走偏时按 When Something Goes Wrong 一节的回退流程重来，不要在错的路上继续堆 prompt。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>27 次上榜靠的不是新鲜度而是装机量，跨十几个客户端的安装表本身就是分发策略。",
+            "<strong>判断：</strong>它卖的是纪律：把先想清楚再动手固化进流程，比升级模型便宜得多。",
+            "<strong>判断：</strong>方法论类项目能长期霸榜，说明工具层已饱和，稀缺的是知道什么时候该让 agent 停下来问。"
+          ],
+          "tags": [
+            "agent",
+            "methodology",
+            "claude-code",
+            "workflow",
+            "skills"
+          ],
+          "rank": 2,
+          "count": 27
+        },
+        {
+          "owner": "firecrawl",
+          "name": "firecrawl",
+          "fullName": "firecrawl / firecrawl",
+          "org": "firecrawl",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "211,383",
+          "forks": "11,103",
+          "starsToday": "833",
+          "badge": "新面孔",
+          "description": "🔥 抓网页给 agent 吃 —— +833★，21.1 万★，第 5 次上榜。搜索、抓取、接 550+ 数据源走同一个 API，吐出来直接是干净 Markdown。",
+          "problems": [
+            "<strong>爬虫写完就失效：</strong>反爬一改解析全崩，维护像打地鼠。",
+            "<strong>噪声吃掉上下文：</strong>抓下来一半是导航和广告，token 花在没用的地方。",
+            "<strong>十套解析并行：</strong>搜索、网页、结构化站点各接各的，最后没人敢动。"
+          ],
+          "usage": [
+            "用官方 SDK 或 /scrape、/crawl 端点，一次调用拿到 markdown。",
+            "不想托管就自部署开源版，跑在自己的机器上。",
+            "配 /search 或数据源接口做检索增强，别把抓取和检索拆成两条线。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>21 万★ 的爬虫项目，护城河在清洗加结构化，以及 550 个数据源的接入量。",
+            "<strong>判断：</strong>开源版能自部署，托管服务才是收入来源。用之前先想清楚数据允不允许出门。",
+            "<strong>判断：</strong>agent 的瓶颈正从模型不够聪明转向上下文太脏，这类基建继续吃红利。"
+          ],
+          "tags": [
+            "scraping",
+            "rag",
+            "api",
+            "markdown",
+            "data"
+          ],
+          "rank": 3,
+          "count": 5
+        },
+        {
+          "owner": "zhouxiaoka",
+          "name": "autoclip",
+          "fullName": "zhouxiaoka / autoclip",
+          "org": "zhouxiaoka",
+          "url": "https://github.com/zhouxiaoka/autoclip",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "17,400",
+          "forks": "2,451",
+          "starsToday": "733",
+          "badge": "新面孔",
+          "description": "🔥 开源版 OpusClip —— +733★，1.74 万★，第 6 次上榜。v1.6 新增 6 种直播回放源，OBS 录完自动排队出片，还带 MCP server。",
+          "problems": [
+            "<strong>直播录完还得熬夜剪：</strong>两小时回放挑高光、裁切、配字幕，人工一晚上就没了。",
+            "<strong>云端工具按月收费：</strong>素材上传队列排到明天，订阅费和隐私一起交代出去。",
+            "<strong>一套素材要发五六个平台：</strong>比例、封面、标题每样重做一遍。"
+          ],
+          "usage": [
+            "从 releases 下桌面版，拖入链接、本地文件或 OBS/Twitch/YouTube/Kick/Discord 回放。",
+            "接 OBS WebSocket（4455），下播后用 <pre><code>-c copy</code></pre> 无损切片并自动排队。",
+            "接 MCP server 让 agent 触发剪辑，或用 Ollama/LM Studio + Whisper/SenseVoice 全离线跑。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>直播场景是这类工具真正的现金牛：一场直播产生几十条候选片段，人工根本筛不过来。",
+            "<strong>判断：</strong>MCP server 这个加法比多支持一个平台更关键，它把剪辑变成 agent 可调用的动作。",
+            "<strong>判断：</strong>13 种语言界面，加上本地优先的主张，目标用户从一开始就是海外创作者。"
+          ],
+          "tags": [
+            "video",
+            "clipping",
+            "local-first",
+            "mcp",
+            "creator"
+          ],
+          "rank": 4,
+          "count": 6
+        },
+        {
+          "owner": "cathrynlavery",
+          "name": "diagram-design",
+          "fullName": "cathrynlavery / diagram-design",
+          "org": "cathrynlavery",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "lang": "HTML",
+          "langClass": "html",
+          "stars": "74,257",
+          "forks": "4,993",
+          "starsToday": "731",
+          "badge": "新面孔",
+          "description": "🔥 让 agent 画好看的图 —— +731★，7.4 万★，第 10 次上榜。52 种图型，输出一个自包含的 HTML+SVG 文件，能抓你网站的配色和字体。",
+          "problems": [
+            "<strong>Mermaid 生成的图一眼假：</strong>阴影、圆角、字体全一样，放进方案书里掉档次。",
+            "<strong>品牌一致性靠人盯：</strong>每张图都要手动改配色，改完十张已经不是一个风格。",
+            "<strong>改图要回工具里：</strong>代理生成的图想微调，得重新描述一遍。"
+          ],
+          "usage": [
+            "<pre><code>npx skills add cathrynlavery/diagram-design</code></pre> 装进任意支持 Agent Skills 的客户端。",
+            "直接用中文描述：给我一张前后端加 Redis 的架构图，或者 Q2 项目的影响/成本四象限。",
+            "一句 onboard 到你的站点，它会把配色和字体拉下来，之后所有图同风格；也能从 drawio/mermaid/excalidraw/plantuml 导入。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>「No shadows. No Mermaid slop.」这句挑衅写进了产品定位：图的审美是可交付物的一部分。",
+            "<strong>判断：</strong>单文件 HTML+SVG 是个聪明选择，双击就能看，发微信、贴 Notion、进 PPT 都不用导出。",
+            "<strong>判断：</strong>技能类项目反复上榜，说明真需求不在模型，在产出物的最后一公里。"
+          ],
+          "tags": [
+            "diagram",
+            "agent-skills",
+            "svg",
+            "branding",
+            "design"
+          ],
+          "rank": 5,
+          "count": 10
+        },
+        {
+          "owner": "HKUDS",
+          "name": "CLI-Anything",
+          "fullName": "HKUDS / CLI-Anything",
+          "org": "HKUDS",
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "66,753",
+          "forks": "6,106",
+          "starsToday": "668",
+          "badge": "新面孔",
+          "description": "🔥 给所有软件套一层 CLI 让 agent 能用 —— +668★，6.7 万★，第 12 次上榜。18 个真实应用 demo、2,461 个测试通过，cli-hub install 一键装别人的 harness。",
+          "problems": [
+            "<strong>GUI 软件没有 API：</strong>agent 只能截图点鼠标，慢且脆，改个版就失效。",
+            "<strong>适配层写一次用一次：</strong>每个软件单独包装，写完没人复用。",
+            "<strong>输出格式不统一：</strong>agent 解析全靠猜，换个软件就得改 prompt。"
+          ],
+          "usage": [
+            "<pre><code>pip install cli-anything-hub</code></pre>",
+            "<pre><code>cli-hub install &lt;name&gt;</code></pre> 浏览并安装社区建好的 CLI。",
+            "自建 harness 后提 PR，hub 立即更新。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>12 次上榜说明「给软件装手脚」是长期需求，不是一时热度。",
+            "<strong>判断：</strong>2,461 个测试与 18 个 demo 让产出可验证（CAD、3D 场景、字幕），这比 prompt 包装项目高一个层级。",
+            "<strong>判断：</strong>中心化 hub 加社区 PR，抢的是 agent 与软件之间的标准接口，这个位置比单个工具值钱。"
+          ],
+          "tags": [
+            "cli",
+            "agent",
+            "harness",
+            "automation",
+            "agent-native"
+          ],
+          "rank": 6,
+          "count": 12
+        },
+        {
+          "owner": "jingyaogong",
+          "name": "minimind",
+          "fullName": "jingyaogong / minimind",
+          "org": "jingyaogong",
+          "url": "https://github.com/jingyaogong/minimind",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "72,074",
+          "forks": "9,389",
+          "starsToday": "667",
+          "badge": "新面孔",
+          "description": "🔥 3 块钱 2 小时训出 64M 小模型 —— +667★，7.2 万★，第 6 次上榜。预训练到 RLHF、Agentic RL、蒸馏整条链路全开源，单卡可复现。",
+          "problems": [
+            "<strong>教程停在调 API：</strong>想从零训一个模型，找不到完整可跑的代码。",
+            "<strong>论文与实现差一截：</strong>数据清洗、超参、训练细节，论文里不写全。",
+            "<strong>RLHF 无处下手：</strong>PPO、DPO、GRPO 讲得多，能跑起来的项目少。"
+          ],
+          "usage": [
+            "<pre><code>git clone https://github.com/jingyaogong/minimind</code></pre> 后按 README 装依赖。",
+            "下载数据集，按 Pretrain、SFT、LoRA/DPO、RLAIF 顺序跑各阶段脚本。",
+            "同仓库还有 -V 视觉版、-O 多模态版、-dLM 扩散语言模型可参考。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>主线模型约是 GPT-3 的 1/2700，价值不在能力，在每一环都能自己搓一遍。",
+            "<strong>判断：</strong>覆盖 MoE、数据清洗、RLAIF（PPO/GRPO/CISPO）、Tool Use、Agentic RL，覆盖面比多数付费课程完整。",
+            "<strong>判断：</strong>中文文档加单卡成本，是它反复上榜的原因：教学类项目复访率天然高于工具类。"
+          ],
+          "tags": [
+            "llm",
+            "from-scratch",
+            "training",
+            "rl",
+            "tutorial"
+          ],
+          "rank": 7,
+          "count": 6
+        },
+        {
+          "owner": "mvanhorn",
+          "name": "last30days-skill",
+          "fullName": "mvanhorn / last30days-skill",
+          "org": "mvanhorn",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "76,155",
+          "forks": "6,749",
+          "starsToday": "664",
+          "badge": "新面孔",
+          "description": "🔥 用投票和真金白银排序的搜索 —— +664★，7.6 万★，第 7 次上榜。Reddit、HN、Polymarket、GitHub 开箱即用，专利和招聘页也能查。",
+          "problems": [
+            "<strong>搜索引擎被 SEO 洗了：</strong>搜一个话题，前十条是内容农场。",
+            "<strong>多平台要开一堆标签页：</strong>Reddit 一个界面、HN 一个、X 又一个，最后自己汇总。",
+            "<strong>时效性无法控制：</strong>想要最近 30 天，只能一条条看日期。"
+          ],
+          "usage": [
+            "Claude Code：<pre><code>/plugin marketplace add mvanhorn/last30days-skill</code></pre> 再 install last30days。",
+            "其它客户端：<pre><code>npx skills add mvanhorn/last30days-skill -g</code></pre> 全局安装。",
+            "跑一次走完引导，解锁 X、YouTube、TikTok、arXiv、Techmeme，之后一句话出简报。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>它把排序权交回给人：upvote、点赞、真金白银的下注，比编辑推荐难刷得多。",
+            "<strong>判断：</strong>Polymarket 的赔率作为信号源很少见，对判断事件真伪比新闻标题可靠。",
+            "<strong>判断：</strong>零配置就能跑，是这类 skill 扩散的关键，注册门槛每加一步就流失一半用户。"
+          ],
+          "tags": [
+            "research",
+            "agent-skills",
+            "search",
+            "social",
+            "briefing"
+          ],
+          "rank": 8,
+          "count": 7
+        },
+        {
+          "owner": "superdesigndev",
+          "name": "treg",
+          "fullName": "superdesigndev / treg",
+          "org": "superdesigndev",
+          "url": "https://github.com/superdesigndev/treg",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "9,698",
+          "forks": "1,002",
+          "starsToday": "501",
+          "badge": "新面孔",
+          "description": "🔥 工具版的 OpenRouter —— +501★，9,698★，第 3 次上榜。一个 base URL 一个 token，调上千个按次计费的数据接口，不用挨个注册供应商。",
+          "problems": [
+            "<strong>数据接口按年订阅：</strong>Semrush $139/月、Moz $99/月、Crunchbase $99/月，只为跑一次也得买整年。",
+            "<strong>要么没 API：</strong>邀请制、合作方专用、只开放应用审核，agent 根本接不上。",
+            "<strong>密钥散在每个人本机：</strong>团队里谁的 key 都能看到，离职后没人回收。"
+          ],
+          "usage": [
+            "把 agent 指到一个 base URL 并带上 token，先搜任务再调用，按次计价。",
+            "自托管也行，官方实例在 treg.to，团队自有密钥留在服务端不落地到 agent。",
+            "新验证账号送 $1 额度，够把整条链路试通。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>这是把「工具」当成模型来做路由：模型层已经收敛到几家，工具层还在野蛮生长，中间必然出现聚合层。",
+            "<strong>判断：</strong>按次计价击中了 agent 的成本结构：任务是一次性的，订阅是持续的。",
+            "<strong>判断：</strong>真正的资产是那些「没有公开 API」的账户，谁能合规地转售调用权，谁就握住定价权。"
+          ],
+          "tags": [
+            "tools",
+            "api",
+            "agent",
+            "pricing",
+            "router"
+          ],
+          "rank": 9,
+          "count": 3
+        },
+        {
+          "owner": "Tracer-Cloud",
+          "name": "opensre",
+          "fullName": "Tracer-Cloud / opensre",
+          "org": "Tracer-Cloud",
+          "url": "https://github.com/Tracer-Cloud/opensre",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "16,010",
+          "forks": "2,112",
+          "starsToday": "326",
+          "badge": "新面孔",
+          "description": "🔥 让 agent 修 CI —— +326★，1.6 万★，第 3 次上榜。CI 只告诉你挂了，它读失败日志、追到根因、把修复推给你审。自托管、用自己的模型。",
+          "problems": [
+            "<strong>CI 只说挂了不说原因：</strong>翻几百行日志找那一行报错。",
+            "<strong>修复靠人肉：</strong>同一个 flaky 测试，三个月里修了五遍。",
+            "<strong>日志不敢外传：</strong>托管型诊断服务要读你的构建日志和仓库结构。"
+          ],
+          "usage": [
+            "macOS/Linux：<pre><code>curl -fsSL https://install.opensre.com | bash -s -- -gh</code></pre>",
+            "在代码仓库里运行 <pre><code>opensre</code></pre>，指向失败的 workflow run。",
+            "它给出根因和补丁，你审完再合，模型与凭据都在自己这边。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>CI 可靠性是个被低估的 agent 落点：输入结构清晰（日志+diff）、输出可验证（测试是否转绿）。",
+            "<strong>判断：</strong>自托管加自带模型，卖的是合规而不是能力，这在企业采购里往往才是决定性因素。",
+            "<strong>判断：</strong>README 明写 public alpha，现在上车的人是在替他们做集成测试，生产环境别急。"
+          ],
+          "tags": [
+            "ci-cd",
+            "agent",
+            "devops",
+            "self-hosted",
+            "reliability"
+          ],
+          "rank": 10,
+          "count": 3
+        },
+        {
+          "owner": "google-labs-code",
+          "name": "stitch-skills",
+          "fullName": "google-labs-code / stitch-skills",
+          "org": "google-labs-code",
+          "url": "https://github.com/google-labs-code/stitch-skills",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "13,470",
+          "forks": "1,593",
+          "starsToday": "311",
+          "badge": "新面孔",
+          "description": "🔥 Google Stitch 的官方技能包 —— +311★，1.3 万★，第 5 次上榜。设计、构建、工具三组插件，跟着 Agent Skills 开放标准走，Codex 和 Claude Code 都能装。",
+          "problems": [
+            "<strong>设计稿到代码断层：</strong>UI 图转成组件，样式、间距、状态全靠人补。",
+            "<strong>每个客户端一套玩法：</strong>Codex 用 marketplace，Claude Code 用 npx，Cursor 又是另一套。",
+            "<strong>设计系统对不齐：</strong>生成的组件和现有 token 打架。"
+          ],
+          "usage": [
+            "Codex：<pre><code>codex plugin marketplace add google-labs-code/stitch-skills --ref main</code></pre>",
+            "Claude Code 与 Cursor：<pre><code>npx plugins add google-labs-code/stitch-skills</code></pre>",
+            "按需只装 stitch-design、stitch-build、stitch-utilities 中的一组，别一次全拉。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>Google 用开放标准发技能，等于承认客户端之争已经打完，先抢内容供给。",
+            "<strong>判断：</strong>三组插件就是三段流水线：设计、构建、工具。拆得越细，越容易被别家复用。",
+            "<strong>判断：</strong>与 Stitch 绑定意味着它是入口，不是独立工具，长期看价值随 Stitch 的采用率浮动。"
+          ],
+          "tags": [
+            "google",
+            "agent-skills",
+            "ui-design",
+            "codegen",
+            "plugin"
+          ],
+          "rank": 11,
+          "count": 5
+        },
+        {
+          "owner": "cursor",
+          "name": "plugins",
+          "fullName": "cursor / plugins",
+          "org": "cursor",
+          "url": "https://github.com/cursor/plugins",
+          "lang": "TypeScript",
+          "langClass": "ts",
+          "stars": "19,921",
+          "forks": "2,200",
+          "starsToday": "242",
+          "badge": "新面孔",
+          "description": "🔥 Cursor 把 IDE 做成应用商店 —— +242★，1.99 万★，第 6 次上榜。Google 全家桶、Salesforce、GitHub、Playwright、X 都是带 manifest 的插件。",
+          "problems": [
+            "<strong>集成靠自己搓：</strong>接内部工具时每个团队各写一套胶水，不管版本，彼此不兼容。",
+            "<strong>权限边界说不清：</strong>SaaS 授权散在各处脚本里，审计时讲不明白 agent 能碰什么。",
+            "<strong>复用只能复制粘贴：</strong>没有可安装、可升级的分发单元。"
+          ],
+          "usage": [
+            "<pre><code>git clone https://github.com/cursor/plugins</code></pre> 每个目录自带 <pre><code>.cursor-plugin/plugin.json</code></pre>。",
+            "从插件市场直接安装 third_party 下的 github、playwright、salesforce、google-sheets。",
+            "照 create-plugin 脚手架写自己的集成，用 agent-compatibility 校验跨客户端兼容性。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>比的不是模型，是哪家 SaaS 先被写成插件。这是 IDE 抢分发入口的老剧本。",
+            "<strong>判断：</strong>manifest 比裸 MCP server 多出版本、作者、市场三件套，集成层竞争正从协议转向应用商店。",
+            "<strong>判断：</strong>thermos 这类审查插件已经插手 code review，插件规范迟早要补安全边界。"
+          ],
+          "tags": [
+            "cursor",
+            "plugins",
+            "ai-ide",
+            "mcp",
+            "integrations"
+          ],
+          "rank": 12,
+          "count": 6
+        },
+        {
+          "owner": "phone-harness",
+          "name": "phone-harness",
+          "fullName": "phone-harness / phone-harness",
+          "org": "phone-harness",
+          "url": "https://github.com/phone-harness/phone-harness",
+          "lang": "Python",
+          "langClass": "py",
+          "stars": "6,063",
+          "forks": "638",
+          "starsToday": "100",
+          "badge": "新面孔",
+          "description": "🔥 让 agent 直接用你的手机 —— +100★，6,063★，第 2 次上榜。iPhone 走镜像、安卓走 adb、云机走账号，几行 Python 就能点屏幕、打字、读界面。",
+          "problems": [
+            "<strong>手机操作是自动化的死角：</strong>App 没有 API，脚本测试只能靠人点。",
+            "<strong>Andr​oid 与 iOS 两套逻辑：</strong>adb 和镜像各写一遍，维护成本翻倍。",
+            "<strong>云端真机贵且慢：</strong>跑一次回归测试，排队比执行久。"
+          ],
+          "usage": [
+            "<pre><code>phone-harness doctor</code></pre> 先检查环境：iPhone 要 macOS 15+ 与 iOS 18+ 镜像授权，安卓要 adb 与 USB 调试。",
+            "内联 Python：<pre><code>open_app(\"Notes\")</code></pre>、<pre><code>tap_text(\"New Note\")</code></pre>、<pre><code>screen()</code></pre> 读界面文本。",
+            "MCP 客户端加 <pre><code>https://mcp.phone-harness.com/mcp</code></pre>，或装 Hermes/OpenClaw 插件。"
+          ],
+          "insights": [
+            "<strong>判断：</strong>agent 的最后一公里是「有没有人手去点那个按钮」，手机是最大的一块空白。",
+            "<strong>判断：</strong>用镜像和 adb 而不是越狱/Root，是在合规和安全之间选了个能规模化的点。",
+            "<strong>判断：</strong>只出 100★ 却值得看，因为它补的是能力缺口，不是体验优化，天花板取决于 App 会不会封杀。"
+          ],
+          "tags": [
+            "mobile",
+            "agent",
+            "automation",
+            "adb",
+            "mcp"
+          ],
+          "rank": 13,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "label": "3天前",
       "icon": "",
       "projects": [
         {
@@ -470,7 +971,7 @@ var siteData = {
     },
     {
       "date": "2026-11-23",
-      "label": "昨天",
+      "label": "4天前",
       "icon": "",
       "projects": [
         {
@@ -933,7 +1434,7 @@ var siteData = {
     },
     {
       "date": "2026-11-22",
-      "label": "前天",
+      "label": "5天前",
       "icon": "",
       "projects": [
         {
@@ -1396,7 +1897,7 @@ var siteData = {
     },
     {
       "date": "2026-11-21",
-      "label": "3天前",
+      "label": "6天前",
       "icon": "",
       "projects": [
         {
@@ -1897,7 +2398,7 @@ var siteData = {
     },
     {
       "date": "2026-11-18",
-      "label": "6天前",
+      "label": "9天前",
       "icon": "",
       "projects": [
         {
@@ -2360,7 +2861,7 @@ var siteData = {
     },
     {
       "date": "2026-11-17",
-      "label": "7天前",
+      "label": "10天前",
       "icon": "",
       "projects": [
         {
@@ -2899,7 +3400,7 @@ var siteData = {
     },
     {
       "date": "2026-11-13",
-      "label": "11天前",
+      "label": "14天前",
       "icon": "",
       "projects": [
         {
@@ -3400,7 +3901,7 @@ var siteData = {
     },
     {
       "date": "2026-11-07",
-      "label": "17天前",
+      "label": "20天前",
       "icon": "",
       "projects": [
         {
@@ -3901,7 +4402,7 @@ var siteData = {
     },
     {
       "date": "2026-11-05",
-      "label": "19天前",
+      "label": "22天前",
       "icon": "",
       "projects": [
         {
@@ -4440,7 +4941,7 @@ var siteData = {
     },
     {
       "date": "2026-11-03",
-      "label": "21天前",
+      "label": "24天前",
       "icon": "",
       "projects": [
         {
@@ -4979,7 +5480,7 @@ var siteData = {
     },
     {
       "date": "2026-11-01",
-      "label": "23天前",
+      "label": "26天前",
       "icon": "",
       "projects": [
         {
@@ -5480,7 +5981,7 @@ var siteData = {
     },
     {
       "date": "2026-10-28",
-      "label": "27天前",
+      "label": "30天前",
       "icon": "",
       "projects": [
         {
@@ -6019,7 +6520,7 @@ var siteData = {
     },
     {
       "date": "2026-10-24",
-      "label": "31天前",
+      "label": "34天前",
       "icon": "",
       "projects": [
         {
@@ -6330,7 +6831,7 @@ var siteData = {
     },
     {
       "date": "2026-10-21",
-      "label": "34天前",
+      "label": "37天前",
       "icon": "",
       "projects": [
         {
@@ -6831,7 +7332,7 @@ var siteData = {
     },
     {
       "date": "2026-10-19",
-      "label": "36天前",
+      "label": "39天前",
       "icon": "",
       "projects": [
         {
@@ -7256,7 +7757,7 @@ var siteData = {
     },
     {
       "date": "2026-10-18",
-      "label": "37天前",
+      "label": "40天前",
       "icon": "",
       "projects": [
         {
@@ -7757,7 +8258,7 @@ var siteData = {
     },
     {
       "date": "2026-10-17",
-      "label": "38天前",
+      "label": "41天前",
       "icon": "",
       "projects": [
         {
@@ -8258,7 +8759,7 @@ var siteData = {
     },
     {
       "date": "2026-10-15",
-      "label": "40天前",
+      "label": "43天前",
       "icon": "",
       "projects": [
         {
@@ -8721,7 +9222,7 @@ var siteData = {
     },
     {
       "date": "2026-10-11",
-      "label": "44天前",
+      "label": "47天前",
       "icon": "",
       "projects": [
         {
@@ -9222,7 +9723,7 @@ var siteData = {
     },
     {
       "date": "2026-10-09",
-      "label": "46天前",
+      "label": "49天前",
       "icon": "",
       "projects": [
         {
@@ -9571,7 +10072,7 @@ var siteData = {
     },
     {
       "date": "2026-09-29",
-      "label": "56天前",
+      "label": "59天前",
       "icon": "",
       "projects": [
         {
@@ -10034,7 +10535,7 @@ var siteData = {
     },
     {
       "date": "2026-09-28",
-      "label": "57天前",
+      "label": "60天前",
       "icon": "",
       "projects": [
         {
@@ -10345,7 +10846,7 @@ var siteData = {
     },
     {
       "date": "2026-09-27",
-      "label": "58天前",
+      "label": "61天前",
       "icon": "",
       "projects": [
         {
@@ -10694,7 +11195,7 @@ var siteData = {
     },
     {
       "date": "2026-09-24",
-      "label": "61天前",
+      "label": "64天前",
       "icon": "",
       "projects": [
         {
@@ -11119,7 +11620,7 @@ var siteData = {
     },
     {
       "date": "2026-09-23",
-      "label": "62天前",
+      "label": "65天前",
       "icon": "",
       "projects": [
         {
@@ -11430,7 +11931,7 @@ var siteData = {
     },
     {
       "date": "2026-09-21",
-      "label": "64天前",
+      "label": "67天前",
       "icon": "",
       "projects": [
         {
@@ -11817,7 +12318,7 @@ var siteData = {
     },
     {
       "date": "2026-09-20",
-      "label": "65天前",
+      "label": "68天前",
       "icon": "",
       "projects": [
         {
@@ -12242,7 +12743,7 @@ var siteData = {
     },
     {
       "date": "2026-09-19",
-      "label": "66天前",
+      "label": "69天前",
       "icon": "",
       "projects": [
         {
@@ -12705,7 +13206,7 @@ var siteData = {
     },
     {
       "date": "2026-09-18",
-      "label": "67天前",
+      "label": "70天前",
       "icon": "",
       "projects": [
         {
@@ -13168,7 +13669,7 @@ var siteData = {
     },
     {
       "date": "2026-09-17",
-      "label": "68天前",
+      "label": "71天前",
       "icon": "",
       "projects": [
         {
@@ -13707,7 +14208,7 @@ var siteData = {
     },
     {
       "date": "2026-09-10",
-      "label": "75天前",
+      "label": "78天前",
       "icon": "",
       "projects": [
         {
@@ -14170,7 +14671,7 @@ var siteData = {
     },
     {
       "date": "2026-09-08",
-      "label": "77天前",
+      "label": "80天前",
       "icon": "",
       "projects": [
         {
@@ -14633,7 +15134,7 @@ var siteData = {
     },
     {
       "date": "2026-08-31",
-      "label": "85天前",
+      "label": "88天前",
       "icon": "",
       "projects": [
         {
@@ -15096,7 +15597,7 @@ var siteData = {
     },
     {
       "date": "2026-08-30",
-      "label": "86天前",
+      "label": "89天前",
       "icon": "",
       "projects": [
         {
@@ -15521,7 +16022,7 @@ var siteData = {
     },
     {
       "date": "2026-08-29",
-      "label": "87天前",
+      "label": "90天前",
       "icon": "",
       "projects": [
         {
@@ -15984,7 +16485,7 @@ var siteData = {
     },
     {
       "date": "2026-08-28",
-      "label": "88天前",
+      "label": "91天前",
       "icon": "",
       "projects": [
         {
@@ -16371,7 +16872,7 @@ var siteData = {
     },
     {
       "date": "2026-08-27",
-      "label": "89天前",
+      "label": "92天前",
       "icon": "",
       "projects": [
         {
@@ -16834,7 +17335,7 @@ var siteData = {
     },
     {
       "date": "2026-08-26",
-      "label": "90天前",
+      "label": "93天前",
       "icon": "",
       "projects": [
         {
@@ -17285,7 +17786,7 @@ var siteData = {
     },
     {
       "date": "2026-08-25",
-      "label": "91天前",
+      "label": "94天前",
       "icon": "",
       "projects": [
         {
@@ -17699,7 +18200,7 @@ var siteData = {
     },
     {
       "date": "2026-08-23",
-      "label": "93天前",
+      "label": "96天前",
       "icon": "",
       "projects": [
         {
@@ -18076,7 +18577,7 @@ var siteData = {
     },
     {
       "date": "2026-08-20",
-      "label": "96天前",
+      "label": "99天前",
       "icon": "",
       "projects": [
         {
@@ -18379,7 +18880,7 @@ var siteData = {
     },
     {
       "date": "2026-08-19",
-      "label": "97天前",
+      "label": "100天前",
       "icon": "",
       "projects": [
         {
@@ -18719,7 +19220,7 @@ var siteData = {
     },
     {
       "date": "2026-08-18",
-      "label": "98天前",
+      "label": "101天前",
       "icon": "",
       "projects": [
         {
@@ -19022,7 +19523,7 @@ var siteData = {
     },
     {
       "date": "2026-08-17",
-      "label": "99天前",
+      "label": "102天前",
       "icon": "",
       "projects": [
         {
@@ -19288,7 +19789,7 @@ var siteData = {
     },
     {
       "date": "2026-08-16",
-      "label": "100天前",
+      "label": "103天前",
       "icon": "",
       "projects": [
         {
@@ -19554,7 +20055,7 @@ var siteData = {
     },
     {
       "date": "2026-08-14",
-      "label": "102天前",
+      "label": "105天前",
       "icon": "",
       "projects": [
         {
@@ -19820,7 +20321,7 @@ var siteData = {
     },
     {
       "date": "2026-08-13",
-      "label": "103天前",
+      "label": "106天前",
       "icon": "",
       "projects": [
         {
@@ -20086,7 +20587,7 @@ var siteData = {
     },
     {
       "date": "2026-08-10",
-      "label": "106天前",
+      "label": "109天前",
       "icon": "",
       "projects": [
         {
@@ -20352,7 +20853,7 @@ var siteData = {
     },
     {
       "date": "2026-08-08",
-      "label": "108天前",
+      "label": "111天前",
       "icon": "",
       "projects": [
         {
@@ -20618,7 +21119,7 @@ var siteData = {
     },
     {
       "date": "2026-08-06",
-      "label": "110天前",
+      "label": "113天前",
       "icon": "",
       "projects": [
         {
@@ -20884,7 +21385,7 @@ var siteData = {
     },
     {
       "date": "2026-07-30",
-      "label": "117天前",
+      "label": "120天前",
       "icon": "",
       "projects": [
         {
@@ -21150,7 +21651,7 @@ var siteData = {
     },
     {
       "date": "2026-07-29",
-      "label": "118天前",
+      "label": "121天前",
       "icon": "",
       "projects": [
         {
@@ -21416,7 +21917,7 @@ var siteData = {
     },
     {
       "date": "2026-07-28",
-      "label": "119天前",
+      "label": "122天前",
       "icon": "",
       "projects": [
         {
@@ -21682,7 +22183,7 @@ var siteData = {
     },
     {
       "date": "2026-07-22",
-      "label": "125天前",
+      "label": "128天前",
       "icon": "",
       "projects": [
         {
@@ -21868,7 +22369,7 @@ var siteData = {
     },
     {
       "date": "2026-07-19",
-      "label": "128天前",
+      "label": "131天前",
       "icon": "",
       "projects": [
         {
@@ -22060,7 +22561,7 @@ var siteData = {
     },
     {
       "date": "2026-07-17",
-      "label": "130天前",
+      "label": "133天前",
       "icon": "",
       "projects": [
         {
@@ -22252,7 +22753,7 @@ var siteData = {
     },
     {
       "date": "2026-07-14",
-      "label": "133天前",
+      "label": "136天前",
       "icon": "",
       "projects": [
         {
@@ -22444,7 +22945,7 @@ var siteData = {
     },
     {
       "date": "2026-07-13",
-      "label": "134天前",
+      "label": "137天前",
       "icon": "",
       "projects": [
         {
@@ -22636,7 +23137,7 @@ var siteData = {
     },
     {
       "date": "2026-07-11",
-      "label": "136天前",
+      "label": "139天前",
       "icon": "",
       "projects": [
         {
@@ -22828,7 +23329,7 @@ var siteData = {
     },
     {
       "date": "2026-07-07",
-      "label": "140天前",
+      "label": "143天前",
       "icon": "",
       "projects": [
         {
@@ -23020,7 +23521,7 @@ var siteData = {
     },
     {
       "date": "2026-07-06",
-      "label": "141天前",
+      "label": "144天前",
       "icon": "",
       "projects": [
         {
@@ -23212,7 +23713,7 @@ var siteData = {
     },
     {
       "date": "2026-07-04",
-      "label": "143天前",
+      "label": "146天前",
       "icon": "",
       "projects": [
         {
@@ -23404,7 +23905,7 @@ var siteData = {
     },
     {
       "date": "2026-07-02",
-      "label": "145天前",
+      "label": "148天前",
       "icon": "",
       "projects": [
         {
@@ -23596,7 +24097,7 @@ var siteData = {
     },
     {
       "date": "2026-07-01",
-      "label": "146天前",
+      "label": "149天前",
       "icon": "",
       "projects": [
         {
@@ -23788,7 +24289,7 @@ var siteData = {
     },
     {
       "date": "2026-06-30",
-      "label": "147天前",
+      "label": "150天前",
       "icon": "",
       "projects": [
         {
@@ -23980,7 +24481,7 @@ var siteData = {
     },
     {
       "date": "2026-06-28",
-      "label": "149天前",
+      "label": "152天前",
       "icon": "",
       "projects": [
         {
@@ -24172,7 +24673,7 @@ var siteData = {
     },
     {
       "date": "2026-06-27",
-      "label": "150天前",
+      "label": "153天前",
       "icon": "",
       "projects": [
         {
@@ -24364,7 +24865,7 @@ var siteData = {
     },
     {
       "date": "2026-06-26",
-      "label": "151天前",
+      "label": "154天前",
       "icon": "",
       "projects": [
         {
@@ -24556,7 +25057,7 @@ var siteData = {
     },
     {
       "date": "2026-06-25",
-      "label": "152天前",
+      "label": "155天前",
       "icon": "",
       "projects": [
         {
@@ -24748,7 +25249,7 @@ var siteData = {
     },
     {
       "date": "2026-06-21",
-      "label": "156天前",
+      "label": "159天前",
       "icon": "",
       "projects": [
         {
@@ -24940,7 +25441,7 @@ var siteData = {
     },
     {
       "date": "2026-06-20",
-      "label": "157天前",
+      "label": "160天前",
       "icon": "",
       "projects": [
         {
@@ -25132,7 +25633,7 @@ var siteData = {
     },
     {
       "date": "2026-06-19",
-      "label": "158天前",
+      "label": "161天前",
       "icon": "",
       "projects": [
         {
@@ -25324,7 +25825,7 @@ var siteData = {
     },
     {
       "date": "2026-06-18",
-      "label": "159天前",
+      "label": "162天前",
       "icon": "",
       "projects": [
         {
@@ -25515,7 +26016,7 @@ var siteData = {
     },
     {
       "date": "2026-06-17",
-      "label": "160天前",
+      "label": "163天前",
       "icon": "",
       "projects": [
         {
@@ -25707,7 +26208,7 @@ var siteData = {
     },
     {
       "date": "2026-06-15",
-      "label": "162天前",
+      "label": "165天前",
       "icon": "",
       "projects": [
         {
@@ -25899,7 +26400,7 @@ var siteData = {
     },
     {
       "date": "2026-06-14",
-      "label": "163天前",
+      "label": "166天前",
       "icon": "",
       "projects": [
         {
@@ -26091,7 +26592,7 @@ var siteData = {
     },
     {
       "date": "2026-06-13",
-      "label": "164天前",
+      "label": "167天前",
       "icon": "",
       "projects": [
         {
@@ -26283,7 +26784,7 @@ var siteData = {
     },
     {
       "date": "2026-06-12",
-      "label": "165天前",
+      "label": "168天前",
       "icon": "",
       "projects": [
         {
@@ -26475,7 +26976,7 @@ var siteData = {
     },
     {
       "date": "2026-06-10",
-      "label": "167天前",
+      "label": "170天前",
       "icon": "",
       "projects": [
         {
@@ -26668,7 +27169,7 @@ var siteData = {
     },
     {
       "date": "2026-06-09",
-      "label": "168天前",
+      "label": "171天前",
       "icon": "",
       "projects": [
         {
@@ -26861,7 +27362,7 @@ var siteData = {
     },
     {
       "date": "2026-06-08",
-      "label": "169天前",
+      "label": "172天前",
       "icon": "",
       "projects": [
         {
@@ -27054,7 +27555,7 @@ var siteData = {
     },
     {
       "date": "2026-06-06",
-      "label": "171天前",
+      "label": "174天前",
       "icon": "",
       "projects": [
         {
@@ -27247,7 +27748,7 @@ var siteData = {
     },
     {
       "date": "2026-06-05",
-      "label": "172天前",
+      "label": "175天前",
       "icon": "",
       "projects": [
         {
@@ -27445,7 +27946,7 @@ var siteData = {
     },
     {
       "date": "2026-06-04",
-      "label": "173天前",
+      "label": "176天前",
       "icon": "",
       "projects": [
         {
@@ -27642,7 +28143,7 @@ var siteData = {
     },
     {
       "date": "2026-06-03",
-      "label": "174天前",
+      "label": "177天前",
       "icon": "",
       "projects": [
         {
@@ -27839,7 +28340,7 @@ var siteData = {
     },
     {
       "date": "2026-06-02",
-      "label": "175天前",
+      "label": "178天前",
       "icon": "",
       "projects": [
         {
@@ -28036,7 +28537,7 @@ var siteData = {
     },
     {
       "date": "2026-05-31",
-      "label": "177天前",
+      "label": "180天前",
       "icon": "",
       "projects": [
         {
@@ -28234,7 +28735,7 @@ var siteData = {
     },
     {
       "date": "2026-05-30",
-      "label": "178天前",
+      "label": "181天前",
       "icon": "",
       "projects": [
         {
@@ -28429,7 +28930,7 @@ var siteData = {
     },
     {
       "date": "2026-05-29",
-      "label": "179天前",
+      "label": "182天前",
       "icon": "",
       "projects": [
         {
@@ -28624,7 +29125,7 @@ var siteData = {
     },
     {
       "date": "2026-05-28",
-      "label": "180天前",
+      "label": "183天前",
       "icon": "",
       "projects": [
         {
@@ -28820,7 +29321,7 @@ var siteData = {
     },
     {
       "date": "2026-05-26",
-      "label": "182天前",
+      "label": "185天前",
       "icon": "",
       "projects": [
         {
@@ -29016,7 +29517,7 @@ var siteData = {
     },
     {
       "date": "2026-05-25",
-      "label": "183天前",
+      "label": "186天前",
       "icon": "",
       "projects": [
         {
@@ -29210,7 +29711,7 @@ var siteData = {
     },
     {
       "date": "2026-05-24",
-      "label": "184天前",
+      "label": "187天前",
       "icon": "",
       "projects": [
         {
@@ -29408,7 +29909,7 @@ var siteData = {
     },
     {
       "date": "2026-05-22",
-      "label": "186天前",
+      "label": "189天前",
       "icon": "",
       "projects": [
         {
@@ -29610,7 +30111,7 @@ var siteData = {
     },
     {
       "date": "2026-05-21",
-      "label": "187天前",
+      "label": "190天前",
       "icon": "",
       "projects": [
         {
@@ -29812,7 +30313,7 @@ var siteData = {
     },
     {
       "date": "2026-05-20",
-      "label": "188天前",
+      "label": "191天前",
       "icon": "",
       "projects": [
         {
@@ -30014,7 +30515,7 @@ var siteData = {
     },
     {
       "date": "2026-05-19",
-      "label": "189天前",
+      "label": "192天前",
       "icon": "",
       "projects": [
         {
@@ -30216,7 +30717,7 @@ var siteData = {
     },
     {
       "date": "2026-05-18",
-      "label": "190天前",
+      "label": "193天前",
       "icon": "",
       "projects": [
         {
@@ -30418,7 +30919,7 @@ var siteData = {
     },
     {
       "date": "2026-05-17",
-      "label": "191天前",
+      "label": "194天前",
       "icon": "",
       "projects": [
         {
@@ -30620,7 +31121,7 @@ var siteData = {
     },
     {
       "date": "2026-05-16",
-      "label": "192天前",
+      "label": "195天前",
       "icon": "",
       "projects": [
         {
@@ -30822,7 +31323,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "196天前",
+      "label": "199天前",
       "icon": "",
       "projects": [
         {
@@ -31022,7 +31523,7 @@ var siteData = {
     },
     {
       "date": "2026-05-13",
-      "label": "195天前",
+      "label": "198天前",
       "icon": "",
       "projects": [
         {
@@ -31218,7 +31719,7 @@ var siteData = {
     },
     {
       "date": "2026-05-12",
-      "label": "196天前",
+      "label": "199天前",
       "icon": "",
       "projects": [
         {
